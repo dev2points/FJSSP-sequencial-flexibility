@@ -1,0 +1,349 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS24
+[runlim] start:			Tue Apr 14 17:09:25 2026
+[runlim] child:			7744
+Operations: 92, Edges: 87, Machines: 9
+Greedy Schedule UB: 660
+Greedy UB 660 is valid!
+[runlim] sample:		9.99 time, 10.01 real, 1142 MB, 0.96 load
+Building constraints took 13.25 seconds.
+[runlim] sample:		19.99 time, 20.01 real, 2101 MB, 0.97 load
+[runlim] sample:		29.99 time, 30.01 real, 2290 MB, 0.97 load
+[runlim] sample:		39.98 time, 40.01 real, 2571 MB, 0.98 load
+[runlim] sample:		49.98 time, 50.01 real, 2110 MB, 0.98 load
+[runlim] sample:		59.98 time, 60.01 real, 1899 MB, 0.98 load
+[runlim] sample:		69.97 time, 70.01 real, 1783 MB, 0.99 load
+[runlim] sample:		79.96 time, 80.01 real, 1775 MB, 0.99 load
+[runlim] sample:		89.96 time, 90.01 real, 1813 MB, 0.99 load
+[runlim] sample:		99.96 time, 100.01 real, 1811 MB, 0.99 load
+[runlim] sample:		109.95 time, 110.01 real, 1758 MB, 0.99 load
+[runlim] sample:		119.94 time, 120.01 real, 1792 MB, 1.07 load
+[runlim] sample:		129.94 time, 130.01 real, 2145 MB, 1.06 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 660
+UB 660 is valid!
+[runlim] sample:		139.94 time, 140.01 real, 1783 MB, 1.05 load
+[runlim] sample:		149.93 time, 150.01 real, 1782 MB, 1.04 load
+[runlim] sample:		159.93 time, 160.01 real, 2257 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 659
+UB 659 is valid!
+[runlim] sample:		169.92 time, 170.01 real, 1836 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 658
+UB 658 is valid!
+[runlim] sample:		179.92 time, 180.01 real, 1760 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 657
+UB 657 is valid!
+[runlim] sample:		189.92 time, 190.01 real, 2033 MB, 1.10 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 656
+UB 656 is valid!
+[runlim] sample:		199.91 time, 200.01 real, 1754 MB, 1.08 load
+[runlim] sample:		209.91 time, 210.01 real, 1752 MB, 1.07 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 655
+UB 655 is valid!
+[runlim] sample:		219.90 time, 220.01 real, 1944 MB, 1.06 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 654
+UB 654 is valid!
+[runlim] sample:		229.90 time, 230.01 real, 1806 MB, 1.05 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 653
+UB 653 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 652
+UB 652 is valid!
+[runlim] sample:		239.89 time, 240.01 real, 1734 MB, 1.04 load
+[runlim] sample:		249.89 time, 250.01 real, 1734 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 651
+UB 651 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 650
+UB 650 is valid!
+[runlim] sample:		259.88 time, 260.01 real, 1807 MB, 1.10 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 649
+UB 649 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 648
+UB 648 is valid!
+[runlim] sample:		269.88 time, 270.01 real, 1734 MB, 1.17 load
+[runlim] sample:		279.87 time, 280.01 real, 1718 MB, 1.14 load
+[runlim] sample:		289.87 time, 290.01 real, 1719 MB, 1.12 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 647
+UB 647 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 646
+UB 646 is valid!
+[runlim] sample:		299.86 time, 300.01 real, 1711 MB, 1.10 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 645
+UB 645 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 644
+UB 644 is valid!
+[runlim] sample:		309.86 time, 310.01 real, 1791 MB, 1.24 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 643
+UB 643 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 642
+UB 642 is valid!
+[runlim] sample:		319.85 time, 320.01 real, 1693 MB, 1.20 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 641
+UB 641 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 640
+UB 640 is valid!
+[runlim] sample:		329.86 time, 330.01 real, 1692 MB, 1.25 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 639
+UB 639 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 638
+UB 638 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 637
+UB 637 is valid!
+[runlim] sample:		339.85 time, 340.01 real, 1685 MB, 1.21 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 636
+UB 636 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 635
+UB 635 is valid!
+[runlim] sample:		349.84 time, 350.01 real, 1685 MB, 1.18 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 634
+UB 634 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 633
+UB 633 is valid!
+[runlim] sample:		359.83 time, 360.01 real, 1760 MB, 1.15 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 632
+UB 632 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 631
+UB 631 is valid!
+[runlim] sample:		369.82 time, 370.01 real, 1680 MB, 1.13 load
+[runlim] sample:		379.83 time, 380.01 real, 1741 MB, 1.11 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 630
+UB 630 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 629
+UB 629 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 628
+UB 628 is valid!
+[runlim] sample:		389.82 time, 390.01 real, 1647 MB, 1.09 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 627
+UB 627 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 626
+UB 626 is valid!
+[runlim] sample:		399.82 time, 400.01 real, 1647 MB, 1.08 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 625
+UB 625 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 624
+UB 624 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 623
+UB 623 is valid!
+[runlim] sample:		409.81 time, 410.01 real, 1645 MB, 1.06 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 622
+UB 622 is valid!
+[runlim] sample:		419.81 time, 420.01 real, 1644 MB, 1.05 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 621
+UB 621 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 620
+UB 620 is valid!
+[runlim] sample:		429.80 time, 430.01 real, 1631 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 619
+UB 619 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 618
+UB 618 is valid!
+[runlim] sample:		439.80 time, 440.01 real, 1630 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 617
+UB 617 is valid!
+[runlim] sample:		449.79 time, 450.01 real, 1631 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 616
+UB 616 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 615
+UB 615 is valid!
+[runlim] sample:		459.78 time, 460.01 real, 1629 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 614
+UB 614 is valid!
+[runlim] sample:		469.79 time, 470.01 real, 1606 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 613
+UB 613 is valid!
+[runlim] sample:		479.77 time, 480.01 real, 1700 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 612
+UB 612 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 611
+UB 611 is valid!
+[runlim] sample:		489.77 time, 490.01 real, 1697 MB, 1.09 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 610
+UB 610 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 609
+UB 609 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 608
+UB 608 is valid!
+[runlim] sample:		499.77 time, 500.01 real, 1602 MB, 1.07 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 607
+UB 607 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 606
+UB 606 is valid!
+[runlim] sample:		509.76 time, 510.01 real, 1602 MB, 1.06 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 605
+UB 605 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 604
+UB 604 is valid!
+[runlim] sample:		519.75 time, 520.01 real, 1592 MB, 1.05 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 603
+UB 603 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 602
+UB 602 is valid!
+[runlim] sample:		529.75 time, 530.01 real, 1593 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 601
+UB 601 is valid!
+[runlim] sample:		539.75 time, 540.01 real, 1691 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 600
+UB 600 is valid!
+[runlim] sample:		549.74 time, 550.01 real, 1683 MB, 1.03 load
+[runlim] sample:		559.74 time, 560.01 real, 1684 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 599
+UB 599 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 598
+UB 598 is valid!
+[runlim] sample:		569.73 time, 570.01 real, 1681 MB, 1.02 load
+[runlim] sample:		579.73 time, 580.01 real, 1681 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 597
+UB 597 is valid!
+[runlim] sample:		589.72 time, 590.01 real, 1680 MB, 1.01 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 596
+UB 596 is valid!
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 595
+UB 595 is valid!
+[runlim] sample:		599.71 time, 600.01 real, 1681 MB, 1.01 load
+[runlim] end:			Tue Apr 14 17:19:26 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			601.06 seconds
+[runlim] time:			599.71 seconds
+[runlim] space:			2765 MB
+[runlim] load:			1.25 maximum
+[runlim] samples:		6000

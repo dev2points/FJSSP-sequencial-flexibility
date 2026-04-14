@@ -1,0 +1,113 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS26
+[runlim] start:			Tue Apr 14 17:29:27 2026
+[runlim] child:			7813
+Operations: 119, Edges: 116, Machines: 9
+Greedy Schedule UB: 888
+Greedy UB 888 is valid!
+[runlim] sample:		9.95 time, 10.01 real, 1299 MB, 1.13 load
+[runlim] sample:		19.95 time, 20.01 real, 2229 MB, 1.11 load
+Building constraints took 27.87 seconds.
+[runlim] sample:		29.94 time, 30.01 real, 3137 MB, 1.09 load
+[runlim] sample:		39.94 time, 40.01 real, 5493 MB, 1.08 load
+[runlim] sample:		49.93 time, 50.01 real, 4101 MB, 1.06 load
+[runlim] sample:		59.93 time, 60.01 real, 4569 MB, 1.05 load
+[runlim] sample:		69.93 time, 70.01 real, 4349 MB, 1.04 load
+[runlim] sample:		79.92 time, 80.01 real, 5248 MB, 1.04 load
+[runlim] sample:		89.92 time, 90.01 real, 4101 MB, 1.03 load
+[runlim] sample:		99.91 time, 100.01 real, 4099 MB, 1.03 load
+[runlim] sample:		109.91 time, 110.01 real, 4099 MB, 1.02 load
+[runlim] sample:		119.91 time, 120.01 real, 4077 MB, 1.02 load
+[runlim] sample:		129.90 time, 130.01 real, 4074 MB, 1.01 load
+[runlim] sample:		139.90 time, 140.01 real, 4071 MB, 1.01 load
+[runlim] sample:		149.89 time, 150.01 real, 4064 MB, 1.01 load
+[runlim] sample:		159.89 time, 160.01 real, 4064 MB, 1.01 load
+[runlim] sample:		169.89 time, 170.01 real, 4016 MB, 1.09 load
+[runlim] sample:		179.88 time, 180.01 real, 4016 MB, 1.15 load
+[runlim] sample:		189.88 time, 190.01 real, 4016 MB, 1.12 load
+[runlim] sample:		199.87 time, 200.01 real, 4016 MB, 1.10 load
+[runlim] sample:		209.87 time, 210.01 real, 4005 MB, 1.09 load
+[runlim] sample:		219.87 time, 220.01 real, 4002 MB, 1.07 load
+[runlim] sample:		229.87 time, 230.01 real, 4001 MB, 1.06 load
+[runlim] sample:		239.86 time, 240.01 real, 4001 MB, 1.05 load
+[runlim] sample:		249.86 time, 250.01 real, 4001 MB, 1.04 load
+[runlim] sample:		259.85 time, 260.01 real, 4584 MB, 1.04 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 888
+UB 888 is valid!
+[runlim] sample:		269.85 time, 270.01 real, 3723 MB, 1.03 load
+[runlim] sample:		279.85 time, 280.01 real, 3720 MB, 1.02 load
+[runlim] sample:		289.84 time, 290.01 real, 3716 MB, 1.02 load
+[runlim] sample:		299.84 time, 300.01 real, 3716 MB, 1.02 load
+[runlim] sample:		309.83 time, 310.01 real, 3716 MB, 1.01 load
+[runlim] sample:		319.84 time, 320.01 real, 3716 MB, 1.01 load
+[runlim] sample:		329.83 time, 330.01 real, 3716 MB, 1.01 load
+[runlim] sample:		339.82 time, 340.01 real, 3703 MB, 1.01 load
+[runlim] sample:		349.82 time, 350.01 real, 3703 MB, 1.01 load
+[runlim] sample:		359.81 time, 360.01 real, 3703 MB, 1.00 load
+[runlim] sample:		369.81 time, 370.01 real, 3695 MB, 1.00 load
+[runlim] sample:		379.81 time, 380.01 real, 3695 MB, 1.00 load
+[runlim] sample:		389.81 time, 390.01 real, 3695 MB, 1.00 load
+[runlim] sample:		399.80 time, 400.01 real, 3694 MB, 1.00 load
+[runlim] sample:		409.80 time, 410.01 real, 3694 MB, 1.00 load
+[runlim] sample:		419.80 time, 420.01 real, 3694 MB, 1.00 load
+[runlim] sample:		429.79 time, 430.01 real, 3687 MB, 1.00 load
+[runlim] sample:		439.79 time, 440.01 real, 3687 MB, 1.00 load
+[runlim] sample:		449.78 time, 450.01 real, 3686 MB, 1.00 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 887
+UB 887 is valid!
+[runlim] sample:		459.78 time, 460.01 real, 3656 MB, 1.00 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 886
+UB 886 is valid!
+[runlim] sample:		469.78 time, 470.01 real, 3849 MB, 1.07 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 885
+UB 885 is valid!
+[runlim] sample:		479.77 time, 480.01 real, 4784 MB, 1.06 load
+[runlim] sample:		489.76 time, 490.01 real, 3655 MB, 1.05 load
+[runlim] sample:		499.76 time, 500.01 real, 3779 MB, 1.04 load
+[runlim] sample:		509.76 time, 510.01 real, 3779 MB, 1.04 load
+[runlim] sample:		519.76 time, 520.01 real, 3770 MB, 1.03 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 884
+UB 884 is valid!
+[runlim] sample:		529.75 time, 530.01 real, 3645 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 883
+UB 883 is valid!
+[runlim] sample:		539.74 time, 540.01 real, 3646 MB, 1.02 load
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 882
+UB 882 is valid!
+[runlim] sample:		549.75 time, 550.01 real, 3641 MB, 1.02 load
+[runlim] sample:		559.74 time, 560.01 real, 3641 MB, 1.01 load
+[runlim] sample:		569.73 time, 570.01 real, 3978 MB, 1.01 load
+[runlim] sample:		579.73 time, 580.01 real, 3641 MB, 1.01 load
+[runlim] sample:		589.72 time, 590.01 real, 3627 MB, 1.01 load
+[runlim] sample:		599.72 time, 600.01 real, 3627 MB, 1.01 load
+[runlim] end:			Tue Apr 14 17:39:29 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			601.06 seconds
+[runlim] time:			599.72 seconds
+[runlim] space:			5523 MB
+[runlim] load:			1.16 maximum
+[runlim] samples:		6000

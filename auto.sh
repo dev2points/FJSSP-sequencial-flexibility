@@ -1,5 +1,5 @@
 TO=600
-MO=8000S
+MO=14000
 
 YDATA_DIR=datasets/yfjs
 DADATA_DIR=datasets/dafjs

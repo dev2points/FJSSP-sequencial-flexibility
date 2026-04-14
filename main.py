@@ -279,7 +279,7 @@ def add_incremental_constraints(solver, num_operations, out_degree, request_list
 
 def solve_and_print(solver, num_operations, s, m, request_list):
     if solver.solve():
-        print("SATISFIABLE: Tìm thấy lịch trình hợp lệ!")
+        print("SAT")
         model = solver.get_model()
         
         # Chuyển model thành set chứa các biến (literals) có giá trị True (số dương)
@@ -339,7 +339,8 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         return machine_assignment, start_times, machine_queues, makespan
         
     else:
-        print("UNSATISFIABLE: Không thể đạt được UB bằng cách thêm ràng buộc, UB trước đó là tối ưu!")
+        print("UNSAT")
+        print(f"status: optimal")
         return None, None, None, None
     
 
@@ -408,6 +409,11 @@ def main():
 
     in_degree, out_degree, neighbors, predecessors = data(num_operations, num_edges, num_machines, precedence_list, request_list)
     ub, assignment, queue = greedy_schedule(num_operations, num_machines, precedence_list, request_list, in_degree, neighbors, predecessors)
+    if verify_schedule(num_operations, num_machines, precedence_list, request_list, assignment, queue, ub):
+        print(f"Greedy UB {ub} is valid!")
+    else:
+        print(f"Greedy UB {ub} is NOT valid!")
+        return
     s, x, m, a, top_id = create_var(num_operations, num_machines, request_list, ub)
 
     start_time = perf_counter()
@@ -422,9 +428,9 @@ def main():
             break  # Không thể giảm UB nữa
 
         if verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, queue, ub):
-            print(f"UB {ub} hợp lệ và được cải thiện xuống {makespan}!")
+            print(f"UB {ub} is valid!")
         else:
-            print(f"UB {ub} không hợp lệ sau khi thêm ràng buộc, giữ nguyên UB cũ là {ub}.")
+            print(f"UB {ub} is NOT valid!")
             break
 
         # Tìm nghiệm tốt hơn ở vòng lặp tiếp theo.

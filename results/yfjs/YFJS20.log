@@ -1,0 +1,36 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/yfjs/YFJS20
+[runlim] start:			Tue Apr 14 14:17:22 2026
+[runlim] child:			7186
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1252
+Greedy UB 1252 is valid!
+[runlim] sample:		9.99 time, 10.01 real, 1540 MB, 1.01 load
+[runlim] sample:		19.98 time, 20.01 real, 2672 MB, 1.01 load
+[runlim] sample:		29.98 time, 30.01 real, 3817 MB, 1.01 load
+[runlim] sample:		39.98 time, 40.01 real, 4954 MB, 1.01 load
+[runlim] sample:		49.97 time, 50.01 real, 6090 MB, 1.00 load
+[runlim] sample:		59.96 time, 60.01 real, 7231 MB, 1.00 load
+[runlim] sample:		69.96 time, 70.01 real, 8387 MB, 1.00 load
+[runlim] sample:		79.96 time, 80.01 real, 9525 MB, 1.00 load
+[runlim] sample:		89.96 time, 90.01 real, 10620 MB, 1.00 load
+[runlim] sample:		99.95 time, 100.01 real, 11547 MB, 1.00 load
+[runlim] sample:		109.94 time, 110.01 real, 12436 MB, 1.08 load
+[runlim] sample:		119.94 time, 120.01 real, 13288 MB, 1.14 load
+[runlim] end:			Tue Apr 14 14:19:32 2026
+[runlim] status:		out of memory
+[runlim] result:		3
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			129.25 seconds
+[runlim] time:			128.14 seconds
+[runlim] space:			14007 MB
+[runlim] load:			1.15 maximum
+[runlim] samples:		1282

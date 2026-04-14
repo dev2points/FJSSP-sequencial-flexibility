@@ -1,817 +1,817 @@
 [runlim] version:		2.0.0rc12
-[runlim] host:			DESKTOP-8K0D0PT
+[runlim] host:			ap-Precision-7550
 [runlim] time limit:		311040000 seconds
 [runlim] real time limit:	600 seconds
-[runlim] space limit:		80035 MB
+[runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		main.py
 [runlim] argv[3]:		datasets/yfjs/YFJS01
-[runlim] start:			Tue Apr 14 12:52:00 2026
-[runlim] child:			3374
+[runlim] start:			Tue Apr 14 13:35:45 2026
+[runlim] child:			6887
 Operations: 40, Edges: 36, Machines: 7
 Greedy Schedule UB: 988
-Building constraints took 6.63 seconds.
-[runlim] sample:		10.28 time, 10.01 real, 1110 MB, 0.41 load
-[runlim] sample:		20.42 time, 20.01 real, 1081 MB, 0.50 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+Greedy UB 988 is valid!
+Building constraints took 6.21 seconds.
+[runlim] sample:		10.00 time, 10.01 real, 1428 MB, 0.48 load
+[runlim] sample:		20.00 time, 20.01 real, 1083 MB, 0.56 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 988
-UB 988 hợp lệ và được cải thiện xuống 988!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 988 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 987
-UB 987 hợp lệ và được cải thiện xuống 987!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 987 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 986
-UB 986 hợp lệ và được cải thiện xuống 986!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 986 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 985
-UB 985 hợp lệ và được cải thiện xuống 985!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 985 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 984
-UB 984 hợp lệ và được cải thiện xuống 984!
-[runlim] sample:		30.47 time, 30.60 real, 1061 MB, 0.58 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 984 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 983
-UB 983 hợp lệ và được cải thiện xuống 983!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 983 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 982
-UB 982 hợp lệ và được cải thiện xuống 982!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 982 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 981
-UB 981 hợp lệ và được cải thiện xuống 981!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 981 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 980
-UB 980 hợp lệ và được cải thiện xuống 980!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 980 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 979
-UB 979 hợp lệ và được cải thiện xuống 979!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 979 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 978
-UB 978 hợp lệ và được cải thiện xuống 978!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 978 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 975
-UB 977 hợp lệ và được cải thiện xuống 975!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 977 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 974
-UB 974 hợp lệ và được cải thiện xuống 974!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 974 is valid!
+[runlim] sample:		30.00 time, 30.01 real, 1064 MB, 0.63 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 973
-UB 973 hợp lệ và được cải thiện xuống 973!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 973 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 972
-UB 972 hợp lệ và được cải thiện xuống 972!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 972 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 971
-UB 971 hợp lệ và được cải thiện xuống 971!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 971 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 970
-UB 970 hợp lệ và được cải thiện xuống 970!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 970 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 965
-UB 969 hợp lệ và được cải thiện xuống 965!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 969 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 964
-UB 964 hợp lệ và được cải thiện xuống 964!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 964 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 963
-UB 963 hợp lệ và được cải thiện xuống 963!
-[runlim] sample:		40.64 time, 40.60 real, 1048 MB, 0.88 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 963 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 962
-UB 962 hợp lệ và được cải thiện xuống 962!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 962 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 961
-UB 961 hợp lệ và được cải thiện xuống 961!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 961 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 960
-UB 960 hợp lệ và được cải thiện xuống 960!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 960 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 959
-UB 959 hợp lệ và được cải thiện xuống 959!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 959 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 958
-UB 958 hợp lệ và được cải thiện xuống 958!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 958 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 957
-UB 957 hợp lệ và được cải thiện xuống 957!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 957 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 956
-UB 956 hợp lệ và được cải thiện xuống 956!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 956 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 955
-UB 955 hợp lệ và được cải thiện xuống 955!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 955 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 954
-UB 954 hợp lệ và được cải thiện xuống 954!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 954 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 953
-UB 953 hợp lệ và được cải thiện xuống 953!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 953 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 952
-UB 952 hợp lệ và được cải thiện xuống 952!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 952 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 951
-UB 951 hợp lệ và được cải thiện xuống 951!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 951 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 950
-UB 950 hợp lệ và được cải thiện xuống 950!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 950 is valid!
+[runlim] sample:		39.99 time, 40.01 real, 998 MB, 0.69 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 949
-UB 949 hợp lệ và được cải thiện xuống 949!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 949 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 948
-UB 948 hợp lệ và được cải thiện xuống 948!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 948 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 947
-UB 947 hợp lệ và được cải thiện xuống 947!
-[runlim] sample:		50.96 time, 50.60 real, 1045 MB, 0.90 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 947 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 946
-UB 946 hợp lệ và được cải thiện xuống 946!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 946 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 943
-UB 945 hợp lệ và được cải thiện xuống 943!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 945 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 942
-UB 942 hợp lệ và được cải thiện xuống 942!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 942 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 941
-UB 941 hợp lệ và được cải thiện xuống 941!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 941 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 940
-UB 940 hợp lệ và được cải thiện xuống 940!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 940 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 939
-UB 939 hợp lệ và được cải thiện xuống 939!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 939 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 938
-UB 938 hợp lệ và được cải thiện xuống 938!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 938 is valid!
+[runlim] sample:		49.98 time, 50.01 real, 977 MB, 0.74 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 937
-UB 937 hợp lệ và được cải thiện xuống 937!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 937 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 936
-UB 936 hợp lệ và được cải thiện xuống 936!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 936 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 935
-UB 935 hợp lệ và được cải thiện xuống 935!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 935 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 934
-UB 934 hợp lệ và được cải thiện xuống 934!
-[runlim] sample:		61.05 time, 61.19 real, 1019 MB, 0.91 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 934 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 933
-UB 933 hợp lệ và được cải thiện xuống 933!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 933 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 932
-UB 932 hợp lệ và được cải thiện xuống 932!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 932 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 931
-UB 931 hợp lệ và được cải thiện xuống 931!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 931 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 930
-UB 930 hợp lệ và được cải thiện xuống 930!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 930 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 929
-UB 929 hợp lệ và được cải thiện xuống 929!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 929 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 928
-UB 928 hợp lệ và được cải thiện xuống 928!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 928 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 927
-UB 927 hợp lệ và được cải thiện xuống 927!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 927 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 926
-UB 926 hợp lệ và được cải thiện xuống 926!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 926 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 925
-UB 925 hợp lệ và được cải thiện xuống 925!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 925 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 924
-UB 924 hợp lệ và được cải thiện xuống 924!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 924 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 923
-UB 923 hợp lệ và được cải thiện xuống 923!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 923 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 922
-UB 922 hợp lệ và được cải thiện xuống 922!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 922 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 921
-UB 921 hợp lệ và được cải thiện xuống 921!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 921 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 920
-UB 920 hợp lệ và được cải thiện xuống 920!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 920 is valid!
+[runlim] sample:		59.97 time, 60.01 real, 976 MB, 0.86 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 919
-UB 919 hợp lệ và được cải thiện xuống 919!
-[runlim] sample:		71.14 time, 71.19 real, 1018 MB, 0.93 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 919 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 918
-UB 918 hợp lệ và được cải thiện xuống 918!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 918 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 917
-UB 917 hợp lệ và được cải thiện xuống 917!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 917 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 916
-UB 916 hợp lệ và được cải thiện xuống 916!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 916 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 915
-UB 915 hợp lệ và được cải thiện xuống 915!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 915 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 914
-UB 914 hợp lệ và được cải thiện xuống 914!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 914 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 913
-UB 913 hợp lệ và được cải thiện xuống 913!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 913 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 912
-UB 912 hợp lệ và được cải thiện xuống 912!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 912 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 905
-UB 911 hợp lệ và được cải thiện xuống 905!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 911 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 904
-UB 904 hợp lệ và được cải thiện xuống 904!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 904 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 902
-UB 903 hợp lệ và được cải thiện xuống 902!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 903 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 901
-UB 901 hợp lệ và được cải thiện xuống 901!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 901 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 900
-UB 900 hợp lệ và được cải thiện xuống 900!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 900 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 899
-UB 899 hợp lệ và được cải thiện xuống 899!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 899 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 898
-UB 898 hợp lệ và được cải thiện xuống 898!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 898 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 897
-UB 897 hợp lệ và được cải thiện xuống 897!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 897 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 896
-UB 896 hợp lệ và được cải thiện xuống 896!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 896 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 895
-UB 895 hợp lệ và được cải thiện xuống 895!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 895 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 894
-UB 894 hợp lệ và được cải thiện xuống 894!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 894 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 893
-UB 893 hợp lệ và được cải thiện xuống 893!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 893 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 892
-UB 892 hợp lệ và được cải thiện xuống 892!
-[runlim] sample:		81.38 time, 81.19 real, 1000 MB, 0.94 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 892 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 891
-UB 891 hợp lệ và được cải thiện xuống 891!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 891 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 890
-UB 890 hợp lệ và được cải thiện xuống 890!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 890 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 889
-UB 889 hợp lệ và được cải thiện xuống 889!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 889 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 888
-UB 888 hợp lệ và được cải thiện xuống 888!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 888 is valid!
+[runlim] sample:		69.96 time, 70.01 real, 1009 MB, 0.88 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 885
-UB 887 hợp lệ và được cải thiện xuống 885!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 887 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 884
-UB 884 hợp lệ và được cải thiện xuống 884!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 884 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 883
-UB 883 hợp lệ và được cải thiện xuống 883!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 883 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 882
-UB 882 hợp lệ và được cải thiện xuống 882!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 882 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 881
-UB 881 hợp lệ và được cải thiện xuống 881!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 881 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 880
-UB 880 hợp lệ và được cải thiện xuống 880!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 880 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 879
-UB 879 hợp lệ và được cải thiện xuống 879!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 879 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 878
-UB 878 hợp lệ và được cải thiện xuống 878!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 878 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 877
-UB 877 hợp lệ và được cải thiện xuống 877!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 877 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 876
-UB 876 hợp lệ và được cải thiện xuống 876!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 876 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 875
-UB 875 hợp lệ và được cải thiện xuống 875!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 875 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 874
-UB 874 hợp lệ và được cải thiện xuống 874!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 874 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 873
-UB 873 hợp lệ và được cải thiện xuống 873!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 873 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 872
-UB 872 hợp lệ và được cải thiện xuống 872!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 872 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 871
-UB 871 hợp lệ và được cải thiện xuống 871!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 871 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 870
-UB 870 hợp lệ và được cải thiện xuống 870!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 870 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 869
-UB 869 hợp lệ và được cải thiện xuống 869!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 869 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 868
-UB 868 hợp lệ và được cải thiện xuống 868!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 868 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 867
-UB 867 hợp lệ và được cải thiện xuống 867!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 867 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 866
-UB 866 hợp lệ và được cải thiện xuống 866!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 866 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 865
-UB 865 hợp lệ và được cải thiện xuống 865!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 865 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 864
-UB 864 hợp lệ và được cải thiện xuống 864!
-[runlim] sample:		91.55 time, 91.19 real, 970 MB, 0.95 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 864 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 863
-UB 863 hợp lệ và được cải thiện xuống 863!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 863 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 862
-UB 862 hợp lệ và được cải thiện xuống 862!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 862 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 861
-UB 861 hợp lệ và được cải thiện xuống 861!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 861 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 860
-UB 860 hợp lệ và được cải thiện xuống 860!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 860 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 859
-UB 859 hợp lệ và được cải thiện xuống 859!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 859 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 858
-UB 858 hợp lệ và được cải thiện xuống 858!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 858 is valid!
+[runlim] sample:		79.96 time, 80.01 real, 966 MB, 0.90 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 857
-UB 857 hợp lệ và được cải thiện xuống 857!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 857 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 856
-UB 856 hợp lệ và được cải thiện xuống 856!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 856 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 855
-UB 855 hợp lệ và được cải thiện xuống 855!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 855 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 854
-UB 854 hợp lệ và được cải thiện xuống 854!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 854 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 853
-UB 853 hợp lệ và được cải thiện xuống 853!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 853 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 852
-UB 852 hợp lệ và được cải thiện xuống 852!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 852 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 851
-UB 851 hợp lệ và được cải thiện xuống 851!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 851 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 850
-UB 850 hợp lệ và được cải thiện xuống 850!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 850 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 849
-UB 849 hợp lệ và được cải thiện xuống 849!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 849 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 848
-UB 848 hợp lệ và được cải thiện xuống 848!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 848 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 847
-UB 847 hợp lệ và được cải thiện xuống 847!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 847 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 844
-UB 846 hợp lệ và được cải thiện xuống 844!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 846 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 843
-UB 843 hợp lệ và được cải thiện xuống 843!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 843 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 842
-UB 842 hợp lệ và được cải thiện xuống 842!
-[runlim] sample:		101.70 time, 101.71 real, 964 MB, 0.96 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 842 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 841
-UB 841 hợp lệ và được cải thiện xuống 841!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 841 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 840
-UB 840 hợp lệ và được cải thiện xuống 840!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 840 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 839
-UB 839 hợp lệ và được cải thiện xuống 839!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 839 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 838
-UB 838 hợp lệ và được cải thiện xuống 838!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 838 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 837
-UB 837 hợp lệ và được cải thiện xuống 837!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 837 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 836
-UB 836 hợp lệ và được cải thiện xuống 836!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 836 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 835
-UB 835 hợp lệ và được cải thiện xuống 835!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 835 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 834
-UB 834 hợp lệ và được cải thiện xuống 834!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 834 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 831
-UB 833 hợp lệ và được cải thiện xuống 831!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 833 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 830
-UB 830 hợp lệ và được cải thiện xuống 830!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 830 is valid!
+[runlim] sample:		89.95 time, 90.01 real, 961 MB, 0.91 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 829
-UB 829 hợp lệ và được cải thiện xuống 829!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 829 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 828
-UB 828 hợp lệ và được cải thiện xuống 828!
-[runlim] sample:		111.84 time, 111.71 real, 959 MB, 0.96 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 828 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 827
-UB 827 hợp lệ và được cải thiện xuống 827!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 827 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 826
-UB 826 hợp lệ và được cải thiện xuống 826!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 826 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 825
-UB 825 hợp lệ và được cải thiện xuống 825!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 825 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 824
-UB 824 hợp lệ và được cải thiện xuống 824!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 824 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 823
-UB 823 hợp lệ và được cải thiện xuống 823!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 823 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 822
-UB 822 hợp lệ và được cải thiện xuống 822!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 822 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 821
-UB 821 hợp lệ và được cải thiện xuống 821!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 821 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 820
-UB 820 hợp lệ và được cải thiện xuống 820!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 820 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 819
-UB 819 hợp lệ và được cải thiện xuống 819!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 819 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 818
-UB 818 hợp lệ và được cải thiện xuống 818!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 818 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 817
-UB 817 hợp lệ và được cải thiện xuống 817!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 817 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 816
-UB 816 hợp lệ và được cải thiện xuống 816!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 816 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 815
-UB 815 hợp lệ và được cải thiện xuống 815!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 815 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 814
-UB 814 hợp lệ và được cải thiện xuống 814!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 814 is valid!
+[runlim] sample:		99.94 time, 100.01 real, 964 MB, 1.01 load
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 813
-UB 813 hợp lệ và được cải thiện xuống 813!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 813 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 812
-UB 812 hợp lệ và được cải thiện xuống 812!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 812 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 811
-UB 811 hợp lệ và được cải thiện xuống 811!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 811 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 810
-UB 810 hợp lệ và được cải thiện xuống 810!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 810 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 809
-UB 809 hợp lệ và được cải thiện xuống 809!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 809 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 808
-UB 808 hợp lệ và được cải thiện xuống 808!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 808 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 807
-UB 807 hợp lệ và được cải thiện xuống 807!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 807 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 806
-UB 806 hợp lệ và được cải thiện xuống 806!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 806 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 805
-UB 805 hợp lệ và được cải thiện xuống 805!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 805 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 804
-UB 804 hợp lệ và được cải thiện xuống 804!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 804 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 803
-UB 803 hợp lệ và được cải thiện xuống 803!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 803 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 802
-UB 802 hợp lệ và được cải thiện xuống 802!
-[runlim] sample:		121.99 time, 121.71 real, 962 MB, 0.97 load
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 802 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 801
-UB 801 hợp lệ và được cải thiện xuống 801!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 801 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 800
-UB 800 hợp lệ và được cải thiện xuống 800!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 800 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 799
-UB 799 hợp lệ và được cải thiện xuống 799!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 799 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 798
-UB 798 hợp lệ và được cải thiện xuống 798!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 798 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 797
-UB 797 hợp lệ và được cải thiện xuống 797!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 797 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 796
-UB 796 hợp lệ và được cải thiện xuống 796!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 796 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 795
-UB 795 hợp lệ và được cải thiện xuống 795!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 795 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 794
-UB 794 hợp lệ và được cải thiện xuống 794!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 794 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 793
-UB 793 hợp lệ và được cải thiện xuống 793!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 793 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 792
-UB 792 hợp lệ và được cải thiện xuống 792!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 792 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 791
-UB 791 hợp lệ và được cải thiện xuống 791!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 791 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 790
-UB 790 hợp lệ và được cải thiện xuống 790!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 790 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 789
-UB 789 hợp lệ và được cải thiện xuống 789!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 789 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 788
-UB 788 hợp lệ và được cải thiện xuống 788!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 788 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 787
-UB 787 hợp lệ và được cải thiện xuống 787!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 787 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 786
-UB 786 hợp lệ và được cải thiện xuống 786!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 786 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 785
-UB 785 hợp lệ và được cải thiện xuống 785!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 785 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 784
-UB 784 hợp lệ và được cải thiện xuống 784!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 784 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 783
-UB 783 hợp lệ và được cải thiện xuống 783!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 783 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 782
-UB 782 hợp lệ và được cải thiện xuống 782!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 782 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 781
-UB 781 hợp lệ và được cải thiện xuống 781!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 781 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 780
-UB 780 hợp lệ và được cải thiện xuống 780!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 780 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 779
-UB 779 hợp lệ và được cải thiện xuống 779!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 779 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 778
-UB 778 hợp lệ và được cải thiện xuống 778!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 778 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 777
-UB 777 hợp lệ và được cải thiện xuống 777!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 777 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 776
-UB 776 hợp lệ và được cải thiện xuống 776!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 776 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 775
-UB 775 hợp lệ và được cải thiện xuống 775!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 775 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 774
-UB 774 hợp lệ và được cải thiện xuống 774!
-SATISFIABLE: Tìm thấy lịch trình hợp lệ!
+UB 774 is valid!
+SAT
 
 => THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 773
-UB 773 hợp lệ và được cải thiện xuống 773!
-UNSATISFIABLE: Không thể đạt được UB bằng cách thêm ràng buộc, UB trước đó là tối ưu!
-[runlim] end:			Tue Apr 14 12:54:11 2026
+UB 773 is valid!
+UNSAT
+status: optimal
+[runlim] end:			Tue Apr 14 13:37:35 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			130.53 seconds
-[runlim] time:			130.42 seconds
-[runlim] space:			1431 MB
-[runlim] load:			0.98 maximum
-[runlim] samples:		1284
+[runlim] real:			109.38 seconds
+[runlim] time:			109.24 seconds
+[runlim] space:			1428 MB
+[runlim] load:			1.01 maximum
+[runlim] samples:		1094

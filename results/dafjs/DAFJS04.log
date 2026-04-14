@@ -1,0 +1,31 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS04
+[runlim] start:			Tue Apr 14 14:20:17 2026
+[runlim] child:			7202
+Operations: 43, Edges: 40, Machines: 10
+Greedy Schedule UB: 606
+Greedy UB 606 is valid!
+Building constraints took 3.63 seconds.
+SAT
+
+=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 606
+UB 606 is valid!
+UNSAT
+status: optimal
+[runlim] end:			Tue Apr 14 14:20:22 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			4.54 seconds
+[runlim] time:			4.45 seconds
+[runlim] space:			625 MB
+[runlim] load:			1.21 maximum
+[runlim] samples:		46

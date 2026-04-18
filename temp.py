@@ -239,23 +239,24 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         -m[(j, machine)],
                         -s[(i, t_i)]
                     ]
-                    # nếu start <= 0 thì luôn thỏa → không cần thêm
+
                     # Nếu end < ES_j: j chắc chắn bắt đầu sau end -> Mệnh đề luôn ĐÚNG
                     if end < feasible_time[j][0]:
                         continue
-                    
+
                     # Nếu start + 1 > LS_j: j chắc chắn bắt đầu trước start -> Mệnh đề luôn ĐÚNG
-                    if start + 1 > feasible_time[j][1]:
+                    if start  >= feasible_time[j][1]:
                         continue
+
                     # xử lý biên trái
                     if start > feasible_time[j][0]:
                         clause.append(-x[(j, start + 1)])
-                    
+
                     # xử lý biên phải
                     if end <= feasible_time[j][1]:
                         clause.append(x[(j, end)])
-                    # nếu end >= feasible_time[j][1] thì luôn thỏa
 
+                    # nếu end >= feasible_time[j][1] thì luôn thỏa
                     solver.add_clause(clause)
     
 
@@ -284,7 +285,7 @@ def add_incremental_constraints(solver, num_operations, out_degree, request_list
     for i in last_ops:
         for machine, process_time in request_list[i].items():
             limit_time = ub - process_time
-            if limit_time < feasible_time[i][0]:
+            if limit_time < feasible_time[i][0] :
                 solver.add_clause([-m[(i, machine)]]) 
             elif limit_time < feasible_time[i][1]:
                 solver.add_clause([-m[(i, machine)], -x[(i, limit_time + 1)]])

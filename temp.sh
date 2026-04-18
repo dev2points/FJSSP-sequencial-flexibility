@@ -17,12 +17,12 @@ mkdir -p $DARESULT_DIR
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS06 2>&1 | tee $YRESULT_DIR/YFJS06.log 
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS07 2>&1 | tee $YRESULT_DIR/YFJS07.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS08 2>&1 | tee $YRESULT_DIR/YFJS08.log
-# ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS09 2>&1 | tee $YRESULT_DIR/YFJS09.log
+./runlim -r $TO -s $MO python3 -u temp.py $YDATA_DIR/YFJS09 2>&1 | tee $YRESULT_DIR/YFJS09.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS10 2>&1 | tee $YRESULT_DIR/YFJS10.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS11 2>&1 | tee $YRESULT_DIR/YFJS11.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS12 2>&1 | tee $YRESULT_DIR/YFJS12.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS13 2>&1 | tee $YRESULT_DIR/YFJS13.log
-./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS14 2>&1 | tee $YRESULT_DIR/YFJS14.log
+# ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS14 2>&1 | tee $YRESULT_DIR/YFJS14.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS15 2>&1 | tee $YRESULT_DIR/YFJS15.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS16 2>&1 | tee $YRESULT_DIR/YFJS16.log
 # ./runlim -r $TO -s $MO python3 -u main.py $YDATA_DIR/YFJS17 2>&1 | tee $YRESULT_DIR/YFJS17.log
@@ -54,7 +54,7 @@ mkdir -p $DARESULT_DIR
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS22 2>&1 | tee $DARESULT_DIR/DAFJS22.log
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS23 2>&1 | tee $DARESULT_DIR/DAFJS23.log
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS24 2>&1 | tee $DARESULT_DIR/DAFJS24.log
-./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS25 2>&1 | tee $DARESULT_DIR/DAFJS25.log
+# ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS25 2>&1 | tee $DARESULT_DIR/DAFJS25.log
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS26 2>&1 | tee $DARESULT_DIR/DAFJS26.log
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS27 2>&1 | tee $DARESULT_DIR/DAFJS27.log
 # ./runlim -r $TO -s $MO python3 -u main.py $DADATA_DIR/DAFJS28 2>&1 | tee $DARESULT_DIR/DAFJS28.log

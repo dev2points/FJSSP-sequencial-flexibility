@@ -54,7 +54,6 @@ def data(num_operations, precedence_list):
 
     return in_degree, out_degree, neighbors, predecessors
 
-
 def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
     machine_ready_time = {m: 0 for m in range(num_machines)}
     op_completion_time = {i: 0 for i in range(num_operations)} 
@@ -176,15 +175,10 @@ def create_var(num_operations, request_list, size_time):
             counter += 1
             m[(i, a)] = counter
     
-    a = {}
-    for i in range(num_operations):
-        for t in range(size_time + 1):
-            counter += 1
-            a[(i,t)] = counter
 
-    return s, x, m, a, counter    
+    return s, x, m, counter    
 
-def build_constraints(solver, num_operations, precedence_list, request_list, size_time, s, x, m, a, top_id):
+def build_constraints(solver, num_operations, precedence_list, request_list, size_time, s, x, m, top_id):
     # (4) tạo dãy order
     for i in range(num_operations):
         for t in range(size_time):
@@ -219,58 +213,52 @@ def build_constraints(solver, num_operations, precedence_list, request_list, siz
         top_id = enc.nv
         solver.append_formula(enc.clauses)
 
-    # liên kết trạng thái active 
-    for i in range(num_operations):
-        processing = dict(sorted(request_list[i].items(), key=lambda x: x[1]))
-        first = 1
-        for machine, process_time in processing.items():
-            if first == 1:
-                first_process_time = process_time
-                first = 0
-                for t in range(size_time + 1):
-                    for delta in range(first_process_time):
-                        if t + delta <= size_time:
-                            solver.add_clause([-s[(i,t)], a[(i,t+delta)]]) #(8)
-                        else:
-                            break
-            else:
-                for t in range(size_time + 1):
-                    for delta in range(first_process_time, process_time):
-                        if t + delta <= size_time:
-                            solver.add_clause([-s[(i,t)], -m[(i,machine)], a[(i,t+delta)]]) #(9)
-                        else:
-                            break
-    
-    # (10) 
-    for i in range(num_operations):
-        for t in range(size_time):
-            solver.add_clause([-a[(i,t)], -x[(i,t+1)]])
 
-    #(11)
+    # #(11)
     for i in range(num_operations):
-        processing_i = request_list[i]
         for j in range(i+1, num_operations):
-            processing_j = request_list[j]
-            for machine_i in processing_i.keys():
-                for machine_j in processing_j.keys():
-                    if machine_i == machine_j:
-                        for t in range(size_time + 1):
-                            solver.add_clause([-m[(i,machine_i)], -m[(j,machine_j)], -a[(i,t)], -a[(j,t)]]) #(11)                    
-            
+            common_machines = set(request_list[i].keys()).intersection(set(request_list[j].keys()))
+            for machine in common_machines:
+                p_i = request_list[i][machine]
+                p_j = request_list[j][machine]
+
+                for t_i in range(size_time + 1):
+
+                    start = t_i - p_j # Biên time bên trái
+                    end   = t_i + p_i # Biên time bên phải
+
+                    clause = [
+                        -m[(i, machine)],
+                        -m[(j, machine)],
+                        -s[(i, t_i)]
+                    ]
+
+                    # xử lý biên trái
+                    if start > 0:
+                        clause.append(-x[(j, start + 1)])
+                    # nếu start <= 0 thì luôn thỏa → không cần thêm
+
+                    # xử lý biên phải
+                    if end <= size_time:
+                        clause.append(x[(j, end)])
+                    # nếu end >= size_time thì luôn thỏa
+
+                    solver.add_clause(clause)
+
+                    
         
-def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m, a):
+def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m):
     # (12) Giới hạn makespan cho toàn bộ thao tác, không chỉ các thao tác cuối.
     # Nếu một máy không thể hoàn thành thao tác trước hoặc tại ub, cấm gán máy đó.
     last_ops = [i for i in range(num_operations) if out_degree[i] == 0]
     # print(f"Adding incremental constraints for UB = {ub} on last operations: {last_ops}")
     for i in last_ops:
-    # for i in range(num_operations):
         for machine, process_time in request_list[i].items():
             limit_time = ub - process_time
             if limit_time >= 0:
                 solver.add_clause([-m[(i, machine)], -x[(i, limit_time + 1)]])
-            # else:
-            #     solver.add_clause([-m[(i, machine)]])
+            else:
+                solver.add_clause([-m[(i, machine)]])
 
 def solve_and_print(solver, num_operations, s, m, request_list):
     if solver.solve():
@@ -440,21 +428,22 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 
 def main():
+    start_time = perf_counter()
     file_path = sys.argv[1]
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
 
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
     ub = size_time - 1
-    s, x, m, a, top_id = create_var(num_operations, request_list, ub)
+    s, x, m, top_id = create_var(num_operations, request_list, ub)
 
-    start_time = perf_counter()
+    
     solver = Solver(name = 'cadical195')
-    build_constraints(solver, num_operations, precedence_list, request_list, ub, s, x, m, a, top_id)
+    build_constraints(solver, num_operations, precedence_list, request_list, ub, s, x, m, top_id)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:
-        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m, a)
+        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m)
         machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
         if machine_assignment is None:
             break  # Không thể giảm UB nữa
@@ -467,5 +456,6 @@ def main():
 
         # Tìm nghiệm tốt hơn ở vòng lặp tiếp theo.
         ub = makespan - 1
+        print(f" Time taken: {perf_counter() - start_time:.2f} seconds")
 if __name__ == "__main__":
     main()

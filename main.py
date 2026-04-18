@@ -116,7 +116,7 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
     for i in range(num_operations):
         feasible_time[i] = (earliest_start[i], latest_start[i])
         if earliest_start[i] > latest_start[i]:
-            print(f"Thao tác {i} không thể hoàn thành trong UB hiện tại (feasible time: {feasible_time[i]})")
+            print(f"Operation {i} cannot be scheduled (feasible time: {feasible_time[i]})")
 
     return feasible_time
 
@@ -305,14 +305,14 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         for (i, machine), lit in m.items():
             if lit in positive_lits:
                 if machine_assignment.get(i) is not None:
-                    raise ValueError(f"Cảnh báo: Thao tác {i} đã được gán máy {machine_assignment[i]} trước đó, nhưng giờ lại được gán máy {machine}.")
+                    raise ValueError(f"Warning: Operation {i} was already assigned to machine {machine_assignment[i]}, but now is assigned to machine {machine}.")
                 machine_assignment[i] = machine
                 
         # 2. Trích xuất Thời điểm bắt đầu của mỗi thao tác
         for (i, t), lit in s.items():
             if lit in positive_lits:
                 if start_times.get(i) is not None:
-                    raise ValueError(f"Cảnh báo: Thao tác {i} đã có thời điểm bắt đầu {start_times[i]} trước đó, nhưng giờ lại có thời điểm bắt đầu {t}.")
+                    raise ValueError(f"Warning: Operation {i} already has a start time {start_times[i]} assigned, but now has a new start time {t}.")
                 start_times[i] = t
                 
         # 3. Tạo hàng đợi và tính Makespan (UB)
@@ -342,15 +342,15 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         # --- IN KẾT QUẢ ---
         # print("\n--- CHI TIẾT GÁN MÁY ---")
         # for i in range(num_operations):
-        #     print(f"Thao tác {i:2d}: Chạy trên Máy {machine_assignment[i]}, Từ t = {start_times[i]} đến t = {start_times[i] + request_list[i][machine_assignment[i]]}")
+        #     print(f"Operation {i:2d}: Running on Machine {machine_assignment[i]}, From t = {start_times[i]} to t = {start_times[i] + request_list[i][machine_assignment[i]]}")
             
-        # print("\n--- HÀNG ĐỢI TRÊN TỪNG MÁY ---")
+        # print("\n--- QUEUE ON EACH MACHINE ---")
         # for machine, queue in sorted(machine_queues.items()):
-        #     # Định dạng chuỗi cho đẹp: Op i [start -> end]
+        #     # Format string for better readability: Op i [start -> end]
         #     queue_str = "  ->  ".join([f"Op {op} [{st}->{en}]" for st, en, op in queue])
-        #     print(f"Máy {machine}: {queue_str}")
+        #     print(f"Machine {machine}: {queue_str}")
             
-        print(f"\n=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): {makespan}")
+        print(f"\n=> TOTAL COMPLETION TIME (Makespan / UB): {makespan}")
             
         # Trả về thêm makespan (ub) ở vị trí thứ 4
         return machine_assignment, start_times, machine_queues, makespan
@@ -365,25 +365,21 @@ def solve_and_print(solver, num_operations, s, m, request_list):
 def verify_schedule(num_operations, num_machines, precedence_list,
                     request_list, machine_assignment, start_times):
 
-    """
-    Verify schedule từ SAT model (KHÔNG dùng greedy queue)
-    """
-
     # 1. Kiểm tra mỗi operation có đúng 1 machine
     for i in range(num_operations):
         if i not in machine_assignment:
-            print(f"Op {i} chưa được gán máy")
+            print(f"Operation {i} is not assigned to any machine")
             return False
 
         machine = machine_assignment[i]
         if machine not in request_list[i]:
-            print(f"Op {i} gán máy {machine} không hợp lệ")
+            print(f"Operation {i} is assigned to machine {machine} which is not valid")
             return False
 
     # 2. Kiểm tra mỗi operation có đúng 1 start time
     for i in range(num_operations):
         if i not in start_times:
-            print(f"Op {i} chưa có start time")
+            print(f"Operation {i} does not have a start time")
             return False
 
     # 3. Tính lại schedule thực tế (resolve conflict + precedence)
@@ -407,7 +403,7 @@ def verify_schedule(num_operations, num_machines, precedence_list,
         if predecessors[i]:
             for p in predecessors[i]:
                 if p not in op_completion_time:
-                    print(f"Op {i} có predecessor {p} chưa hoàn thành")
+                    print(f"Operation {i} has predecessor {p} that is not completed")
                     return False
             earliest_start = max(op_completion_time[p] for p in predecessors[i])
 
@@ -435,7 +431,7 @@ def verify_schedule(num_operations, num_machines, precedence_list,
             st1, en1, i1 = intervals[k]
             st2, en2, i2 = intervals[k+1]
             if en1 > st2:
-                print(f"Machine {m} bị overlap giữa op {i1} (từ {st1} đến {en1}) và op {i2} (từ {st2} đến {en2})")
+                print(f"Machine {m} is overlapping between operation {i1} (from {st1} to {en1}) and operation {i2} (from {st2} to {en2})")
                 return False
 
     # 5. kiểm tra precedence trực tiếp
@@ -447,7 +443,7 @@ def verify_schedule(num_operations, num_machines, precedence_list,
         start_v = start_times[v]
 
         if end_u > start_v:
-            print(f"Vi phạm precedence: op {u} (kết thúc lúc {end_u}) phải trước op {v} (bắt đầu lúc {start_v})")
+            print(f"Violation of precedence: operation {u} (completed at {end_u}) must come before operation {v} (started at {start_v})")
             return False
 
     # 6. makespan

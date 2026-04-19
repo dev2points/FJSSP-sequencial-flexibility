@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS16
-[runlim] start:			Sun Apr 19 22:32:50 2026
-[runlim] child:			60920
+[runlim] start:			Sun Apr 19 23:18:36 2026
+[runlim] child:			77674
 Loading data từ: datasets/yfjs/YFJS16
 Operations: 221, Edges: 208, Machines: 26
 Greedy Schedule UB: 1498
@@ -17,92 +17,71 @@ Complete preprocessing! Greedy UB = 1498
 Initial UB = 1497, LB = 1189
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 1189, UB = 1497
-[TopDown] Initializing with target = 1497
+[BottomUp] Trying with at most 1189, LB = 1189, UB = 1497
+[TopDown] Trying with at most 1497, LB = 1189, UB = 1497
 [IndepBinary] New iteration with LB = 1189, UB = 1497, Target = 1343
 [CoopBinary] New iteration with LB = 1189, UB = 1497, Target = 1343
-[BottomUp] UNSAT in 1189. Incrementing LB.
-Time taken: 9.21 seconds
-Current bounds: LB = 1190, UB = 1497
-[BottomUp] Starting new iteration with LB = 1190, UB = 1497
-[runlim] sample:		10.05 time, 10.01 real, 875 MB, 1.42 load
+[runlim] sample:		10.05 time, 10.01 real, 1002 MB, 1.05 load
 [CoopBinary] SAT in 1343! Updating UB.
-Time taken: 19.39 seconds
-Current bounds: LB = 1190, UB = 1342
-[CoopBinary] New iteration with LB = 1190, UB = 1342, Target = 1266
-[runlim] sample:		20.09 time, 20.01 real, 1103 MB, 1.35 load
-[CoopBinary] SAT in 1266! Updating UB.
-Time taken: 29.18 seconds
-Current bounds: LB = 1190, UB = 1265
-[CoopBinary] New iteration with LB = 1190, UB = 1265, Target = 1227
-[runlim] sample:		30.15 time, 30.01 real, 1103 MB, 1.30 load
-[CoopBinary] SAT in 1227! Updating UB.
-Time taken: 36.74 seconds
-Current bounds: LB = 1190, UB = 1226
-[CoopBinary] New iteration with LB = 1190, UB = 1226, Target = 1208
-[CoopBinary] UNSAT in 1208. Incrementing LB.
-Time taken: 36.75 seconds
-Current bounds: LB = 1209, UB = 1226
-[CoopBinary] New iteration with LB = 1209, UB = 1226, Target = 1217
-[runlim] sample:		40.20 time, 40.01 real, 1118 MB, 1.25 load
-[IndepBinary] New iteration with LB = 1209, UB = 1226, Target = 1217
-[runlim] sample:		50.24 time, 50.01 real, 1233 MB, 1.21 load
-[IndepBinary] UNSAT in 1217. Incrementing LB.
-Time taken: 50.17 seconds
-Current bounds: LB = 1218, UB = 1226
-[IndepBinary] New iteration with LB = 1218, UB = 1226, Target = 1222
-[BottomUp] UNSAT in 1190. Incrementing LB.
-Time taken: 54.56 seconds
-Current bounds: LB = 1218, UB = 1226
-[BottomUp] Starting new iteration with LB = 1218, UB = 1226
-[CoopBinary] UNSAT in 1217. Incrementing LB.
-Time taken: 54.78 seconds
-Current bounds: LB = 1218, UB = 1226
-[CoopBinary] New iteration with LB = 1218, UB = 1226, Target = 1222
-[runlim] sample:		60.29 time, 60.01 real, 1453 MB, 1.11 load
-[runlim] sample:		70.36 time, 70.01 real, 1417 MB, 1.24 load
-[runlim] sample:		80.40 time, 80.01 real, 1408 MB, 1.29 load
-[TopDown] SAT in 1226! Updating UB.
-Time taken: 83.87 seconds
-Current bounds: LB = 1218, UB = 1225
+Time taken: 17.77 seconds
+Current bounds: LB = 1189, UB = 1342
+[CoopBinary] New iteration with LB = 1189, UB = 1342, Target = 1265
+[runlim] sample:		20.11 time, 20.01 real, 1044 MB, 1.04 load
+[CoopBinary] SAT in 1265! Updating UB.
+Time taken: 27.39 seconds
+Current bounds: LB = 1189, UB = 1264
+[CoopBinary] New iteration with LB = 1189, UB = 1264, Target = 1226
+[runlim] sample:		30.17 time, 30.01 real, 1051 MB, 1.03 load
+[CoopBinary] SAT in 1226! Updating UB.
+Time taken: 33.79 seconds
+Current bounds: LB = 1189, UB = 1225
+[CoopBinary] New iteration with LB = 1189, UB = 1225, Target = 1207
+[CoopBinary] UNSAT in 1207. Incrementing LB.
+Time taken: 33.95 seconds
+Current bounds: LB = 1208, UB = 1225
+[CoopBinary] New iteration with LB = 1208, UB = 1225, Target = 1216
+[BottomUp] UNSAT in 1189. Incrementing LB.
+Time taken: 35.57 seconds
+Current bounds: LB = 1208, UB = 1225
+[BottomUp] Trying with at most 1208, LB = 1208, UB = 1225
+[runlim] sample:		40.22 time, 40.01 real, 1222 MB, 1.03 load
+[IndepBinary] New iteration with LB = 1208, UB = 1225, Target = 1216
+[IndepBinary] UNSAT in 1216. Incrementing LB.
+Time taken: 49.87 seconds
+Current bounds: LB = 1217, UB = 1225[runlim] sample:		50.26 time, 50.01 real, 1354 MB, 1.02 load
+
+[IndepBinary] New iteration with LB = 1217, UB = 1225, Target = 1221
+[runlim] sample:		60.31 time, 60.01 real, 1469 MB, 1.02 load
+[runlim] sample:		70.36 time, 70.01 real, 1435 MB, 1.02 load
+[runlim] sample:		80.41 time, 80.01 real, 1415 MB, 1.01 load
 [TopDown] SAT in 1225! Updating UB.
-Time taken: 83.88 seconds
-Current bounds: LB = 1218, UB = 1224
+Time taken: 83.48 seconds
+Current bounds: LB = 1217, UB = 1224
+[runlim] sample:		90.47 time, 90.01 real, 1429 MB, 1.01 load
 [TopDown] SAT in 1224! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1223
+Time taken: 92.82 seconds
+Current bounds: LB = 1217, UB = 1223
 [TopDown] SAT in 1223! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1222
+Time taken: 94.92 seconds
+Current bounds: LB = 1217, UB = 1222
 [TopDown] SAT in 1222! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1221
-[TopDown] SAT in 1221! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1220
-[TopDown] SAT in 1220! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1219
-[TopDown] SAT in 1219! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1218
-[TopDown] SAT in 1218! Updating UB.
-Time taken: 83.91 seconds
-Current bounds: LB = 1218, UB = 1217
-[runlim] sample:		90.45 time, 90.01 real, 853 MB, 1.32 load
+Time taken: 95.57 seconds
+Current bounds: LB = 1217, UB = 1221
+[TopDown]  UNSAT in 1221. FOUND OPTIMAL.
+Time taken: 95.57 seconds
 --------------------------------------------------
 Final result:
 Status: Optimal
 Proved by: TopDown
-Optimal Makespan: 1218
-Total time: 99.74 seconds
-[runlim] end:			Sun Apr 19 22:34:30 2026
+Optimal Makespan: 1222
+Total time: 98.48 seconds
+[runlim] end:			Sun Apr 19 23:20:15 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			99.79 seconds
-[runlim] time:			100.15 seconds
-[runlim] space:			1605 MB
-[runlim] load:			1.43 maximum
-[runlim] samples:		998
+[runlim] real:			98.53 seconds
+[runlim] time:			99.04 seconds
+[runlim] space:			1624 MB
+[runlim] load:			1.06 maximum
+[runlim] samples:		986

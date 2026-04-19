@@ -1,0 +1,177 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS06
+[runlim] start:			Sun Apr 19 23:28:54 2026
+[runlim] child:			77765
+Loading data từ: datasets/dafjs/DAFJS06
+Operations: 44, Edges: 41, Machines: 5
+Greedy Schedule UB: 490
+Lower Bound: 391 (precedence=326, avg_load=391, mandatory=0)
+Complete preprocessing! Greedy UB = 490
+Initial UB = 489, LB = 391
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Trying with at most 391, LB = 391, UB = 489
+[TopDown] Trying with at most 489, LB = 391, UB = 489
+[IndepBinary] New iteration with LB = 391, UB = 489, Target = 440
+[CoopBinary] New iteration with LB = 391, UB = 489, Target = 440
+[runlim] sample:		10.05 time, 10.01 real, 182 MB, 1.00 load
+[runlim] sample:		20.11 time, 20.01 real, 206 MB, 1.00 load
+[BottomUp] UNSAT in 391. Incrementing LB.
+Time taken: 22.95 seconds
+Current bounds: LB = 392, UB = 489
+[BottomUp] Trying with at most 392, LB = 392, UB = 489
+[IndepBinary] SAT in 440! Updating UB.
+Time taken: 27.93 seconds
+Current bounds: LB = 392, UB = 439
+Exception in thread Thread-3 (worker_independent_binary):
+Traceback (most recent call last):
+[TopDown] SAT in 489! Updating UB.
+Time taken: 27.94 seconds
+Current bounds: LB = 392, UB = 439
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 549, in worker_independent_binary
+    s_obj.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+[runlim] sample:		30.16 time, 30.01 real, 364 MB, 1.00 load
+    self.solver.interrupt()
+[TopDown] SAT in 439! Updating UB.
+Time taken: 33.44 seconds
+Current bounds: LB = 392, UB = 438
+[TopDown] SAT in 438! Updating UB.
+Time taken: 34.48 seconds
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+Current bounds: LB = 392, UB = 437
+[TopDown] SAT in 437! Updating UB.
+Time taken: 34.50 seconds
+Current bounds: LB = 392, UB = 436
+[TopDown] SAT in 436! Updating UB.
+Time taken: 34.61 seconds
+Current bounds: LB = 392, UB = 435
+[TopDown] SAT in 435! Updating UB.
+Time taken: 34.85 seconds
+Current bounds: LB = 392, UB = 434
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] SAT in 434! Updating UB.
+Time taken: 35.13 seconds
+Current bounds: LB = 392, UB = 433
+[TopDown] SAT in 433! Updating UB.
+Time taken: 35.70 seconds
+Current bounds: LB = 392, UB = 432
+[TopDown] SAT in 432! Updating UB.
+Time taken: 35.96 seconds
+Current bounds: LB = 392, UB = 431
+[TopDown] SAT in 431! Updating UB.
+Time taken: 36.22 seconds
+Current bounds: LB = 392, UB = 430
+[TopDown] SAT in 430! Updating UB.
+Time taken: 36.22 seconds
+Current bounds: LB = 392, UB = 429
+[TopDown] SAT in 429! Updating UB.
+Time taken: 38.18 seconds
+Current bounds: LB = 392, UB = 428
+[TopDown] SAT in 428! Updating UB.
+Time taken: 38.46 seconds
+Current bounds: LB = 392, UB = 427
+[runlim] sample:		40.21 time, 40.01 real, 282 MB, 1.00 load
+[TopDown] SAT in 427! Updating UB.
+Time taken: 43.14 seconds
+Current bounds: LB = 392, UB = 426
+[TopDown] SAT in 426! Updating UB.
+Time taken: 44.86 seconds
+Current bounds: LB = 392, UB = 425
+[TopDown] SAT in 425! Updating UB.
+Time taken: 46.00 seconds
+Current bounds: LB = 392, UB = 424
+[TopDown] SAT in 424! Updating UB.
+Time taken: 46.14 seconds
+Current bounds: LB = 392, UB = 423
+[TopDown] SAT in 423! Updating UB.
+Time taken: 46.29 seconds
+Current bounds: LB = 392, UB = 422
+[runlim] sample:		50.25 time, 50.01 real, 360 MB, 1.00 load
+[CoopBinary] SAT in 440! Updating UB.
+Time taken: 51.59 seconds
+Current bounds: LB = 392, UB = 422
+[CoopBinary] New iteration with LB = 392, UB = 422, Target = 407
+[runlim] sample:		60.29 time, 60.01 real, 361 MB, 1.00 load
+[runlim] sample:		70.33 time, 70.01 real, 361 MB, 1.00 load
+[runlim] sample:		80.36 time, 80.01 real, 361 MB, 1.00 load
+[CoopBinary] SAT in 407! Updating UB.
+Time taken: 82.36 seconds
+Exception in thread Thread-4 (worker_cooperative_binary)[TopDown] SAT in 422! Updating UB.
+Time taken: 82.37 seconds
+Current bounds: LB = 392, UB = 406
+[runlim] sample:		90.40 time, 90.01 real, 362 MB, 1.00 load
+[runlim] sample:		100.44 time, 100.01 real, 362 MB, 1.00 load
+[runlim] sample:		110.48 time, 110.01 real, 362 MB, 1.00 load
+[TopDown] SAT in 406! Updating UB.
+Time taken: 116.57 seconds
+Current bounds: LB = 392, UB = 405
+[TopDown] SAT in 405! Updating UB.
+Time taken: 116.60 seconds
+Current bounds: LB = 392, UB = 404:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+
+[TopDown] SAT in 404! Updating UB.
+Time taken: 117.03 seconds
+Current bounds: LB = 392, UB = 403
+[runlim] sample:		120.51 time, 120.01 real, 370 MB, 1.00 load
+[runlim] sample:		130.55 time, 130.01 real, 371 MB, 1.00 load
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+[runlim] sample:		140.59 time, 140.01 real, 372 MB, 1.00 load
+[runlim] sample:		150.62 time, 150.01 real, 372 MB, 1.00 load
+[runlim] sample:		160.67 time, 160.01 real, 373 MB, 1.00 load
+[runlim] sample:		170.71 time, 170.01 real, 373 MB, 1.00 load
+[runlim] sample:		180.74 time, 180.01 real, 377 MB, 1.00 load
+[runlim] sample:		190.78 time, 190.01 real, 377 MB, 1.00 load
+[runlim] sample:		200.83 time, 200.01 real, 377 MB, 1.00 load
+[runlim] sample:		210.86 time, 210.01 real, 377 MB, 1.00 load
+[runlim] sample:		220.90 time, 220.01 real, 377 MB, 1.00 load
+[runlim] sample:		230.94 time, 230.01 real, 377 MB, 1.00 load
+[runlim] sample:		240.99 time, 240.01 real, 377 MB, 1.00 load
+[runlim] sample:		251.03 time, 250.01 real, 377 MB, 1.00 load
+[runlim] sample:		261.07 time, 260.01 real, 378 MB, 1.00 load
+[runlim] sample:		271.12 time, 270.01 real, 378 MB, 1.00 load
+[BottomUp] UNSAT in 392. Incrementing LB.
+Time taken: 273.58 seconds
+Current bounds: LB = 393, UB = 403
+[TopDown]  UNSAT in 403. FOUND OPTIMAL.
+    Time taken: 273.58 seconds
+self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 624, in worker_cooperative_binary
+    for n, s_obj in shared_state['active_solvers'].items(): s_obj.interrupt()
+                                                            ^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: TopDown
+Optimal Makespan: 404
+Total time: 273.59 seconds
+[runlim] end:			Sun Apr 19 23:33:27 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			273.63 seconds
+[runlim] time:			274.73 seconds
+[runlim] space:			378 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		2737

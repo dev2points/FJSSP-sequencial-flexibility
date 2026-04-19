@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS14
-[runlim] start:			Sun Apr 19 22:30:41 2026
-[runlim] child:			60756
+[runlim] start:			Sun Apr 19 23:17:38 2026
+[runlim] child:			77658
 Loading data từ: datasets/yfjs/YFJS14
 Operations: 221, Edges: 208, Machines: 26
 Greedy Schedule UB: 1517
@@ -17,58 +17,28 @@ Complete preprocessing! Greedy UB = 1517
 Initial UB = 1516, LB = 1317
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 1317, UB = 1516
-[TopDown] Initializing with target = 1516
+[BottomUp] Trying with at most 1317, LB = 1317, UB = 1516
+[TopDown] Trying with at most 1516, LB = 1317, UB = 1516
 [IndepBinary] New iteration with LB = 1317, UB = 1516, Target = 1416
 [CoopBinary] New iteration with LB = 1317, UB = 1516, Target = 1416
-[runlim] sample:		10.06 time, 10.01 real, 1121 MB, 0.96 load
-[runlim] sample:		20.10 time, 20.01 real, 1973 MB, 1.04 load
-[runlim] sample:		30.16 time, 30.01 real, 2058 MB, 1.04 load
-[CoopBinary] SAT in 1416! Updating UB.
-Time taken: 32.51 seconds
-Current bounds: LB = 1317, UB = 1415
-[CoopBinary] New iteration with LB = 1317, UB = 1415, Target = 1366
-[CoopBinary] SAT in 1366! Updating UB.
-Time taken: 36.45 seconds
-Current bounds: LB = 1317, UB = 1365
-[CoopBinary] New iteration with LB = 1317, UB = 1365, Target = 1341
-[runlim] sample:		40.22 time, 40.01 real, 2006 MB, 1.11 load
-[CoopBinary] SAT in 1341! Updating UB.
-Time taken: 47.03 seconds
-Current bounds: LB = 1317, UB = 1340
-[CoopBinary] New iteration with LB = 1317, UB = 1340, Target = 1328
-[CoopBinary] SAT in 1328! Updating UB.
-Time taken: 48.79 seconds
-Current bounds: LB = 1317, UB = 1327
-[CoopBinary] New iteration with LB = 1317, UB = 1327, Target = 1322
-[CoopBinary] SAT in 1322! Updating UB.
-Time taken: 48.91 seconds
-Current bounds: LB = 1317, UB = 1321
-[CoopBinary] New iteration with LB = 1317, UB = 1321, Target = 1319
-[CoopBinary] SAT in 1319! Updating UB.
-Time taken: 48.95 seconds
-Current bounds: LB = 1317, UB = 1318
-[CoopBinary] New iteration with LB = 1317, UB = 1318, Target = 1317
-[CoopBinary] SAT in 1317! Updating UB.
-Time taken: 49.30 seconds
-[CoopBinary] UB < LB => OPTIMAL
-Current bounds: LB = 1317, UB = 1316
-[runlim] sample:		50.26 time, 50.01 real, 1543 MB, 1.09 load
-[runlim] sample:		60.31 time, 60.01 real, 1074 MB, 1.08 load
-[runlim] sample:		70.33 time, 70.01 real, 1326 MB, 1.15 load
+[runlim] sample:		10.06 time, 10.01 real, 1122 MB, 1.25 load
+[runlim] sample:		20.11 time, 20.01 real, 1637 MB, 1.21 load
+[BottomUp] SAT in 1317! FOUND OPTIMAL.
+Time taken: 24.21 seconds
+[runlim] sample:		30.17 time, 30.01 real, 545 MB, 1.10 load
 --------------------------------------------------
 Final result:
 Status: Optimal
-Proved by: CoopBinary
+Proved by: BottomUp
 Optimal Makespan: 1317
-Total time: 74.18 seconds
-[runlim] end:			Sun Apr 19 22:31:55 2026
+Total time: 31.12 seconds
+[runlim] end:			Sun Apr 19 23:18:09 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			74.24 seconds
-[runlim] time:			74.54 seconds
-[runlim] space:			2198 MB
-[runlim] load:			1.15 maximum
-[runlim] samples:		743
+[runlim] real:			31.18 seconds
+[runlim] time:			31.27 seconds
+[runlim] space:			1757 MB
+[runlim] load:			1.29 maximum
+[runlim] samples:		312

@@ -1,0 +1,41 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS03
+[runlim] start:			Sun Apr 19 23:28:40 2026
+[runlim] child:			77743
+Loading data từ: datasets/dafjs/DAFJS03
+Operations: 55, Edges: 52, Machines: 10
+Greedy Schedule UB: 601
+Lower Bound: 576 (precedence=576, avg_load=268, mandatory=0)
+Complete preprocessing! Greedy UB = 601
+Initial UB = 600, LB = 576
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Trying with at most 576, LB = 576, UB = 600
+[TopDown] Trying with at most 600, LB = 576, UB = 600
+[IndepBinary] New iteration with LB = 576, UB = 600, Target = 588
+[CoopBinary] New iteration with LB = 576, UB = 600, Target = 588
+[BottomUp] SAT in 576! FOUND OPTIMAL.
+Time taken: 0.59 seconds
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: BottomUp
+Optimal Makespan: 576
+Total time: 1.28 seconds
+[runlim] end:			Sun Apr 19 23:28:41 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			1.31 seconds
+[runlim] time:			1.31 seconds
+[runlim] space:			84 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		14

@@ -1,0 +1,38 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS04
+[runlim] start:			Sun Apr 19 23:28:41 2026
+[runlim] child:			77750
+Loading data từ: datasets/dafjs/DAFJS04
+Operations: 43, Edges: 40, Machines: 10
+Greedy Schedule UB: 606
+Lower Bound: 606 (precedence=606, avg_load=225, mandatory=0)
+Complete preprocessing! Greedy UB = 606
+Initial UB = 605, LB = 606
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[TopDown] Trying with at most 605, LB = 606, UB = 605
+Operation 7 cannot be scheduled (feasible time: (434, 433))
+No feasible solution found with UB = 605 during pre-processing.
+--------------------------------------------------
+Final result:
+Status: Solving
+Proved by: None
+Optimal Makespan: 606
+Total time: 0.00 seconds
+[runlim] end:			Sun Apr 19 23:28:41 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] processes:		0
+[runlim] real:			0.04 seconds
+[runlim] time:			0.00 seconds
+[runlim] space:			0 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		1

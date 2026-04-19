@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS01
-[runlim] start:			Sun Apr 19 22:29:50 2026
-[runlim] child:			60658
+[runlim] start:			Sun Apr 19 23:16:50 2026
+[runlim] child:			77563
 Loading data từ: datasets/yfjs/YFJS01
 Operations: 40, Edges: 36, Machines: 7
 Greedy Schedule UB: 988
@@ -17,140 +17,96 @@ Complete preprocessing! Greedy UB = 988
 Initial UB = 987, LB = 718
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 718, UB = 987
-[TopDown] Initializing with target = 987
-[IndepBinary] New iteration with LB = 718, UB = 987, Target = 852
+[BottomUp] Trying with at most 718, LB = 718, UB = 987
+[TopDown] Trying with at most 987, LB = 718, UB = 987
 [BottomUp] UNSAT in 718. Incrementing LB.
-Time taken: 0.18 seconds
+Time taken: 0.16 seconds
 Current bounds: LB = 719, UB = 987
-[BottomUp] Starting new iteration with LB = 719, UB = 987
-[CoopBinary] New iteration with LB = 719, UB = 987, Target = 853
-[CoopBinary] SAT in 853! Updating UB.
-Time taken: 0.74 seconds
-Current bounds: LB = 719, UB = 852
-[CoopBinary] New iteration with LB = 719, UB = 852, Target = 785[BottomUp] UNSAT in 719. Incrementing LB.
-Time taken: 0.80 seconds
+[BottomUp] Trying with at most 719, LB = 719, UB = 987
+[IndepBinary] New iteration with LB = 719, UB = 987, Target = 853
+[BottomUp] UNSAT in 719. Incrementing LB.
+Time taken: 0.39 seconds
+Current bounds: LB = 720, UB = 987
+[CoopBinary] New iteration with LB = 720, UB = 987, Target = 853
+[BottomUp] Trying with at most 720, LB = 720, UB = 987
+[IndepBinary] SAT in 853! Updating UB.
+Time taken: 0.81 seconds
 Current bounds: LB = 720, UB = 852
-[BottomUp] Starting new iteration with LB = 720, UB = 852
 [IndepBinary] New iteration with LB = 720, UB = 852, Target = 786
 [IndepBinary] SAT in 786! Updating UB.
-Time taken: 1.15 seconds
+Time taken: 0.94 seconds
 Current bounds: LB = 720, UB = 785
 [IndepBinary] New iteration with LB = 720, UB = 785, Target = 752
-
 [IndepBinary] UNSAT in 752. Incrementing LB.
-Time taken: 1.27 seconds
-Exception in thread Thread-3 (worker_independent_binary):
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
-[CoopBinary] SAT in 785! Updating UB.
-Time taken: 1.28 seconds
+Time taken: 1.08 seconds
 Current bounds: LB = 753, UB = 785
-[CoopBinary] New iteration with LB = 753, UB = 785, Target = 769
-    self.run()
-  File "/usr/lib/python3.12/threading.py", line 1010, in run
-[CoopBinary] UNSAT in 769. Incrementing LB.
-Time taken: 1.47 seconds
-Current bounds: LB = 770, UB = 785
-[CoopBinary] New iteration with LB = 770, UB = 785, Target = 777
-[BottomUp] UNSAT in 720. Incrementing LB.
-Time taken: 1.58 seconds
-Current bounds: LB = 770, UB = 785
-[BottomUp] Starting new iteration with LB = 770, UB = 785
+[IndepBinary] New iteration with LB = 753, UB = 785, Target = 769
 [TopDown] SAT in 785! Updating UB.
-Time taken: 2.84 seconds
-Current bounds: LB = 770, UB = 784
+Time taken: 2.28 seconds
+Current bounds: LB = 753, UB = 784
 [TopDown] SAT in 784! Updating UB.
-Time taken: 2.84 seconds
-Current bounds: LB = 770, UB = 783
+Time taken: 2.30 seconds
+Current bounds: LB = 753, UB = 783
 [TopDown] SAT in 783! Updating UB.
-Time taken: 2.84 seconds
-Current bounds: LB = 770, UB = 782
-[TopDown] SAT in 782! Updating UB.
-Time taken: 2.87 seconds
-Current bounds: LB = 770, UB = 781
-    self._target(*self._args, **self._kwargs)
-  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 571, in worker_independent_binary
-    s_obj.interrupt()
-  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
-[TopDown] SAT in 781! Updating UB.
-    self.solver.interrupt()
-  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
-Time taken: 3.02 seconds    
-Current bounds: LB = 770, UB = 780
-[TopDown] SAT in 780! Updating UB.
-Time taken: 3.03 seconds
-Current bounds: LB = 770, UB = 779
-[TopDown] SAT in 779! Updating UB.
-Time taken: 3.03 seconds
-Current bounds: LB = 770, UB = 778
-[TopDown] SAT in 778! Updating UB.
-Time taken: 3.03 seconds
-Current bounds: LB = 770, UB = 777
-[TopDown] SAT in 777! Updating UB.
-Time taken: 3.03 seconds
-Current bounds: LB = 770, UB = 776
-raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
-NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
-[BottomUp] UNSAT in 770. Incrementing LB.
-Time taken: 3.13 seconds
-Exception in thread Thread-1 (worker_bottom_up):
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
-[TopDown] SAT in 776! Updating UB.
-Time taken: 3.13 seconds
+Time taken: 2.40 seconds
 Exception in thread Thread-2 (worker_top_down):
 Traceback (most recent call last):
-    [CoopBinary] SAT in 777! Updating UB.
-Time taken: 3.14 seconds
   File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
-Current bounds: LB = 771, UB = 775
-[CoopBinary] New iteration with LB = 771, UB = 775, Target = 773
-self.run()
-[CoopBinary] SAT in 773! Updating UB.
-Time taken: 3.18 seconds
-Current bounds: LB = 771, UB = 772
-[CoopBinary] New iteration with LB = 771, UB = 772, Target = 771
+    self.run()
   File "/usr/lib/python3.12/threading.py", line 1010, in run
-[CoopBinary] UNSAT in 771. Incrementing LB.
-Time taken: 3.20 seconds
-Current bounds: LB = 772, UB = 772
-[CoopBinary] New iteration with LB = 772, UB = 772, Target = 772
-        self.run()
-  File "/usr/lib/python3.12/threading.py", line 1010, in run
-self._target(*self._args, **self._kwargs)
-  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 422, in worker_bottom_up
-    s_obj.interrupt()
+[CoopBinary] SAT in 853! Updating UB.
+Time taken: 2.41 seconds
+Current bounds: LB = 753, UB = 782
+[CoopBinary] New iteration with LB = 753, UB = 782, Target = 767
+[CoopBinary] UNSAT in 767. Incrementing LB.
+Time taken: 2.57 seconds
+Current bounds: LB = 768, UB = 782
+[CoopBinary] New iteration with LB = 768, UB = 782, Target = 775
     self._target(*self._args, **self._kwargs)
-  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 466, in worker_top_down
-      File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
-    self.solver.interrupt()
-s_obj.interrupt()
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 464, in worker_top_down
+    s_obj.interrupt()
   File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
-  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
     self.solver.interrupt()
   File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
-[CoopBinary] UNSAT in 772. Incrementing LB.    
-Time taken: 3.42 seconds
-[CoopBinary] UB < LB => OPTIMAL
-Current bounds: LB = 773, UB = 772
-raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
-NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[BottomUp] UNSAT in 720. Incrementing LB.
+Time taken: 2.80 seconds
+Current bounds: LB = 768, UB = 782
+[BottomUp] Trying with at most 768, LB = 768, UB = 782
+[CoopBinary] SAT in 775! Updating UB.
+Time taken: 2.96 seconds
+Current bounds: LB = 768, UB = 774
+[CoopBinary] New iteration with LB = 768, UB = 774, Target = 771
+[CoopBinary] UNSAT in 771. Incrementing LB.
+Time taken: 3.00 seconds
+Current bounds: LB = 772, UB = 774
+[CoopBinary] New iteration with LB = 772, UB = 774, Target = 773
     raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
 NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[IndepBinary] UNSAT in 769. Incrementing LB.
+Time taken: 3.15 seconds
+Current bounds: LB = 772, UB = 774
+[IndepBinary] New iteration with LB = 772, UB = 774, Target = 773
+[CoopBinary] SAT in 773! Updating UB.
+Time taken: 3.49 seconds
+Current bounds: LB = 772, UB = 772
+[CoopBinary] New iteration with LB = 772, UB = 772, Target = 772
+[CoopBinary] UNSAT in 772. Incrementing LB.
+Time taken: 3.53 seconds
+[CoopBinary] UB < LB => OPTIMAL
+Current bounds: LB = 773, UB = 772
 --------------------------------------------------
 Final result:
 Status: Optimal
 Proved by: CoopBinary
 Optimal Makespan: 773
-Total time: 3.44 seconds
-[runlim] end:			Sun Apr 19 22:29:53 2026
+Total time: 3.60 seconds
+[runlim] end:			Sun Apr 19 23:16:54 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			3.48 seconds
-[runlim] time:			3.42 seconds
-[runlim] space:			183 MB
-[runlim] load:			0.62 maximum
-[runlim] samples:		35
+[runlim] real:			3.64 seconds
+[runlim] time:			3.63 seconds
+[runlim] space:			170 MB
+[runlim] load:			0.99 maximum
+[runlim] samples:		37

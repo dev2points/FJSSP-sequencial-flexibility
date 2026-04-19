@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS04
-[runlim] start:			Sun Apr 19 22:29:56 2026
-[runlim] child:			60679
+[runlim] start:			Sun Apr 19 23:16:55 2026
+[runlim] child:			77584
 Loading data từ: datasets/yfjs/YFJS04
 Operations: 28, Edges: 21, Machines: 7
 Greedy Schedule UB: 533
@@ -17,81 +17,96 @@ Complete preprocessing! Greedy UB = 533
 Initial UB = 532, LB = 350
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 350, UB = 532
-[TopDown] Initializing with target = 532
+[BottomUp] Trying with at most 350, LB = 350, UB = 532
+[TopDown] Trying with at most 532, LB = 350, UB = 532
 [IndepBinary] New iteration with LB = 350, UB = 532, Target = 441
 [CoopBinary] New iteration with LB = 350, UB = 532, Target = 441
 [BottomUp] UNSAT in 350. Incrementing LB.
 Time taken: 0.09 seconds
 Current bounds: LB = 351, UB = 532
-[BottomUp] Starting new iteration with LB = 351, UB = 532
+[BottomUp] Trying with at most 351, LB = 351, UB = 532
 [BottomUp] UNSAT in 351. Incrementing LB.
-Time taken: 0.17 seconds
+Time taken: 0.18 seconds
 Current bounds: LB = 352, UB = 532
-[BottomUp] Starting new iteration with LB = 352, UB = 532
+[BottomUp] Trying with at most 352, LB = 352, UB = 532
 [BottomUp] UNSAT in 352. Incrementing LB.
-Time taken: 0.27 seconds
+Time taken: 0.26 seconds
 Current bounds: LB = 353, UB = 532
-[BottomUp] Starting new iteration with LB = 353, UB = 532
-[IndepBinary] SAT in 441! Updating UB.
-Time taken: 0.35 seconds
-Current bounds: LB = 353, UB = 440
-[IndepBinary] New iteration with LB = 353, UB = 440, Target = 396
-[IndepBinary] SAT in 396! Updating UB.
-Time taken: 0.41 seconds
-Current bounds: LB = 353, UB = 395
-[IndepBinary] New iteration with LB = 353, UB = 395, Target = 374
-[IndepBinary] UNSAT in 374. Incrementing LB.
-Time taken: 0.43 seconds
-Current bounds: LB = 375, UB = 395
-[IndepBinary] New iteration with LB = 375, UB = 395, Target = 385
-[CoopBinary] SAT in 441! Updating UB.
-Time taken: 0.56 seconds
-Current bounds: LB = 375, UB = 395
-[CoopBinary] New iteration with LB = 375, UB = 395, Target = 385
-[CoopBinary] UNSAT in 385. Incrementing LB.
-Time taken: 0.61 seconds
-Current bounds: LB = 386, UB = 395
-[CoopBinary] New iteration with LB = 386, UB = 395, Target = 390
+[BottomUp] Trying with at most 353, LB = 353, UB = 532
 [BottomUp] UNSAT in 353. Incrementing LB.
-Time taken: 0.66 seconds
-Current bounds: LB = 386, UB = 395
-[BottomUp] Starting new iteration with LB = 386, UB = 395
-[CoopBinary] SAT in 390! Updating UB.
+Time taken: 0.34 seconds
+Current bounds: LB = 354, UB = 532
+[BottomUp] Trying with at most 354, LB = 354, UB = 532
+[IndepBinary] SAT in 441! Updating UB.
+Time taken: 0.47 seconds
+Current bounds: LB = 354, UB = 440
+[IndepBinary] New iteration with LB = 354, UB = 440, Target = 397
+[IndepBinary] SAT in 397! Updating UB.
+Time taken: 0.52 seconds
+Current bounds: LB = 354, UB = 396
+[IndepBinary] New iteration with LB = 354, UB = 396, Target = 375
+[IndepBinary] UNSAT in 375. Incrementing LB.
+Time taken: 0.55 seconds
+Current bounds: LB = 376, UB = 396
+[IndepBinary] New iteration with LB = 376, UB = 396, Target = 386
+[TopDown] SAT in 396! Updating UB.
 Time taken: 0.80 seconds
-Current bounds: LB = 386, UB = 389
-[CoopBinary] New iteration with LB = 386, UB = 389, Target = 387
-[CoopBinary] UNSAT in 387. Incrementing LB.
+Current bounds: LB = 376, UB = 395
+[TopDown] SAT in 395! Updating UB.
+Time taken: 0.80 seconds
+Current bounds: LB = 376, UB = 394
+[TopDown] SAT in 394! Updating UB.
+Time taken: 0.80 seconds
+Current bounds: LB = 376, UB = 393
+[TopDown] SAT in 393! Updating UB.
 Time taken: 0.81 seconds
-Current bounds: LB = 388, UB = 389
-[CoopBinary] New iteration with LB = 388, UB = 389, Target = 388
-[IndepBinary] UNSAT in 385. Incrementing LB.
-Time taken: 0.95 seconds
-Current bounds: LB = 388, UB = 389
-[IndepBinary] New iteration with LB = 388, UB = 389, Target = 388
-[BottomUp] UNSAT in 386. Incrementing LB.
-Time taken: 1.11 seconds
-Current bounds: LB = 388, UB = 389
-[CoopBinary] UNSAT in 388. Incrementing LB.
-Time taken: 1.12 seconds
-Current bounds: LB = 389, UB = 389
-[BottomUp] Starting new iteration with LB = 389, UB = 389
-[CoopBinary] New iteration with LB = 389, UB = 389, Target = 389
+Current bounds: LB = 376, UB = 392
+[TopDown] SAT in 392! Updating UB.
+Time taken: 0.82 seconds
+Current bounds: LB = 376, UB = 391
+[TopDown] SAT in 391! Updating UB.
+Time taken: 0.82 seconds
+Current bounds: LB = 376, UB = 390
+[BottomUp] UNSAT in 354. Incrementing LB.
+Time taken: 0.89 seconds
+Current bounds: LB = 376, UB = 390
+[TopDown] SAT in 390! Updating UB.
+Time taken: 0.91 seconds
+Current bounds: LB = 376, UB = 389
+[IndepBinary] UNSAT in 386. Incrementing LB.
+Time taken: 0.92 seconds
+Current bounds: LB = 387, UB = 389
+[BottomUp] Trying with at most 387, LB = 387, UB = 389
+[IndepBinary] New iteration with LB = 387, UB = 389, Target = 388
 [TopDown]  UNSAT in 389. FOUND OPTIMAL.
-Time taken: 1.36 seconds
+Time taken: 1.02 seconds
+Exception in thread Thread-2 (worker_top_down):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 475, in worker_top_down
+    for n, s_obj in shared_state['active_solvers'].items(): s_obj.interrupt()
+                                                            ^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
 --------------------------------------------------
 Final result:
 Status: Optimal
 Proved by: TopDown
 Optimal Makespan: 390
-Total time: 1.56 seconds
-[runlim] end:			Sun Apr 19 22:29:57 2026
+Total time: 1.13 seconds
+[runlim] end:			Sun Apr 19 23:16:57 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			1.60 seconds
-[runlim] time:			1.51 seconds
-[runlim] space:			99 MB
-[runlim] load:			0.62 maximum
-[runlim] samples:		16
+[runlim] real:			1.16 seconds
+[runlim] time:			1.10 seconds
+[runlim] space:			87 MB
+[runlim] load:			0.99 maximum
+[runlim] samples:		12

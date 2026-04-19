@@ -1,0 +1,53 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/yfjs/YFJS18
+[runlim] start:			Sun Apr 19 23:22:06 2026
+[runlim] child:			77695
+Loading data từ: datasets/yfjs/YFJS18
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1314
+Lower Bound: 1220 (precedence=1220, avg_load=589, mandatory=0)
+Complete preprocessing! Greedy UB = 1314
+Initial UB = 1313, LB = 1220
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Trying with at most 1220, LB = 1220, UB = 1313
+[TopDown] Trying with at most 1313, LB = 1220, UB = 1313[IndepBinary] New iteration with LB = 1220, UB = 1313, Target = 1266
+
+[CoopBinary] New iteration with LB = 1220, UB = 1313, Target = 1266
+[runlim] sample:		10.05 time, 10.01 real, 1111 MB, 0.97 load
+[runlim] sample:		20.12 time, 20.01 real, 1769 MB, 0.98 load
+[runlim] sample:		30.16 time, 30.01 real, 2417 MB, 0.98 load
+[runlim] sample:		40.22 time, 40.01 real, 3053 MB, 0.98 load
+[runlim] sample:		50.27 time, 50.01 real, 3685 MB, 0.99 load
+[runlim] sample:		60.32 time, 60.01 real, 4320 MB, 1.06 load
+[runlim] sample:		70.37 time, 70.01 real, 5389 MB, 0.98 load
+[runlim] sample:		80.42 time, 80.01 real, 5273 MB, 0.98 load
+[runlim] sample:		90.46 time, 90.01 real, 5211 MB, 0.99 load
+[runlim] sample:		100.51 time, 100.01 real, 5288 MB, 0.99 load
+[runlim] sample:		110.56 time, 110.01 real, 5199 MB, 0.99 load
+[BottomUp] SAT in 1220! FOUND OPTIMAL.
+Time taken: 115.54 seconds
+[runlim] sample:		120.62 time, 120.01 real, 3656 MB, 0.99 load
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: BottomUp
+Optimal Makespan: 1220
+Total time: 129.52 seconds
+[runlim] end:			Sun Apr 19 23:24:16 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			129.61 seconds
+[runlim] time:			130.27 seconds
+[runlim] space:			5802 MB
+[runlim] load:			1.07 maximum
+[runlim] samples:		1297

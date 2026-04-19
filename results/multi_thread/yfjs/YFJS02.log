@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS02
-[runlim] start:			Sun Apr 19 22:29:53 2026
-[runlim] child:			60665
+[runlim] start:			Sun Apr 19 23:16:54 2026
+[runlim] child:			77570
 Loading data từ: datasets/yfjs/YFJS02
 Operations: 40, Edges: 36, Machines: 7
 Greedy Schedule UB: 949
@@ -17,70 +17,59 @@ Complete preprocessing! Greedy UB = 949
 Initial UB = 948, LB = 805
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 805, UB = 948
-[TopDown] Initializing with target = 948
+[BottomUp] Trying with at most 805, LB = 805, UB = 948
+[TopDown] Trying with at most 948, LB = 805, UB = 948
+[IndepBinary] New iteration with LB = 805, UB = 948, Target = 876
+[CoopBinary] New iteration with LB = 805, UB = 948, Target = 876
 [BottomUp] UNSAT in 805. Incrementing LB.
-Time taken: 0.15 seconds
+Time taken: 0.14 seconds
 Current bounds: LB = 806, UB = 948
-[BottomUp] Starting new iteration with LB = 806, UB = 948
-[IndepBinary] New iteration with LB = 806, UB = 948, Target = 877
-[CoopBinary] New iteration with LB = 806, UB = 948, Target = 877
+[BottomUp] Trying with at most 806, LB = 806, UB = 948
 [BottomUp] UNSAT in 806. Incrementing LB.
-Time taken: 0.38 seconds
+Time taken: 0.36 seconds
 Current bounds: LB = 807, UB = 948
-[BottomUp] Starting new iteration with LB = 807, UB = 948
-[BottomUp] UNSAT in 807. Incrementing LB.
-Time taken: 0.57 seconds
-Current bounds: LB = 808, UB = 948
-[BottomUp] Starting new iteration with LB = 808, UB = 948
-[IndepBinary] SAT in 877! Updating UB.
-Time taken: 0.80 seconds
-Current bounds: LB = 808, UB = 876
-[IndepBinary] New iteration with LB = 808, UB = 876, Target = 842
-[IndepBinary] SAT in 842! Updating UB.
-Time taken: 0.91 seconds
-Current bounds: LB = 808, UB = 841
-[IndepBinary] New iteration with LB = 808, UB = 841, Target = 824
+[BottomUp] Trying with at most 807, LB = 807, UB = 948
+[IndepBinary] SAT in 876! Updating UB.
+Time taken: 0.56 seconds
+Current bounds: LB = 807, UB = 875
+[IndepBinary] New iteration with LB = 807, UB = 875, Target = 841
+[IndepBinary] SAT in 841! Updating UB.
+Time taken: 0.63 seconds
+Current bounds: LB = 807, UB = 840
+[IndepBinary] New iteration with LB = 807, UB = 840, Target = 823
+[IndepBinary] UNSAT in 823. Incrementing LB.
+Time taken: 0.68 seconds
+Current bounds: LB = 824, UB = 840
+[IndepBinary] New iteration with LB = 824, UB = 840, Target = 832
+[IndepBinary] SAT in 832! Updating UB.
+Time taken: 0.93 seconds
+Current bounds: LB = 824, UB = 831
+[IndepBinary] New iteration with LB = 824, UB = 831, Target = 827
+[IndepBinary] SAT in 827! Updating UB.
+Time taken: 0.96 seconds
+Current bounds: LB = 824, UB = 826
+[IndepBinary] New iteration with LB = 824, UB = 826, Target = 825
+[IndepBinary] SAT in 825! Updating UB.
+Time taken: 0.97 seconds
+Current bounds: LB = 824, UB = 824
+[IndepBinary] New iteration with LB = 824, UB = 824, Target = 824
 [IndepBinary] UNSAT in 824. Incrementing LB.
 Time taken: 0.97 seconds
-Current bounds: LB = 825, UB = 841
-[IndepBinary] New iteration with LB = 825, UB = 841, Target = 833
-[CoopBinary] SAT in 877! Updating UB.
-Time taken: 1.19 seconds
-Current bounds: LB = 825, UB = 841
-[CoopBinary] New iteration with LB = 825, UB = 841, Target = 833
-[CoopBinary] SAT in 833! Updating UB.
-Time taken: 1.27 seconds
-Current bounds: LB = 825, UB = 832
-[CoopBinary] New iteration with LB = 825, UB = 832, Target = 828
-[CoopBinary] SAT in 828! Updating UB.
-Time taken: 1.30 seconds
-Current bounds: LB = 825, UB = 827
-[CoopBinary] New iteration with LB = 825, UB = 827, Target = 826
-[CoopBinary] SAT in 826! Updating UB.
-Time taken: 1.30 seconds
-Current bounds: LB = 825, UB = 825
-[CoopBinary] New iteration with LB = 825, UB = 825, Target = 825
-[CoopBinary] SAT in 825! Updating UB.
-Time taken: 1.58 seconds
-Current bounds: LB = 825, UB = 825
-[CoopBinary] New iteration with LB = 825, UB = 825, Target = 825
-[TopDown] SAT in 825! Updating UB.
-Time taken: 1.61 seconds
+[IndepBinary] UB < LB => OPTIMAL
 Current bounds: LB = 825, UB = 824
 --------------------------------------------------
 Final result:
 Status: Optimal
-Proved by: TopDown
+Proved by: IndepBinary
 Optimal Makespan: 825
-Total time: 1.82 seconds
-[runlim] end:			Sun Apr 19 22:29:55 2026
+Total time: 1.16 seconds
+[runlim] end:			Sun Apr 19 23:16:55 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			1.86 seconds
-[runlim] time:			1.81 seconds
-[runlim] space:			126 MB
-[runlim] load:			0.62 maximum
-[runlim] samples:		19
+[runlim] real:			1.20 seconds
+[runlim] time:			1.11 seconds
+[runlim] space:			83 MB
+[runlim] load:			0.99 maximum
+[runlim] samples:		12

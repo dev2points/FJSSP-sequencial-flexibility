@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS17
-[runlim] start:			Sun Apr 19 22:34:30 2026
-[runlim] child:			61621
+[runlim] start:			Sun Apr 19 23:20:15 2026
+[runlim] child:			77685
 Loading data từ: datasets/yfjs/YFJS17
 Operations: 289, Edges: 272, Machines: 26
 Greedy Schedule UB: 1319
@@ -17,11 +17,36 @@ Complete preprocessing! Greedy UB = 1319
 Initial UB = 1318, LB = 1133
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 1133, UB = 1318
-[TopDown] Initializing with target = 1318
+[BottomUp] Trying with at most 1133, LB = 1133, UB = 1318
+[TopDown] Trying with at most 1318, LB = 1133, UB = 1318
 [IndepBinary] New iteration with LB = 1133, UB = 1318, Target = 1225
 [CoopBinary] New iteration with LB = 1133, UB = 1318, Target = 1225
-[runlim] sample:		10.05 time, 10.01 real, 1032 MB, 1.37 load
-[runlim] sample:		20.10 time, 20.01 real, 1653 MB, 1.23 load
-[runlim] sample:		30.15 time, 30.01 real, 2265 MB, 1.12 load
-[runlim] sample:		40.20 time, 40.01 real, 2890 MB, 1.17 load
+[runlim] sample:		10.04 time, 10.01 real, 1066 MB, 1.01 load
+[runlim] sample:		20.10 time, 20.01 real, 1712 MB, 1.00 load
+[runlim] sample:		30.15 time, 30.01 real, 2348 MB, 1.00 load
+[runlim] sample:		40.20 time, 40.01 real, 3009 MB, 1.00 load
+[runlim] sample:		50.25 time, 50.01 real, 4119 MB, 1.08 load
+[runlim] sample:		60.30 time, 60.01 real, 4148 MB, 1.07 load
+[runlim] sample:		70.34 time, 70.01 real, 4143 MB, 1.06 load
+[runlim] sample:		80.40 time, 80.01 real, 4126 MB, 1.05 load
+[runlim] sample:		90.45 time, 90.01 real, 4538 MB, 1.04 load
+[BottomUp] SAT in 1133! FOUND OPTIMAL.
+Time taken: 91.10 seconds
+[runlim] sample:		100.50 time, 100.01 real, 3286 MB, 0.96 load
+[runlim] sample:		110.55 time, 110.01 real, 1479 MB, 0.97 load
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: BottomUp
+Optimal Makespan: 1133
+Total time: 111.62 seconds
+[runlim] end:			Sun Apr 19 23:22:06 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			111.72 seconds
+[runlim] time:			112.25 seconds
+[runlim] space:			4572 MB
+[runlim] load:			1.08 maximum
+[runlim] samples:		1118

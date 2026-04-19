@@ -7,8 +7,8 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		multi_thread.py
 [runlim] argv[3]:		datasets/yfjs/YFJS13
-[runlim] start:			Sun Apr 19 22:30:36 2026
-[runlim] child:			60749
+[runlim] start:			Sun Apr 19 23:17:33 2026
+[runlim] child:			77651
 Loading data từ: datasets/yfjs/YFJS13
 Operations: 50, Edges: 40, Machines: 10
 Greedy Schedule UB: 522
@@ -17,92 +17,101 @@ Complete preprocessing! Greedy UB = 522
 Initial UB = 521, LB = 350
 --------------------------------------------------
 Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
-[BottomUp] Starting new iteration with LB = 350, UB = 521
-[TopDown] Initializing with target = 521
+[BottomUp] Trying with at most 350, LB = 350, UB = 521
+[TopDown] Trying with at most 521, LB = 350, UB = 521
 [IndepBinary] New iteration with LB = 350, UB = 521, Target = 435
 [CoopBinary] New iteration with LB = 350, UB = 521, Target = 435
 [BottomUp] UNSAT in 350. Incrementing LB.
 Time taken: 0.20 seconds
 Current bounds: LB = 351, UB = 521
-[BottomUp] Starting new iteration with LB = 351, UB = 521
+[BottomUp] Trying with at most 351, LB = 351, UB = 521
 [BottomUp] UNSAT in 351. Incrementing LB.
 Time taken: 0.37 seconds
 Current bounds: LB = 352, UB = 521
-[BottomUp] Starting new iteration with LB = 352, UB = 521
-[CoopBinary] SAT in 435! Updating UB.
-Time taken: 1.07 seconds
+[BottomUp] Trying with at most 352, LB = 352, UB = 521
+[IndepBinary] SAT in 435! Updating UB.
+Time taken: 0.88 seconds
 Current bounds: LB = 352, UB = 434
-[CoopBinary] New iteration with LB = 352, UB = 434, Target = 393
-[CoopBinary] UNSAT in 393. Incrementing LB.
-Time taken: 1.41 seconds
+[IndepBinary] New iteration with LB = 352, UB = 434, Target = 393
+[IndepBinary] UNSAT in 393. Incrementing LB.
+Time taken: 1.22 seconds
 Current bounds: LB = 394, UB = 434
-[CoopBinary] New iteration with LB = 394, UB = 434, Target = 414
-[BottomUp] UNSAT in 352. Incrementing LB.
-Time taken: 1.48 seconds
-Current bounds: LB = 394, UB = 434
-[BottomUp] Starting new iteration with LB = 394, UB = 434
 [IndepBinary] New iteration with LB = 394, UB = 434, Target = 414
-[IndepBinary] SAT in 414! Updating UB.
-Time taken: 2.42 seconds
-Current bounds: LB = 394, UB = 413
-[IndepBinary] New iteration with LB = 394, UB = 413, Target = 403
-[IndepBinary] UNSAT in 403. Incrementing LB.
-Time taken: 2.52 seconds
-Current bounds: LB = 404, UB = 413
-[IndepBinary] New iteration with LB = 404, UB = 413, Target = 408
+[BottomUp] UNSAT in 352. Incrementing LB.
+Time taken: 1.33 seconds
+Current bounds: LB = 394, UB = 434
+[BottomUp] Trying with at most 394, LB = 394, UB = 434
+[BottomUp] UNSAT in 394. Incrementing LB.
+Time taken: 1.69 seconds
+Current bounds: LB = 395, UB = 434
+[BottomUp] Trying with at most 395, LB = 395, UB = 434
+[CoopBinary] SAT in 435! Updating UB.
+Time taken: 2.27 seconds
+Current bounds: LB = 395, UB = 434
+[CoopBinary] New iteration with LB = 395, UB = 434, Target = 414
 [CoopBinary] SAT in 414! Updating UB.
-Time taken: 3.13 seconds
-Current bounds: LB = 404, UB = 413
-[CoopBinary] New iteration with LB = 404, UB = 413, Target = 408
-[CoopBinary] SAT in 408! Updating UB.
-Time taken: 4.10 seconds
-Exception in thread Thread-4 (worker_cooperative_binary):
+Time taken: 2.69 seconds
+Current bounds: LB = 395, UB = 413
+[CoopBinary] New iteration with LB = 395, UB = 413, Target = 404
+[BottomUp] UNSAT in 395. Incrementing LB.
+Time taken: 3.06 seconds
+Exception in thread Thread-1 (worker_bottom_up):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+[CoopBinary] UNSAT in 404. Incrementing LB.
+Time taken: 3.43 seconds
+Current bounds: LB = 405, UB = 413
+[IndepBinary] New iteration with LB = 405, UB = 413, Target = 409
+[CoopBinary] New iteration with LB = 405, UB = 413, Target = 409    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    [IndepBinary] SAT in 409! Updating UB.
+Time taken: 3.76 seconds
+Current bounds: LB = 405, UB = 408
+[IndepBinary] New iteration with LB = 405, UB = 408, Target = 406
+
+self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 423, in worker_bottom_up
+[IndepBinary] SAT in 406! Updating UB.
+Time taken: 4.70 seconds
+Current bounds: LB = 405, UB = 405
+Exception in thread Thread-3 (worker_independent_binary):
 Traceback (most recent call last):
   File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
 [TopDown] SAT in 413! Updating UB.
-Time taken: 4.10 seconds
-Current bounds: LB = 404, UB = 407
-[BottomUp] UNSAT in 394. Incrementing LB.
-Time taken: 4.64 seconds
-Current bounds: LB = 404, UB = 407
-[BottomUp] Starting new iteration with LB = 404, UB = 407
-[IndepBinary] New iteration with LB = 404, UB = 407, Target = 405
+Time taken: 4.71 seconds
+Current bounds: LB = 405, UB = 405
     self.run()
   File "/usr/lib/python3.12/threading.py", line 1010, in run
-[TopDown] SAT in 407! Updating UB.
-Time taken: 4.92 seconds
-Current bounds: LB = 404, UB = 406
-[TopDown] SAT in 406! Updating UB.
-Time taken: 4.92 seconds
-Current bounds: LB = 404, UB = 405
 [TopDown] SAT in 405! Updating UB.
-Time taken: 4.93 seconds
-Current bounds: LB = 404, UB = 404
-[TopDown] SAT in 404! Updating UB.
-Time taken: 4.93 seconds
-Current bounds: LB = 404, UB = 403
-    self._target(*self._args, **self._kwargs)
-  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 626, in worker_cooperative_binary
-    for n, s_obj in shared_state['active_solvers'].items(): s_obj.interrupt()
-                                                            ^^^^^^^^^^^^^^^^^
+Time taken: 4.81 seconds
+Current bounds: LB = 405, UB = 404
+    s_obj.interrupt()
   File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 549, in worker_independent_binary
+        self.solver.interrupt()
+s_obj.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
     self.solver.interrupt()
   File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
     raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
 NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
 --------------------------------------------------
 Final result:
 Status: Optimal
 Proved by: TopDown
-Optimal Makespan: 404
-Total time: 5.43 seconds
-[runlim] end:			Sun Apr 19 22:30:41 2026
+Optimal Makespan: 405
+Total time: 4.93 seconds
+[runlim] end:			Sun Apr 19 23:17:38 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			5.47 seconds
-[runlim] time:			5.43 seconds
-[runlim] space:			180 MB
-[runlim] load:			0.95 maximum
-[runlim] samples:		55
+[runlim] real:			4.97 seconds
+[runlim] time:			4.93 seconds
+[runlim] space:			171 MB
+[runlim] load:			1.32 maximum
+[runlim] samples:		50

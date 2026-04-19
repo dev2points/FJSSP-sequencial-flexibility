@@ -54,6 +54,7 @@ def data(num_operations, precedence_list):
 
     return in_degree, out_degree, neighbors, predecessors
 
+
 def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
     machine_ready_time = {m: 0 for m in range(num_machines)}
     op_completion_time = {i: 0 for i in range(num_operations)} 
@@ -93,32 +94,6 @@ def greedy_schedule(num_operations, num_machines, request_list, in_degree, neigh
 
     return ub, machine_assignment, queue
 
-def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue, neighbors, request_list, ub):
-    # Tính thời gian xử lý tối thiểu cho mỗi thao tác (dựa trên máy nhanh nhất)
-    min_proc_time = {}
-    for i in range(num_operations):
-        min_proc_time[i] = min(request_list[i].values())
-    
-    # Tính thời gian sớm nhất thao tác có thể bắt đầu
-    earliest_start = {i: 0 for i in range(num_operations)}
-    for u in topo_queue:
-        for v in neighbors[u]:
-            earliest_start[v] = max(earliest_start[v], earliest_start[u] + min_proc_time[u])
-    
-    # Tính thời gian muộn nhất thao tác có thể bắt đầu
-    latest_start = {i: ub - min_proc_time[i] for i in range(num_operations)}
-
-    for u in reversed(topo_queue):
-        for v in neighbors[u]:
-            latest_start[u] = min(latest_start[u], latest_start[v] - min_proc_time[u])
-    
-    feasible_time = {}
-    for i in range(num_operations):
-        feasible_time[i] = (earliest_start[i], latest_start[i])
-        if earliest_start[i] > latest_start[i]:
-            print(f"Thao tác {i} không thể hoàn thành trong UB hiện tại (feasible time: {feasible_time[i]})")
-
-    return feasible_time
 
 def calculate_greedy_ub(num_operations, num_machines, precedence_list, request_list):
     """
@@ -181,17 +156,19 @@ def calculate_greedy_ub(num_operations, num_machines, precedence_list, request_l
     # Bước 4: UB chính là thời điểm hoàn thành của thao tác muộn nhất
     ub = max(op_completion_time.values())
     return ub
-def create_var(num_operations, request_list, feasible_time):
+def create_var(num_operations, request_list, size_time):
     s={}
-    x={}
     counter = 0
     for i in range(num_operations):
-        for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+        for t in range(size_time + 1):
             counter += 1
             s[(i,t)] = counter
+
+    x = {}
+    for i in range(num_operations):
+        for t in range(size_time + 1):
             counter += 1
             x[(i,t)] = counter
-            
     
     m = {}
     for i in range(num_operations):
@@ -199,96 +176,84 @@ def create_var(num_operations, request_list, feasible_time):
             counter += 1
             m[(i, a)] = counter
     
+    a = {}
+    for i in range(num_operations):
+        for t in range(size_time + 1):
+            counter += 1
+            a[(i,t)] = counter
 
-    return s, x, m, counter    
+    return s, x, m, a, counter    
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id):
+def build_constraints(solver, num_operations, precedence_list, request_list, size_time, s, x, m, a, top_id):
     # (4) tạo dãy order
     for i in range(num_operations):
-        # exactly one
-        machines= request_list[i].keys()
-        enc = CardEnc.equals(lits=[m[(i,machine)] for machine in machines], bound=1, encoding=1, top_id=top_id)
-        top_id = enc.nv
-        solver.append_formula(enc.clauses)
-        solver.add_clause([x[(i,feasible_time[i][0])]])
-        for t in range(feasible_time[i][0], feasible_time[i][1]):
-            # (4) Tạo dãy order
-            solver.add_clause([-x[(i,t+1)], x[(i,t)]]) 
-            # (5) Link s và x
+        for t in range(size_time):
+            solver.add_clause([-x[(i,t+1)], x[(i,t)]])
+    
+    #(5) link s và x
+    for i in range(num_operations):
+        solver.add_clause([x[(i,0)]])
+        for t in range(size_time):
             solver.add_clause([-s[(i,t)], x[(i,t)]])
             solver.add_clause([-s[(i,t)], -x[(i,t+1)]])
             solver.add_clause([-x[(i,t)], x[(i,t+1)], s[(i,t)]])
-        solver.add_clause([-s[(i,feasible_time[i][1])], x[(i,feasible_time[i][1])]])
-        solver.add_clause([s[(i,feasible_time[i][1])], -x[(i,feasible_time[i][1])]])
-        # ràng buộc chống overlap
-        for j in range(i+1, num_operations):
-            if (i,j) in precedence_list or (j,i) in precedence_list:
-                continue
-            common_machines = set(request_list[i].keys()).intersection(set(request_list[j].keys()))
-            for machine in common_machines:
-                p_i = request_list[i][machine]
-                p_j = request_list[j][machine]
-
-                for t_i in range(feasible_time[i][0], feasible_time[i][1] + 1):
-
-                    start = t_i - p_j # Biên time bên trái
-                    end   = t_i + p_i # Biên time bên phải
-
-                    clause = [
-                        -m[(i, machine)],
-                        -m[(j, machine)],
-                        -s[(i, t_i)]
-                    ]
-
-                    # Nếu end < ES_j: j chắc chắn bắt đầu sau end -> Mệnh đề luôn ĐÚNG
-                    if end < feasible_time[j][0]:
-                        continue
-
-                    # Nếu start + 1 > LS_j: j chắc chắn bắt đầu trước start -> Mệnh đề luôn ĐÚNG
-                    if start  >= feasible_time[j][1]:
-                        continue
-
-                    # xử lý biên trái
-                    if start > feasible_time[j][0]:
-                        clause.append(-x[(j, start + 1)])
-
-                    # xử lý biên phải
-                    if end <= feasible_time[j][1]:
-                        clause.append(x[(j, end)])
-
-                    # nếu end >= feasible_time[j][1] thì luôn thỏa
-                    solver.add_clause(clause)
-    
-
-            
-        
+        # t = size_time
+        solver.add_clause([-s[(i,size_time)], x[(i,size_time)]])
+        solver.add_clause([s[(i,size_time)], -x[(i,size_time)]])
 
     #(6) ràng buộc thứ tự ưu tiên
     for i,j in precedence_list:
         # print(f"Adding precedence constraint: Op {i} -> Op {j}")
         processing = request_list[i]
         for machine, process_time in processing.items():
-            for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
-                if feasible_time[j][0] <= t + process_time and t + process_time < feasible_time[j][1] + 1:
+            for t in range(size_time + 1):
+                if t + process_time <= size_time:
                     solver.add_clause([-s[(i,t)], -m[(i,machine)], x[(j,t+process_time)]])
                 else:
                     solver.add_clause([-s[(i,t)], -m[(i,machine)]])
-        
 
-                    
+    # (7) exactly one machine per operation
+    for i in range(num_operations):
+        machines= request_list[i].keys()
+        enc = CardEnc.equals(lits=[m[(i,machine)] for machine in machines], bound=1, encoding=1, top_id=top_id)
+        top_id = enc.nv
+        solver.append_formula(enc.clauses)
+
+
+    #(11)
+    for i in range(num_operations):
+        for j in range(i+1, num_operations):
+            common_machines = set(request_list[i].keys()) & set(request_list[j].keys())
+            if common_machines:
+                for machine in common_machines:
+                    proc_time_i = request_list[i][machine]
+                    proc_time_j = request_list[j][machine]
+                    for t in range(size_time + 1):
+                        clause_i = [-m[(i,machine)], -s[(i,t)], -m[(j,machine)]]
+                        if t + proc_time_i > size_time:
+                            continue
+                        if t - proc_time_j < 0:
+                            continue
+                        if t + proc_time_i <= size_time:
+                            clause_i.append(x[(j,t+proc_time_i)])
+                        if t - proc_time_j >= 0:
+                            clause_i.append(x[(i,t-proc_time_j+1)])
+                        solver.add_clause(clause_i)
+            
         
-def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
+def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m, a):
     # (12) Giới hạn makespan cho toàn bộ thao tác, không chỉ các thao tác cuối.
     # Nếu một máy không thể hoàn thành thao tác trước hoặc tại ub, cấm gán máy đó.
     last_ops = [i for i in range(num_operations) if out_degree[i] == 0]
     # print(f"Adding incremental constraints for UB = {ub} on last operations: {last_ops}")
     for i in last_ops:
+    # for i in range(num_operations):
         for machine, process_time in request_list[i].items():
             limit_time = ub - process_time
-            if limit_time < feasible_time[i][0] :
-                solver.add_clause([-m[(i, machine)]]) 
-            elif limit_time < feasible_time[i][1]:
+            if limit_time >= 0:
                 solver.add_clause([-m[(i, machine)], -x[(i, limit_time + 1)]])
+            # else:
+            #     solver.add_clause([-m[(i, machine)]])
 
 def solve_and_print(solver, num_operations, s, m, request_list):
     if solver.solve():
@@ -458,22 +423,21 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 
 def main():
-    start_time = perf_counter()
     file_path = sys.argv[1]
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
+
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
     ub = size_time - 1
-    feasible_time = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
-    s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
+    s, x, m, a, top_id = create_var(num_operations, request_list, ub)
 
-    
+    start_time = perf_counter()
     solver = Solver(name = 'cadical195')
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
+    build_constraints(solver, num_operations, precedence_list, request_list, ub, s, x, m, a, top_id)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:
-        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time)
+        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, s, x, m, a)
         machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
         if machine_assignment is None:
             break  # Không thể giảm UB nữa
@@ -486,6 +450,5 @@ def main():
 
         # Tìm nghiệm tốt hơn ở vòng lặp tiếp theo.
         ub = makespan - 1
-        print(f" Time taken: {perf_counter() - start_time:.2f} seconds")
 if __name__ == "__main__":
     main()

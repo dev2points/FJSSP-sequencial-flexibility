@@ -26,7 +26,7 @@ def parse_log_file(file_path):
     regex_greedy = re.compile(r"Greedy Schedule UB:\s+(\d+)")
     regex_greedy_fallback = re.compile(r"Greedy UB (\d+) is valid!")
     regex_build = re.compile(r"Building constraints took ([\d.]+) seconds")
-    regex_makespan = re.compile(r"THỜI GIAN HOÀN THÀNH TỔNG.*:\s+(\d+)")
+    regex_makespan = re.compile(r"Makespan\s*/\s*UB\):\s*(\d+)")
     regex_status_opt = re.compile(r"status:\s+optimal")
     regex_runlim_status = re.compile(r"\[runlim\] status:\s+(\w+)")
     regex_runlim_real = re.compile(r"\[runlim\] real:\s+([\d.]+)")

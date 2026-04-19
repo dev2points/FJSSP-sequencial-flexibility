@@ -1,4 +1,4 @@
-TO=600
+TO=1800
 MO=14000
 
 YDATA_DIR=datasets/yfjs

@@ -1,407 +1,516 @@
 [runlim] version:		2.0.0rc12
 [runlim] host:			ap-Precision-7550
 [runlim] time limit:		311040000 seconds
-[runlim] real time limit:	600 seconds
+[runlim] real time limit:	1800 seconds
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		main.py
 [runlim] argv[3]:		datasets/yfjs/YFJS08
-[runlim] start:			Tue Apr 14 13:42:45 2026
-[runlim] child:			7056
+[runlim] start:			Sat Apr 18 23:35:06 2026
+[runlim] child:			25856
 Operations: 36, Edges: 27, Machines: 12
 Greedy Schedule UB: 451
-Greedy UB 451 is valid!
-Building constraints took 2.17 seconds.
+Building constraints took 0.14 seconds.
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 451
-UB 451 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 450
+Schedule is valid
+ Time taken: 0.16 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 450
-UB 450 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 449
+Schedule is valid
+ Time taken: 0.16 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 449
-UB 449 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 448
+Schedule is valid
+ Time taken: 0.16 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 448
-UB 448 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 447
+Schedule is valid
+ Time taken: 0.16 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 447
-UB 447 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 446
+Schedule is valid
+ Time taken: 0.16 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 446
-UB 446 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 445
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 445
-UB 445 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 444
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 444
-UB 444 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 443
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 443
-UB 443 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 442
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 442
-UB 442 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 441
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 441
-UB 441 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 440
+Schedule is valid
+ Time taken: 0.17 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 440
-UB 440 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 439
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 439
-UB 439 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 438
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 438
-UB 438 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 437
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 437
-UB 437 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 436
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 436
-UB 436 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 435
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 435
-UB 435 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 434
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 434
-UB 434 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 433
+Schedule is valid
+ Time taken: 0.18 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 433
-UB 433 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 432
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 432
-UB 432 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 431
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 431
-UB 431 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 430
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 430
-UB 430 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 429
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 429
-UB 429 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 428
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 428
-UB 428 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 427
+Schedule is valid
+ Time taken: 0.19 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 427
-UB 427 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 426
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 426
-UB 426 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 425
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 425
-UB 425 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 424
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 424
-UB 424 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 423
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 423
-UB 423 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 422
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 422
-UB 422 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 421
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 421
-UB 421 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 420
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 420
-UB 420 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 419
+Schedule is valid
+ Time taken: 0.20 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 419
-UB 419 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 418
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 418
-UB 418 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 417
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 417
-UB 417 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 416
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 416
-UB 416 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 415
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 415
-UB 415 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 414
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 414
-UB 414 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 413
+Schedule is valid
+ Time taken: 0.21 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 413
-UB 413 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 412
+Schedule is valid
+ Time taken: 0.22 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 408
-UB 412 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 411
+Schedule is valid
+ Time taken: 0.22 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 407
-UB 407 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 410
+Schedule is valid
+ Time taken: 0.23 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 406
-UB 406 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 409
+Schedule is valid
+ Time taken: 0.23 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 405
-UB 405 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 408
+Schedule is valid
+ Time taken: 0.25 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 404
-UB 404 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 407
+Schedule is valid
+ Time taken: 0.25 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 403
-UB 403 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 406
+Schedule is valid
+ Time taken: 0.25 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 402
-UB 402 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 405
+Schedule is valid
+ Time taken: 0.26 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 401
-UB 401 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 404
+Schedule is valid
+ Time taken: 0.26 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 400
-UB 400 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 403
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 399
-UB 399 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 402
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 398
-UB 398 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 401
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 397
-UB 397 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 400
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 396
-UB 396 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 399
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 395
-UB 395 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 398
+Schedule is valid
+ Time taken: 0.27 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 394
-UB 394 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 397
+Schedule is valid
+ Time taken: 0.28 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 393
-UB 393 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 396
+Schedule is valid
+ Time taken: 0.28 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 392
-UB 392 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 395
+Schedule is valid
+ Time taken: 0.28 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 391
-UB 391 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 394
+Schedule is valid
+ Time taken: 0.28 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 390
-UB 390 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 393
+Schedule is valid
+ Time taken: 0.29 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 389
-UB 389 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 392
+Schedule is valid
+ Time taken: 0.29 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 388
-UB 388 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 391
+Schedule is valid
+ Time taken: 0.29 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 387
-UB 387 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 390
+Schedule is valid
+ Time taken: 0.29 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 386
-UB 386 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 389
+Schedule is valid
+ Time taken: 0.30 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 385
-UB 385 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 388
+Schedule is valid
+ Time taken: 0.30 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 384
-UB 384 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 387
+Schedule is valid
+ Time taken: 0.30 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 383
-UB 383 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 386
+Schedule is valid
+ Time taken: 0.30 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 382
-UB 382 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 385
+Schedule is valid
+ Time taken: 0.31 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 381
-UB 381 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 384
+Schedule is valid
+ Time taken: 0.31 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 380
-UB 380 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 383
+Schedule is valid
+ Time taken: 0.31 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 379
-UB 379 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 382
+Schedule is valid
+ Time taken: 0.31 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 378
-UB 378 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 381
+Schedule is valid
+ Time taken: 0.32 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 377
-UB 377 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 380
+Schedule is valid
+ Time taken: 0.32 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 376
-UB 376 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 379
+Schedule is valid
+ Time taken: 0.32 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 375
-UB 375 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 378
+Schedule is valid
+ Time taken: 0.32 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 374
-UB 374 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 377
+Schedule is valid
+ Time taken: 0.32 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 373
-UB 373 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 376
+Schedule is valid
+ Time taken: 0.33 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 372
-UB 372 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 375
+Schedule is valid
+ Time taken: 0.33 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 371
-UB 371 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 374
+Schedule is valid
+ Time taken: 0.33 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 370
-UB 370 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 373
+Schedule is valid
+ Time taken: 0.33 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 369
-UB 369 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 372
+Schedule is valid
+ Time taken: 0.34 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 368
-UB 368 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 371
+Schedule is valid
+ Time taken: 0.34 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 367
-UB 367 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 370
+Schedule is valid
+ Time taken: 0.34 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 366
-UB 366 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 369
+Schedule is valid
+ Time taken: 0.35 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 365
-UB 365 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 368
+Schedule is valid
+ Time taken: 0.35 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 364
-UB 364 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 367
+Schedule is valid
+ Time taken: 0.35 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 363
-UB 363 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 366
+Schedule is valid
+ Time taken: 0.35 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 362
-UB 362 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 365
+Schedule is valid
+ Time taken: 0.36 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 361
-UB 361 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 364
+Schedule is valid
+ Time taken: 0.36 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 360
-UB 360 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 363
+Schedule is valid
+ Time taken: 0.36 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 359
-UB 359 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 362
+Schedule is valid
+ Time taken: 0.36 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 358
-UB 358 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 361
+Schedule is valid
+ Time taken: 0.36 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 357
-UB 357 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 360
+Schedule is valid
+ Time taken: 0.37 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 356
-UB 356 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 359
+Schedule is valid
+ Time taken: 0.37 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 355
-UB 355 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 358
+Schedule is valid
+ Time taken: 0.37 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 354
-UB 354 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 357
+Schedule is valid
+ Time taken: 0.37 seconds
 SAT
 
-=> THỜI GIAN HOÀN THÀNH TỔNG (Makespan / UB): 353
-UB 353 is valid!
+=> TOTAL COMPLETION TIME (Makespan / UB): 356
+Schedule is valid
+ Time taken: 0.37 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 355
+Schedule is valid
+ Time taken: 0.38 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 354
+Schedule is valid
+ Time taken: 0.38 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 353
+Schedule is valid
+ Time taken: 0.38 seconds
 UNSAT
 status: optimal
-[runlim] end:			Tue Apr 14 13:42:51 2026
+[runlim] end:			Sat Apr 18 23:35:06 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			5.61 seconds
-[runlim] time:			5.50 seconds
-[runlim] space:			537 MB
-[runlim] load:			1.13 maximum
-[runlim] samples:		56
+[runlim] real:			0.42 seconds
+[runlim] time:			0.40 seconds
+[runlim] space:			47 MB
+[runlim] load:			0.95 maximum
+[runlim] samples:		5

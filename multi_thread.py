@@ -612,7 +612,7 @@ def worker_cooperative_binary(shared_state, lock, stop_event, num_operations, pr
             with lock:
                 print(f"[{name}] SAT in {target}! Updating UB.")
                 print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-                if target < shared_state['ub']:
+                if target <= shared_state['ub']:
                     shared_state['ub'] = target - 1
                     shared_state['best_makespan'] = target
                     # BINARY SEARCH: NẾU UB < LB -> OPTIMAL

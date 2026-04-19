@@ -184,6 +184,67 @@ def calculate_greedy_ub(num_operations, num_machines, precedence_list, request_l
     # Bước 4: UB chính là thời điểm hoàn thành của thao tác muộn nhất
     ub = max(op_completion_time.values())
     return ub
+
+
+def calculate_lower_bound(num_operations, num_machines, precedence_list, request_list):
+    """
+    Compute a valid makespan lower bound using three relaxations:
+    1) precedence-only critical path with min processing times,
+    2) average load over all machines,
+    3) mandatory machine load from operations that have only one eligible machine.
+    """
+    min_proc_time = {i: min(request_list[i].values()) for i in range(num_operations)}
+
+    # Build precedence graph.
+    indegree = [0] * num_operations
+    successors = [[] for _ in range(num_operations)]
+    for u, v in precedence_list:
+        successors[u].append(v)
+        indegree[v] += 1
+
+    # Topological order for longest path in DAG with node weights min_proc_time.
+    queue = deque(i for i in range(num_operations) if indegree[i] == 0)
+    topo = []
+    while queue:
+        u = queue.popleft()
+        topo.append(u)
+        for v in successors[u]:
+            indegree[v] -= 1
+            if indegree[v] == 0:
+                queue.append(v)
+
+    if len(topo) != num_operations:
+        raise ValueError("Precedence graph contains a cycle")
+
+    longest_finish = [0] * num_operations
+    for u in topo:
+        if longest_finish[u] == 0:
+            longest_finish[u] = min_proc_time[u]
+        for v in successors[u]:
+            cand = longest_finish[u] + min_proc_time[v]
+            if cand > longest_finish[v]:
+                longest_finish[v] = cand
+    lb_precedence = max(longest_finish) if longest_finish else 0
+
+    # Load-based lower bound from total minimum workload.
+    total_min_work = sum(min_proc_time.values())
+    lb_avg_load = (total_min_work + num_machines - 1) // num_machines
+
+    # Mandatory load per machine (operations with exactly one eligible machine).
+    mandatory_load = [0] * num_machines
+    for i in range(num_operations):
+        if len(request_list[i]) == 1:
+            machine, p_time = next(iter(request_list[i].items()))
+            mandatory_load[machine] += p_time
+    lb_mandatory = max(mandatory_load) if mandatory_load else 0
+
+    lb = max(lb_precedence, lb_avg_load, lb_mandatory)
+    print(
+        f"Lower Bound: {lb} "
+        f"(precedence={lb_precedence}, avg_load={lb_avg_load}, mandatory={lb_mandatory})"
+    )
+    return lb
+
 def create_var(num_operations, request_list, feasible_time):
     s={}
     x={}
@@ -286,18 +347,28 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
 
                     
         
-def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
+def add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time):
     # (12) Giới hạn makespan cho toàn bộ thao tác, không chỉ các thao tác cuối.
-    # Nếu một máy không thể hoàn thành thao tác trước hoặc tại ub, cấm gán máy đó.
+    # Nếu một máy không thể hoàn thành thao tác trước hoặc tại expected_makespan, cấm gán máy đó.
     last_ops = [i for i in range(num_operations) if out_degree[i] == 0]
-    # print(f"Adding incremental constraints for UB = {ub} on last operations: {last_ops}")
+    # print(f"Adding incremental constraints for UB = {expected_makespan} on last operations: {last_ops}")
     for i in last_ops:
         for machine, process_time in request_list[i].items():
-            limit_time = ub - process_time
+            limit_time = expected_makespan - process_time
             if limit_time < feasible_time[i][0] :
                 solver.add_clause([-m[(i, machine)]]) 
             elif limit_time < feasible_time[i][1]:
                 solver.add_clause([-m[(i, machine)], -x[(i, limit_time + 1)]])
+
+def init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan):
+    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, expected_makespan)
+    if not is_feasible:
+        print(f"No feasible solution found with UB = {expected_makespan} during pre-processing.")
+        return False
+    s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
+    add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
+    return True, s, x, m, feasible_time
 
 def solve_and_print(solver, num_operations, s, m, request_list):
     if solver.solve():
@@ -366,7 +437,7 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         
     else:
         print("UNSAT")
-        print(f"status: optimal")
+        # print(f"status: optimal")
         return None, None, None, None
     
 
@@ -471,34 +542,104 @@ def main():
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
-    ub = size_time - 1
-    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
-    if not is_feasible:
-        print("No feasible solution found")
-        print("status: optimal")
-        print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-        return
-    s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
+    lb = calculate_lower_bound(num_operations, num_machines, precedence_list, request_list)
 
-    
-    solver = Solver(name = 'cadical195')
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
-    print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
-
-    while True:
-        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time)
-        machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
-        if machine_assignment is None:
-            break  # Không thể giảm UB nữa
-
-        if not verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, start_times, makespan):
-            print("Schedule is not valid")
-            return
+    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, lb)
+    if is_feasible:
+        print(f"Initial pre-processing with LB = {lb} found feasible time windows for all operations.")
+        feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, lb - 1)
+        if not is_feasible:
+            print(f"Pre-processing with LB = {lb - 1} correctly identified infeasibility, confirming LB = {lb} is valid.")
+            ub = lb
         else:
-            print("Schedule is valid")
+            print(f"Feasible time windows still exist with LB = {lb - 1}, indicating LB can be improved. Adjusting LB.")
+            return
+    else:
+        print(f"Pre-processing with LB = {lb} found infeasibility, updateing LB.")
+        lb += 1
 
-        # Tìm nghiệm tốt hơn ở vòng lặp tiếp theo.
-        ub = makespan - 1
-        print(f" Time taken: {perf_counter() - start_time:.2f} seconds")
+
+    best_makespan = size_time
+    ub = size_time - 1
+    expected_makespan = (lb + ub) // 2
+    last_expected_makespan = expected_makespan
+    # while True:
+    #     print(f"\nTrying to solve with expected makespan (UB) = {expected_makespan} (LB={lb}, UB={ub})")
+    #     solver = Solver(name='cadical195')
+    #     init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan)
+    #     if not init_success:
+    #         print(f"Pre-processing determined no feasible solution with UB = {expected_makespan}. Adjusting bounds.")
+    #         ub = expected_makespan - 1
+    #         expected_makespan = (lb + ub) // 2
+    #         continue
+
+    #     machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
+    #     solver.delete()
+
+    #     if machine_assignment is not None:
+    #         if verify_schedule(num_operations, num_machines, precedence_list,
+    #                            request_list, machine_assignment, start_times, expected_makespan):
+    #             print(f"Schedule verified successfully with makespan {makespan}. Updating UB.")
+    #             print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+    #             best_makespan = makespan
+    #             ub = makespan - 1
+    #         else:
+    #             print("Schedule verification failed. This should not happen if the SAT model is correct.")
+    #             print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+    #             break
+    #     else:
+    #         print(f"No schedule found with UB = {expected_makespan}. Updating LB.")
+    #         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+    #         lb = expected_makespan + 1
+
+    #     if lb > ub:
+    #         print(f"Search complete. Optimal makespan is {best_makespan}.")
+    #         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+    #         break
+
+    #     expected_makespan = (lb + ub) // 2
+    
+    while lb <= ub:
+        print(f"\nTrying to solve with expected makespan (UB) = {expected_makespan} (LB={lb}, UB={ub})")
+        
+        # --- NHÁNH 1: INCREMENTAL SAT (Chỉ dùng khi giảm makespan và solver chưa bị xóa) ---
+        if expected_makespan < last_expected_makespan :
+            add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
+            machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
+            
+        # --- NHÁNH 2: RE-INIT SOLVER (Dùng cho vòng đầu tiên, hoặc sau khi UNSAT) ---
+        else:            
+            solver = Solver(name='cadical195')
+            init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan)
+            
+            if not init_success:
+                print(f"Pre-processing determined no feasible solution with UB = {expected_makespan}.")
+                machine_assignment = None  # Ép nó hiểu là UNSAT
+            else:
+                machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
+
+        if machine_assignment is not None:
+            if verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, start_times, expected_makespan):
+                print(f"Schedule verified successfully with makespan {makespan}. Updating UB.")
+                best_makespan = makespan
+                ub = makespan - 1
+            else:
+                print("Schedule verification failed. This should not happen if the SAT model is correct.")
+                break
+        else:
+
+            print(f"No schedule found with UB = {expected_makespan}. Updating LB.")
+            lb = expected_makespan + 1
+            if solver is not None:
+                solver.delete()
+                solver = None
+
+        last_expected_makespan = expected_makespan
+        expected_makespan = (lb + ub) // 2
+        print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+
+    # Kết thúc vòng lặp
+    print(f"\nSearch complete. Optimal makespan is {best_makespan}.")
+    
 if __name__ == "__main__":
     main()

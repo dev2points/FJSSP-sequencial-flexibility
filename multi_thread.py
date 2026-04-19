@@ -379,7 +379,8 @@ def worker_bottom_up(shared_state, lock, stop_event, num_operations, precedence_
     while not stop_event.is_set():
         with lock: lb, ub = shared_state['lb'], shared_state['ub']
         if lb > ub: break
-        print(f"[{name}] Starting new iteration with LB = {lb}, UB = {ub}")
+        if stop_event.is_set(): break
+        print(f"[{name}] Trying with at most {lb}, LB = {lb}, UB = {ub}")
         solver = Solver(name='cadical195') 
         init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, lb)
 
@@ -387,13 +388,13 @@ def worker_bottom_up(shared_state, lock, stop_event, num_operations, precedence_
             with lock:
                 if lb >= shared_state['lb']: shared_state['lb'] = lb + 1
             solver.delete(); continue
-
+        if stop_event.is_set(): break
         with lock: shared_state['active_solvers'][name] = solver
         is_sat = solver.solve()
         with lock: shared_state['active_solvers'].pop(name, None)
 
         if stop_event.is_set(): solver.delete(); break
-
+        if stop_event.is_set(): break
         if is_sat is True:
             # BOTTOM-UP TÌM THẤY NGHIỆM -> LÀ OPTIMAL
             with lock:
@@ -427,20 +428,18 @@ def worker_bottom_up(shared_state, lock, stop_event, num_operations, precedence_
 # --- THREAD 2: TOP-DOWN ---
 def worker_top_down(shared_state, lock, stop_event, num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time):
     name = "TopDown"
-    with lock: current_target = shared_state['ub']
+    with lock: ub = shared_state['ub']
     
     solver = Solver(name='cadical195')
-    print(f"[{name}] Initializing with target = {current_target}")
-    init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, current_target)
+    print(f"[{name}] Trying with at most {ub}, LB = {shared_state['lb']}, UB = {shared_state['ub']}")
+    init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, ub)
 
     while not stop_event.is_set():
+        if stop_event.is_set(): break
         with lock: lb, ub = shared_state['lb'], shared_state['ub']
         if lb > ub: break
-
-        if ub < current_target:
-            current_target = ub
-            add_incremental_constraints(solver, num_operations, out_degree, request_list, current_target, x, m, feasible_time)
-
+        add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time)
+        if stop_event.is_set(): break
         with lock: shared_state['active_solvers'][name] = solver
         is_sat = solver.solve()
         with lock: shared_state['active_solvers'].pop(name, None)
@@ -449,12 +448,11 @@ def worker_top_down(shared_state, lock, stop_event, num_operations, precedence_l
 
         if is_sat is True:
             with lock:
-                print(f"[{name}] SAT in {current_target}! Updating UB.")
+                print(f"[{name}] SAT in {ub}! Updating UB.")
                 print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-                if current_target <= shared_state['ub']:
-                    shared_state['ub'] = current_target - 1
-                    shared_state['best_makespan'] = current_target
-                    current_target -= 1 
+                if ub <= shared_state['ub']:
+                    shared_state['ub'] = ub - 1
+                    shared_state['best_makespan'] = ub
                     
                     # Kiểm tra chéo nếu ub tụt xuống dưới lb
                     if shared_state['lb'] > shared_state['ub'] and shared_state['status'] != 'Optimal':
@@ -469,7 +467,7 @@ def worker_top_down(shared_state, lock, stop_event, num_operations, precedence_l
             # TOP-DOWN ĐỤNG UNSAT -> LÀ OPTIMAL
             with lock:
                 if shared_state['status'] != 'Optimal':
-                    print(f"[{name}]  UNSAT in {current_target}. FOUND OPTIMAL.")
+                    print(f"[{name}]  UNSAT in {ub}. FOUND OPTIMAL.")
                     print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
                     shared_state['status'] = 'Optimal'
                     shared_state['proved_by'] = name
@@ -522,7 +520,7 @@ def worker_independent_binary(shared_state, lock, stop_event, num_operations, pr
                 solver = None
                 last_target = float('inf')
                 continue
-
+        if stop_event.is_set(): break
         # ĐỘC LẬP: Không đưa solver này vào shared_state['active_solvers'].
         # Nó sẽ lầm lũi giải cho đến khi xong, không ai ngắt được nó!
         is_sat = solver.solve()
@@ -549,7 +547,7 @@ def worker_independent_binary(shared_state, lock, stop_event, num_operations, pr
                     # Dù nó độc lập, nó VẪN CÓ QUYỀN bắn ngắt các luồng khác
                     for n, s_obj in shared_state['active_solvers'].items(): 
                         s_obj.interrupt()
-                        
+                        if stop_event.is_set(): break
             last_target = target # Lưu lại để vòng sau có thể Incremental
 
         elif is_sat is False:
@@ -575,7 +573,7 @@ def worker_independent_binary(shared_state, lock, stop_event, num_operations, pr
             solver.delete()
             solver = None
             last_target = float('inf')
-
+        if stop_event.is_set(): break
     # Dọn dẹp trước khi thoát luồng
     if solver: 
         solver.delete()
@@ -603,7 +601,7 @@ def worker_cooperative_binary(shared_state, lock, stop_event, num_operations, pr
                 with lock:
                     if target >= shared_state['lb']: shared_state['lb'] = target + 1
                 solver.delete(); solver = None; last_target = float('inf'); continue
-
+        if stop_event.is_set(): break
         with lock: shared_state['active_solvers'][name] = solver
         is_sat = solver.solve()
         with lock: shared_state['active_solvers'].pop(name, None)

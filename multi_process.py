@@ -1,0 +1,990 @@
+from collections import defaultdict, deque
+import sys
+import multiprocessing as mp
+import threading
+from time import perf_counter, sleep
+from pysat.solvers import Solver
+from pysat.card import CardEnc
+
+def read_file(file_path):
+    with open(file_path, 'r') as file:
+        if 'yfjs' in file_path.lower():
+            for _ in range(4):
+                next(file, None)
+        line = file.readline()
+        line = line.strip().split()
+        if line:
+            num_operations = int(line[0])
+            num_edges = int(line[1])
+            num_machines = int(line[2])
+            print(f"Operations: {num_operations}, Edges: {num_edges}, Machines: {num_machines}")
+        precedence_list = []
+        for _ in range(num_edges):
+            line = file.readline()
+            line = line.strip().split()
+            if line:
+                precedence_list.append((int(line[0]), int(line[1])))
+        request_list = []
+        for _ in range(num_operations):
+            line = file.readline()
+            line = line.strip().split()
+            if line:
+                num_resources = int(line[0])
+                map = {}
+                for i in range(num_resources):
+                    machine = int(line[1 + 2 * i])
+                    process_time = int(line[2 + 2 * i])
+                    map[machine] = process_time
+                request_list.append(map)
+
+    return num_operations, num_edges, num_machines, precedence_list, request_list
+
+def data(num_operations, precedence_list):
+    in_degree = {i: 0 for i in range(num_operations)}
+    out_degree = {i: 0 for i in range(num_operations)}
+    neighbors = {i: [] for i in range(num_operations)}
+    predecessors = {i: [] for i in range(num_operations)}
+
+    for u, v in precedence_list:
+        in_degree[v] += 1
+        out_degree[u] += 1
+        neighbors[u].append(v)
+        predecessors[v].append(u)
+
+    return in_degree, out_degree, neighbors, predecessors
+
+def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
+    machine_ready_time = {m: 0 for m in range(num_machines)}
+    op_completion_time = {i: 0 for i in range(num_operations)} 
+    machine_assignment = {i: None for i in range(num_operations)}
+
+    in_degree_copy = in_degree.copy()
+
+    queue = [i for i in range(num_operations) if in_degree_copy[i] == 0]
+    index = 0
+    
+    while index < num_operations:
+        curr = queue[index]
+        index += 1
+        min_completion = float('inf')
+
+        earliest_start = 0
+        if predecessors[curr]:
+            earliest_start = max(op_completion_time[p] for p in predecessors[curr])
+
+        for machine, proc_time in request_list[curr].items():
+            actual_start = max(machine_ready_time[machine], earliest_start)
+            completion = proc_time + actual_start
+
+            if completion < min_completion:
+                min_completion = completion
+                machine_assignment[curr] = machine
+
+        if machine_assignment[curr] is not None:
+            machine_ready_time[machine_assignment[curr]] = min_completion
+            op_completion_time[curr] = min_completion
+
+        for neighbor in neighbors[curr]:
+            in_degree_copy[neighbor] -= 1
+            if in_degree_copy[neighbor] == 0:
+                queue.append(neighbor)
+
+    ub = max(machine_ready_time.values())
+    print(f"Greedy Schedule UB: {ub}")
+
+    return ub, machine_assignment, queue
+
+def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue, neighbors, request_list, ub):
+    # Tính thời gian xử lý tối thiểu cho mỗi thao tác (dựa trên máy nhanh nhất)
+    min_proc_time = {}
+    for i in range(num_operations):
+        min_proc_time[i] = min(request_list[i].values())
+    # print(f"Minimum processing time for each operation: {min_proc_time}")
+    
+    # Tính thời gian sớm nhất thao tác có thể bắt đầu
+    earliest_start = {i: 0 for i in range(num_operations)}
+    for u in topo_queue:
+        for v in neighbors[u]:
+            earliest_start[v] = max(earliest_start[v], earliest_start[u] + min_proc_time[u])
+    
+    # Tính thời gian muộn nhất thao tác có thể bắt đầu
+    latest_start = {i: ub - min_proc_time[i] if out_degree[i] == 0 else 0 for i in range(num_operations)}
+    # print(f"lastest start 8 {latest_start[8]}")
+
+    for u in reversed(topo_queue):
+        for v in neighbors[u]:
+            latest_start[u] = max(latest_start[u], latest_start[v] - min_proc_time[u])
+    
+    feasible_time = {}
+    for i in range(num_operations):
+        feasible_time[i] = (earliest_start[i], latest_start[i])
+        if earliest_start[i] > latest_start[i]:
+            print(f"Operation {i} cannot be scheduled (feasible time: {feasible_time[i]})")
+            return None, False
+
+    return feasible_time, True
+
+def calculate_greedy_ub(num_operations, num_machines, precedence_list, request_list):
+    """
+    Tính Cận trên (Upper Bound - UB) bằng thuật toán Heuristic Tham Lam.
+    """
+    # Bước 1: Xây dựng đồ thị và tính bán bậc vào (in-degree) cho Sắp xếp Topo
+    adj_list = defaultdict(list)
+    in_degree = {i: 0 for i in range(num_operations)}
+    predecessors = defaultdict(list)
+    
+    for u, v in precedence_list:
+        adj_list[u].append(v)
+        in_degree[v] += 1
+        predecessors[v].append(u)
+        
+    # Bước 2: Sắp xếp Topo (Kahn's Algorithm)
+    queue = deque([i for i in range(num_operations) if in_degree[i] == 0])
+    topo_order = []
+    
+    while queue:
+        curr = queue.popleft()
+        topo_order.append(curr)
+        for neighbor in adj_list[curr]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+                
+    # Kiểm tra an toàn: Đảm bảo đồ thị không có chu trình
+    if len(topo_order) != num_operations:
+        raise ValueError("Đồ thị chứa chu trình, không thể giải quyết!")
+
+    # Bước 3: Lập lịch tham lam (Greedy Scheduling)
+    machine_ready_time = {m: 0 for m in range(num_machines)}
+    op_completion_time = {i: 0 for i in range(num_operations)}
+    
+    for op in topo_order:
+        # Thời điểm sớm nhất thao tác này có thể bắt đầu (sau khi các thao tác trước đã xong)
+        earliest_start = 0
+        if predecessors[op]:
+            earliest_start = max(op_completion_time[p] for p in predecessors[op])
+            
+        best_completion = float('inf')
+        best_machine = -1
+        
+        # Duyệt qua các máy có thể xử lý thao tác này
+        for machine, proc_time in request_list[op].items():
+            # Thời điểm thực tế có thể bắt đầu trên máy này
+            actual_start = max(earliest_start, machine_ready_time[machine])
+            completion = actual_start + proc_time
+            
+            # Tham lam: Chọn máy giúp thao tác hoàn thành sớm nhất
+            if completion < best_completion:
+                best_completion = completion
+                best_machine = machine
+                
+        # Cập nhật thời gian rảnh của máy và thời gian hoàn thành của thao tác
+        machine_ready_time[best_machine] = best_completion
+        op_completion_time[op] = best_completion
+
+    # Bước 4: UB chính là thời điểm hoàn thành của thao tác muộn nhất
+    ub = max(op_completion_time.values())
+    return ub
+
+
+def calculate_lower_bound(num_operations, num_machines, precedence_list, request_list):
+    """
+    Compute a valid makespan lower bound using three relaxations:
+    1) precedence-only critical path with min processing times,
+    2) average load over all machines,
+    3) mandatory machine load from operations that have only one eligible machine.
+    """
+    min_proc_time = {i: min(request_list[i].values()) for i in range(num_operations)}
+
+    # Build precedence graph.
+    indegree = [0] * num_operations
+    successors = [[] for _ in range(num_operations)]
+    for u, v in precedence_list:
+        successors[u].append(v)
+        indegree[v] += 1
+
+    # Topological order for longest path in DAG with node weights min_proc_time.
+    queue = deque(i for i in range(num_operations) if indegree[i] == 0)
+    topo = []
+    while queue:
+        u = queue.popleft()
+        topo.append(u)
+        for v in successors[u]:
+            indegree[v] -= 1
+            if indegree[v] == 0:
+                queue.append(v)
+
+    if len(topo) != num_operations:
+        raise ValueError("Precedence graph contains a cycle")
+
+    longest_finish = [0] * num_operations
+    for u in topo:
+        if longest_finish[u] == 0:
+            longest_finish[u] = min_proc_time[u]
+        for v in successors[u]:
+            cand = longest_finish[u] + min_proc_time[v]
+            if cand > longest_finish[v]:
+                longest_finish[v] = cand
+    lb_precedence = max(longest_finish) if longest_finish else 0
+
+    # Load-based lower bound from total minimum workload.
+    total_min_work = sum(min_proc_time.values())
+    lb_avg_load = (total_min_work + num_machines - 1) // num_machines
+
+    # Mandatory load per machine (operations with exactly one eligible machine).
+    mandatory_load = [0] * num_machines
+    for i in range(num_operations):
+        if len(request_list[i]) == 1:
+            machine, p_time = next(iter(request_list[i].items()))
+            mandatory_load[machine] += p_time
+    lb_mandatory = max(mandatory_load) if mandatory_load else 0
+
+    lb = max(lb_precedence, lb_avg_load, lb_mandatory)
+    print(
+        f"Lower Bound: {lb} "
+        f"(precedence={lb_precedence}, avg_load={lb_avg_load}, mandatory={lb_mandatory})"
+    )
+    return lb
+
+def create_var(num_operations, request_list, feasible_time):
+    s={}
+    x={}
+    m={}
+    counter = 0
+    for i in range(num_operations):
+        for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+            counter += 1
+            s[(i,t)] = counter
+            counter += 1
+            x[(i,t)] = counter
+        for a, process_time in request_list[i].items():
+            counter += 1
+            m[(i, a)] = counter
+    
+
+    return s, x, m, counter    
+
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id):
+    # (4) tạo dãy order
+    for i in range(num_operations):
+
+        # exactly one
+        machines= request_list[i].keys()
+        enc = CardEnc.equals(lits=[m[(i,machine)] for machine in machines], bound=1, encoding=1, top_id=top_id)
+        top_id = enc.nv
+        solver.append_formula(enc.clauses)
+
+        # Create first bit of order
+        solver.add_clause([x[(i,feasible_time[i][0])]])
+        for t in range(feasible_time[i][0], feasible_time[i][1]):
+            # (4) Tạo dãy order
+            solver.add_clause([-x[(i,t+1)], x[(i,t)]]) 
+            # (5) Link s và x
+            solver.add_clause([-s[(i,t)], x[(i,t)]])
+            solver.add_clause([-s[(i,t)], -x[(i,t+1)]])
+            solver.add_clause([-x[(i,t)], x[(i,t+1)], s[(i,t)]])
+        # t = feasible_time[i][1]
+        solver.add_clause([-s[(i,feasible_time[i][1])], x[(i,feasible_time[i][1])]])
+        solver.add_clause([s[(i,feasible_time[i][1])], -x[(i,feasible_time[i][1])]])
+
+        # ràng buộc chống overlap
+        for j in range(i+1, num_operations):
+            if (i,j) in precedence_list or (j,i) in precedence_list:
+                continue
+            common_machines = set(request_list[i].keys()).intersection(set(request_list[j].keys()))
+            for machine in common_machines:
+                p_i = request_list[i][machine]
+                p_j = request_list[j][machine]
+
+                for t_i in range(feasible_time[i][0], feasible_time[i][1] + 1):
+
+                    start = t_i - p_j # Biên time bên trái
+                    end   = t_i + p_i # Biên time bên phải
+
+                    clause = [
+                        -m[(i, machine)],
+                        -m[(j, machine)],
+                        -s[(i, t_i)]
+                    ]
+
+                    # Nếu end < ES_j: j chắc chắn bắt đầu sau end -> Mệnh đề luôn ĐÚNG
+                    if end <= feasible_time[j][0]:
+                        continue
+
+                    # Nếu start + 1 > LS_j: j chắc chắn bắt đầu trước start -> Mệnh đề luôn ĐÚNG
+                    if start  >= feasible_time[j][1]:
+                        continue
+
+                    # xử lý biên trái
+                    if start >= feasible_time[j][0]:
+                        clause.append(-x[(j, start + 1)])
+
+                    # xử lý biên phải
+                    if end <= feasible_time[j][1]:
+                        clause.append(x[(j, end)])
+
+                    # nếu end >= feasible_time[j][1] thì luôn thỏa
+                    solver.add_clause(clause)
+    
+
+            
+        
+
+    #(6) ràng buộc thứ tự ưu tiên
+    for i,j in precedence_list:
+        # print(f"Adding precedence constraint: Op {i} -> Op {j}")
+        processing = request_list[i]
+        for machine, process_time in processing.items():
+            for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                finish_i = t + process_time
+                
+                if finish_i > feasible_time[j][1]:
+                    # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                    solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+                elif finish_i > feasible_time[j][0]:
+                    # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                    solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
+        
+
+                    
+        
+def add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time):
+    # (12) Giới hạn makespan cho toàn bộ thao tác, không chỉ các thao tác cuối.
+    # Nếu một máy không thể hoàn thành thao tác trước hoặc tại expected_makespan, cấm gán máy đó.
+    last_ops = [i for i in range(num_operations) if out_degree[i] == 0]
+    # print(f"Adding incremental constraints for UB = {expected_makespan} on last operations: {last_ops}")
+    for i in last_ops:
+        for machine, process_time in request_list[i].items():
+            limit_time = expected_makespan - process_time
+            if limit_time < feasible_time[i][0] :
+                solver.add_clause([-m[(i, machine)]]) 
+            elif limit_time < feasible_time[i][1]:
+                solver.add_clause([-m[(i, machine)], -x[(i, limit_time + 1)]])
+
+def init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan):
+    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, expected_makespan)
+    if not is_feasible:
+        print(f"No feasible solution found with UB = {expected_makespan} during pre-processing.")
+        return False, None, None, None, None
+    s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
+    add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
+    return True, s, x, m, feasible_time
+# ==============================================================================
+# KHU VỰC 2: CÁC LUỒNG TÌM KIẾM (WORKERS)
+# ==============================================================================
+
+
+# 1. HÀM WATCHDOG CHO BOTTOM-UP
+def watchdog_lb(solver, shared_state, current_target, process_stop_event, worker_name, watchdog_flag):
+    """Canh chừng biên LB (Dành cho Bottom-Up)"""
+    while not process_stop_event.is_set():
+        latest_lb = shared_state.get('lb')
+        if latest_lb is not None and latest_lb > current_target:
+            print(f"[{worker_name}-Watchdog] LB ({latest_lb}) over {current_target}. Interrupt!")
+            watchdog_flag[0] = True # Bật cờ ngắt
+            if solver is not None:
+                solver.interrupt()  # Bóp cò ngắt CaDiCaL
+            break
+        process_stop_event.wait(0.1)
+
+
+# 2. HÀM WORKER CHÍNH SỬ DỤNG MULTIPROCESSING
+def worker_bottom_up(shared_state, lock, stop_event, num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time):
+    name = "BottomUp"
+    solver = None
+
+    while not stop_event.is_set():
+        with lock:
+            current_target = shared_state.get('lb')
+            if current_target > shared_state.get('ub'):
+                break
+
+        print(f"[{name}] Trying with at most {current_target}, LB = {shared_state.get('lb')}, UB = {shared_state.get('ub')}")
+        
+        # Bottom-Up luôn đi lên, không thể dùng Incremental (PySAT không hỗ trợ tháo gỡ điều kiện)
+        if solver: 
+            solver.delete()
+            solver = None
+            
+        solver = Solver(name='cadical195')
+        
+        init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, current_target)
+
+        if not init_success:
+            with lock:
+                if current_target >= shared_state.get('lb'):
+                    shared_state['lb'] = current_target + 1
+            continue
+
+        if stop_event.is_set(): break
+        
+        # --- CHỐNG STALE TARGET ---
+        # Kiểm tra xem trong lúc init_solver, LB đã bị process khác đổi chưa
+        if shared_state.get('lb') > current_target:
+            print(f"[{name}] Target {current_target} đã lỗi thời sau khi init. Bỏ qua vòng này.")
+            continue
+
+        # --- 1. KHỞI ĐỘNG WATCHDOG ---
+        watchdog_flag = [False]
+        process_stop_event = threading.Event()
+        monitor_thread = threading.Thread(
+            target=watchdog_lb,
+            args=(solver, shared_state, current_target, process_stop_event, name, watchdog_flag)
+        )
+        monitor_thread.start()
+
+        # --- 2. BẮT ĐẦU GIẢI (BỌC BẢO VỆ) ---
+        is_sat = None
+        try:
+            is_sat = solver.solve()
+        except Exception as e:
+            print(f"[{name}] Solver sinh Exception (Do bị ngắt): {e}")
+            is_sat = None
+
+        # --- 3. DỌN DẸP WATCHDOG ---
+        process_stop_event.set()
+        monitor_thread.join()
+
+        if stop_event.is_set(): break
+
+        # --- 4. XỬ LÝ KẾT QUẢ ---
+        
+        # Nếu bị ngắt bởi Watchdog hoặc PySAT trả về None
+        if watchdog_flag[0] or is_sat is None:
+            print(f"[{name}] Bị ngắt thành công! Chuyển sang Target mới...")
+            # Sẽ tự động khởi tạo lại solver ở đầu vòng lặp while do Bottom-Up không dùng Incremental
+            continue
+
+        elif is_sat is True:
+            with lock:
+                print(f"[{name}] SAT in {current_target}! ĐÃ TÌM THẤY OPTIMAL.")
+                print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+                
+                # Bottom-Up tìm thấy SAT là Optimal. Gán UB = current_target và chốt kết quả.
+                shared_state['ub'] = current_target
+                shared_state['best_makespan'] = current_target
+                shared_state['status'] = 'Optimal'
+                shared_state['proved_by'] = name
+                stop_event.set() # Dừng tất cả các process khác
+                
+            if solver:
+                solver.delete()
+                solver = None
+            break # Thoát vòng lặp luôn vì đã xong bài toán
+
+        elif is_sat is False:
+            with lock:
+                print(f"[{name}] UNSAT in {current_target}. Tăng LB.")
+                if current_target >= shared_state.get('lb'):
+                    shared_state['lb'] = current_target + 1
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+            
+            if solver:
+                solver.delete()
+                solver = None
+
+    if solver:
+        solver.delete()
+
+
+
+# 1. HÀM WATCHDOG ĐƯỢC TINH CHỈNH (Dành cho Top-Down)
+def watchdog_ub(solver, shared_state, current_target, process_stop_event, worker_name, watchdog_flag):
+    """Canh chừng biên UB (Dành cho Top-Down)"""
+    while not process_stop_event.is_set():
+        # Lấy UB mới nhất từ Share Memory một cách an toàn
+        latest_ub = shared_state.get('ub')
+        
+        # Top-Down chỉ bị ngắt khi có process khác đè UB xuống THẤP HƠN target đang giải
+        if latest_ub is not None and latest_ub < current_target:
+            print(f"[{worker_name}-Watchdog] Phát hiện UB ({latest_ub}) < Target ({current_target}). INTERRUPT!")
+            watchdog_flag[0] = True # Bật cờ ngắt
+            if solver is not None:
+                solver.interrupt()  # Bóp cò ngắt CaDiCaL
+            break
+            
+        process_stop_event.wait(0.1)
+
+
+# 2. HÀM WORKER TOP-DOWN SỬ DỤNG INCREMENTAL SAT
+def worker_top_down(shared_state, lock, stop_event, num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time):
+    name = "TopDown"
+    solver = None
+    s, x, m, feasible_time = None, None, None, None
+
+    while not stop_event.is_set():
+        with lock:
+            current_target = shared_state.get('ub')
+            if shared_state.get('lb') > current_target:
+                break
+                
+        print(f"[{name}] Trying with at most {current_target}, LB = {shared_state.get('lb')}, UB = {shared_state.get('ub')}")
+
+        # --- 1. QUYẾT ĐỊNH: INCREMENTAL HOẶC RE-INIT ---
+        if solver is not None:
+            # SOLVER ĐÃ CÓ SẴN (Có thể từ vòng lặp trước bị ngắt, hoặc vừa tìm thấy SAT)
+            # -> Thêm điều kiện và GIỮ NGUYÊN LEARNED CLAUSES
+            add_incremental_constraints(solver, num_operations, out_degree, request_list, current_target, x, m, feasible_time)
+        else:
+            # CHẠY LẦN ĐẦU TIÊN: Phải khởi tạo từ đầu
+            solver = Solver(name='cadical195')
+            init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, current_target)
+            
+            if not init_success:
+                with lock:
+                    if current_target >= shared_state.get('lb'):
+                        shared_state['lb'] = current_target + 1
+                solver.delete()
+                solver = None
+                continue
+
+        if stop_event.is_set(): break
+
+        # --- CHỐNG STALE TARGET ---
+        # Ngăn chặn việc nhảy vào giải nếu trong lúc add_incremental/init_solver, UB đã bị đổi
+        if shared_state.get('ub') < current_target:
+            print(f"[{name}] Target {current_target} đã lỗi thời trước khi gọi solve. Bỏ qua vòng này.")
+            continue
+
+        # --- 2. KHỞI ĐỘNG WATCHDOG ---
+        watchdog_flag = [False]
+        process_stop_event = threading.Event()
+        monitor_thread = threading.Thread(
+            target=watchdog_ub,
+            args=(solver, shared_state, current_target, process_stop_event, name, watchdog_flag)
+        )
+        monitor_thread.start()
+
+        # --- 3. BẮT ĐẦU GIẢI (BỌC BẢO VỆ CRASH) ---
+        is_sat = None
+        try:
+            is_sat = solver.solve()
+        except Exception as e:
+            # Bắt lỗi nếu lõi C++ của PySAT ném Exception do bị ngắt
+            print(f"[{name}] Solver sinh Exception (Do bị ngắt): {e}")
+            is_sat = None 
+
+        # --- 4. DỌN DẸP WATCHDOG ---
+        process_stop_event.set()
+        monitor_thread.join()
+
+        if stop_event.is_set(): break
+        
+        was_interrupted = watchdog_flag[0]
+
+        # --- 5. XỬ LÝ KẾT QUẢ ---
+        
+        # KỊCH BẢN A: BỊ NGẮT (Bởi Watchdog)
+        if is_sat is None or was_interrupted:
+            print(f"[{name}] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!")
+            # Tuyệt đối KHÔNG gán solver = None hay solver.delete() ở đây
+            continue
+
+        # KỊCH BẢN B: TÌM THẤY NGHIỆM TỐT HƠN
+        elif is_sat is True:
+            with lock:
+                print(f"[{name}] SAT in {current_target}! Updating UB.")
+                print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+                
+                if current_target <= shared_state.get('ub'):
+                    shared_state['ub'] = current_target - 1
+                    shared_state['best_makespan'] = current_target
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+            
+            # Tuyệt đối KHÔNG gán solver = None hay solver.delete() ở đây
+            # Vòng lặp sẽ quay lại trên cùng, lấy UB mới và gọi add_incremental_constraints
+
+        # KỊCH BẢN C: VÔ NGHIỆM (Đã chạm đáy)
+        elif is_sat is False:
+            with lock:
+                print(f"[{name}] UNSAT in {current_target}. Đã chạm đáy Optimal!")
+                if current_target >= shared_state.get('lb'):
+                    shared_state['lb'] = current_target + 1
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+                        
+            # Khi Top-Down gặp UNSAT, có nghĩa là toàn bộ khoảng thời gian bên dưới đều vô nghiệm.
+            # Strategy Top-Down đã hoàn thành sứ mệnh lịch sử của nó.
+            # Lúc này XÓA solver là hợp lý để dọn dẹp RAM.
+            if solver:
+                solver.delete()
+                solver = None
+
+    # Dọn dẹp cuối cùng khi stop_event được bật (bài toán kết thúc)
+    if solver:
+        solver.delete()
+
+
+# 3. HÀM WORKER INDEPENDENT BINARY SEARCH (KHÔNG WATCHDOG)
+def worker_independent_binary(shared_state, lock, stop_event, num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time):
+    name = "IndepBinary"
+    solver = None
+    solver_bound = float('inf') # Đồng bộ tên biến với hàm CoopBinary
+    s, x, m, feasible_time = None, None, None, None
+
+    while not stop_event.is_set():
+        with lock: 
+            lb, ub = shared_state.get('lb'), shared_state.get('ub')
+        
+        if lb is None or ub is None or lb > ub: 
+            break
+            
+        target = (lb + ub) // 2
+        print(f"[{name}] New iteration: LB={lb}, UB={ub} => Target={target}")
+        
+        # --- QUẢN LÝ SOLVER (Incremental vs Re-init) ---
+        if solver is not None and target < solver_bound:
+            add_incremental_constraints(solver, num_operations, out_degree, request_list, target, x, m, feasible_time)
+            solver_bound = target
+        else:
+            if solver: 
+                solver.delete()
+                solver = None
+                
+            solver = Solver(name='cadical195') 
+            
+            init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, target)
+            
+            if not init_success:
+                with lock:
+                    if target >= shared_state.get('lb'): 
+                        shared_state['lb'] = target + 1
+                        if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                            shared_state['status'] = 'Optimal'
+                            shared_state['proved_by'] = name
+                            stop_event.set()
+                            
+                if solver:
+                    solver.delete()
+                    solver = None
+                solver_bound = float('inf')
+                continue
+            else:
+                solver_bound = target
+
+        if stop_event.is_set(): 
+            break
+            
+        # --- CHỐNG STALE TARGET TRƯỚC KHI GIẢI ---
+        current_lb, current_ub = shared_state.get('lb'), shared_state.get('ub')
+        # Nếu target hiện tại đã văng ra ngoài khoảng tìm kiếm mới nhất, bỏ qua luôn!
+        if current_lb > target or current_ub < target or current_lb > current_ub:
+            print(f"[{name}] Target {target} đã lỗi thời so với mốc chung. Bỏ qua lấy Target mới.")
+            continue
+            
+        # ĐỘC LẬP: Không Watchdog. Chạy thẳng lệnh giải. Bọc try-except đề phòng tắt đột ngột
+        is_sat = None
+        try:
+            is_sat = solver.solve()
+        except Exception as e:
+            print(f"[{name}] Solver sinh Exception: {e}")
+            is_sat = None
+
+        if stop_event.is_set(): 
+            break
+
+        # --- XỬ LÝ KẾT QUẢ ---
+        if is_sat is True:
+            with lock:
+                # Sửa thành <= để bao quát hết trường hợp
+                if target <= shared_state.get('ub'):
+                    shared_state['ub'] = target - 1
+                    shared_state['best_makespan'] = target
+                    print(f"[{name}] SAT in {target}! Updating UB.")
+                    print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+                        
+            # SAT thì vòng lặp sau target sẽ đi xuống -> Tuyệt đối giữ nguyên Solver!
+
+        elif is_sat is False:
+            with lock:
+                print(f"[{name}] UNSAT in {target}. Incrementing LB.")
+                if target >= shared_state.get('lb'):
+                    shared_state['lb'] = target + 1
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+                        
+            # UNSAT thì vòng lặp sau target sẽ đi lên -> Bắt buộc Xóa Solver!
+            if solver:
+                solver.delete()
+                solver = None
+            solver_bound = float('inf')
+
+    if solver: 
+        solver.delete()
+
+# 1. HÀM WATCHDOG CHO BINARY SEARCH
+def watchdog_both(solver, shared_state, current_target, process_stop_event, worker_name, watchdog_flag):
+    """Canh chừng cả 2 biên LB và UB. Ngắt nếu target không còn giá trị."""
+    while not process_stop_event.is_set():
+        # Dùng .get() để tránh lỗi khi đọc từ multiprocessing dict
+        latest_lb = shared_state.get('lb')
+        latest_ub = shared_state.get('ub')
+        
+        if latest_lb is not None and latest_ub is not None:
+            # Bài toán đã Optimal bởi một process khác
+            if latest_lb > latest_ub:
+                watchdog_flag[0] = True
+                if solver is not None: solver.interrupt()
+                break
+                
+            # Cận dưới bị đẩy lên cao hơn Target đang giải
+            if latest_lb > current_target:
+                print(f"[{worker_name}-Watchdog] LB ({latest_lb}) over target {current_target}. Interrupt!")
+                watchdog_flag[0] = True
+                if solver is not None: solver.interrupt()
+                break
+                
+            # Cận trên bị ép xuống thấp hơn Target đang giải
+            if latest_ub < current_target:
+                print(f"[{worker_name}-Watchdog] UB ({latest_ub}) under target {current_target}. Interrupt!")
+                watchdog_flag[0] = True
+                if solver is not None: solver.interrupt()
+                break
+            
+        process_stop_event.wait(0.1)
+
+
+# 2. HÀM WORKER BINARY SEARCH (TỐI ƯU HÓA INCREMENTAL & MEMORY)
+def worker_cooperative_binary(shared_state, lock, stop_event, num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time):
+    name = "CoopBinary"
+    solver = None
+    
+    # Biến này lưu lại Target hiện tại đang nằm bên trong Solver
+    # Đổi tên từ last_target thành solver_bound cho dễ hiểu
+    solver_bound = float('inf') 
+    s, x, m, feasible_time = None, None, None, None
+
+    while not stop_event.is_set():
+        with lock: 
+            lb, ub = shared_state.get('lb'), shared_state.get('ub')
+            
+        if lb is None or ub is None or lb > ub: 
+            break
+            
+        target = (lb + ub) // 2
+        print(f"[{name}] New iteration: LB={lb}, UB={ub} => Target={target}")
+        
+        # --- QUẢN LÝ SOLVER THÔNG MINH (Giữ Learned Clauses) ---
+        if solver is not None and target < solver_bound:
+            print(f"[{name}] Đi XUỐNG (Target {target} < Bound {solver_bound}) -> Dùng Incremental SAT")
+            add_incremental_constraints(solver, num_operations, out_degree, request_list, target, x, m, feasible_time)
+            solver_bound = target
+        else:
+            # Nếu target >= solver_bound (Đi LÊN), bắt buộc phải Re-init vì không thể nới lỏng điều kiện
+            if solver is not None:
+                print(f"[{name}] Đi LÊN (Target {target} >= Bound {solver_bound}) -> Re-init Solver")
+                solver.delete()
+                solver = None
+                
+            solver = Solver(name='cadical195')
+            init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, target)
+            
+            if not init_success:
+                with lock:
+                    if target >= shared_state.get('lb'): 
+                        shared_state['lb'] = target + 1
+                solver.delete()
+                solver = None
+                solver_bound = float('inf')
+                continue
+            else:
+                solver_bound = target # Cập nhật mốc giới hạn mới đã nạp vào Solver
+
+        if stop_event.is_set(): 
+            break
+
+        # --- CHỐNG STALE TARGET (Mục tiêu thiu) ---
+        current_lb, current_ub = shared_state.get('lb'), shared_state.get('ub')
+        if current_lb > target or current_ub < target or current_lb > current_ub:
+            print(f"[{name}] Target {target} đã bị process khác làm lỗi thời. Bỏ qua.")
+            continue
+
+        # --- 1. KHỞI ĐỘNG WATCHDOG ---
+        watchdog_flag = [False]
+        process_stop_event = threading.Event()
+        monitor_thread = threading.Thread(
+            target=watchdog_both,
+            args=(solver, shared_state, target, process_stop_event, name, watchdog_flag)
+        )
+        monitor_thread.start()
+
+        # --- 2. BẮT ĐẦU GIẢI (Bọc Try-Except) ---
+        is_sat = None
+        try:
+            is_sat = solver.solve()
+        except Exception as e:
+            print(f"[{name}] Solver sinh Exception (Do bị ngắt): {e}")
+            is_sat = None
+
+        # --- 3. DỌN DẸP WATCHDOG ---
+        process_stop_event.set()
+        monitor_thread.join()
+
+        if stop_event.is_set(): 
+            break
+
+        was_interrupted = watchdog_flag[0]
+
+        # --- 4. XỬ LÝ KẾT QUẢ CỰC KỲ QUAN TRỌNG ---
+        
+        # KỊCH BẢN A: BỊ NGẮT (Bởi Watchdog)
+        if is_sat is None or was_interrupted:
+            print(f"[{name}] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.")
+            # TUYỆT ĐỐI KHÔNG XÓA SOLVER!
+            # Nếu vòng sau target đi xuống (do ai đó tìm ra UB tốt hơn), vòng lặp trên sẽ dùng Incremental.
+            # Nếu vòng sau target đi lên (do ai đó nâng LB lên), vòng lặp trên sẽ TỰ ĐỘNG xóa solver.
+            continue
+
+        # KỊCH BẢN B: TÌM THẤY NGHIỆM (SAT)
+        elif is_sat is True:
+            with lock:
+                print(f"[{name}] SAT in {target}! Updating UB.")
+                print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+                
+                if target <= shared_state.get('ub'):
+                    shared_state['ub'] = target - 1
+                    shared_state['best_makespan'] = target
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        print(f"[{name}] UB < LB => OPTIMAL")
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set() 
+            
+            # ĐÃ SAT, UB GIẢM -> Vòng lặp sau Target chắc chắn sẽ đi XUỐNG!
+            # TUYỆT ĐỐI KHÔNG XÓA SOLVER ĐỂ GIỮ LẠI LEARNED CLAUSES CHO VÒNG TỚI!
+            continue
+
+        # KỊCH BẢN C: VÔ NGHIỆM (UNSAT)
+        elif is_sat is False:
+            with lock:
+                print(f"[{name}] UNSAT in {target}. Incrementing LB.")
+                
+                if target >= shared_state.get('lb'):
+                    shared_state['lb'] = target + 1
+                    
+                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
+                        print(f"[{name}] LB > UB => OPTIMAL")
+                        shared_state['status'] = 'Optimal'
+                        shared_state['proved_by'] = name
+                        stop_event.set()
+            
+            # ĐÃ UNSAT, LB TĂNG -> Vòng lặp sau Target chắc chắn sẽ đi LÊN!
+            # Do không thể nới lỏng Incremental, lúc này BẮT BUỘC PHẢI XÓA SOLVER.
+            if solver:
+                solver.delete()
+                solver = None
+                solver_bound = float('inf')
+
+    # Dọn dẹp cuối cùng khi kết thúc chương trình
+    if solver: 
+        solver.delete()
+
+
+# ==============================================================================
+# KHU VỰC 3: HÀM MAIN (KHỞI TẠO TÀI NGUYÊN VÀ ĐIỀU PHỐI)
+# ==============================================================================
+def main():
+    if len(sys.argv) < 2:
+        print("Sử dụng: python3 script.py <file_path>")
+        sys.exit(1)
+
+    start_time = perf_counter()
+    file_path = sys.argv[1]
+    
+    print(f"Loading data from: {file_path}")
+    num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
+    in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
+    
+    size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
+    lb_initial = calculate_lower_bound(num_operations, num_machines, precedence_list, request_list)
+    ub = size_time - 1
+    
+    print(f"Complete preprocessing! Greedy UB = {size_time}")
+    print(f"Initial UB = {ub}, LB = {lb_initial}")
+    
+    # ==============================================================
+    # BẢN VÁ LỖI BROKEN PIPE
+    # ==============================================================
+    # 1. Khai báo Lock và Event NATIVE (Không thông qua Manager)
+    # Tốc độ cực nhanh, không dùng Pipe, không bao giờ lỗi.
+    lock = mp.Lock()
+    stop_event = mp.Event()
+
+    # 2. Dùng Manager bằng khối `with` để đảm bảo nó sống cho đến phút cuối cùng
+    with mp.Manager() as manager:
+        shared_state = manager.dict({
+            'lb': lb_initial,
+            'ub': ub,
+            'best_makespan': size_time,
+            'status': 'Solving',   
+            'proved_by': None      
+        })
+        
+        args_chung = (
+            shared_state, lock, stop_event, 
+            num_operations, precedence_list, request_list, out_degree, queue, neighbors, start_time
+        )
+
+        processes = [
+            mp.Process(target=worker_bottom_up, args=args_chung),
+            mp.Process(target=worker_top_down, args=args_chung),
+            mp.Process(target=worker_independent_binary, args=args_chung),
+            mp.Process(target=worker_cooperative_binary, args=args_chung)
+        ]
+
+        print("-" * 50)
+        print(" Start MULTIPROCESSING search with 4 CPU Cores...")
+        print("-" * 50)
+        
+        for p in processes:
+            p.start()
+        
+        # Vòng lặp chờ an toàn
+        try:
+            while not stop_event.is_set() and any(p.is_alive() for p in processes):
+                sleep(0.1) # Tăng tốc độ phản hồi lệnh dừng (0.5 -> 0.1)
+                
+        except KeyboardInterrupt:
+            print("\n[Main] Found user interrupt (Ctrl+C)!")
+            stop_event.set()
+
+        print("\nFound optimal solution or received stop signal. Cleaning up processes...")
+        
+        # 3. Dọn dẹp an toàn thay vì bắn vỡ pipe
+        for p in processes:
+            if p.is_alive():
+                p.terminate() 
+                p.join() # Chờ tiến trình con trả lại tài nguyên
+        
+        # IN KẾT QUẢ CUỐI CÙNG NGAY TRONG KHỐI WITH (Khi Manager vẫn còn sống)
+        print("-" * 50)
+        print(f"   FINAL RESULT:")
+        print(f"   Status: {shared_state['status']}")
+        print(f"   Proved by: {shared_state['proved_by']}")
+        print(f"   Optimal Makespan: {shared_state['best_makespan']}")
+        print(f"   Total time: {perf_counter() - start_time:.2f} seconds")
+
+if __name__ == '__main__':
+    mp.freeze_support() 
+    main()

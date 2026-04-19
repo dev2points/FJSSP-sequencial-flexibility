@@ -1,0 +1,69 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/yfjs/YFJS11
+[runlim] start:			Sun Apr 19 22:30:20 2026
+[runlim] child:			60735
+Loading data từ: datasets/yfjs/YFJS11
+Operations: 50, Edges: 40, Machines: 10
+Greedy Schedule UB: 616
+Lower Bound: 507 (precedence=507, avg_load=364, mandatory=193)
+Complete preprocessing! Greedy UB = 616
+Initial UB = 615, LB = 507
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Starting new iteration with LB = 507, UB = 615
+[TopDown] Initializing with target = 615
+[IndepBinary] New iteration with LB = 507, UB = 615, Target = 561
+[CoopBinary] New iteration with LB = 507, UB = 615, Target = 561
+[IndepBinary] SAT in 561! Updating UB.
+Time taken: 0.95 seconds
+Current bounds: LB = 507, UB = 560
+[IndepBinary] New iteration with LB = 507, UB = 560, Target = 533
+[IndepBinary] SAT in 533! Updating UB.
+Time taken: 2.13 seconds
+Current bounds: LB = 507, UB = 532
+[IndepBinary] New iteration with LB = 507, UB = 532, Target = 519
+[IndepBinary] UNSAT in 519. Incrementing LB.
+Time taken: 2.16 seconds
+Current bounds: LB = 520, UB = 532
+[IndepBinary] New iteration with LB = 520, UB = 532, Target = 526
+[BottomUp] UNSAT in 507. Incrementing LB.
+Time taken: 2.38 seconds
+Current bounds: LB = 520, UB = 532
+[BottomUp] Starting new iteration with LB = 520, UB = 532
+[CoopBinary] SAT in 561! Updating UB.
+Time taken: 2.64 seconds
+Current bounds: LB = 520, UB = 532
+[CoopBinary] New iteration with LB = 520, UB = 532, Target = 526
+[CoopBinary] SAT in 526! Updating UB.
+Time taken: 3.05 seconds
+Current bounds: LB = 520, UB = 525
+[CoopBinary] New iteration with LB = 520, UB = 525, Target = 522
+[CoopBinary] UNSAT in 522. Incrementing LB.
+Time taken: 3.07 seconds
+Current bounds: LB = 523, UB = 525
+[CoopBinary] New iteration with LB = 523, UB = 525, Target = 524
+[TopDown]  UNSAT in 525. FOUND OPTIMAL.
+Time taken: 3.78 seconds
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: TopDown
+Optimal Makespan: 526
+Total time: 4.68 seconds
+[runlim] end:			Sun Apr 19 22:30:24 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			4.72 seconds
+[runlim] time:			4.73 seconds
+[runlim] space:			208 MB
+[runlim] load:			0.85 maximum
+[runlim] samples:		48

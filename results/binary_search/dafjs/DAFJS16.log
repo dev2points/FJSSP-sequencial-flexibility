@@ -1,0 +1,16 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS16
+[runlim] start:			Sun Apr 19 19:29:14 2026
+[runlim] child:			7753
+Operations: 120, Edges: 114, Machines: 10
+Greedy Schedule UB: 897
+Lower Bound: 640 (precedence=640, avg_load=588, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 768 (LB=640, UB=896)

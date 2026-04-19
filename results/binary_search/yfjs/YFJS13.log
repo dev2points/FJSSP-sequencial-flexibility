@@ -1,0 +1,69 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS13
+[runlim] start:			Sun Apr 19 16:27:23 2026
+[runlim] child:			7099
+Operations: 50, Edges: 40, Machines: 10
+Greedy Schedule UB: 522
+Lower Bound: 350 (precedence=350, avg_load=292, mandatory=64)
+
+Trying to solve with expected makespan (UB) = 435 (LB=350, UB=521)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 435
+Schedule verified successfully with makespan 435. Updating UB.
+Time taken: 0.54 seconds
+
+Trying to solve with expected makespan (UB) = 392 (LB=350, UB=434)
+UNSAT
+No schedule found with UB = 392. Updating LB.
+Time taken: 0.84 seconds
+
+Trying to solve with expected makespan (UB) = 413 (LB=393, UB=434)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 413
+Schedule verified successfully with makespan 413. Updating UB.
+Time taken: 1.15 seconds
+
+Trying to solve with expected makespan (UB) = 402 (LB=393, UB=412)
+UNSAT
+No schedule found with UB = 402. Updating LB.
+Time taken: 1.42 seconds
+
+Trying to solve with expected makespan (UB) = 407 (LB=403, UB=412)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 407
+Schedule verified successfully with makespan 407. Updating UB.
+Time taken: 1.70 seconds
+
+Trying to solve with expected makespan (UB) = 404 (LB=403, UB=406)
+UNSAT
+No schedule found with UB = 404. Updating LB.
+Time taken: 1.96 seconds
+
+Trying to solve with expected makespan (UB) = 405 (LB=405, UB=406)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 405
+Schedule verified successfully with makespan 405. Updating UB.
+Time taken: 2.20 seconds
+
+Search complete. Optimal makespan is 405.
+[runlim] end:			Sun Apr 19 16:27:25 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			2.24 seconds
+[runlim] time:			2.20 seconds
+[runlim] space:			58 MB
+[runlim] load:			0.74 maximum
+[runlim] samples:		23

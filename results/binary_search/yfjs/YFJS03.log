@@ -1,0 +1,67 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS03
+[runlim] start:			Sun Apr 19 16:26:59 2026
+[runlim] child:			7069
+Operations: 24, Edges: 18, Machines: 7
+Greedy Schedule UB: 445
+Lower Bound: 334 (precedence=334, avg_load=231, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 389 (LB=334, UB=444)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 389
+Schedule verified successfully with makespan 389. Updating UB.
+Time taken: 0.07 seconds
+
+Trying to solve with expected makespan (UB) = 361 (LB=334, UB=388)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 361
+Schedule verified successfully with makespan 361. Updating UB.
+Time taken: 0.10 seconds
+
+Trying to solve with expected makespan (UB) = 347 (LB=334, UB=360)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 347
+Schedule verified successfully with makespan 347. Updating UB.
+Time taken: 0.11 seconds
+
+Trying to solve with expected makespan (UB) = 340 (LB=334, UB=346)
+UNSAT
+No schedule found with UB = 340. Updating LB.
+Time taken: 0.11 seconds
+
+Trying to solve with expected makespan (UB) = 343 (LB=341, UB=346)
+UNSAT
+No schedule found with UB = 343. Updating LB.
+Time taken: 0.17 seconds
+
+Trying to solve with expected makespan (UB) = 345 (LB=344, UB=346)
+UNSAT
+No schedule found with UB = 345. Updating LB.
+Time taken: 0.22 seconds
+
+Trying to solve with expected makespan (UB) = 346 (LB=346, UB=346)
+UNSAT
+No schedule found with UB = 346. Updating LB.
+Time taken: 0.29 seconds
+
+Search complete. Optimal makespan is 347.
+[runlim] end:			Sun Apr 19 16:27:00 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.32 seconds
+[runlim] time:			0.30 seconds
+[runlim] space:			30 MB
+[runlim] load:			0.60 maximum
+[runlim] samples:		4

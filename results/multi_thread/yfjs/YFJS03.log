@@ -1,0 +1,93 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/yfjs/YFJS03
+[runlim] start:			Sun Apr 19 22:29:55 2026
+[runlim] child:			60672
+Loading data từ: datasets/yfjs/YFJS03
+Operations: 24, Edges: 18, Machines: 7
+Greedy Schedule UB: 445
+Lower Bound: 334 (precedence=334, avg_load=231, mandatory=0)
+Complete preprocessing! Greedy UB = 445
+Initial UB = 444, LB = 334
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Starting new iteration with LB = 334, UB = 444
+[TopDown] Initializing with target = 444[IndepBinary] New iteration with LB = 334, UB = 444, Target = 389
+
+[CoopBinary] New iteration with LB = 334, UB = 444, Target = 389
+[BottomUp] UNSAT in 334. Incrementing LB.
+Time taken: 0.10 seconds
+Current bounds: LB = 335, UB = 444
+[BottomUp] Starting new iteration with LB = 335, UB = 444
+[CoopBinary] SAT in 389! Updating UB.
+Time taken: 0.21 seconds
+Current bounds: LB = 335, UB = 388
+[CoopBinary] New iteration with LB = 335, UB = 388, Target = 361
+[CoopBinary] SAT in 361! Updating UB.
+Time taken: 0.25 seconds
+Current bounds: LB = 335, UB = 360
+[CoopBinary] New iteration with LB = 335, UB = 360, Target = 347
+[CoopBinary] SAT in 347! Updating UB.
+Time taken: 0.27 seconds
+Current bounds: LB = 335, UB = 346
+[CoopBinary] New iteration with LB = 335, UB = 346, Target = 340
+[CoopBinary] UNSAT in 340. Incrementing LB.
+Time taken: 0.28 seconds
+Exception in thread Thread-4 (worker_cooperative_binary):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+[IndepBinary] New iteration with LB = 341, UB = 346, Target = 343
+[IndepBinary] UNSAT in 343. Incrementing LB.
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+Time taken: 0.35 seconds
+Exception in thread Thread-3 (worker_independent_binary):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+[BottomUp] UNSAT in 335. Incrementing LB.
+Time taken: 0.35 seconds
+Current bounds: LB = 344, UB = 346
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 571, in worker_independent_binary
+[BottomUp] Starting new iteration with LB = 344, UB = 346
+[TopDown]  UNSAT in 346. FOUND OPTIMAL.
+Time taken: 0.42 seconds
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 642, in worker_cooperative_binary
+    for n, s_obj in shared_state['active_solvers'].items(): s_obj.interrupt()
+                                                                s_obj.interrupt()
+^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')    
+NotImplementedErrorraise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+: Limited solve is currently unsupported by CaDiCaL.
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: TopDown
+Optimal Makespan: 347
+Total time: 0.48 seconds
+[runlim] end:			Sun Apr 19 22:29:56 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.52 seconds
+[runlim] time:			0.50 seconds
+[runlim] space:			64 MB
+[runlim] load:			0.62 maximum
+[runlim] samples:		6

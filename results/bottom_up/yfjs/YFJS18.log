@@ -1,0 +1,37 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/yfjs/YFJS18
+[runlim] start:			Sun Apr 19 19:40:33 2026
+[runlim] child:			10800
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1314
+Lower Bound: 1220 (precedence=1220, avg_load=589, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 1220...
+[runlim] sample:		10.00 time, 10.01 real, 747 MB, 1.11 load
+[runlim] sample:		19.98 time, 20.01 real, 2350 MB, 1.09 load
+[runlim] sample:		29.97 time, 30.01 real, 2012 MB, 1.46 load
+[runlim] sample:		39.96 time, 40.01 real, 1871 MB, 1.39 load
+[runlim] sample:		49.96 time, 50.01 real, 1870 MB, 1.33 load
+[runlim] sample:		59.96 time, 60.01 real, 1864 MB, 1.28 load
+[runlim] sample:		69.94 time, 70.01 real, 2323 MB, 1.23 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1220
+Schedule is valid with makespan 1220.
+[runlim] end:			Sun Apr 19 19:41:44 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			71.40 seconds
+[runlim] time:			71.25 seconds
+[runlim] space:			2457 MB
+[runlim] load:			1.46 maximum
+[runlim] samples:		714

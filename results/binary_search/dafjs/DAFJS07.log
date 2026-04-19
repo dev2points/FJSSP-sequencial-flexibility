@@ -1,0 +1,75 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS07
+[runlim] start:			Sun Apr 19 16:55:21 2026
+[runlim] child:			7224
+Operations: 85, Edges: 82, Machines: 10
+Greedy Schedule UB: 626
+Lower Bound: 490 (precedence=490, avg_load=394, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 557 (LB=490, UB=625)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 557
+Schedule verified successfully with makespan 557. Updating UB.
+Time taken: 2.19 seconds
+
+Trying to solve with expected makespan (UB) = 523 (LB=490, UB=556)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 523
+Schedule verified successfully with makespan 523. Updating UB.
+Time taken: 7.60 seconds
+
+Trying to solve with expected makespan (UB) = 506 (LB=490, UB=522)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 506
+Schedule verified successfully with makespan 506. Updating UB.
+Time taken: 8.82 seconds
+
+Trying to solve with expected makespan (UB) = 497 (LB=490, UB=505)
+UNSAT
+No schedule found with UB = 497. Updating LB.
+Time taken: 8.92 seconds
+
+Trying to solve with expected makespan (UB) = 501 (LB=498, UB=505)
+[runlim] sample:		9.95 time, 10.01 real, 150 MB, 1.11 load
+UNSAT
+No schedule found with UB = 501. Updating LB.
+Time taken: 10.13 seconds
+
+Trying to solve with expected makespan (UB) = 503 (LB=502, UB=505)
+UNSAT
+No schedule found with UB = 503. Updating LB.
+Time taken: 13.46 seconds
+
+Trying to solve with expected makespan (UB) = 504 (LB=504, UB=505)
+UNSAT
+No schedule found with UB = 504. Updating LB.
+Time taken: 16.44 seconds
+
+Trying to solve with expected makespan (UB) = 505 (LB=505, UB=505)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 505
+Schedule verified successfully with makespan 505. Updating UB.
+Time taken: 19.09 seconds
+
+Search complete. Optimal makespan is 505.
+[runlim] end:			Sun Apr 19 16:55:41 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			19.14 seconds
+[runlim] time:			19.04 seconds
+[runlim] space:			188 MB
+[runlim] load:			1.12 maximum
+[runlim] samples:		192

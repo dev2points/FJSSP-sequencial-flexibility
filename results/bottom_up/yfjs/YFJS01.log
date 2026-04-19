@@ -1,0 +1,195 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/yfjs/YFJS01
+[runlim] start:			Sun Apr 19 19:35:48 2026
+[runlim] child:			9459
+Operations: 40, Edges: 36, Machines: 7
+Greedy Schedule UB: 988
+Lower Bound: 718 (precedence=718, avg_load=405, mandatory=172)
+
+Trying to find a schedule with expected_makespan = 718...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 719...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 720...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 721...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 722...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 723...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 724...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 725...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 726...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 727...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 728...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 729...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 730...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 731...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 732...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 733...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 734...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 735...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 736...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 737...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 738...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 739...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 740...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 741...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 742...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 743...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 744...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 745...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 746...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 747...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 748...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 749...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 750...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 751...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 752...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 753...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 754...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 755...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 756...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 757...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 758...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 759...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 760...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 761...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 762...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 763...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 764...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 765...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 766...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 767...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 768...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 769...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 770...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 771...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 772...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 773...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 773
+Schedule is valid with makespan 773.
+[runlim] end:			Sun Apr 19 19:35:57 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			9.17 seconds
+[runlim] time:			9.09 seconds
+[runlim] space:			47 MB
+[runlim] load:			1.54 maximum
+[runlim] samples:		92

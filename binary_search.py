@@ -59,7 +59,9 @@ def greedy_schedule(num_operations, num_machines, request_list, in_degree, neigh
     op_completion_time = {i: 0 for i in range(num_operations)} 
     machine_assignment = {i: None for i in range(num_operations)}
 
-    queue = [i for i in range(num_operations) if in_degree[i] == 0]
+    in_degree_copy = in_degree.copy()
+
+    queue = [i for i in range(num_operations) if in_degree_copy[i] == 0]
     index = 0
     
     while index < num_operations:
@@ -84,8 +86,8 @@ def greedy_schedule(num_operations, num_machines, request_list, in_degree, neigh
             op_completion_time[curr] = min_completion
 
         for neighbor in neighbors[curr]:
-            in_degree[neighbor] -= 1
-            if in_degree[neighbor] == 0:
+            in_degree_copy[neighbor] -= 1
+            if in_degree_copy[neighbor] == 0:
                 queue.append(neighbor)
 
     ub = max(machine_ready_time.values())
@@ -364,7 +366,7 @@ def init_solver(solver, num_operations, precedence_list, request_list, out_degre
     feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, expected_makespan)
     if not is_feasible:
         print(f"No feasible solution found with UB = {expected_makespan} during pre-processing.")
-        return False
+        return False, None, None, None, None
     s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
     build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
     add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
@@ -544,20 +546,6 @@ def main():
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
     lb = calculate_lower_bound(num_operations, num_machines, precedence_list, request_list)
 
-    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, lb)
-    if is_feasible:
-        print(f"Initial pre-processing with LB = {lb} found feasible time windows for all operations.")
-        feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, lb - 1)
-        if not is_feasible:
-            print(f"Pre-processing with LB = {lb - 1} correctly identified infeasibility, confirming LB = {lb} is valid.")
-            ub = lb
-        else:
-            print(f"Feasible time windows still exist with LB = {lb - 1}, indicating LB can be improved. Adjusting LB.")
-            return
-    else:
-        print(f"Pre-processing with LB = {lb} found infeasibility, updateing LB.")
-        lb += 1
-
 
     best_makespan = size_time
     ub = size_time - 1
@@ -598,7 +586,7 @@ def main():
     #         break
 
     #     expected_makespan = (lb + ub) // 2
-    
+
     while lb <= ub:
         print(f"\nTrying to solve with expected makespan (UB) = {expected_makespan} (LB={lb}, UB={ub})")
         

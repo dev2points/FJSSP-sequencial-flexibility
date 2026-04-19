@@ -1,0 +1,86 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS15
+[runlim] start:			Sun Apr 19 16:28:01 2026
+[runlim] child:			7108
+Operations: 221, Edges: 208, Machines: 26
+Greedy Schedule UB: 1578
+Lower Bound: 1239 (precedence=1239, avg_load=550, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 1408 (LB=1239, UB=1577)
+[runlim] sample:		10.00 time, 10.01 real, 692 MB, 0.88 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1408
+Schedule verified successfully with makespan 1408. Updating UB.
+Time taken: 18.04 seconds
+
+Trying to solve with expected makespan (UB) = 1323 (LB=1239, UB=1407)
+[runlim] sample:		19.99 time, 20.01 real, 673 MB, 0.90 load
+[runlim] sample:		29.99 time, 30.01 real, 811 MB, 0.99 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1323
+Schedule verified successfully with makespan 1323. Updating UB.
+Time taken: 32.19 seconds
+
+Trying to solve with expected makespan (UB) = 1280 (LB=1239, UB=1322)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1280
+Schedule verified successfully with makespan 1280. Updating UB.
+Time taken: 35.42 seconds
+
+Trying to solve with expected makespan (UB) = 1259 (LB=1239, UB=1279)
+[runlim] sample:		39.98 time, 40.01 real, 683 MB, 1.15 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1259
+Schedule verified successfully with makespan 1259. Updating UB.
+Time taken: 42.09 seconds
+
+Trying to solve with expected makespan (UB) = 1248 (LB=1239, UB=1258)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1248
+Schedule verified successfully with makespan 1248. Updating UB.
+Time taken: 42.37 seconds
+
+Trying to solve with expected makespan (UB) = 1243 (LB=1239, UB=1247)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1243
+Schedule verified successfully with makespan 1243. Updating UB.
+Time taken: 43.82 seconds
+
+Trying to solve with expected makespan (UB) = 1240 (LB=1239, UB=1242)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1240
+Schedule verified successfully with makespan 1240. Updating UB.
+Time taken: 46.01 seconds
+
+Trying to solve with expected makespan (UB) = 1239 (LB=1239, UB=1239)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1239
+Schedule verified successfully with makespan 1239. Updating UB.
+Time taken: 46.26 seconds
+
+Search complete. Optimal makespan is 1239.
+[runlim] end:			Sun Apr 19 16:28:47 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			46.37 seconds
+[runlim] time:			46.27 seconds
+[runlim] space:			845 MB
+[runlim] load:			1.15 maximum
+[runlim] samples:		464

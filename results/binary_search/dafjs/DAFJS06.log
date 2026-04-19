@@ -1,0 +1,120 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS06
+[runlim] start:			Sun Apr 19 16:47:09 2026
+[runlim] child:			7206
+Operations: 44, Edges: 41, Machines: 5
+Greedy Schedule UB: 490
+Lower Bound: 391 (precedence=326, avg_load=391, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 440 (LB=391, UB=489)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 440
+Schedule verified successfully with makespan 440. Updating UB.
+Time taken: 5.46 seconds
+
+Trying to solve with expected makespan (UB) = 415 (LB=391, UB=439)
+[runlim] sample:		9.99 time, 10.01 real, 119 MB, 1.03 load
+[runlim] sample:		19.99 time, 20.01 real, 120 MB, 1.03 load
+[runlim] sample:		29.98 time, 30.01 real, 148 MB, 1.02 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 415
+Schedule verified successfully with makespan 415. Updating UB.
+Time taken: 34.27 seconds
+
+Trying to solve with expected makespan (UB) = 402 (LB=391, UB=414)
+[runlim] sample:		39.98 time, 40.01 real, 132 MB, 1.02 load
+[runlim] sample:		49.97 time, 50.01 real, 132 MB, 1.02 load
+[runlim] sample:		59.97 time, 60.01 real, 132 MB, 1.01 load
+[runlim] sample:		69.97 time, 70.01 real, 132 MB, 1.01 load
+[runlim] sample:		79.96 time, 80.01 real, 133 MB, 1.01 load
+[runlim] sample:		89.96 time, 90.01 real, 133 MB, 1.01 load
+[runlim] sample:		99.95 time, 100.01 real, 133 MB, 1.00 load
+[runlim] sample:		109.95 time, 110.01 real, 133 MB, 1.00 load
+[runlim] sample:		119.95 time, 120.01 real, 133 MB, 1.00 load
+[runlim] sample:		129.94 time, 130.01 real, 133 MB, 1.00 load
+[runlim] sample:		139.94 time, 140.01 real, 133 MB, 1.00 load
+[runlim] sample:		149.94 time, 150.01 real, 133 MB, 1.00 load
+UNSAT
+No schedule found with UB = 402. Updating LB.
+Time taken: 157.80 seconds
+
+Trying to solve with expected makespan (UB) = 408 (LB=403, UB=414)
+[runlim] sample:		159.93 time, 160.01 real, 133 MB, 1.00 load
+[runlim] sample:		169.93 time, 170.01 real, 133 MB, 1.00 load
+[runlim] sample:		179.93 time, 180.01 real, 133 MB, 1.00 load
+[runlim] sample:		189.92 time, 190.01 real, 133 MB, 1.00 load
+[runlim] sample:		199.92 time, 200.01 real, 133 MB, 1.00 load
+[runlim] sample:		209.92 time, 210.01 real, 133 MB, 1.00 load
+[runlim] sample:		219.91 time, 220.01 real, 133 MB, 1.00 load
+[runlim] sample:		229.91 time, 230.01 real, 133 MB, 1.00 load
+[runlim] sample:		239.91 time, 240.01 real, 133 MB, 1.00 load
+[runlim] sample:		249.90 time, 250.01 real, 133 MB, 1.00 load
+[runlim] sample:		259.90 time, 260.01 real, 133 MB, 1.00 load
+[runlim] sample:		269.90 time, 270.01 real, 133 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 408
+Schedule verified successfully with makespan 408. Updating UB.
+Time taken: 274.15 seconds
+
+Trying to solve with expected makespan (UB) = 405 (LB=403, UB=407)
+[runlim] sample:		279.89 time, 280.01 real, 133 MB, 1.15 load
+[runlim] sample:		289.89 time, 290.01 real, 133 MB, 1.12 load
+[runlim] sample:		299.88 time, 300.01 real, 133 MB, 1.10 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 405
+Schedule verified successfully with makespan 405. Updating UB.
+Time taken: 309.57 seconds
+
+Trying to solve with expected makespan (UB) = 403 (LB=403, UB=404)
+[runlim] sample:		309.88 time, 310.01 real, 133 MB, 1.24 load
+[runlim] sample:		319.88 time, 320.01 real, 133 MB, 1.20 load
+[runlim] sample:		329.88 time, 330.01 real, 133 MB, 1.17 load
+[runlim] sample:		339.87 time, 340.01 real, 133 MB, 1.15 load
+[runlim] sample:		349.87 time, 350.01 real, 133 MB, 1.12 load
+[runlim] sample:		359.86 time, 360.01 real, 152 MB, 1.10 load
+[runlim] sample:		369.86 time, 370.01 real, 139 MB, 1.09 load
+[runlim] sample:		379.86 time, 380.01 real, 139 MB, 1.07 load
+[runlim] sample:		389.86 time, 390.01 real, 139 MB, 1.06 load
+UNSAT
+No schedule found with UB = 403. Updating LB.
+Time taken: 393.97 seconds
+
+Trying to solve with expected makespan (UB) = 404 (LB=404, UB=404)
+[runlim] sample:		399.85 time, 400.01 real, 112 MB, 1.05 load
+[runlim] sample:		409.84 time, 410.01 real, 112 MB, 1.04 load
+[runlim] sample:		419.85 time, 420.01 real, 113 MB, 1.04 load
+[runlim] sample:		429.84 time, 430.01 real, 114 MB, 1.03 load
+[runlim] sample:		439.84 time, 440.01 real, 114 MB, 1.10 load
+[runlim] sample:		449.84 time, 450.01 real, 114 MB, 1.08 load
+[runlim] sample:		459.83 time, 460.01 real, 114 MB, 1.07 load
+[runlim] sample:		469.83 time, 470.01 real, 115 MB, 1.06 load
+[runlim] sample:		479.82 time, 480.01 real, 115 MB, 1.05 load
+[runlim] sample:		489.82 time, 490.01 real, 116 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 404
+Schedule verified successfully with makespan 404. Updating UB.
+Time taken: 491.87 seconds
+
+Search complete. Optimal makespan is 404.
+[runlim] end:			Sun Apr 19 16:55:21 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			491.92 seconds
+[runlim] time:			491.72 seconds
+[runlim] space:			152 MB
+[runlim] load:			1.24 maximum
+[runlim] samples:		4920

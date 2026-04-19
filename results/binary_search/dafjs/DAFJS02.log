@@ -1,0 +1,72 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS02
+[runlim] start:			Sun Apr 19 16:46:59 2026
+[runlim] child:			7193
+Operations: 25, Edges: 23, Machines: 5
+Greedy Schedule UB: 403
+Lower Bound: 264 (precedence=246, avg_load=264, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 333 (LB=264, UB=402)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 333
+Schedule verified successfully with makespan 333. Updating UB.
+Time taken: 0.10 seconds
+
+Trying to solve with expected makespan (UB) = 298 (LB=264, UB=332)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 298
+Schedule verified successfully with makespan 298. Updating UB.
+Time taken: 0.18 seconds
+
+Trying to solve with expected makespan (UB) = 280 (LB=264, UB=297)
+UNSAT
+No schedule found with UB = 280. Updating LB.
+Time taken: 0.30 seconds
+
+Trying to solve with expected makespan (UB) = 289 (LB=281, UB=297)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 289
+Schedule verified successfully with makespan 289. Updating UB.
+Time taken: 0.48 seconds
+
+Trying to solve with expected makespan (UB) = 284 (LB=281, UB=288)
+UNSAT
+No schedule found with UB = 284. Updating LB.
+Time taken: 0.58 seconds
+
+Trying to solve with expected makespan (UB) = 286 (LB=285, UB=288)
+UNSAT
+No schedule found with UB = 286. Updating LB.
+Time taken: 0.85 seconds
+
+Trying to solve with expected makespan (UB) = 287 (LB=287, UB=288)
+UNSAT
+No schedule found with UB = 287. Updating LB.
+Time taken: 1.13 seconds
+
+Trying to solve with expected makespan (UB) = 288 (LB=288, UB=288)
+UNSAT
+No schedule found with UB = 288. Updating LB.
+Time taken: 1.42 seconds
+
+Search complete. Optimal makespan is 289.
+[runlim] end:			Sun Apr 19 16:47:01 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			1.46 seconds
+[runlim] time:			1.39 seconds
+[runlim] space:			38 MB
+[runlim] load:			1.05 maximum
+[runlim] samples:		15

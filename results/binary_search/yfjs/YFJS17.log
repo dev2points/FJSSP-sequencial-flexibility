@@ -1,0 +1,99 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS17
+[runlim] start:			Sun Apr 19 16:29:33 2026
+[runlim] child:			7120
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1319
+Lower Bound: 1133 (precedence=1133, avg_load=562, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 1225 (LB=1133, UB=1318)
+[runlim] sample:		9.99 time, 10.01 real, 720 MB, 1.05 load
+[runlim] sample:		19.98 time, 20.01 real, 2011 MB, 1.04 load
+[runlim] sample:		29.98 time, 30.01 real, 2034 MB, 1.03 load
+[runlim] sample:		39.98 time, 40.01 real, 1945 MB, 1.03 load
+[runlim] sample:		49.98 time, 50.01 real, 1945 MB, 1.02 load
+[runlim] sample:		59.97 time, 60.01 real, 1945 MB, 1.02 load
+[runlim] sample:		69.96 time, 70.01 real, 1932 MB, 1.16 load
+[runlim] sample:		79.96 time, 80.01 real, 2059 MB, 1.14 load
+[runlim] sample:		89.96 time, 90.01 real, 2419 MB, 1.27 load
+[runlim] sample:		99.95 time, 100.01 real, 2410 MB, 1.23 load
+[runlim] sample:		109.95 time, 110.01 real, 1924 MB, 1.19 load
+[runlim] sample:		119.94 time, 120.01 real, 1924 MB, 1.16 load
+[runlim] sample:		129.94 time, 130.01 real, 1925 MB, 1.14 load
+[runlim] sample:		139.93 time, 140.01 real, 1926 MB, 1.12 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1225
+Schedule verified successfully with makespan 1225. Updating UB.
+Time taken: 145.67 seconds
+
+Trying to solve with expected makespan (UB) = 1178 (LB=1133, UB=1224)
+[runlim] sample:		149.93 time, 150.01 real, 1921 MB, 1.10 load
+[runlim] sample:		159.93 time, 160.01 real, 1906 MB, 1.08 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1178
+Schedule verified successfully with makespan 1178. Updating UB.
+Time taken: 167.25 seconds
+
+Trying to solve with expected makespan (UB) = 1155 (LB=1133, UB=1177)
+[runlim] sample:		169.92 time, 170.01 real, 2161 MB, 1.07 load
+[runlim] sample:		179.91 time, 180.01 real, 2062 MB, 1.06 load
+[runlim] sample:		189.91 time, 190.01 real, 2394 MB, 1.05 load
+[runlim] sample:		199.90 time, 200.01 real, 1885 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1155
+Schedule verified successfully with makespan 1155. Updating UB.
+Time taken: 205.27 seconds
+
+Trying to solve with expected makespan (UB) = 1143 (LB=1133, UB=1154)
+[runlim] sample:		209.90 time, 210.01 real, 1875 MB, 1.03 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1143
+Schedule verified successfully with makespan 1143. Updating UB.
+Time taken: 211.97 seconds
+
+Trying to solve with expected makespan (UB) = 1137 (LB=1133, UB=1142)
+[runlim] sample:		219.90 time, 220.01 real, 1881 MB, 1.26 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1137
+Schedule verified successfully with makespan 1137. Updating UB.
+Time taken: 223.59 seconds
+
+Trying to solve with expected makespan (UB) = 1134 (LB=1133, UB=1136)
+[runlim] sample:		229.90 time, 230.01 real, 1855 MB, 1.22 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1134
+Schedule verified successfully with makespan 1134. Updating UB.
+Time taken: 239.41 seconds
+
+Trying to solve with expected makespan (UB) = 1133 (LB=1133, UB=1133)
+[runlim] sample:		239.89 time, 240.01 real, 1854 MB, 1.19 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1133
+Schedule verified successfully with makespan 1133. Updating UB.
+Time taken: 245.91 seconds
+
+Search complete. Optimal makespan is 1133.
+[runlim] end:			Sun Apr 19 16:33:39 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			246.11 seconds
+[runlim] time:			245.89 seconds
+[runlim] space:			2540 MB
+[runlim] load:			1.27 maximum
+[runlim] samples:		2461

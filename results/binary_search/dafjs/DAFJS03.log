@@ -1,0 +1,54 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS03
+[runlim] start:			Sun Apr 19 16:47:01 2026
+[runlim] child:			7196
+Operations: 55, Edges: 52, Machines: 10
+Greedy Schedule UB: 601
+Lower Bound: 576 (precedence=576, avg_load=268, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 588 (LB=576, UB=600)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 588
+Schedule verified successfully with makespan 588. Updating UB.
+Time taken: 0.33 seconds
+
+Trying to solve with expected makespan (UB) = 581 (LB=576, UB=587)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 581
+Schedule verified successfully with makespan 581. Updating UB.
+Time taken: 0.35 seconds
+
+Trying to solve with expected makespan (UB) = 578 (LB=576, UB=580)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 578
+Schedule verified successfully with makespan 578. Updating UB.
+Time taken: 0.36 seconds
+
+Trying to solve with expected makespan (UB) = 576 (LB=576, UB=577)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 576
+Schedule verified successfully with makespan 576. Updating UB.
+Time taken: 0.39 seconds
+
+Search complete. Optimal makespan is 576.
+[runlim] end:			Sun Apr 19 16:47:01 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.43 seconds
+[runlim] time:			0.39 seconds
+[runlim] space:			60 MB
+[runlim] load:			1.05 maximum
+[runlim] samples:		5

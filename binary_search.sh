@@ -3,8 +3,8 @@ MO=14000
 
 YDATA_DIR=datasets/yfjs
 DADATA_DIR=datasets/dafjs
-YRESULT_DIR=results/yfjs
-DARESULT_DIR=results/dafjs
+YRESULT_DIR=results/binary_search/yfjs
+DARESULT_DIR=results/binary_search/dafjs
 
 mkdir -p $YRESULT_DIR
 mkdir -p $DARESULT_DIR

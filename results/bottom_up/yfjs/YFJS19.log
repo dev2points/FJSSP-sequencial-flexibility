@@ -1,0 +1,39 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/yfjs/YFJS19
+[runlim] start:			Sun Apr 19 19:41:44 2026
+[runlim] child:			11058
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1207
+Lower Bound: 926 (precedence=926, avg_load=553, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 926...
+[runlim] sample:		10.00 time, 10.01 real, 811 MB, 1.20 load
+[runlim] sample:		19.97 time, 20.01 real, 787 MB, 1.25 load
+[runlim] sample:		29.95 time, 30.01 real, 855 MB, 1.45 load
+[runlim] sample:		39.92 time, 40.01 real, 969 MB, 1.76 load
+[runlim] sample:		49.91 time, 50.01 real, 763 MB, 1.87 load
+[runlim] sample:		59.90 time, 60.01 real, 811 MB, 1.81 load
+[runlim] sample:		69.87 time, 70.01 real, 815 MB, 1.69 load
+[runlim] sample:		79.87 time, 80.01 real, 816 MB, 1.58 load
+[runlim] sample:		89.84 time, 90.01 real, 806 MB, 1.49 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 926
+Schedule is valid with makespan 926.
+[runlim] end:			Sun Apr 19 19:43:20 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			95.81 seconds
+[runlim] time:			95.54 seconds
+[runlim] space:			1044 MB
+[runlim] load:			1.88 maximum
+[runlim] samples:		958

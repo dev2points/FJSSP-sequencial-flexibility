@@ -1,0 +1,119 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_thread.py
+[runlim] argv[3]:		datasets/yfjs/YFJS08
+[runlim] start:			Sun Apr 19 22:30:16 2026
+[runlim] child:			60714
+Loading data từ: datasets/yfjs/YFJS08
+Operations: 36, Edges: 27, Machines: 12
+Greedy Schedule UB: 451
+Lower Bound: 338 (precedence=338, avg_load=186, mandatory=0)
+Complete preprocessing! Greedy UB = 451
+Initial UB = 450, LB = 338
+--------------------------------------------------
+Start multi-threaded search with 4 workers: Bottom-Up, Top-Down, Independent Binary, Cooperative Binary
+[BottomUp] Starting new iteration with LB = 338, UB = 450
+[TopDown] Initializing with target = 450
+[IndepBinary] New iteration with LB = 338, UB = 450, Target = 394
+[CoopBinary] New iteration with LB = 338, UB = 450, Target = 394
+[IndepBinary] SAT in 394! Updating UB.
+Time taken: 0.28 seconds
+Current bounds: LB = 338, UB = 393
+[IndepBinary] New iteration with LB = 338, UB = 393, Target = 365
+[BottomUp] UNSAT in 338. Incrementing LB.
+Time taken: 0.29 seconds
+Current bounds: LB = 339, UB = 393
+[BottomUp] Starting new iteration with LB = 339, UB = 393
+[BottomUp] UNSAT in 339. Incrementing LB.
+Time taken: 0.42 seconds
+Current bounds: LB = 340, UB = 393
+[BottomUp] Starting new iteration with LB = 340, UB = 393
+[TopDown] SAT in 393! Updating UB.
+Time taken: 0.47 seconds
+Current bounds: LB = 340, UB = 392
+[TopDown] SAT in 392! Updating UB.
+Time taken: 0.47 seconds
+Current bounds: LB = 340, UB = 391
+[TopDown] SAT in 391! Updating UB.
+Time taken: 0.54 seconds
+Current bounds: LB = 340, UB = 390
+[TopDown] SAT in 390! Updating UB.
+Time taken: 0.56 seconds
+Exception in thread Thread-2 (worker_top_down):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+[IndepBinary] SAT in 365! Updating UB.
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 466, in worker_top_down
+Time taken: 0.56 seconds
+Current bounds: LB = 340, UB = 364
+Exception in thread Thread-3 (worker_independent_binary):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+[CoopBinary] SAT in 394! Updating UB.    
+Time taken: 0.56 seconds
+Current bounds: LB = 340, UB = 364
+s_obj.interrupt()
+[CoopBinary] New iteration with LB = 340, UB = 364, Target = 352
+[BottomUp] UNSAT in 340. Incrementing LB.
+Time taken: 0.56 seconds  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+
+Current bounds: LB = 341, UB = 364
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+[BottomUp] Starting new iteration with LB = 341, UB = 364[CoopBinary] UNSAT in 352. Incrementing LB.
+Time taken: 0.57 seconds
+Current bounds: LB = 353, UB = 364
+[CoopBinary] New iteration with LB = 353, UB = 364, Target = 358
+
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_thread.py", line 551, in worker_independent_binary
+    [BottomUp] UNSAT in 341. Incrementing LB.
+Time taken: 0.69 seconds
+Current bounds: LB = 353, UB = 364raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')    s_obj.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+
+[BottomUp] Starting new iteration with LB = 353, UB = 364
+[CoopBinary] SAT in 358! Updating UB.
+Time taken: 0.74 seconds
+Current bounds: LB = 353, UB = 357
+[CoopBinary] New iteration with LB = 353, UB = 357, Target = 355
+[CoopBinary] SAT in 355! Updating UB.
+Time taken: 0.75 seconds
+Current bounds: LB = 353, UB = 354
+[CoopBinary] New iteration with LB = 353, UB = 354, Target = 353
+[CoopBinary] SAT in 353! Updating UB.
+Time taken: 0.75 seconds
+[CoopBinary] UB < LB => OPTIMAL
+Current bounds: LB = 353, UB = 352
+
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+--------------------------------------------------
+Final result:
+Status: Optimal
+Proved by: CoopBinary
+Optimal Makespan: 353
+Total time: 0.82 seconds
+[runlim] end:			Sun Apr 19 22:30:17 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.85 seconds
+[runlim] time:			0.80 seconds
+[runlim] space:			86 MB
+[runlim] load:			0.73 maximum
+[runlim] samples:		9

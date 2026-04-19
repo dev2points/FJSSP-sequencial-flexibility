@@ -1,0 +1,65 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS09
+[runlim] start:			Sun Apr 19 16:27:14 2026
+[runlim] child:			7087
+Operations: 36, Edges: 27, Machines: 12
+Greedy Schedule UB: 288
+Lower Bound: 203 (precedence=203, avg_load=147, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 245 (LB=203, UB=287)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 245
+Schedule verified successfully with makespan 245. Updating UB.
+Time taken: 0.18 seconds
+
+Trying to solve with expected makespan (UB) = 223 (LB=203, UB=244)
+UNSAT
+No schedule found with UB = 223. Updating LB.
+Time taken: 0.18 seconds
+
+Trying to solve with expected makespan (UB) = 234 (LB=224, UB=244)
+UNSAT
+No schedule found with UB = 234. Updating LB.
+Time taken: 0.31 seconds
+
+Trying to solve with expected makespan (UB) = 239 (LB=235, UB=244)
+UNSAT
+No schedule found with UB = 239. Updating LB.
+Time taken: 0.46 seconds
+
+Trying to solve with expected makespan (UB) = 242 (LB=240, UB=244)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 242
+Schedule verified successfully with makespan 242. Updating UB.
+Time taken: 0.61 seconds
+
+Trying to solve with expected makespan (UB) = 240 (LB=240, UB=241)
+UNSAT
+No schedule found with UB = 240. Updating LB.
+Time taken: 0.62 seconds
+
+Trying to solve with expected makespan (UB) = 241 (LB=241, UB=241)
+UNSAT
+No schedule found with UB = 241. Updating LB.
+Time taken: 0.78 seconds
+
+Search complete. Optimal makespan is 242.
+[runlim] end:			Sun Apr 19 16:27:15 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.81 seconds
+[runlim] time:			0.80 seconds
+[runlim] space:			38 MB
+[runlim] load:			0.69 maximum
+[runlim] samples:		9

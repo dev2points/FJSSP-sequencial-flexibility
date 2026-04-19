@@ -1,0 +1,76 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		binary_search.py
+[runlim] argv[3]:		datasets/yfjs/YFJS12
+[runlim] start:			Sun Apr 19 16:27:19 2026
+[runlim] child:			7096
+Operations: 50, Edges: 40, Machines: 10
+Greedy Schedule UB: 765
+Lower Bound: 448 (precedence=448, avg_load=354, mandatory=0)
+
+Trying to solve with expected makespan (UB) = 606 (LB=448, UB=764)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 606
+Schedule verified successfully with makespan 606. Updating UB.
+Time taken: 0.52 seconds
+
+Trying to solve with expected makespan (UB) = 526 (LB=448, UB=605)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 526
+Schedule verified successfully with makespan 526. Updating UB.
+Time taken: 1.84 seconds
+
+Trying to solve with expected makespan (UB) = 486 (LB=448, UB=525)
+UNSAT
+No schedule found with UB = 486. Updating LB.
+Time taken: 1.86 seconds
+
+Trying to solve with expected makespan (UB) = 506 (LB=487, UB=525)
+UNSAT
+No schedule found with UB = 506. Updating LB.
+Time taken: 2.34 seconds
+
+Trying to solve with expected makespan (UB) = 516 (LB=507, UB=525)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 516
+Schedule verified successfully with makespan 516. Updating UB.
+Time taken: 3.41 seconds
+
+Trying to solve with expected makespan (UB) = 511 (LB=507, UB=515)
+UNSAT
+No schedule found with UB = 511. Updating LB.
+Time taken: 3.43 seconds
+
+Trying to solve with expected makespan (UB) = 513 (LB=512, UB=515)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 513
+Schedule verified successfully with makespan 513. Updating UB.
+Time taken: 4.14 seconds
+
+Trying to solve with expected makespan (UB) = 512 (LB=512, UB=512)
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 512
+Schedule verified successfully with makespan 512. Updating UB.
+Time taken: 4.16 seconds
+
+Search complete. Optimal makespan is 512.
+[runlim] end:			Sun Apr 19 16:27:23 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			4.20 seconds
+[runlim] time:			4.10 seconds
+[runlim] space:			90 MB
+[runlim] load:			0.71 maximum
+[runlim] samples:		42

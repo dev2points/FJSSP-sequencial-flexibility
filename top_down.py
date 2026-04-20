@@ -9,6 +9,9 @@ from collections import deque, defaultdict
 
 def read_file(file_path):
     with open(file_path, 'r') as file:
+        if 'mk' in file_path.lower():
+            for _ in range(1):
+                next(file, None)
         if 'yfjs' in file_path.lower():
             for _ in range(4):
                 next(file, None)

@@ -1,0 +1,76 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS07
+[runlim] start:			Mon Apr 20 12:47:05 2026
+[runlim] child:			5878
+Operations: 85, Edges: 82, Machines: 10
+Greedy Schedule UB: 626
+Lower Bound: 490 (precedence=490, avg_load=394, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 490...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 491...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 492...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 493...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 494...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 495...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 496...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 497...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 498...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 499...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 500...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 501...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 502...
+[runlim] sample:		10.00 time, 10.01 real, 109 MB, 1.09 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 503...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 504...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 505...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 505
+Schedule is valid with makespan 505.
+[runlim] end:			Mon Apr 20 12:47:25 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			19.13 seconds
+[runlim] time:			19.09 seconds
+[runlim] space:			122 MB
+[runlim] load:			1.11 maximum
+[runlim] samples:		192

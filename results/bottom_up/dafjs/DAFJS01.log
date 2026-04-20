@@ -1,0 +1,69 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS01
+[runlim] start:			Mon Apr 20 12:31:21 2026
+[runlim] child:			5824
+Operations: 26, Edges: 26, Machines: 5
+Greedy Schedule UB: 341
+Lower Bound: 244 (precedence=244, avg_load=219, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 244...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 245...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 246...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 247...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 248...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 249...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 250...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 251...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 252...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 253...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 254...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 255...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 256...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 257...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 257
+Schedule is valid with makespan 257.
+[runlim] end:			Mon Apr 20 12:31:21 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.73 seconds
+[runlim] time:			0.69 seconds
+[runlim] space:			29 MB
+[runlim] load:			0.43 maximum
+[runlim] samples:		8

@@ -1,0 +1,105 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS02
+[runlim] start:			Mon Apr 20 12:31:21 2026
+[runlim] child:			5827
+Operations: 25, Edges: 23, Machines: 5
+Greedy Schedule UB: 403
+Lower Bound: 264 (precedence=246, avg_load=264, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 264...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 265...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 266...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 267...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 268...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 269...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 270...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 271...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 272...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 273...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 274...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 275...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 276...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 277...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 278...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 279...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 280...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 281...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 282...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 283...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 284...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 285...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 286...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 287...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 288...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 289...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 289
+Schedule is valid with makespan 289.
+[runlim] end:			Mon Apr 20 12:31:24 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			3.17 seconds
+[runlim] time:			3.10 seconds
+[runlim] space:			33 MB
+[runlim] load:			0.56 maximum
+[runlim] samples:		32

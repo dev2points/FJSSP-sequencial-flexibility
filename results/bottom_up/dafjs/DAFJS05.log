@@ -1,0 +1,79 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS05
+[runlim] start:			Mon Apr 20 12:31:25 2026
+[runlim] child:			5836
+Operations: 39, Edges: 34, Machines: 5
+Greedy Schedule UB: 495
+Lower Bound: 368 (precedence=321, avg_load=368, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 368...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 369...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 370...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 371...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 372...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 373...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 374...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 375...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 376...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 377...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 378...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 379...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 380...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 381...
+[runlim] sample:		9.99 time, 10.01 real, 53 MB, 0.77 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 382...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 383...
+UNSAT
+
+Trying to find a schedule with expected_makespan = 384...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 384
+Schedule is valid with makespan 384.
+[runlim] end:			Mon Apr 20 12:31:40 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			14.64 seconds
+[runlim] time:			14.59 seconds
+[runlim] space:			73 MB
+[runlim] load:			0.79 maximum
+[runlim] samples:		147

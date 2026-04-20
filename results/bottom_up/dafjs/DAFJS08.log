@@ -1,0 +1,30 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS08
+[runlim] start:			Mon Apr 20 12:47:25 2026
+[runlim] child:			5882
+Operations: 85, Edges: 82, Machines: 10
+Greedy Schedule UB: 670
+Lower Bound: 628 (precedence=628, avg_load=416, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 628...
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 628
+Schedule is valid with makespan 628.
+[runlim] end:			Mon Apr 20 12:47:27 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			2.41 seconds
+[runlim] time:			2.30 seconds
+[runlim] space:			223 MB
+[runlim] load:			1.08 maximum
+[runlim] samples:		24

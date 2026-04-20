@@ -1,0 +1,161 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS06
+[runlim] start:			Mon Apr 20 12:31:40 2026
+[runlim] child:			5839
+Operations: 44, Edges: 41, Machines: 5
+Greedy Schedule UB: 490
+Lower Bound: 391 (precedence=326, avg_load=391, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 391...
+[runlim] sample:		9.94 time, 10.01 real, 113 MB, 0.83 load
+[runlim] sample:		19.92 time, 20.01 real, 101 MB, 0.93 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 392...
+[runlim] sample:		29.92 time, 30.01 real, 104 MB, 1.02 load
+[runlim] sample:		39.91 time, 40.01 real, 93 MB, 1.01 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 393...
+[runlim] sample:		49.90 time, 50.01 real, 115 MB, 1.09 load
+[runlim] sample:		59.90 time, 60.01 real, 116 MB, 1.08 load
+[runlim] sample:		69.90 time, 70.01 real, 92 MB, 1.15 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 394...
+[runlim] sample:		79.89 time, 80.01 real, 115 MB, 1.12 load
+[runlim] sample:		89.89 time, 90.01 real, 92 MB, 1.10 load
+[runlim] sample:		99.89 time, 100.01 real, 105 MB, 1.09 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 395...
+[runlim] sample:		109.88 time, 110.01 real, 115 MB, 1.07 load
+[runlim] sample:		119.87 time, 120.01 real, 116 MB, 1.06 load
+[runlim] sample:		129.87 time, 130.01 real, 117 MB, 1.05 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 396...
+[runlim] sample:		139.87 time, 140.01 real, 114 MB, 1.04 load
+[runlim] sample:		149.87 time, 150.01 real, 114 MB, 1.04 load
+[runlim] sample:		159.87 time, 160.01 real, 102 MB, 1.03 load
+[runlim] sample:		169.87 time, 170.01 real, 103 MB, 1.02 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 397...
+[runlim] sample:		179.87 time, 180.01 real, 112 MB, 1.02 load
+[runlim] sample:		189.86 time, 190.01 real, 112 MB, 1.02 load
+[runlim] sample:		199.86 time, 200.01 real, 114 MB, 1.01 load
+[runlim] sample:		209.85 time, 210.01 real, 110 MB, 1.01 load
+[runlim] sample:		219.86 time, 220.01 real, 93 MB, 1.01 load
+[runlim] sample:		229.85 time, 230.01 real, 99 MB, 1.01 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 398...
+[runlim] sample:		239.85 time, 240.01 real, 114 MB, 1.01 load
+[runlim] sample:		249.85 time, 250.01 real, 114 MB, 1.00 load
+[runlim] sample:		259.84 time, 260.01 real, 115 MB, 1.00 load
+[runlim] sample:		269.84 time, 270.01 real, 116 MB, 1.00 load
+[runlim] sample:		279.84 time, 280.01 real, 116 MB, 1.00 load
+[runlim] sample:		289.83 time, 290.01 real, 101 MB, 1.00 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 399...
+[runlim] sample:		299.83 time, 300.01 real, 111 MB, 1.00 load
+[runlim] sample:		309.83 time, 310.01 real, 113 MB, 1.00 load
+[runlim] sample:		319.82 time, 320.01 real, 99 MB, 1.00 load
+[runlim] sample:		329.82 time, 330.01 real, 89 MB, 1.00 load
+[runlim] sample:		339.81 time, 340.01 real, 88 MB, 1.00 load
+[runlim] sample:		349.81 time, 350.01 real, 101 MB, 1.00 load
+[runlim] sample:		359.81 time, 360.01 real, 101 MB, 1.00 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 400...
+[runlim] sample:		369.80 time, 370.01 real, 114 MB, 1.00 load
+[runlim] sample:		379.80 time, 380.01 real, 114 MB, 1.08 load
+[runlim] sample:		389.80 time, 390.01 real, 116 MB, 1.14 load
+[runlim] sample:		399.79 time, 400.01 real, 118 MB, 1.12 load
+[runlim] sample:		409.79 time, 410.01 real, 118 MB, 1.10 load
+[runlim] sample:		419.79 time, 420.01 real, 119 MB, 1.08 load
+[runlim] sample:		429.78 time, 430.01 real, 119 MB, 1.07 load
+[runlim] sample:		439.78 time, 440.01 real, 119 MB, 1.06 load
+[runlim] sample:		449.78 time, 450.01 real, 119 MB, 1.05 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 401...
+[runlim] sample:		459.78 time, 460.01 real, 114 MB, 1.04 load
+[runlim] sample:		469.77 time, 470.01 real, 115 MB, 1.04 load
+[runlim] sample:		479.77 time, 480.01 real, 117 MB, 1.03 load
+[runlim] sample:		489.76 time, 490.01 real, 119 MB, 1.02 load
+[runlim] sample:		499.76 time, 500.01 real, 120 MB, 1.02 load
+[runlim] sample:		509.76 time, 510.01 real, 120 MB, 1.02 load
+[runlim] sample:		519.75 time, 520.01 real, 121 MB, 1.01 load
+[runlim] sample:		529.75 time, 530.01 real, 121 MB, 1.01 load
+[runlim] sample:		539.75 time, 540.01 real, 92 MB, 1.01 load
+[runlim] sample:		549.74 time, 550.01 real, 107 MB, 1.15 load
+[runlim] sample:		559.73 time, 560.01 real, 91 MB, 1.13 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 402...
+[runlim] sample:		569.73 time, 570.01 real, 119 MB, 1.11 load
+[runlim] sample:		579.73 time, 580.01 real, 119 MB, 1.09 load
+[runlim] sample:		589.73 time, 590.01 real, 119 MB, 1.08 load
+[runlim] sample:		599.72 time, 600.01 real, 119 MB, 1.07 load
+[runlim] sample:		609.72 time, 610.01 real, 119 MB, 1.06 load
+[runlim] sample:		619.71 time, 620.01 real, 119 MB, 1.05 load
+[runlim] sample:		629.71 time, 630.01 real, 119 MB, 1.04 load
+[runlim] sample:		639.71 time, 640.01 real, 119 MB, 1.03 load
+[runlim] sample:		649.70 time, 650.01 real, 120 MB, 1.03 load
+[runlim] sample:		659.70 time, 660.01 real, 103 MB, 1.02 load
+[runlim] sample:		669.70 time, 670.01 real, 106 MB, 1.02 load
+[runlim] sample:		679.69 time, 680.01 real, 106 MB, 1.02 load
+[runlim] sample:		689.69 time, 690.01 real, 106 MB, 1.01 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 403...
+[runlim] sample:		699.68 time, 700.01 real, 116 MB, 1.01 load
+[runlim] sample:		709.68 time, 710.01 real, 117 MB, 1.01 load
+[runlim] sample:		719.67 time, 720.01 real, 120 MB, 1.01 load
+[runlim] sample:		729.67 time, 730.01 real, 122 MB, 1.00 load
+[runlim] sample:		739.67 time, 740.01 real, 122 MB, 1.00 load
+[runlim] sample:		749.66 time, 750.01 real, 123 MB, 1.00 load
+[runlim] sample:		759.66 time, 760.01 real, 123 MB, 1.00 load
+[runlim] sample:		769.65 time, 770.01 real, 123 MB, 1.00 load
+[runlim] sample:		779.65 time, 780.01 real, 123 MB, 1.00 load
+[runlim] sample:		789.64 time, 790.01 real, 123 MB, 1.00 load
+[runlim] sample:		799.64 time, 800.01 real, 123 MB, 1.00 load
+[runlim] sample:		809.63 time, 810.01 real, 123 MB, 1.00 load
+[runlim] sample:		819.63 time, 820.01 real, 125 MB, 1.00 load
+UNSAT
+
+Trying to find a schedule with expected_makespan = 404...
+[runlim] sample:		829.63 time, 830.01 real, 119 MB, 1.00 load
+[runlim] sample:		839.62 time, 840.01 real, 119 MB, 1.00 load
+[runlim] sample:		849.62 time, 850.01 real, 119 MB, 1.00 load
+[runlim] sample:		859.62 time, 860.01 real, 119 MB, 1.00 load
+[runlim] sample:		869.61 time, 870.01 real, 119 MB, 1.07 load
+[runlim] sample:		879.61 time, 880.01 real, 119 MB, 1.14 load
+[runlim] sample:		889.61 time, 890.01 real, 119 MB, 1.19 load
+[runlim] sample:		899.60 time, 900.01 real, 119 MB, 1.16 load
+[runlim] sample:		909.60 time, 910.01 real, 120 MB, 1.14 load
+[runlim] sample:		919.60 time, 920.01 real, 120 MB, 1.12 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 404
+Schedule is valid with makespan 404.
+[runlim] end:			Mon Apr 20 12:47:05 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] processes:		2
+[runlim] real:			925.39 seconds
+[runlim] time:			924.90 seconds
+[runlim] space:			137 MB
+[runlim] load:			1.21 maximum
+[runlim] samples:		9254

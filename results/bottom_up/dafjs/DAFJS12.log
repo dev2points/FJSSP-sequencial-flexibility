@@ -1,0 +1,30 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		bottom_up.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS12
+[runlim] start:			Mon Apr 20 13:48:21 2026
+[runlim] child:			6054
+Operations: 117, Edges: 114, Machines: 10
+Greedy Schedule UB: 791
+Lower Bound: 549 (precedence=530, avg_load=549, mandatory=0)
+
+Trying to find a schedule with expected_makespan = 549...
+[runlim] sample:		9.94 time, 10.01 real, 486 MB, 1.21 load
+[runlim] sample:		19.93 time, 20.01 real, 464 MB, 1.18 load
+[runlim] sample:		29.93 time, 30.01 real, 462 MB, 1.15 load
+[runlim] sample:		39.91 time, 40.01 real, 551 MB, 1.20 load
+[runlim] sample:		49.90 time, 50.01 real, 475 MB, 1.24 load
+[runlim] sample:		59.90 time, 60.01 real, 480 MB, 1.21 load
+[runlim] sample:		69.88 time, 70.01 real, 481 MB, 1.17 load
+[runlim] sample:		79.88 time, 80.01 real, 479 MB, 1.15 load
+[runlim] sample:		89.88 time, 90.01 real, 480 MB, 1.12 load
+[runlim] sample:		99.87 time, 100.01 real, 515 MB, 1.10 load
+[runlim] sample:		109.87 time, 110.01 real, 515 MB, 1.09 load
+[runlim] sample:		119.86 time, 120.01 real, 515 MB, 1.23 load
+[runlim] sample:		129.86 time, 130.01 real, 516 MB, 1.19 load
+[runlim] sample:		139.85 time, 140.01 real, 516 MB, 1.16 load

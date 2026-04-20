@@ -1,0 +1,172 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS10
+[runlim] start:			Mon Apr 20 01:23:05 2026
+[runlim] child:			115282
+Loading data from: datasets/yfjs/YFJS10
+Operations: 40, Edges: 30, Machines: 12
+Greedy Schedule UB: 529
+Lower Bound: 334 (precedence=334, avg_load=239, mandatory=187)
+Complete preprocessing! Greedy UB = 529
+Initial UB = 528, LB = 334
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 334, LB = 334, UB = 528
+[TopDown] Trying with at most 528, LB = 334, UB = 528
+[IndepBinary] New iteration: LB=334, UB=528 => Target=431
+[CoopBinary] New iteration: LB=334, UB=528 => Target=431
+[BottomUp] UNSAT in 334. Tăng LB.
+[BottomUp] Trying with at most 335, LB = 335, UB = 528
+[BottomUp] UNSAT in 335. Tăng LB.
+[BottomUp] Trying with at most 336, LB = 336, UB = 528
+[CoopBinary] SAT in 431! Updating UB.
+Time taken: 0.18 seconds
+[CoopBinary] New iteration: LB=336, UB=430 => Target=383
+[CoopBinary] Đi XUỐNG (Target 383 < Bound 431) -> Dùng Incremental SAT
+[IndepBinary] Target 431 đã lỗi thời so với mốc chung. Bỏ qua lấy Target mới.
+[IndepBinary] New iteration: LB=336, UB=430 => Target=383
+[CoopBinary] UNSAT in 383. Incrementing LB.
+[IndepBinary] UNSAT in 383. Incrementing LB.
+[IndepBinary] New iteration: LB=384, UB=430 => Target=407
+[CoopBinary] New iteration: LB=384, UB=430 => Target=407
+[BottomUp] Target 336 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 384, LB = 384, UB = 430
+[TopDown] Target 528 đã lỗi thời trước khi gọi solve. Bỏ qua vòng này.
+[TopDown] Trying with at most 430, LB = 384, UB = 430
+[TopDown] SAT in 430! Updating UB.
+Time taken: 0.31 seconds
+[TopDown] Trying with at most 429, LB = 384, UB = 429
+[BottomUp] UNSAT in 384. Tăng LB.
+[TopDown] SAT in 429! Updating UB.
+Time taken: 0.36 seconds
+[TopDown] Trying with at most 428, LB = 385, UB = 428
+[BottomUp] Trying with at most 385, LB = 385, UB = 428
+[TopDown] SAT in 428! Updating UB.
+Time taken: 0.36 seconds
+[TopDown] Trying with at most 427, LB = 385, UB = 427
+[TopDown] SAT in 427! Updating UB.
+Time taken: 0.36 seconds
+[TopDown] Trying with at most 426, LB = 385, UB = 426
+[TopDown] SAT in 426! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 425, LB = 385, UB = 425
+[TopDown] SAT in 425! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 424, LB = 385, UB = 424
+[TopDown] SAT in 424! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 423, LB = 385, UB = 423
+[TopDown] SAT in 423! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 422, LB = 385, UB = 422
+[TopDown] SAT in 422! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 421, LB = 385, UB = 421
+[CoopBinary] SAT in 407! Updating UB.
+Time taken: 0.39 seconds
+[CoopBinary] New iteration: LB=385, UB=406 => Target=395
+[CoopBinary] Đi XUỐNG (Target 395 < Bound 407) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=385, UB=406 => Target=395
+[IndepBinary] UNSAT in 395. Incrementing LB.
+[CoopBinary-Watchdog] LB (396) over target 395. Interrupt!
+Exception in thread Thread-4 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 754, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[CoopBinary] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.
+[CoopBinary] New iteration: LB=396, UB=406 => Target=401
+[CoopBinary] Đi LÊN (Target 401 >= Bound 395) -> Re-init Solver
+[IndepBinary] New iteration: LB=396, UB=406 => Target=401
+[BottomUp] Target 385 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 396, LB = 396, UB = 406
+[TopDown-Watchdog] Phát hiện UB (406) < Target (421). INTERRUPT!
+Exception in thread Thread-10 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 406, LB = 396, UB = 406
+[TopDown] SAT in 406! Updating UB.
+Time taken: 0.52 seconds
+[TopDown] Trying with at most 405, LB = 396, UB = 405
+[TopDown] SAT in 405! Updating UB.
+Time taken: 0.52 seconds
+[TopDown] Trying with at most 404, LB = 396, UB = 404
+[TopDown] SAT in 404! Updating UB.
+Time taken: 0.52 seconds
+[TopDown] Trying with at most 403, LB = 396, UB = 403
+[TopDown] SAT in 403! Updating UB.
+Time taken: 0.52 seconds
+[TopDown] Trying with at most 402, LB = 396, UB = 402
+[TopDown] SAT in 402! Updating UB.
+Time taken: 0.53 seconds
+[TopDown] Trying with at most 401, LB = 396, UB = 401
+[TopDown] SAT in 401! Updating UB.
+Time taken: 0.53 seconds
+[TopDown] Trying with at most 400, LB = 396, UB = 400
+[TopDown] SAT in 400! Updating UB.
+Time taken: 0.53 seconds
+[TopDown] Trying with at most 399, LB = 396, UB = 399
+[TopDown] SAT in 399! Updating UB.
+Time taken: 0.55 seconds
+[TopDown] Trying with at most 398, LB = 396, UB = 398
+[TopDown] UNSAT in 398. Đã chạm đáy Optimal!
+Exception in thread Thread-5 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 747, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: TopDown
+   Optimal Makespan: 399
+   Total time: 0.62 seconds
+[runlim] end:			Mon Apr 20 01:23:06 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			0.67 seconds
+[runlim] time:			2.21 seconds
+[runlim] space:			212 MB
+[runlim] load:			1.66 maximum
+[runlim] samples:		7

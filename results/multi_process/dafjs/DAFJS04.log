@@ -1,0 +1,38 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS04
+[runlim] start:			Mon Apr 20 01:33:52 2026
+[runlim] child:			116012
+Loading data from: datasets/dafjs/DAFJS04
+Operations: 43, Edges: 40, Machines: 10
+Greedy Schedule UB: 606
+Lower Bound: 606 (precedence=606, avg_load=225, mandatory=0)
+Complete preprocessing! Greedy UB = 606
+Initial UB = 605, LB = 606
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Solving
+   Proved by: None
+   Optimal Makespan: 606
+   Total time: 0.12 seconds
+[runlim] end:			Mon Apr 20 01:33:52 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			0.17 seconds
+[runlim] time:			0.05 seconds
+[runlim] space:			43 MB
+[runlim] load:			3.77 maximum
+[runlim] samples:		2

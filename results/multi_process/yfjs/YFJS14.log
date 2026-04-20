@@ -1,0 +1,46 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS14
+[runlim] start:			Mon Apr 20 01:23:15 2026
+[runlim] child:			115607
+Loading data from: datasets/yfjs/YFJS14
+Operations: 221, Edges: 208, Machines: 26
+Greedy Schedule UB: 1517
+Lower Bound: 1317 (precedence=1317, avg_load=553, mandatory=0)
+Complete preprocessing! Greedy UB = 1517
+Initial UB = 1516, LB = 1317
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 1317, LB = 1317, UB = 1516
+[TopDown] Trying with at most 1516, LB = 1317, UB = 1516
+[IndepBinary] New iteration: LB=1317, UB=1516 => Target=1416
+[CoopBinary] New iteration: LB=1317, UB=1516 => Target=1416
+[runlim] sample:		39.85 time, 10.01 real, 2965 MB, 2.32 load
+[runlim] sample:		79.96 time, 20.01 real, 3228 MB, 2.65 load
+[BottomUp] SAT in 1317! ĐÃ TÌM THẤY OPTIMAL.
+Time taken: 21.45 seconds
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: BottomUp
+   Optimal Makespan: 1317
+   Total time: 21.68 seconds
+[runlim] end:			Mon Apr 20 01:23:37 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			21.73 seconds
+[runlim] time:			86.39 seconds
+[runlim] space:			3295 MB
+[runlim] load:			2.65 maximum
+[runlim] samples:		218

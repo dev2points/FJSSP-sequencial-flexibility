@@ -1,0 +1,59 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS20
+[runlim] start:			Mon Apr 20 01:31:18 2026
+[runlim] child:			115840
+Loading data from: datasets/yfjs/YFJS20
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1252
+Lower Bound: 968 (precedence=968, avg_load=554, mandatory=0)
+Complete preprocessing! Greedy UB = 1252
+Initial UB = 1251, LB = 968
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 968, LB = 968, UB = 1251
+[TopDown] Trying with at most 1251, LB = 968, UB = 1251
+[IndepBinary] New iteration: LB=968, UB=1251 => Target=1109
+[CoopBinary] New iteration: LB=968, UB=1251 => Target=1109
+[runlim] sample:		39.82 time, 10.01 real, 2702 MB, 4.12 load
+[runlim] sample:		79.88 time, 20.01 real, 4666 MB, 4.10 load
+[runlim] sample:		119.94 time, 30.01 real, 5605 MB, 4.08 load
+[runlim] sample:		160.06 time, 40.01 real, 5654 MB, 4.07 load
+[runlim] sample:		200.13 time, 50.01 real, 5585 MB, 4.06 load
+[runlim] sample:		240.25 time, 60.01 real, 5618 MB, 4.05 load
+[runlim] sample:		280.40 time, 70.01 real, 5546 MB, 4.04 load
+[runlim] sample:		320.51 time, 80.01 real, 5515 MB, 4.04 load
+[runlim] sample:		360.61 time, 90.01 real, 5855 MB, 4.03 load
+[runlim] sample:		400.76 time, 100.01 real, 5845 MB, 4.02 load
+[runlim] sample:		440.85 time, 110.01 real, 5560 MB, 4.02 load
+[runlim] sample:		480.96 time, 120.01 real, 5521 MB, 4.02 load
+[runlim] sample:		521.07 time, 130.01 real, 5485 MB, 4.01 load
+[runlim] sample:		561.17 time, 140.01 real, 5920 MB, 4.01 load
+[runlim] sample:		601.25 time, 150.01 real, 5589 MB, 4.01 load
+[BottomUp] SAT in 968! ĐÃ TÌM THẤY OPTIMAL.
+Time taken: 150.90 seconds
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: BottomUp
+   Optimal Makespan: 968
+   Total time: 151.25 seconds
+[runlim] end:			Mon Apr 20 01:33:50 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			151.30 seconds
+[runlim] time:			605.79 seconds
+[runlim] space:			6978 MB
+[runlim] load:			4.14 maximum
+[runlim] samples:		1513

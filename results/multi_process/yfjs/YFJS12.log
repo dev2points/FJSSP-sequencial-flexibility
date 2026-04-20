@@ -1,0 +1,135 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS12
+[runlim] start:			Mon Apr 20 01:23:09 2026
+[runlim] child:			115417
+Loading data from: datasets/yfjs/YFJS12
+Operations: 50, Edges: 40, Machines: 10
+Greedy Schedule UB: 765
+Lower Bound: 448 (precedence=448, avg_load=354, mandatory=0)
+Complete preprocessing! Greedy UB = 765
+Initial UB = 764, LB = 448
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 448, LB = 448, UB = 764
+[TopDown] Trying with at most 764, LB = 448, UB = 764
+[IndepBinary] New iteration: LB=448, UB=764 => Target=606
+[CoopBinary] New iteration: LB=448, UB=764 => Target=606
+[BottomUp] UNSAT in 448. Tăng LB.
+[BottomUp] Trying with at most 449, LB = 449, UB = 764
+[BottomUp] UNSAT in 449. Tăng LB.
+[BottomUp] Trying with at most 450, LB = 450, UB = 764
+[BottomUp] UNSAT in 450. Tăng LB.
+[BottomUp] Trying with at most 451, LB = 451, UB = 764
+[IndepBinary] SAT in 606! Updating UB.
+Time taken: 0.67 seconds
+[IndepBinary] New iteration: LB=451, UB=605 => Target=528
+[CoopBinary-Watchdog] UB (605) under target 606. Interrupt!
+Exception in thread Thread-1 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 761, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[CoopBinary] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.
+[CoopBinary] New iteration: LB=451, UB=605 => Target=528
+[CoopBinary] Đi XUỐNG (Target 528 < Bound 606) -> Dùng Incremental SAT
+[TopDown] Target 764 đã lỗi thời trước khi gọi solve. Bỏ qua vòng này.
+[TopDown] Trying with at most 605, LB = 451, UB = 605
+[BottomUp] UNSAT in 451. Tăng LB.
+[BottomUp] Trying with at most 452, LB = 452, UB = 605
+[BottomUp] UNSAT in 452. Tăng LB.
+[BottomUp] Trying with at most 453, LB = 453, UB = 605
+[TopDown] SAT in 605! Updating UB.
+Time taken: 1.07 seconds
+[TopDown] Trying with at most 604, LB = 453, UB = 604
+[TopDown] SAT in 604! Updating UB.
+Time taken: 1.08 seconds
+[TopDown] Trying with at most 603, LB = 453, UB = 603
+[TopDown] SAT in 603! Updating UB.
+Time taken: 1.09 seconds
+[TopDown] Trying with at most 602, LB = 453, UB = 602
+[BottomUp] UNSAT in 453. Tăng LB.
+[BottomUp] Trying with at most 454, LB = 454, UB = 602
+[BottomUp] UNSAT in 454. Tăng LB.
+[BottomUp] Trying with at most 455, LB = 455, UB = 602
+[BottomUp] UNSAT in 455. Tăng LB.
+[BottomUp] Trying with at most 456, LB = 456, UB = 602
+[BottomUp] UNSAT in 456. Tăng LB.
+[BottomUp] Trying with at most 457, LB = 457, UB = 602
+[BottomUp] UNSAT in 457. Tăng LB.
+[BottomUp] Trying with at most 458, LB = 458, UB = 602
+[BottomUp] UNSAT in 458. Tăng LB.
+[BottomUp] Trying with at most 459, LB = 459, UB = 602
+[BottomUp] UNSAT in 459. Tăng LB.
+[BottomUp] Trying with at most 460, LB = 460, UB = 602
+[BottomUp] UNSAT in 460. Tăng LB.
+[BottomUp] Trying with at most 461, LB = 461, UB = 602
+[BottomUp] UNSAT in 461. Tăng LB.
+[BottomUp] Trying with at most 462, LB = 462, UB = 602
+[IndepBinary] SAT in 528! Updating UB.
+Time taken: 2.75 seconds
+[IndepBinary] New iteration: LB=462, UB=527 => Target=494
+[IndepBinary] UNSAT in 494. Incrementing LB.
+[CoopBinary-Watchdog] UB (527) under target 528. Interrupt!
+Exception in thread Thread-2 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 761, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[CoopBinary] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.
+[CoopBinary] New iteration: LB=495, UB=527 => Target=511
+[CoopBinary] Đi XUỐNG (Target 511 < Bound 528) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=495, UB=527 => Target=511
+[BottomUp] Target 462 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 495, LB = 495, UB = 527
+[CoopBinary] UNSAT in 511. Incrementing LB.
+[CoopBinary] New iteration: LB=512, UB=527 => Target=519
+[IndepBinary] Target 511 đã lỗi thời so với mốc chung. Bỏ qua lấy Target mới.
+[IndepBinary] New iteration: LB=512, UB=527 => Target=519
+[BottomUp] Target 495 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 512, LB = 512, UB = 527
+[BottomUp] SAT in 512! ĐÃ TÌM THẤY OPTIMAL.
+Time taken: 4.03 seconds
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: BottomUp
+   Optimal Makespan: 512
+   Total time: 4.14 seconds
+[runlim] end:			Mon Apr 20 01:23:13 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			4.19 seconds
+[runlim] time:			16.23 seconds
+[runlim] space:			409 MB
+[runlim] load:			1.84 maximum
+[runlim] samples:		42

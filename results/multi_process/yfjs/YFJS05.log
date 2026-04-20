@@ -1,0 +1,247 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS05
+[runlim] start:			Mon Apr 20 01:22:53 2026
+[runlim] child:			114836
+Loading data from: datasets/yfjs/YFJS05
+Operations: 32, Edges: 24, Machines: 7
+Greedy Schedule UB: 582
+Lower Bound: 415 (precedence=415, avg_load=344, mandatory=0)
+Complete preprocessing! Greedy UB = 582
+Initial UB = 581, LB = 415
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 415, LB = 415, UB = 581
+[TopDown] Trying with at most 581, LB = 415, UB = 581
+[IndepBinary] New iteration: LB=415, UB=581 => Target=498
+[CoopBinary] New iteration: LB=415, UB=581 => Target=498
+[BottomUp] UNSAT in 415. Tăng LB.
+[BottomUp] Trying with at most 416, LB = 416, UB = 581
+[BottomUp] UNSAT in 416. Tăng LB.
+[BottomUp] Trying with at most 417, LB = 417, UB = 581
+[TopDown] SAT in 581! Updating UB.
+Time taken: 0.33 seconds
+[TopDown] Trying with at most 580, LB = 417, UB = 580
+[TopDown] SAT in 580! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 579, LB = 417, UB = 579
+[TopDown] SAT in 579! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 578, LB = 417, UB = 578
+[TopDown] SAT in 578! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 577, LB = 417, UB = 577
+[TopDown] SAT in 577! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 576, LB = 417, UB = 576
+[TopDown] SAT in 576! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 575, LB = 417, UB = 575
+[TopDown] SAT in 575! Updating UB.
+Time taken: 0.34 seconds
+[TopDown] Trying with at most 574, LB = 417, UB = 574
+[TopDown] SAT in 574! Updating UB.
+Time taken: 0.35 seconds
+[TopDown] Trying with at most 573, LB = 417, UB = 573
+[TopDown] SAT in 573! Updating UB.
+Time taken: 0.36 seconds
+[TopDown] Trying with at most 572, LB = 417, UB = 572
+[TopDown] SAT in 572! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 571, LB = 417, UB = 571
+[TopDown] SAT in 571! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 570, LB = 417, UB = 570
+[TopDown] SAT in 570! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 569, LB = 417, UB = 569
+[TopDown] SAT in 569! Updating UB.
+Time taken: 0.37 seconds
+[TopDown] Trying with at most 568, LB = 417, UB = 568
+[TopDown] SAT in 568! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 567, LB = 417, UB = 567
+[TopDown] SAT in 567! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 566, LB = 417, UB = 566
+[TopDown] SAT in 566! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 565, LB = 417, UB = 565
+[TopDown] SAT in 565! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 564, LB = 417, UB = 564
+[TopDown] SAT in 564! Updating UB.
+Time taken: 0.38 seconds
+[TopDown] Trying with at most 563, LB = 417, UB = 563
+[TopDown] SAT in 563! Updating UB.
+Time taken: 0.39 seconds
+[TopDown] Trying with at most 562, LB = 417, UB = 562
+[TopDown] SAT in 562! Updating UB.
+Time taken: 0.39 seconds
+[TopDown] Trying with at most 561, LB = 417, UB = 561
+[TopDown] SAT in 561! Updating UB.
+Time taken: 0.39 seconds
+[TopDown] Trying with at most 560, LB = 417, UB = 560
+[TopDown] SAT in 560! Updating UB.
+Time taken: 0.39 seconds
+[TopDown] Trying with at most 559, LB = 417, UB = 559
+[TopDown] SAT in 559! Updating UB.
+Time taken: 0.39 seconds
+[TopDown] Trying with at most 558, LB = 417, UB = 558
+[TopDown] SAT in 558! Updating UB.
+Time taken: 0.40 seconds
+[TopDown] Trying with at most 557, LB = 417, UB = 557
+[TopDown] SAT in 557! Updating UB.
+Time taken: 0.40 seconds
+[TopDown] Trying with at most 556, LB = 417, UB = 556
+[TopDown] SAT in 556! Updating UB.
+Time taken: 0.40 seconds
+[CoopBinary] SAT in 498! Updating UB.
+Time taken: 0.40 seconds
+[CoopBinary] New iteration: LB=417, UB=497 => Target=457
+[CoopBinary] Đi XUỐNG (Target 457 < Bound 498) -> Dùng Incremental SAT
+[TopDown] Trying with at most 497, LB = 417, UB = 497
+[IndepBinary] New iteration: LB=417, UB=497 => Target=457
+[BottomUp] UNSAT in 417. Tăng LB.
+[BottomUp] Trying with at most 418, LB = 418, UB = 497
+[BottomUp] UNSAT in 418. Tăng LB.
+[BottomUp] Trying with at most 419, LB = 419, UB = 497
+[TopDown] SAT in 497! Updating UB.
+Time taken: 0.61 seconds
+[TopDown] Trying with at most 496, LB = 419, UB = 496
+[TopDown] SAT in 496! Updating UB.
+Time taken: 0.65 seconds
+[TopDown] Trying with at most 495, LB = 419, UB = 495
+[TopDown] SAT in 495! Updating UB.
+Time taken: 0.66 seconds
+[TopDown] Trying with at most 494, LB = 419, UB = 494
+[TopDown] SAT in 494! Updating UB.
+Time taken: 0.66 seconds
+[TopDown] Trying with at most 493, LB = 419, UB = 493
+[TopDown] SAT in 493! Updating UB.
+Time taken: 0.66 seconds
+[TopDown] Trying with at most 492, LB = 419, UB = 492
+[TopDown] SAT in 492! Updating UB.
+Time taken: 0.66 seconds
+[TopDown] Trying with at most 491, LB = 419, UB = 491
+[TopDown] SAT in 491! Updating UB.
+Time taken: 0.66 seconds
+[TopDown] Trying with at most 490, LB = 419, UB = 490
+[TopDown] SAT in 490! Updating UB.
+Time taken: 0.67 seconds
+[TopDown] Trying with at most 489, LB = 419, UB = 489
+[TopDown] SAT in 489! Updating UB.
+Time taken: 0.67 seconds
+[TopDown] Trying with at most 488, LB = 419, UB = 488
+[TopDown] SAT in 488! Updating UB.
+Time taken: 0.67 seconds
+[TopDown] Trying with at most 487, LB = 419, UB = 487
+[TopDown] SAT in 487! Updating UB.
+Time taken: 0.67 seconds
+[TopDown] Trying with at most 486, LB = 419, UB = 486
+[TopDown] SAT in 486! Updating UB.
+Time taken: 0.68 seconds
+[TopDown] Trying with at most 485, LB = 419, UB = 485
+[TopDown] SAT in 485! Updating UB.
+Time taken: 0.68 seconds
+[TopDown] Trying with at most 484, LB = 419, UB = 484
+[BottomUp] UNSAT in 419. Tăng LB.
+[BottomUp] Trying with at most 420, LB = 420, UB = 484
+[CoopBinary] SAT in 457! Updating UB.
+Time taken: 0.83 seconds
+[CoopBinary] New iteration: LB=420, UB=456 => Target=438
+[CoopBinary] Đi XUỐNG (Target 438 < Bound 457) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=420, UB=456 => Target=438
+[BottomUp] UNSAT in 420. Tăng LB.
+[BottomUp] Trying with at most 421, LB = 421, UB = 456
+[BottomUp] UNSAT in 421. Tăng LB.
+[BottomUp] Trying with at most 422, LB = 422, UB = 456
+[TopDown-Watchdog] Phát hiện UB (456) < Target (484). INTERRUPT!
+Exception in thread Thread-40 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 456, LB = 422, UB = 456
+[BottomUp] UNSAT in 422. Tăng LB.
+[BottomUp] Trying with at most 423, LB = 423, UB = 456
+[BottomUp] UNSAT in 423. Tăng LB.
+[BottomUp] Trying with at most 424, LB = 424, UB = 456
+[CoopBinary] UNSAT in 438. Incrementing LB.
+[CoopBinary] New iteration: LB=439, UB=456 => Target=447
+[IndepBinary] UNSAT in 438. Incrementing LB.
+[IndepBinary] New iteration: LB=439, UB=456 => Target=447
+[BottomUp] Target 424 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 439, LB = 439, UB = 456
+[CoopBinary] SAT in 447! Updating UB.
+Time taken: 1.69 seconds
+[CoopBinary] New iteration: LB=439, UB=446 => Target=442
+[CoopBinary] Đi XUỐNG (Target 442 < Bound 447) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=439, UB=446 => Target=442
+[BottomUp] UNSAT in 439. Tăng LB.
+[BottomUp] Trying with at most 440, LB = 440, UB = 446
+[CoopBinary] UNSAT in 442. Incrementing LB.
+[CoopBinary] New iteration: LB=443, UB=446 => Target=444
+[IndepBinary] UNSAT in 442. Incrementing LB.
+[IndepBinary] New iteration: LB=443, UB=446 => Target=444
+[TopDown-Watchdog] Phát hiện UB (446) < Target (456). INTERRUPT!
+Exception in thread Thread-41 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 446, LB = 443, UB = 446
+[BottomUp] Target 440 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 443, LB = 443, UB = 446
+[TopDown] SAT in 446! Updating UB.
+Time taken: 1.99 seconds
+[TopDown] Trying with at most 445, LB = 443, UB = 445
+[TopDown] SAT in 445! Updating UB.
+Time taken: 2.01 seconds
+[TopDown] Trying with at most 444, LB = 443, UB = 444
+[TopDown] UNSAT in 444. Đã chạm đáy Optimal!
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: TopDown
+   Optimal Makespan: 445
+   Total time: 2.23 seconds
+[runlim] end:			Mon Apr 20 01:22:56 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			2.27 seconds
+[runlim] time:			8.55 seconds
+[runlim] space:			267 MB
+[runlim] load:			0.95 maximum
+[runlim] samples:		23

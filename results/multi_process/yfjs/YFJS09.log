@@ -1,0 +1,91 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS09
+[runlim] start:			Mon Apr 20 01:23:05 2026
+[runlim] child:			115240
+Loading data from: datasets/yfjs/YFJS09
+Operations: 36, Edges: 27, Machines: 12
+Greedy Schedule UB: 288
+Lower Bound: 203 (precedence=203, avg_load=147, mandatory=0)
+Complete preprocessing! Greedy UB = 288
+Initial UB = 287, LB = 203
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 203, LB = 203, UB = 287
+[IndepBinary] New iteration: LB=203, UB=287 => Target=245
+[TopDown] Trying with at most 287, LB = 203, UB = 287
+[CoopBinary] New iteration: LB=203, UB=287 => Target=245
+[BottomUp] UNSAT in 203. Tăng LB.
+[BottomUp] Trying with at most 204, LB = 204, UB = 287
+[BottomUp] UNSAT in 204. Tăng LB.
+[BottomUp] Trying with at most 205, LB = 205, UB = 287
+[IndepBinary] SAT in 245! Updating UB.
+Time taken: 0.23 seconds
+[IndepBinary] New iteration: LB=205, UB=244 => Target=224
+[IndepBinary] UNSAT in 224. Incrementing LB.
+[IndepBinary] New iteration: LB=225, UB=244 => Target=234
+[CoopBinary-Watchdog] UB (244) under target 245. Interrupt!
+Exception in thread Thread-1 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 761, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[CoopBinary] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.
+[CoopBinary] New iteration: LB=225, UB=244 => Target=234
+[CoopBinary] Đi XUỐNG (Target 234 < Bound 245) -> Dùng Incremental SAT
+[BottomUp] Target 205 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 225, LB = 225, UB = 244
+[CoopBinary] UNSAT in 234. Incrementing LB.
+[CoopBinary] New iteration: LB=235, UB=244 => Target=239
+[TopDown] Target 287 đã lỗi thời trước khi gọi solve. Bỏ qua vòng này.
+[TopDown] Trying with at most 244, LB = 235, UB = 244
+[BottomUp] Target 225 đã lỗi thời sau khi init. Bỏ qua vòng này.
+[BottomUp] Trying with at most 235, LB = 235, UB = 244
+[IndepBinary] Target 234 đã lỗi thời so với mốc chung. Bỏ qua lấy Target mới.
+[IndepBinary] New iteration: LB=235, UB=244 => Target=239
+[TopDown] SAT in 244! Updating UB.
+Time taken: 0.42 seconds
+[TopDown] Trying with at most 243, LB = 235, UB = 243
+[TopDown] SAT in 243! Updating UB.
+Time taken: 0.42 seconds
+[TopDown] Trying with at most 242, LB = 235, UB = 242
+[TopDown] SAT in 242! Updating UB.
+Time taken: 0.42 seconds
+[TopDown] Trying with at most 241, LB = 235, UB = 241
+[CoopBinary] UNSAT in 239. Incrementing LB.
+[CoopBinary] New iteration: LB=240, UB=241 => Target=240
+[TopDown] UNSAT in 241. Đã chạm đáy Optimal!
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: TopDown
+   Optimal Makespan: 242
+   Total time: 0.52 seconds
+[runlim] end:			Mon Apr 20 01:23:05 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			0.57 seconds
+[runlim] time:			1.81 seconds
+[runlim] space:			199 MB
+[runlim] load:			1.66 maximum
+[runlim] samples:		6

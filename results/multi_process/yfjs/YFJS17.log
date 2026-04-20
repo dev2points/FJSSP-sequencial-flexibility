@@ -1,0 +1,53 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/yfjs/YFJS17
+[runlim] start:			Mon Apr 20 01:24:58 2026
+[runlim] child:			115744
+Loading data from: datasets/yfjs/YFJS17
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1319
+Lower Bound: 1133 (precedence=1133, avg_load=562, mandatory=0)
+Complete preprocessing! Greedy UB = 1319
+Initial UB = 1318, LB = 1133
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 1133, LB = 1133, UB = 1318
+[TopDown] Trying with at most 1318, LB = 1133, UB = 1318
+[IndepBinary] New iteration: LB=1133, UB=1318 => Target=1225
+[CoopBinary] New iteration: LB=1133, UB=1318 => Target=1225
+[runlim] sample:		39.82 time, 10.01 real, 2599 MB, 3.73 load
+[runlim] sample:		79.83 time, 20.01 real, 5083 MB, 3.93 load
+[runlim] sample:		119.90 time, 30.01 real, 7714 MB, 4.09 load
+[runlim] sample:		160.01 time, 40.01 real, 8964 MB, 4.15 load
+[runlim] sample:		200.10 time, 50.01 real, 8068 MB, 4.13 load
+[runlim] sample:		240.19 time, 60.01 real, 8591 MB, 4.11 load
+[runlim] sample:		280.32 time, 70.01 real, 9095 MB, 4.09 load
+[runlim] sample:		320.41 time, 80.01 real, 7889 MB, 4.08 load
+[runlim] sample:		360.51 time, 90.01 real, 8434 MB, 4.06 load
+[BottomUp] SAT in 1133! ĐÃ TÌM THẤY OPTIMAL.
+Time taken: 92.78 seconds
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: BottomUp
+   Optimal Makespan: 1133
+   Total time: 93.25 seconds
+[runlim] end:			Mon Apr 20 01:26:31 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			93.30 seconds
+[runlim] time:			372.77 seconds
+[runlim] space:			10020 MB
+[runlim] load:			4.17 maximum
+[runlim] samples:		933

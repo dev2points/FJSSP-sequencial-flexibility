@@ -1,0 +1,393 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS18
+[runlim] start:			Mon Apr 20 05:33:51 2026
+[runlim] child:			117992
+Loading data from: datasets/dafjs/DAFJS18
+Operations: 74, Edges: 64, Machines: 5
+Greedy Schedule UB: 914
+Lower Bound: 759 (precedence=322, avg_load=759, mandatory=0)
+Complete preprocessing! Greedy UB = 914
+Initial UB = 913, LB = 759
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 759, LB = 759, UB = 913
+[TopDown] Trying with at most 913, LB = 759, UB = 913
+[CoopBinary] New iteration: LB=759, UB=913 => Target=836
+[IndepBinary] New iteration: LB=759, UB=913 => Target=836
+[runlim] sample:		39.68 time, 10.01 real, 2656 MB, 4.05 load
+[runlim] sample:		79.79 time, 20.01 real, 2524 MB, 4.04 load
+[runlim] sample:		119.90 time, 30.01 real, 2645 MB, 4.04 load
+[TopDown] SAT in 913! Updating UB.
+Time taken: 30.09 seconds
+[TopDown] Trying with at most 912, LB = 759, UB = 912
+[runlim] sample:		160.00 time, 40.01 real, 2790 MB, 4.03 load
+[TopDown] SAT in 912! Updating UB.
+Time taken: 41.33 seconds
+[TopDown] Trying with at most 911, LB = 759, UB = 911
+[TopDown] SAT in 911! Updating UB.
+Time taken: 42.80 seconds
+[TopDown] Trying with at most 910, LB = 759, UB = 910
+[TopDown] SAT in 910! Updating UB.
+Time taken: 42.84 seconds
+[TopDown] Trying with at most 909, LB = 759, UB = 909
+[TopDown] SAT in 909! Updating UB.
+Time taken: 44.16 seconds
+[TopDown] Trying with at most 908, LB = 759, UB = 908
+[TopDown] SAT in 908! Updating UB.
+Time taken: 46.34 seconds
+[TopDown] Trying with at most 907, LB = 759, UB = 907
+[runlim] sample:		200.10 time, 50.01 real, 2649 MB, 4.02 load
+[TopDown] SAT in 907! Updating UB.
+Time taken: 49.98 seconds
+[TopDown] Trying with at most 906, LB = 759, UB = 906
+[TopDown] SAT in 906! Updating UB.
+Time taken: 51.19 seconds
+[TopDown] Trying with at most 905, LB = 759, UB = 905
+[TopDown] SAT in 905! Updating UB.
+Time taken: 51.29 seconds
+[TopDown] Trying with at most 904, LB = 759, UB = 904
+[runlim] sample:		240.17 time, 60.01 real, 2697 MB, 4.02 load
+[TopDown] SAT in 904! Updating UB.
+Time taken: 68.16 seconds
+[TopDown] Trying with at most 903, LB = 759, UB = 903
+[runlim] sample:		280.29 time, 70.01 real, 2601 MB, 4.02 load
+[TopDown] SAT in 903! Updating UB.
+Time taken: 70.67 seconds
+[TopDown] Trying with at most 902, LB = 759, UB = 902
+[TopDown] SAT in 902! Updating UB.
+Time taken: 73.34 seconds
+[TopDown] Trying with at most 901, LB = 759, UB = 901
+[TopDown] SAT in 901! Updating UB.
+Time taken: 74.78 seconds
+[TopDown] Trying with at most 900, LB = 759, UB = 900
+[TopDown] SAT in 900! Updating UB.
+Time taken: 74.81 seconds
+[TopDown] Trying with at most 899, LB = 759, UB = 899
+[runlim] sample:		320.40 time, 80.01 real, 2909 MB, 4.01 load
+[TopDown] SAT in 899! Updating UB.
+Time taken: 84.71 seconds
+[TopDown] Trying with at most 898, LB = 759, UB = 898
+[runlim] sample:		360.51 time, 90.01 real, 2648 MB, 4.01 load
+[TopDown] SAT in 898! Updating UB.
+Time taken: 92.83 seconds
+[TopDown] Trying with at most 897, LB = 759, UB = 897
+[TopDown] SAT in 897! Updating UB.
+Time taken: 92.84 seconds
+[TopDown] Trying with at most 896, LB = 759, UB = 896
+[TopDown] SAT in 896! Updating UB.
+Time taken: 92.86 seconds
+[TopDown] Trying with at most 895, LB = 759, UB = 895
+[TopDown] SAT in 895! Updating UB.
+Time taken: 92.87 seconds
+[TopDown] Trying with at most 894, LB = 759, UB = 894
+[TopDown] SAT in 894! Updating UB.
+Time taken: 92.88 seconds
+[TopDown] Trying with at most 893, LB = 759, UB = 893
+[TopDown] SAT in 893! Updating UB.
+Time taken: 94.78 seconds
+[TopDown] Trying with at most 892, LB = 759, UB = 892
+[runlim] sample:		400.62 time, 100.01 real, 2605 MB, 4.01 load
+[runlim] sample:		440.73 time, 110.01 real, 2599 MB, 4.01 load
+[TopDown] SAT in 892! Updating UB.
+Time taken: 116.64 seconds
+[TopDown] Trying with at most 891, LB = 759, UB = 891
+[TopDown] SAT in 891! Updating UB.
+Time taken: 118.24 seconds
+[TopDown] Trying with at most 890, LB = 759, UB = 890
+[runlim] sample:		480.84 time, 120.01 real, 2598 MB, 4.01 load
+[TopDown] SAT in 890! Updating UB.
+Time taken: 126.67 seconds
+[TopDown] Trying with at most 889, LB = 759, UB = 889
+[runlim] sample:		520.93 time, 130.01 real, 2598 MB, 4.08 load
+[TopDown] SAT in 889! Updating UB.
+Time taken: 132.53 seconds
+[TopDown] Trying with at most 888, LB = 759, UB = 888
+[runlim] sample:		561.06 time, 140.01 real, 2600 MB, 4.07 load
+[TopDown] SAT in 888! Updating UB.
+Time taken: 142.16 seconds
+[TopDown] Trying with at most 887, LB = 759, UB = 887
+[TopDown] SAT in 887! Updating UB.
+Time taken: 142.18 seconds
+[TopDown] Trying with at most 886, LB = 759, UB = 886
+[TopDown] SAT in 886! Updating UB.
+Time taken: 142.19 seconds
+[TopDown] Trying with at most 885, LB = 759, UB = 885
+[TopDown] SAT in 885! Updating UB.
+Time taken: 142.20 seconds
+[TopDown] Trying with at most 884, LB = 759, UB = 884
+[TopDown] SAT in 884! Updating UB.
+Time taken: 142.21 seconds
+[TopDown] Trying with at most 883, LB = 759, UB = 883
+[runlim] sample:		601.18 time, 150.01 real, 2562 MB, 4.06 load
+[runlim] sample:		641.29 time, 160.01 real, 2628 MB, 4.12 load
+[TopDown] SAT in 883! Updating UB.
+Time taken: 161.87 seconds
+[TopDown] Trying with at most 882, LB = 759, UB = 882
+[runlim] sample:		681.41 time, 170.01 real, 2581 MB, 4.10 load
+[TopDown] SAT in 882! Updating UB.
+Time taken: 170.06 seconds
+[TopDown] Trying with at most 881, LB = 759, UB = 881
+[TopDown] SAT in 881! Updating UB.
+Time taken: 170.12 seconds
+[TopDown] Trying with at most 880, LB = 759, UB = 880
+[runlim] sample:		721.50 time, 180.01 real, 2726 MB, 4.09 load
+[runlim] sample:		761.61 time, 190.01 real, 2586 MB, 4.07 load
+[TopDown] SAT in 880! Updating UB.
+Time taken: 197.44 seconds
+[TopDown] Trying with at most 879, LB = 759, UB = 879
+[runlim] sample:		801.74 time, 200.01 real, 2680 MB, 4.06 load
+[runlim] sample:		841.87 time, 210.01 real, 2588 MB, 4.13 load
+[TopDown] SAT in 879! Updating UB.
+Time taken: 218.46 seconds
+[TopDown] Trying with at most 878, LB = 759, UB = 878
+[runlim] sample:		881.99 time, 220.01 real, 2582 MB, 4.27 load
+[TopDown] SAT in 878! Updating UB.
+Time taken: 220.88 seconds
+[TopDown] Trying with at most 877, LB = 759, UB = 877
+[runlim] sample:		922.10 time, 230.01 real, 2583 MB, 4.30 load
+[runlim] sample:		962.21 time, 240.01 real, 2622 MB, 4.25 load
+[IndepBinary] SAT in 836! Updating UB.
+Time taken: 247.40 seconds
+[IndepBinary] New iteration: LB=759, UB=835 => Target=797
+[CoopBinary-Watchdog] UB (835) under target 836. Interrupt!
+Exception in thread Thread-1 (watchdog_both):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 761, in watchdog_both
+    if solver is not None: solver.interrupt()
+                           ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[CoopBinary] Bị ngắt! Giữ lại Solver để chờ xem Target vòng sau đi lên hay xuống.
+[CoopBinary] New iteration: LB=759, UB=835 => Target=797
+[CoopBinary] Đi XUỐNG (Target 797 < Bound 836) -> Dùng Incremental SAT
+[runlim] sample:		1002.33 time, 250.01 real, 2587 MB, 4.21 load
+[runlim] sample:		1042.43 time, 260.01 real, 2605 MB, 4.18 load
+[runlim] sample:		1082.54 time, 270.01 real, 2605 MB, 4.15 load
+[runlim] sample:		1122.63 time, 280.01 real, 2602 MB, 4.13 load
+[runlim] sample:		1162.72 time, 290.01 real, 2608 MB, 4.11 load
+[runlim] sample:		1202.85 time, 300.01 real, 2612 MB, 4.09 load
+[runlim] sample:		1242.95 time, 310.01 real, 2594 MB, 4.08 load
+[runlim] sample:		1283.05 time, 320.01 real, 2594 MB, 4.21 load
+[runlim] sample:		1323.14 time, 330.01 real, 2772 MB, 4.18 load
+[runlim] sample:		1363.28 time, 340.01 real, 2591 MB, 4.15 load
+[TopDown-Watchdog] Phát hiện UB (835) < Target (877). INTERRUPT!
+Exception in thread Thread-37 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 835, LB = 759, UB = 835
+[runlim] sample:		1403.36 time, 350.01 real, 2703 MB, 4.13 load
+[runlim] sample:		1443.48 time, 360.01 real, 2615 MB, 4.11 load
+[runlim] sample:		1483.62 time, 370.01 real, 2593 MB, 4.09 load
+[runlim] sample:		1523.74 time, 380.01 real, 2601 MB, 4.08 load
+[runlim] sample:		1563.87 time, 390.01 real, 2567 MB, 4.06 load
+[runlim] sample:		1603.98 time, 400.01 real, 2711 MB, 4.05 load
+[runlim] sample:		1644.11 time, 410.01 real, 2568 MB, 4.05 load
+[runlim] sample:		1684.25 time, 420.01 real, 2701 MB, 4.04 load
+[runlim] sample:		1724.34 time, 430.01 real, 2564 MB, 4.11 load
+[runlim] sample:		1764.47 time, 440.01 real, 2614 MB, 4.24 load
+[runlim] sample:		1804.61 time, 450.01 real, 2709 MB, 4.20 load
+[runlim] sample:		1844.73 time, 460.01 real, 2561 MB, 4.17 load
+[runlim] sample:		1884.83 time, 470.01 real, 2561 MB, 4.15 load
+[runlim] sample:		1924.94 time, 480.01 real, 2560 MB, 4.12 load
+[runlim] sample:		1965.08 time, 490.01 real, 2564 MB, 4.10 load
+[TopDown] SAT in 835! Updating UB.
+Time taken: 498.04 seconds
+[TopDown] Trying with at most 834, LB = 759, UB = 834
+[runlim] sample:		2005.19 time, 500.01 real, 2577 MB, 4.09 load
+[runlim] sample:		2045.31 time, 510.01 real, 2616 MB, 4.07 load
+[runlim] sample:		2085.43 time, 520.01 real, 2567 MB, 4.14 load
+[runlim] sample:		2125.55 time, 530.01 real, 2568 MB, 4.11 load
+[runlim] sample:		2165.66 time, 540.01 real, 2561 MB, 4.10 load
+[runlim] sample:		2205.77 time, 550.01 real, 2698 MB, 4.08 load
+[runlim] sample:		2245.89 time, 560.01 real, 2662 MB, 4.07 load
+[runlim] sample:		2286.02 time, 570.01 real, 2566 MB, 4.06 load
+[runlim] sample:		2326.15 time, 580.01 real, 2696 MB, 4.05 load
+[runlim] sample:		2366.27 time, 590.01 real, 2563 MB, 4.04 load
+[runlim] sample:		2406.39 time, 600.01 real, 2705 MB, 4.03 load
+[runlim] sample:		2446.50 time, 610.01 real, 2566 MB, 4.03 load
+[runlim] sample:		2486.61 time, 620.01 real, 2706 MB, 4.02 load
+[runlim] sample:		2526.74 time, 630.01 real, 2569 MB, 4.02 load
+[runlim] sample:		2566.84 time, 640.01 real, 2705 MB, 4.02 load
+[TopDown] SAT in 834! Updating UB.
+Time taken: 648.21 seconds
+[TopDown] Trying with at most 833, LB = 759, UB = 833
+[runlim] sample:		2606.97 time, 650.01 real, 2566 MB, 4.01 load
+[runlim] sample:		2647.10 time, 660.02 real, 2567 MB, 4.01 load
+[runlim] sample:		2687.21 time, 670.01 real, 2567 MB, 4.01 load
+[runlim] sample:		2727.30 time, 680.01 real, 2567 MB, 4.01 load
+[runlim] sample:		2767.43 time, 690.01 real, 2567 MB, 4.00 load
+[runlim] sample:		2807.54 time, 700.01 real, 2707 MB, 4.00 load
+[runlim] sample:		2847.68 time, 710.01 real, 2574 MB, 4.00 load
+[runlim] sample:		2887.79 time, 720.01 real, 2726 MB, 4.16 load
+[runlim] sample:		2927.93 time, 730.01 real, 2618 MB, 4.29 load
+[runlim] sample:		2968.07 time, 740.01 real, 2578 MB, 4.24 load
+[runlim] sample:		3008.19 time, 750.01 real, 2573 MB, 4.20 load
+[runlim] sample:		3048.31 time, 760.01 real, 2570 MB, 4.17 load
+[TopDown] SAT in 833! Updating UB.
+Time taken: 766.91 seconds
+[TopDown] Trying with at most 832, LB = 759, UB = 832
+[TopDown] SAT in 832! Updating UB.
+Time taken: 768.48 seconds
+[TopDown] Trying with at most 831, LB = 759, UB = 831
+[TopDown] SAT in 831! Updating UB.
+Time taken: 768.53 seconds
+[TopDown] Trying with at most 830, LB = 759, UB = 830
+[runlim] sample:		3088.41 time, 770.01 real, 2569 MB, 4.15 load
+[runlim] sample:		3128.52 time, 780.01 real, 2572 MB, 4.12 load
+[runlim] sample:		3168.65 time, 790.01 real, 2574 MB, 4.18 load
+[TopDown] SAT in 830! Updating UB.
+Time taken: 796.56 seconds
+[TopDown] Trying with at most 829, LB = 759, UB = 829
+[runlim] sample:		3208.75 time, 800.01 real, 2574 MB, 4.16 load
+[runlim] sample:		3248.88 time, 810.01 real, 2576 MB, 4.21 load
+[runlim] sample:		3289.00 time, 820.01 real, 2578 MB, 4.25 load
+[runlim] sample:		3329.11 time, 830.01 real, 2577 MB, 4.21 load
+[runlim] sample:		3369.24 time, 840.01 real, 2623 MB, 4.26 load
+[runlim] sample:		3409.37 time, 850.01 real, 2708 MB, 4.22 load
+[runlim] sample:		3449.48 time, 860.01 real, 2579 MB, 4.27 load
+[runlim] sample:		3489.60 time, 870.01 real, 2580 MB, 4.23 load
+[runlim] sample:		3529.75 time, 880.01 real, 2580 MB, 4.27 load
+[runlim] sample:		3569.87 time, 890.01 real, 2574 MB, 4.23 load
+[runlim] sample:		3609.99 time, 900.01 real, 2574 MB, 4.27 load
+[runlim] sample:		3650.08 time, 910.01 real, 2574 MB, 4.23 load
+[runlim] sample:		3690.21 time, 920.01 real, 2576 MB, 4.20 load
+[runlim] sample:		3730.35 time, 930.01 real, 2576 MB, 4.17 load
+[TopDown] SAT in 829! Updating UB.
+Time taken: 931.70 seconds
+[TopDown] Trying with at most 828, LB = 759, UB = 828
+[runlim] sample:		3770.48 time, 940.01 real, 2634 MB, 4.14 load
+[runlim] sample:		3810.60 time, 950.01 real, 2585 MB, 4.12 load
+[runlim] sample:		3850.74 time, 960.01 real, 2583 MB, 4.10 load
+[runlim] sample:		3890.85 time, 970.01 real, 2584 MB, 4.08 load
+[TopDown] SAT in 828! Updating UB.
+Time taken: 972.08 seconds
+[TopDown] Trying with at most 827, LB = 759, UB = 827
+[runlim] sample:		3930.93 time, 980.01 real, 2579 MB, 4.15 load
+[runlim] sample:		3971.07 time, 990.01 real, 2579 MB, 4.13 load
+[runlim] sample:		4011.18 time, 1000.01 real, 2580 MB, 4.11 load
+[runlim] sample:		4051.31 time, 1010.01 real, 2573 MB, 4.09 load
+[runlim] sample:		4091.43 time, 1020.01 real, 2567 MB, 4.08 load
+[runlim] sample:		4131.55 time, 1030.01 real, 2568 MB, 4.06 load
+[runlim] sample:		4171.66 time, 1040.01 real, 2568 MB, 4.13 load
+[runlim] sample:		4211.77 time, 1050.01 real, 2568 MB, 4.11 load
+[runlim] sample:		4251.88 time, 1060.01 real, 2569 MB, 4.09 load
+[runlim] sample:		4291.97 time, 1070.01 real, 2569 MB, 4.08 load
+[runlim] sample:		4332.09 time, 1080.01 real, 2565 MB, 4.14 load
+[runlim] sample:		4372.18 time, 1090.01 real, 2615 MB, 4.12 load
+[TopDown] SAT in 827! Updating UB.
+Time taken: 1093.53 seconds
+[TopDown] Trying with at most 826, LB = 759, UB = 826
+[runlim] sample:		4412.31 time, 1100.01 real, 2565 MB, 4.10 load
+[TopDown] SAT in 826! Updating UB.
+Time taken: 1103.52 seconds
+[TopDown] Trying with at most 825, LB = 759, UB = 825
+[runlim] sample:		4452.43 time, 1110.01 real, 2566 MB, 4.08 load
+[runlim] sample:		4492.53 time, 1120.01 real, 2569 MB, 4.07 load
+[runlim] sample:		4532.64 time, 1130.01 real, 2570 MB, 4.06 load
+[runlim] sample:		4572.76 time, 1140.01 real, 2570 MB, 4.05 load
+[runlim] sample:		4612.86 time, 1150.01 real, 2572 MB, 4.04 load
+[runlim] sample:		4652.98 time, 1160.01 real, 2663 MB, 4.03 load
+[runlim] sample:		4693.09 time, 1170.01 real, 2573 MB, 4.03 load
+[runlim] sample:		4733.21 time, 1180.01 real, 2573 MB, 4.02 load
+[runlim] sample:		4773.32 time, 1190.01 real, 2569 MB, 4.02 load
+[runlim] sample:		4813.42 time, 1200.01 real, 2570 MB, 4.02 load
+[runlim] sample:		4853.53 time, 1210.01 real, 2702 MB, 4.01 load
+[runlim] sample:		4893.65 time, 1220.01 real, 2573 MB, 4.17 load
+[TopDown] SAT in 825! Updating UB.
+Time taken: 1220.93 seconds
+[TopDown] Trying with at most 824, LB = 759, UB = 824
+[runlim] sample:		4933.78 time, 1230.01 real, 2573 MB, 4.29 load
+[runlim] sample:		4973.89 time, 1240.01 real, 2573 MB, 4.25 load
+[runlim] sample:		5014.00 time, 1250.01 real, 2573 MB, 4.21 load
+[runlim] sample:		5054.14 time, 1260.01 real, 2574 MB, 4.18 load
+[runlim] sample:		5094.27 time, 1270.01 real, 2573 MB, 4.15 load
+[runlim] sample:		5134.41 time, 1280.01 real, 2573 MB, 4.20 load
+[runlim] sample:		5174.53 time, 1290.01 real, 2573 MB, 4.17 load
+[runlim] sample:		5214.68 time, 1300.01 real, 2573 MB, 4.22 load
+[runlim] sample:		5254.80 time, 1310.01 real, 2575 MB, 4.19 load
+[runlim] sample:		5294.92 time, 1320.01 real, 2575 MB, 4.16 load
+[runlim] sample:		5335.02 time, 1330.01 real, 2575 MB, 4.13 load
+[runlim] sample:		5375.17 time, 1340.01 real, 2575 MB, 4.11 load
+[runlim] sample:		5415.29 time, 1350.01 real, 2572 MB, 4.17 load
+[runlim] sample:		5455.41 time, 1360.01 real, 2573 MB, 4.22 load
+[runlim] sample:		5495.54 time, 1370.01 real, 2573 MB, 4.26 load
+[runlim] sample:		5535.62 time, 1380.01 real, 2578 MB, 4.22 load
+[runlim] sample:		5575.75 time, 1390.01 real, 2626 MB, 4.19 load
+[runlim] sample:		5615.87 time, 1400.01 real, 2578 MB, 4.31 load
+[runlim] sample:		5656.02 time, 1410.01 real, 2620 MB, 4.26 load
+[runlim] sample:		5696.11 time, 1420.01 real, 2578 MB, 4.22 load
+[runlim] sample:		5736.23 time, 1430.01 real, 2578 MB, 4.19 load
+[runlim] sample:		5776.35 time, 1440.01 real, 2579 MB, 4.16 load
+[runlim] sample:		5816.47 time, 1450.01 real, 2733 MB, 4.13 load
+[runlim] sample:		5856.59 time, 1460.01 real, 2577 MB, 4.11 load
+[runlim] sample:		5896.71 time, 1470.01 real, 2578 MB, 4.09 load
+[runlim] sample:		5936.83 time, 1480.01 real, 2578 MB, 4.08 load
+[runlim] sample:		5976.94 time, 1490.01 real, 2578 MB, 4.07 load
+[runlim] sample:		6017.06 time, 1500.01 real, 2578 MB, 4.06 load
+[runlim] sample:		6057.16 time, 1510.01 real, 2574 MB, 4.05 load
+[runlim] sample:		6097.34 time, 1520.01 real, 2574 MB, 4.04 load
+[runlim] sample:		6137.44 time, 1530.01 real, 2718 MB, 4.03 load
+[runlim] sample:		6177.54 time, 1540.01 real, 2575 MB, 4.03 load
+[runlim] sample:		6217.64 time, 1550.01 real, 2575 MB, 4.02 load
+[runlim] sample:		6257.76 time, 1560.01 real, 2575 MB, 4.02 load
+[runlim] sample:		6297.87 time, 1570.01 real, 2575 MB, 4.02 load
+[runlim] sample:		6337.99 time, 1580.01 real, 2576 MB, 4.01 load
+[runlim] sample:		6378.10 time, 1590.01 real, 2577 MB, 4.01 load
+[runlim] sample:		6418.20 time, 1600.01 real, 2577 MB, 4.01 load
+[runlim] sample:		6458.33 time, 1610.01 real, 2577 MB, 4.01 load
+[runlim] sample:		6498.43 time, 1620.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6538.53 time, 1630.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6578.64 time, 1640.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6618.73 time, 1650.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6658.83 time, 1660.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6698.95 time, 1670.01 real, 2577 MB, 4.00 load
+[runlim] sample:		6739.06 time, 1680.01 real, 2578 MB, 4.08 load
+[runlim] sample:		6779.20 time, 1690.01 real, 2578 MB, 4.07 load
+[runlim] sample:		6819.32 time, 1700.01 real, 2584 MB, 4.06 load
+[runlim] sample:		6859.42 time, 1710.01 real, 2584 MB, 4.05 load
+[runlim] sample:		6899.56 time, 1720.01 real, 2584 MB, 4.19 load
+[runlim] sample:		6939.67 time, 1730.01 real, 2596 MB, 4.24 load
+[runlim] sample:		6979.79 time, 1740.01 real, 2596 MB, 4.20 load
+[runlim] sample:		7019.91 time, 1750.01 real, 2596 MB, 4.17 load
+[runlim] sample:		7060.03 time, 1760.01 real, 2637 MB, 4.14 load
+[runlim] sample:		7100.15 time, 1770.01 real, 2595 MB, 4.20 load
+[runlim] sample:		7140.28 time, 1780.01 real, 2595 MB, 4.24 load
+[runlim] sample:		7180.43 time, 1790.01 real, 2595 MB, 4.28 load
+[runlim] sample:		7220.54 time, 1800.01 real, 2599 MB, 4.23 load
+[runlim] end:			Mon Apr 20 06:03:52 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			1801.06 seconds
+[runlim] time:			7220.54 seconds
+[runlim] space:			3096 MB
+[runlim] load:			4.33 maximum
+[runlim] samples:		18000

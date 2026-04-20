@@ -1,0 +1,322 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		multi_process.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS06
+[runlim] start:			Mon Apr 20 01:34:02 2026
+[runlim] child:			116136
+Loading data from: datasets/dafjs/DAFJS06
+Operations: 44, Edges: 41, Machines: 5
+Greedy Schedule UB: 490
+Lower Bound: 391 (precedence=326, avg_load=391, mandatory=0)
+Complete preprocessing! Greedy UB = 490
+Initial UB = 489, LB = 391
+--------------------------------------------------
+ Start MULTIPROCESSING search with 4 CPU Cores...
+--------------------------------------------------
+[BottomUp] Trying with at most 391, LB = 391, UB = 489
+[TopDown] Trying with at most 489, LB = 391, UB = 489
+[IndepBinary] New iteration: LB=391, UB=489 => Target=440
+[CoopBinary] New iteration: LB=391, UB=489 => Target=440
+[TopDown] SAT in 489! Updating UB.
+Time taken: 1.04 seconds
+[TopDown] Trying with at most 488, LB = 391, UB = 488
+[TopDown] SAT in 488! Updating UB.
+Time taken: 1.28 seconds
+[TopDown] Trying with at most 487, LB = 391, UB = 487
+[TopDown] SAT in 487! Updating UB.
+Time taken: 1.48 seconds
+[TopDown] Trying with at most 486, LB = 391, UB = 486
+[TopDown] SAT in 486! Updating UB.
+Time taken: 1.48 seconds
+[TopDown] Trying with at most 485, LB = 391, UB = 485
+[TopDown] SAT in 485! Updating UB.
+Time taken: 2.01 seconds
+[TopDown] Trying with at most 484, LB = 391, UB = 484
+[TopDown] SAT in 484! Updating UB.
+Time taken: 2.07 seconds
+[TopDown] Trying with at most 483, LB = 391, UB = 483
+[TopDown] SAT in 483! Updating UB.
+Time taken: 2.40 seconds
+[TopDown] Trying with at most 482, LB = 391, UB = 482
+[TopDown] SAT in 482! Updating UB.
+Time taken: 2.41 seconds
+[TopDown] Trying with at most 481, LB = 391, UB = 481
+[TopDown] SAT in 481! Updating UB.
+Time taken: 2.41 seconds
+[TopDown] Trying with at most 480, LB = 391, UB = 480
+[TopDown] SAT in 480! Updating UB.
+Time taken: 2.41 seconds
+[TopDown] Trying with at most 479, LB = 391, UB = 479
+[TopDown] SAT in 479! Updating UB.
+Time taken: 2.42 seconds
+[TopDown] Trying with at most 478, LB = 391, UB = 478
+[TopDown] SAT in 478! Updating UB.
+Time taken: 2.42 seconds
+[TopDown] Trying with at most 477, LB = 391, UB = 477
+[TopDown] SAT in 477! Updating UB.
+Time taken: 2.42 seconds
+[TopDown] Trying with at most 476, LB = 391, UB = 476
+[TopDown] SAT in 476! Updating UB.
+Time taken: 2.42 seconds
+[TopDown] Trying with at most 475, LB = 391, UB = 475
+[TopDown] SAT in 475! Updating UB.
+Time taken: 2.42 seconds
+[TopDown] Trying with at most 474, LB = 391, UB = 474
+[TopDown] SAT in 474! Updating UB.
+Time taken: 2.43 seconds
+[TopDown] Trying with at most 473, LB = 391, UB = 473
+[TopDown] SAT in 473! Updating UB.
+Time taken: 2.43 seconds
+[TopDown] Trying with at most 472, LB = 391, UB = 472
+[TopDown] SAT in 472! Updating UB.
+Time taken: 5.18 seconds
+[TopDown] Trying with at most 471, LB = 391, UB = 471
+[TopDown] SAT in 471! Updating UB.
+Time taken: 5.89 seconds
+[TopDown] Trying with at most 470, LB = 391, UB = 470
+[TopDown] SAT in 470! Updating UB.
+Time taken: 6.35 seconds
+[TopDown] Trying with at most 469, LB = 391, UB = 469
+[TopDown] SAT in 469! Updating UB.
+Time taken: 7.26 seconds
+[TopDown] Trying with at most 468, LB = 391, UB = 468
+[TopDown] SAT in 468! Updating UB.
+Time taken: 7.27 seconds
+[TopDown] Trying with at most 467, LB = 391, UB = 467
+[TopDown] SAT in 467! Updating UB.
+Time taken: 7.73 seconds
+[TopDown] Trying with at most 466, LB = 391, UB = 466
+[TopDown] SAT in 466! Updating UB.
+Time taken: 7.78 seconds
+[TopDown] Trying with at most 465, LB = 391, UB = 465
+[TopDown] SAT in 465! Updating UB.
+Time taken: 9.26 seconds
+[TopDown] Trying with at most 464, LB = 391, UB = 464
+[TopDown] SAT in 464! Updating UB.
+Time taken: 9.80 seconds
+[TopDown] Trying with at most 463, LB = 391, UB = 463
+[runlim] sample:		39.96 time, 10.01 real, 526 MB, 4.04 load
+[CoopBinary] SAT in 440! Updating UB.
+Time taken: 10.43 seconds
+[CoopBinary] New iteration: LB=391, UB=439 => Target=415
+[CoopBinary] Đi XUỐNG (Target 415 < Bound 440) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=391, UB=439 => Target=415
+[TopDown-Watchdog] Phát hiện UB (439) < Target (463). INTERRUPT!
+Exception in thread Thread-27 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 439, LB = 391, UB = 439
+[TopDown] SAT in 439! Updating UB.
+Time taken: 13.89 seconds
+[TopDown] Trying with at most 438, LB = 391, UB = 438
+[TopDown] SAT in 438! Updating UB.
+Time taken: 14.58 seconds
+[TopDown] Trying with at most 437, LB = 391, UB = 437
+[TopDown] SAT in 437! Updating UB.
+Time taken: 16.07 seconds
+[TopDown] Trying with at most 436, LB = 391, UB = 436
+[TopDown] SAT in 436! Updating UB.
+Time taken: 16.47 seconds
+[TopDown] Trying with at most 435, LB = 391, UB = 435
+[TopDown] SAT in 435! Updating UB.
+Time taken: 16.48 seconds
+[TopDown] Trying with at most 434, LB = 391, UB = 434
+[TopDown] SAT in 434! Updating UB.
+Time taken: 17.64 seconds
+[TopDown] Trying with at most 433, LB = 391, UB = 433
+[TopDown] SAT in 433! Updating UB.
+Time taken: 18.13 seconds
+[TopDown] Trying with at most 432, LB = 391, UB = 432
+[TopDown] SAT in 432! Updating UB.
+Time taken: 18.58 seconds
+[TopDown] Trying with at most 431, LB = 391, UB = 431
+[TopDown] SAT in 431! Updating UB.
+Time taken: 18.59 seconds
+[TopDown] Trying with at most 430, LB = 391, UB = 430
+[TopDown] SAT in 430! Updating UB.
+Time taken: 18.60 seconds
+[TopDown] Trying with at most 429, LB = 391, UB = 429
+[TopDown] SAT in 429! Updating UB.
+Time taken: 18.60 seconds
+[TopDown] Trying with at most 428, LB = 391, UB = 428
+[TopDown] SAT in 428! Updating UB.
+Time taken: 18.61 seconds
+[TopDown] Trying with at most 427, LB = 391, UB = 427
+[TopDown] SAT in 427! Updating UB.
+Time taken: 18.62 seconds
+[TopDown] Trying with at most 426, LB = 391, UB = 426
+[runlim] sample:		80.09 time, 20.01 real, 542 MB, 4.04 load
+[TopDown] SAT in 426! Updating UB.
+Time taken: 22.41 seconds
+[TopDown] Trying with at most 425, LB = 391, UB = 425
+[TopDown] SAT in 425! Updating UB.
+Time taken: 24.99 seconds
+[TopDown] Trying with at most 424, LB = 391, UB = 424
+[TopDown] SAT in 424! Updating UB.
+Time taken: 25.00 seconds
+[TopDown] Trying with at most 423, LB = 391, UB = 423
+[runlim] sample:		120.24 time, 30.01 real, 540 MB, 4.03 load
+[TopDown] SAT in 423! Updating UB.
+Time taken: 38.42 seconds
+[TopDown] Trying with at most 422, LB = 391, UB = 422
+[runlim] sample:		160.37 time, 40.01 real, 552 MB, 4.03 load
+[TopDown] SAT in 422! Updating UB.
+Time taken: 41.60 seconds
+[TopDown] Trying with at most 421, LB = 391, UB = 421
+[TopDown] SAT in 421! Updating UB.
+Time taken: 42.41 seconds
+[TopDown] Trying with at most 420, LB = 391, UB = 420
+[TopDown] SAT in 420! Updating UB.
+Time taken: 43.29 seconds
+[TopDown] Trying with at most 419, LB = 391, UB = 419
+[TopDown] SAT in 419! Updating UB.
+Time taken: 43.31 seconds
+[TopDown] Trying with at most 418, LB = 391, UB = 418
+[TopDown] SAT in 418! Updating UB.
+Time taken: 43.31 seconds
+[TopDown] Trying with at most 417, LB = 391, UB = 417
+[BottomUp] UNSAT in 391. Tăng LB.
+[BottomUp] Trying with at most 392, LB = 392, UB = 417
+[TopDown] SAT in 417! Updating UB.
+Time taken: 47.85 seconds
+[TopDown] Trying with at most 416, LB = 392, UB = 416
+[runlim] sample:		200.52 time, 50.01 real, 561 MB, 4.02 load
+[TopDown] SAT in 416! Updating UB.
+Time taken: 50.33 seconds
+[TopDown] Trying with at most 415, LB = 392, UB = 415
+[runlim] sample:		240.66 time, 60.01 real, 562 MB, 4.02 load
+[runlim] sample:		280.81 time, 70.01 real, 562 MB, 4.01 load
+[CoopBinary] SAT in 415! Updating UB.
+Time taken: 71.30 seconds
+[CoopBinary] New iteration: LB=392, UB=414 => Target=403
+[CoopBinary] Đi XUỐNG (Target 403 < Bound 415) -> Dùng Incremental SAT
+[IndepBinary] New iteration: LB=392, UB=414 => Target=403
+[runlim] sample:		320.96 time, 80.01 real, 539 MB, 4.01 load
+[runlim] sample:		361.10 time, 90.01 real, 550 MB, 4.01 load
+[BottomUp] UNSAT in 392. Tăng LB.
+[BottomUp] Trying with at most 393, LB = 393, UB = 414
+[runlim] sample:		401.24 time, 100.01 real, 561 MB, 4.08 load
+[runlim] sample:		441.39 time, 110.01 real, 561 MB, 4.07 load
+[runlim] sample:		481.51 time, 120.01 real, 561 MB, 4.06 load
+[runlim] sample:		521.65 time, 130.01 real, 541 MB, 4.05 load
+[runlim] sample:		561.78 time, 140.01 real, 542 MB, 4.04 load
+[TopDown-Watchdog] Phát hiện UB (414) < Target (415). INTERRUPT!
+Exception in thread Thread-52 (watchdog_ub):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ap/Desktop/FJSSP-sequencial-flexibility/multi_process.py", line 508, in watchdog_ub
+    solver.interrupt()  # Bóp cò ngắt CaDiCaL
+    ^^^^^^^^^^^^^^^^^^
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 979, in interrupt
+    self.solver.interrupt()
+  File "/home/ap/.local/lib/python3.12/site-packages/pysat/solvers.py", line 2504, in interrupt
+    raise NotImplementedError('Limited solve is currently unsupported by CaDiCaL.')
+NotImplementedError: Limited solve is currently unsupported by CaDiCaL.
+[TopDown] Bị ngắt (Interrupt). Chuyển sang Target mới và GIỮ LẠI Learned Clauses!
+[TopDown] Trying with at most 414, LB = 393, UB = 414
+[BottomUp] UNSAT in 393. Tăng LB.
+[BottomUp] Trying with at most 394, LB = 394, UB = 414
+[runlim] sample:		601.90 time, 150.01 real, 561 MB, 4.03 load
+[runlim] sample:		642.04 time, 160.01 real, 561 MB, 4.03 load
+[runlim] sample:		682.18 time, 170.01 real, 561 MB, 4.02 load
+[runlim] sample:		722.32 time, 180.01 real, 562 MB, 4.10 load
+[runlim] sample:		762.48 time, 190.01 real, 541 MB, 4.08 load
+[runlim] sample:		802.63 time, 200.01 real, 542 MB, 4.15 load
+[runlim] sample:		842.80 time, 210.01 real, 551 MB, 4.12 load
+[TopDown] SAT in 414! Updating UB.
+Time taken: 217.24 seconds
+[TopDown] Trying with at most 413, LB = 394, UB = 413
+[BottomUp] UNSAT in 394. Tăng LB.
+[BottomUp] Trying with at most 395, LB = 395, UB = 413
+[runlim] sample:		882.94 time, 220.01 real, 561 MB, 4.10 load
+[TopDown] SAT in 413! Updating UB.
+Time taken: 222.58 seconds
+[TopDown] Trying with at most 412, LB = 395, UB = 412
+[runlim] sample:		923.06 time, 230.01 real, 561 MB, 4.17 load
+[runlim] sample:		963.22 time, 240.01 real, 561 MB, 4.30 load
+[runlim] sample:		1003.36 time, 250.01 real, 562 MB, 4.32 load
+[runlim] sample:		1043.52 time, 260.01 real, 563 MB, 4.27 load
+[runlim] sample:		1083.65 time, 270.01 real, 563 MB, 4.23 load
+[runlim] sample:		1123.81 time, 280.01 real, 563 MB, 4.20 load
+[BottomUp] UNSAT in 395. Tăng LB.
+[BottomUp] Trying with at most 396, LB = 396, UB = 412
+[TopDown] SAT in 412! Updating UB.
+Time taken: 289.83 seconds
+[TopDown] Trying with at most 411, LB = 396, UB = 411
+[TopDown] SAT in 411! Updating UB.
+Time taken: 289.89 seconds
+[TopDown] Trying with at most 410, LB = 396, UB = 410
+[runlim] sample:		1163.95 time, 290.01 real, 561 MB, 4.17 load
+[TopDown] SAT in 410! Updating UB.
+Time taken: 293.77 seconds
+[TopDown] Trying with at most 409, LB = 396, UB = 409
+[runlim] sample:		1204.08 time, 300.01 real, 561 MB, 4.14 load
+[runlim] sample:		1244.22 time, 310.01 real, 561 MB, 4.20 load
+[TopDown] SAT in 409! Updating UB.
+Time taken: 316.32 seconds
+[TopDown] Trying with at most 408, LB = 396, UB = 408
+[TopDown] SAT in 408! Updating UB.
+Time taken: 317.03 seconds
+[TopDown] Trying with at most 407, LB = 396, UB = 407
+[TopDown] SAT in 407! Updating UB.
+Time taken: 317.08 seconds
+[TopDown] Trying with at most 406, LB = 396, UB = 406
+[TopDown] SAT in 406! Updating UB.
+Time taken: 317.09 seconds
+[TopDown] Trying with at most 405, LB = 396, UB = 405
+[TopDown] SAT in 405! Updating UB.
+Time taken: 317.94 seconds
+[TopDown] Trying with at most 404, LB = 396, UB = 404
+[TopDown] SAT in 404! Updating UB.
+Time taken: 318.52 seconds
+[TopDown] Trying with at most 403, LB = 396, UB = 403
+[runlim] sample:		1284.37 time, 320.01 real, 562 MB, 4.17 load
+[runlim] sample:		1324.51 time, 330.01 real, 563 MB, 4.14 load
+[runlim] sample:		1364.65 time, 340.01 real, 565 MB, 4.20 load
+[runlim] sample:		1404.78 time, 350.01 real, 565 MB, 4.17 load
+[runlim] sample:		1444.94 time, 360.01 real, 551 MB, 4.22 load
+[runlim] sample:		1485.06 time, 370.01 real, 552 MB, 4.27 load
+[runlim] sample:		1525.20 time, 380.01 real, 555 MB, 4.31 load
+[BottomUp] UNSAT in 396. Tăng LB.
+[BottomUp] Trying with at most 397, LB = 397, UB = 403
+[runlim] sample:		1565.33 time, 390.01 real, 565 MB, 4.33 load
+[CoopBinary] UNSAT in 403. Incrementing LB.
+[CoopBinary] LB > UB => OPTIMAL
+
+Found optimal solution or received stop signal. Cleaning up processes...
+--------------------------------------------------
+   FINAL RESULT:
+   Status: Optimal
+   Proved by: CoopBinary
+   Optimal Makespan: 404
+   Total time: 397.72 seconds
+[runlim] end:			Mon Apr 20 01:40:40 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		6
+[runlim] processes:		7
+[runlim] real:			397.77 seconds
+[runlim] time:			1596.21 seconds
+[runlim] space:			574 MB
+[runlim] load:			4.36 maximum
+[runlim] samples:		3978

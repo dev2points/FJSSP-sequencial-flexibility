@@ -3,9 +3,9 @@ MO=14000
 
 YDATA_DIR=datasets/yfjs
 DADATA_DIR=datasets/dafjs
-YRESULT_DIR=results/yfjs
-DARESULT_DIR=results/dafjs
-MKRESULT_DIR=results/mk
+YRESULT_DIR=results/top_down/yfjs
+DARESULT_DIR=results/top_down/dafjs
+MKRESULT_DIR=results/top_down/mk
 MKDATA_DIR=datasets/brandimarte
 
 mkdir -p $YRESULT_DIR

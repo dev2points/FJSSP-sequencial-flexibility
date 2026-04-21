@@ -1,0 +1,61 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		top_down.py
+[runlim] argv[3]:		datasets/brandimarte/MK01
+[runlim] start:			Mon Apr 20 14:44:49 2026
+[runlim] child:			5102
+Operations: 55, Edges: 45, Machines: 6
+Greedy Schedule UB: 47
+Building constraints took 0.05 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 46
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 45
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 44
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 43
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 42
+Schedule is valid
+ Time taken: 0.09 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 41
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 40
+Schedule is valid
+ Time taken: 0.15 seconds
+UNSAT
+status: optimal
+[runlim] end:			Mon Apr 20 14:44:49 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.20 seconds
+[runlim] time:			0.09 seconds
+[runlim] space:			28 MB
+[runlim] load:			0.65 maximum
+[runlim] samples:		2

@@ -5,233 +5,227 @@
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		main.py
+[runlim] argv[2]:		top_down.py
 [runlim] argv[3]:		datasets/dafjs/DAFJS08
-[runlim] start:			Sun Apr 19 01:00:56 2026
-[runlim] child:			26255
+[runlim] start:			Wed Apr 22 19:57:09 2026
+[runlim] child:			8963
 Operations: 85, Edges: 82, Machines: 10
 Greedy Schedule UB: 670
-Building constraints took 1.77 seconds.
+Building constraints took 1.60 seconds.
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 669
 Schedule is valid
- Time taken: 2.11 seconds
+ Time taken: 1.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 668
 Schedule is valid
- Time taken: 2.40 seconds
+ Time taken: 1.96 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 667
 Schedule is valid
- Time taken: 2.41 seconds
+ Time taken: 1.97 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 666
 Schedule is valid
- Time taken: 2.41 seconds
+ Time taken: 2.01 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 665
 Schedule is valid
- Time taken: 2.42 seconds
+ Time taken: 2.04 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 664
 Schedule is valid
- Time taken: 2.43 seconds
+ Time taken: 2.05 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 663
 Schedule is valid
- Time taken: 2.85 seconds
+ Time taken: 2.05 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 662
 Schedule is valid
- Time taken: 2.93 seconds
+ Time taken: 2.06 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 661
 Schedule is valid
- Time taken: 3.17 seconds
+ Time taken: 2.22 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 660
 Schedule is valid
- Time taken: 3.18 seconds
+ Time taken: 2.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 659
 Schedule is valid
- Time taken: 3.31 seconds
+ Time taken: 2.24 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 658
 Schedule is valid
- Time taken: 3.32 seconds
+ Time taken: 2.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 657
 Schedule is valid
- Time taken: 6.59 seconds
+ Time taken: 2.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 656
 Schedule is valid
- Time taken: 6.96 seconds
+ Time taken: 2.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 655
 Schedule is valid
- Time taken: 6.97 seconds
+ Time taken: 2.27 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 654
 Schedule is valid
- Time taken: 6.98 seconds
+ Time taken: 2.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 653
 Schedule is valid
- Time taken: 7.43 seconds
+ Time taken: 3.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 652
 Schedule is valid
- Time taken: 7.61 seconds
+ Time taken: 3.08 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 651
 Schedule is valid
- Time taken: 7.92 seconds
+ Time taken: 3.08 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 650
 Schedule is valid
- Time taken: 8.14 seconds
+ Time taken: 3.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 649
 Schedule is valid
- Time taken: 8.30 seconds
+ Time taken: 3.10 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 648
 Schedule is valid
- Time taken: 8.31 seconds
+ Time taken: 3.10 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 647
 Schedule is valid
- Time taken: 8.57 seconds
+ Time taken: 3.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 646
 Schedule is valid
- Time taken: 8.80 seconds
+ Time taken: 3.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 645
 Schedule is valid
- Time taken: 8.99 seconds
+ Time taken: 5.81 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 644
 Schedule is valid
- Time taken: 9.00 seconds
+ Time taken: 6.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 643
 Schedule is valid
- Time taken: 9.25 seconds
+ Time taken: 6.10 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 642
 Schedule is valid
- Time taken: 9.41 seconds
+ Time taken: 6.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 641
 Schedule is valid
- Time taken: 9.98 seconds
-[runlim] sample:		9.99 time, 10.01 real, 245 MB, 1.14 load
+ Time taken: 6.12 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 640
 Schedule is valid
- Time taken: 12.07 seconds
+ Time taken: 6.21 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 639
 Schedule is valid
- Time taken: 12.45 seconds
+ Time taken: 6.22 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 638
 Schedule is valid
- Time taken: 12.64 seconds
+ Time taken: 6.24 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 637
 Schedule is valid
- Time taken: 12.83 seconds
+ Time taken: 6.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 636
 Schedule is valid
- Time taken: 13.01 seconds
+ Time taken: 6.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 635
 Schedule is valid
- Time taken: 13.17 seconds
+ Time taken: 6.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 634
 Schedule is valid
- Time taken: 13.46 seconds
+ Time taken: 6.89 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 633
 Schedule is valid
- Time taken: 13.71 seconds
-SAT
-
-=> TOTAL COMPLETION TIME (Makespan / UB): 632
-Schedule is valid
- Time taken: 13.83 seconds
+ Time taken: 7.01 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 631
 Schedule is valid
- Time taken: 13.84 seconds
+ Time taken: 7.75 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 630
 Schedule is valid
- Time taken: 14.17 seconds
+ Time taken: 7.77 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 629
 Schedule is valid
- Time taken: 14.26 seconds
+ Time taken: 7.78 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 628
 Schedule is valid
- Time taken: 14.46 seconds
+ Time taken: 7.79 seconds
 UNSAT
 status: optimal
-[runlim] end:			Sun Apr 19 01:01:11 2026
+[runlim] end:			Wed Apr 22 19:57:17 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			14.51 seconds
-[runlim] time:			14.49 seconds
-[runlim] space:			321 MB
-[runlim] load:			1.14 maximum
-[runlim] samples:		146
+[runlim] real:			7.86 seconds
+[runlim] time:			7.79 seconds
+[runlim] space:			270 MB
+[runlim] load:			1.08 maximum
+[runlim] samples:		79

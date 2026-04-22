@@ -5,1715 +5,1730 @@
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		main.py
+[runlim] argv[2]:		top_down.py
 [runlim] argv[3]:		datasets/yfjs/YFJS15
-[runlim] start:			Sat Apr 18 23:37:49 2026
-[runlim] child:			25882
+[runlim] start:			Wed Apr 22 18:41:04 2026
+[runlim] child:			8681
 Operations: 221, Edges: 208, Machines: 26
 Greedy Schedule UB: 1578
-Building constraints took 6.90 seconds.
-[runlim] sample:		9.99 time, 10.01 real, 938 MB, 1.13 load
-[runlim] sample:		19.98 time, 20.01 real, 925 MB, 1.11 load
+Building constraints took 6.25 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1577
+Schedule is valid
+ Time taken: 8.00 seconds
+[runlim] sample:		9.99 time, 10.01 real, 806 MB, 0.46 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1576
+Schedule is valid
+ Time taken: 10.81 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1575
+Schedule is valid
+ Time taken: 11.09 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 1574
+Schedule is valid
+ Time taken: 11.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1573
 Schedule is valid
- Time taken: 23.43 seconds
+ Time taken: 11.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1572
 Schedule is valid
- Time taken: 28.16 seconds
-[runlim] sample:		29.98 time, 30.01 real, 941 MB, 1.17 load
-[runlim] sample:		39.97 time, 40.01 real, 912 MB, 1.14 load
+ Time taken: 11.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1571
 Schedule is valid
- Time taken: 40.63 seconds
+ Time taken: 11.28 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1570
 Schedule is valid
- Time taken: 41.14 seconds
+ Time taken: 11.33 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1569
 Schedule is valid
- Time taken: 41.53 seconds
+ Time taken: 11.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1568
 Schedule is valid
- Time taken: 41.88 seconds
+ Time taken: 11.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1567
 Schedule is valid
- Time taken: 44.50 seconds
+ Time taken: 11.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1566
 Schedule is valid
- Time taken: 46.87 seconds
+ Time taken: 11.59 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1565
 Schedule is valid
- Time taken: 47.29 seconds
+ Time taken: 11.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1564
 Schedule is valid
- Time taken: 47.64 seconds
+ Time taken: 11.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1563
 Schedule is valid
- Time taken: 47.97 seconds
+ Time taken: 11.72 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1562
 Schedule is valid
- Time taken: 48.39 seconds
+ Time taken: 11.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1561
 Schedule is valid
- Time taken: 48.75 seconds
+ Time taken: 11.80 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1560
 Schedule is valid
- Time taken: 49.09 seconds
+ Time taken: 11.85 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1559
 Schedule is valid
- Time taken: 49.60 seconds
-[runlim] sample:		49.95 time, 50.01 real, 938 MB, 1.19 load
+ Time taken: 11.89 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1558
 Schedule is valid
- Time taken: 50.06 seconds
+ Time taken: 11.93 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1557
 Schedule is valid
- Time taken: 50.43 seconds
+ Time taken: 11.98 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1556
 Schedule is valid
- Time taken: 50.77 seconds
+ Time taken: 12.02 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1555
 Schedule is valid
- Time taken: 54.29 seconds
-[runlim] sample:		59.94 time, 60.01 real, 950 MB, 1.16 load
+ Time taken: 12.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1554
 Schedule is valid
- Time taken: 63.93 seconds
+ Time taken: 12.16 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1553
 Schedule is valid
- Time taken: 64.40 seconds
+ Time taken: 12.21 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1552
 Schedule is valid
- Time taken: 64.80 seconds
+ Time taken: 12.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1551
 Schedule is valid
- Time taken: 65.17 seconds
+ Time taken: 12.31 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1550
 Schedule is valid
- Time taken: 65.57 seconds
+ Time taken: 12.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1549
 Schedule is valid
- Time taken: 65.94 seconds
+ Time taken: 12.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1548
 Schedule is valid
- Time taken: 66.28 seconds
+ Time taken: 12.69 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1547
 Schedule is valid
- Time taken: 66.60 seconds
+ Time taken: 12.73 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1546
 Schedule is valid
- Time taken: 66.93 seconds
+ Time taken: 12.78 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1545
 Schedule is valid
- Time taken: 67.83 seconds
+ Time taken: 12.82 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1544
 Schedule is valid
- Time taken: 68.89 seconds
+ Time taken: 12.86 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1543
 Schedule is valid
- Time taken: 69.24 seconds
+ Time taken: 12.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1542
 Schedule is valid
- Time taken: 69.57 seconds
+ Time taken: 12.94 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1541
 Schedule is valid
- Time taken: 69.89 seconds
-[runlim] sample:		69.93 time, 70.01 real, 967 MB, 1.14 load
+ Time taken: 12.99 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1540
 Schedule is valid
- Time taken: 70.23 seconds
+ Time taken: 13.03 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1539
 Schedule is valid
- Time taken: 70.56 seconds
+ Time taken: 13.08 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1538
 Schedule is valid
- Time taken: 70.91 seconds
+ Time taken: 13.13 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1537
 Schedule is valid
- Time taken: 70.97 seconds
+ Time taken: 13.17 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1536
 Schedule is valid
- Time taken: 71.02 seconds
+ Time taken: 13.22 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1535
 Schedule is valid
- Time taken: 71.06 seconds
+ Time taken: 13.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1534
 Schedule is valid
- Time taken: 71.11 seconds
+ Time taken: 13.31 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1533
 Schedule is valid
- Time taken: 71.17 seconds
+ Time taken: 13.35 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1532
 Schedule is valid
- Time taken: 71.30 seconds
+ Time taken: 13.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1531
 Schedule is valid
- Time taken: 72.01 seconds
+ Time taken: 13.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1530
 Schedule is valid
- Time taken: 72.51 seconds
+ Time taken: 13.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1529
 Schedule is valid
- Time taken: 72.77 seconds
+ Time taken: 13.54 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1528
 Schedule is valid
- Time taken: 72.82 seconds
+ Time taken: 13.59 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1527
 Schedule is valid
- Time taken: 72.86 seconds
+ Time taken: 13.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1526
 Schedule is valid
- Time taken: 72.89 seconds
+ Time taken: 13.67 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1525
 Schedule is valid
- Time taken: 73.49 seconds
+ Time taken: 13.71 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1524
 Schedule is valid
- Time taken: 74.73 seconds
+ Time taken: 13.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1523
 Schedule is valid
- Time taken: 76.78 seconds
+ Time taken: 13.82 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1522
 Schedule is valid
- Time taken: 76.86 seconds
+ Time taken: 13.87 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1521
 Schedule is valid
- Time taken: 76.92 seconds
+ Time taken: 13.92 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1520
 Schedule is valid
- Time taken: 77.03 seconds
+ Time taken: 13.97 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1519
 Schedule is valid
- Time taken: 77.08 seconds
+ Time taken: 14.02 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1518
 Schedule is valid
- Time taken: 77.13 seconds
+ Time taken: 14.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1517
 Schedule is valid
- Time taken: 77.17 seconds
+ Time taken: 14.12 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1516
 Schedule is valid
- Time taken: 77.21 seconds
+ Time taken: 14.17 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1515
 Schedule is valid
- Time taken: 77.26 seconds
+ Time taken: 14.22 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1514
 Schedule is valid
- Time taken: 77.30 seconds
+ Time taken: 14.27 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1513
 Schedule is valid
- Time taken: 77.35 seconds
+ Time taken: 14.32 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1512
 Schedule is valid
- Time taken: 77.39 seconds
+ Time taken: 14.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1511
 Schedule is valid
- Time taken: 77.44 seconds
+ Time taken: 14.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1510
 Schedule is valid
- Time taken: 77.48 seconds
+ Time taken: 14.47 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1509
 Schedule is valid
- Time taken: 77.53 seconds
+ Time taken: 14.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1508
 Schedule is valid
- Time taken: 77.89 seconds
+ Time taken: 14.58 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1507
 Schedule is valid
- Time taken: 77.93 seconds
+ Time taken: 14.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1506
 Schedule is valid
- Time taken: 77.99 seconds
+ Time taken: 14.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1505
 Schedule is valid
- Time taken: 78.10 seconds
+ Time taken: 14.73 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1504
 Schedule is valid
- Time taken: 78.16 seconds
+ Time taken: 14.78 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1503
 Schedule is valid
- Time taken: 78.20 seconds
+ Time taken: 14.83 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1502
 Schedule is valid
- Time taken: 78.24 seconds
+ Time taken: 14.88 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1501
 Schedule is valid
- Time taken: 78.27 seconds
+ Time taken: 14.93 seconds
+[runlim] sample:		19.97 time, 20.01 real, 792 MB, 0.55 load
+[runlim] sample:		29.96 time, 30.01 real, 828 MB, 0.62 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1500
 Schedule is valid
- Time taken: 78.31 seconds
+ Time taken: 32.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1499
 Schedule is valid
- Time taken: 78.35 seconds
+ Time taken: 33.45 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1498
 Schedule is valid
- Time taken: 78.39 seconds
+ Time taken: 36.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1497
 Schedule is valid
- Time taken: 78.56 seconds
+ Time taken: 37.14 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1496
 Schedule is valid
- Time taken: 78.61 seconds
+ Time taken: 37.54 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1495
 Schedule is valid
- Time taken: 78.67 seconds
+ Time taken: 37.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1494
 Schedule is valid
- Time taken: 78.78 seconds
+ Time taken: 38.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1493
 Schedule is valid
- Time taken: 78.83 seconds
+ Time taken: 38.66 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1492
 Schedule is valid
- Time taken: 78.87 seconds
+ Time taken: 38.74 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1491
 Schedule is valid
- Time taken: 79.05 seconds
-[runlim] sample:		79.92 time, 80.01 real, 1147 MB, 1.12 load
+ Time taken: 38.77 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1490
 Schedule is valid
- Time taken: 80.92 seconds
+ Time taken: 38.81 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1489
 Schedule is valid
- Time taken: 80.97 seconds
+ Time taken: 38.85 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1488
 Schedule is valid
- Time taken: 81.64 seconds
+ Time taken: 38.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1487
 Schedule is valid
- Time taken: 81.79 seconds
+ Time taken: 38.95 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1486
 Schedule is valid
- Time taken: 81.93 seconds
+ Time taken: 38.99 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1485
 Schedule is valid
- Time taken: 82.01 seconds
+ Time taken: 39.03 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1484
 Schedule is valid
- Time taken: 82.05 seconds
+ Time taken: 39.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1483
 Schedule is valid
- Time taken: 82.11 seconds
+ Time taken: 39.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1482
 Schedule is valid
- Time taken: 82.16 seconds
+ Time taken: 39.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1481
 Schedule is valid
- Time taken: 82.21 seconds
+ Time taken: 39.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1480
 Schedule is valid
- Time taken: 82.26 seconds
+ Time taken: 39.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1479
 Schedule is valid
- Time taken: 82.30 seconds
+ Time taken: 39.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1478
 Schedule is valid
- Time taken: 82.35 seconds
+ Time taken: 39.30 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1477
 Schedule is valid
- Time taken: 82.39 seconds
+ Time taken: 39.34 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1476
 Schedule is valid
- Time taken: 82.45 seconds
+ Time taken: 39.38 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1475
 Schedule is valid
- Time taken: 83.05 seconds
-[runlim] sample:		89.92 time, 90.01 real, 919 MB, 1.10 load
+ Time taken: 39.41 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1474
 Schedule is valid
- Time taken: 95.37 seconds
+ Time taken: 39.45 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1473
 Schedule is valid
- Time taken: 97.49 seconds
+ Time taken: 39.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1472
 Schedule is valid
- Time taken: 97.88 seconds
+ Time taken: 39.52 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1471
 Schedule is valid
- Time taken: 98.20 seconds
+ Time taken: 39.56 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1470
 Schedule is valid
- Time taken: 98.51 seconds
+ Time taken: 39.60 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1469
 Schedule is valid
- Time taken: 98.81 seconds
+ Time taken: 39.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1468
 Schedule is valid
- Time taken: 99.12 seconds
+ Time taken: 39.69 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1467
 Schedule is valid
- Time taken: 99.43 seconds
+ Time taken: 39.73 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1466
 Schedule is valid
- Time taken: 99.74 seconds
-[runlim] sample:		99.92 time, 100.01 real, 930 MB, 1.16 load
+ Time taken: 39.78 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1465
 Schedule is valid
- Time taken: 100.06 seconds
+ Time taken: 39.83 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1464
 Schedule is valid
- Time taken: 100.37 seconds
+ Time taken: 39.87 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1463
 Schedule is valid
- Time taken: 100.67 seconds
+ Time taken: 39.92 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1462
 Schedule is valid
- Time taken: 100.98 seconds
+ Time taken: 39.97 seconds
+[runlim] sample:		39.94 time, 40.01 real, 873 MB, 0.68 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1461
 Schedule is valid
- Time taken: 101.29 seconds
+ Time taken: 40.01 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1460
 Schedule is valid
- Time taken: 101.60 seconds
+ Time taken: 40.06 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1459
 Schedule is valid
- Time taken: 101.91 seconds
+ Time taken: 40.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1458
 Schedule is valid
- Time taken: 102.23 seconds
+ Time taken: 40.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1457
 Schedule is valid
- Time taken: 102.57 seconds
+ Time taken: 40.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1456
 Schedule is valid
- Time taken: 107.06 seconds
+ Time taken: 40.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1455
 Schedule is valid
- Time taken: 107.41 seconds
+ Time taken: 40.54 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1454
 Schedule is valid
- Time taken: 107.71 seconds
+ Time taken: 40.60 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1453
 Schedule is valid
- Time taken: 108.07 seconds
+ Time taken: 40.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1452
 Schedule is valid
- Time taken: 108.41 seconds
+ Time taken: 40.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1451
 Schedule is valid
- Time taken: 108.72 seconds
+ Time taken: 41.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1450
 Schedule is valid
- Time taken: 109.01 seconds
-[runlim] sample:		109.91 time, 110.01 real, 951 MB, 1.13 load
+ Time taken: 46.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1449
 Schedule is valid
- Time taken: 110.76 seconds
+ Time taken: 47.04 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1448
 Schedule is valid
- Time taken: 111.09 seconds
+ Time taken: 47.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1447
 Schedule is valid
- Time taken: 111.36 seconds
+ Time taken: 47.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1446
 Schedule is valid
- Time taken: 111.63 seconds
+ Time taken: 47.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1445
 Schedule is valid
- Time taken: 111.90 seconds
+ Time taken: 47.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1444
 Schedule is valid
- Time taken: 112.17 seconds
+ Time taken: 47.27 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1443
 Schedule is valid
- Time taken: 112.44 seconds
+ Time taken: 47.31 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1442
 Schedule is valid
- Time taken: 112.72 seconds
+ Time taken: 47.35 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1441
 Schedule is valid
- Time taken: 112.99 seconds
+ Time taken: 47.39 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1440
 Schedule is valid
- Time taken: 113.26 seconds
+ Time taken: 47.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1439
 Schedule is valid
- Time taken: 113.54 seconds
+ Time taken: 47.46 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1438
 Schedule is valid
- Time taken: 114.05 seconds
+ Time taken: 47.51 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1437
 Schedule is valid
- Time taken: 114.40 seconds
+ Time taken: 47.55 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1436
 Schedule is valid
- Time taken: 115.96 seconds
+ Time taken: 47.66 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1435
 Schedule is valid
- Time taken: 116.53 seconds
+ Time taken: 47.71 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1434
 Schedule is valid
- Time taken: 117.17 seconds
+ Time taken: 47.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1433
 Schedule is valid
- Time taken: 118.06 seconds
+ Time taken: 47.80 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1432
 Schedule is valid
- Time taken: 118.20 seconds
+ Time taken: 47.84 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1431
 Schedule is valid
- Time taken: 118.58 seconds
+ Time taken: 47.89 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1430
 Schedule is valid
- Time taken: 119.98 seconds
-[runlim] sample:		119.90 time, 120.01 real, 957 MB, 1.19 load
+ Time taken: 47.93 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1429
 Schedule is valid
- Time taken: 121.14 seconds
+ Time taken: 47.97 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1428
 Schedule is valid
- Time taken: 122.17 seconds
+ Time taken: 48.02 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1427
 Schedule is valid
- Time taken: 122.65 seconds
+ Time taken: 48.06 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1426
 Schedule is valid
- Time taken: 122.99 seconds
+ Time taken: 48.10 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1425
 Schedule is valid
- Time taken: 123.29 seconds
+ Time taken: 48.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1424
 Schedule is valid
- Time taken: 123.58 seconds
+ Time taken: 48.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1423
 Schedule is valid
- Time taken: 123.87 seconds
+ Time taken: 48.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1422
 Schedule is valid
- Time taken: 123.92 seconds
+ Time taken: 48.27 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1421
 Schedule is valid
- Time taken: 124.52 seconds
+ Time taken: 48.32 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1420
 Schedule is valid
- Time taken: 124.62 seconds
+ Time taken: 48.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1419
 Schedule is valid
- Time taken: 125.11 seconds
+ Time taken: 48.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1418
 Schedule is valid
- Time taken: 125.44 seconds
+ Time taken: 48.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1417
 Schedule is valid
- Time taken: 125.49 seconds
+ Time taken: 48.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1416
 Schedule is valid
- Time taken: 125.54 seconds
+ Time taken: 48.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1415
 Schedule is valid
- Time taken: 125.59 seconds
+ Time taken: 48.57 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1414
 Schedule is valid
- Time taken: 126.71 seconds
+ Time taken: 48.61 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1413
 Schedule is valid
- Time taken: 126.76 seconds
+ Time taken: 49.84 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1412
 Schedule is valid
- Time taken: 126.80 seconds
+ Time taken: 49.87 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1411
 Schedule is valid
- Time taken: 126.84 seconds
+ Time taken: 49.92 seconds
+[runlim] sample:		49.93 time, 50.01 real, 873 MB, 0.73 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1410
 Schedule is valid
- Time taken: 126.88 seconds
+ Time taken: 50.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1409
 Schedule is valid
- Time taken: 126.99 seconds
+ Time taken: 50.45 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1408
 Schedule is valid
- Time taken: 127.05 seconds
+ Time taken: 50.50 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1407
 Schedule is valid
- Time taken: 127.09 seconds
+ Time taken: 50.54 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1406
 Schedule is valid
- Time taken: 127.13 seconds
+ Time taken: 50.59 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1405
 Schedule is valid
- Time taken: 127.16 seconds
+ Time taken: 50.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1404
 Schedule is valid
- Time taken: 127.20 seconds
+ Time taken: 50.67 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1403
 Schedule is valid
- Time taken: 127.24 seconds
+ Time taken: 50.72 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1402
 Schedule is valid
- Time taken: 127.28 seconds
+ Time taken: 51.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1401
 Schedule is valid
- Time taken: 127.31 seconds
+ Time taken: 52.08 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1400
 Schedule is valid
- Time taken: 127.35 seconds
+ Time taken: 52.13 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1399
 Schedule is valid
- Time taken: 127.39 seconds
+ Time taken: 52.17 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1398
 Schedule is valid
- Time taken: 127.43 seconds
+ Time taken: 52.82 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1397
 Schedule is valid
- Time taken: 127.46 seconds
+ Time taken: 52.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1396
 Schedule is valid
- Time taken: 127.50 seconds
+ Time taken: 52.95 seconds
+[runlim] sample:		59.92 time, 60.01 real, 845 MB, 0.77 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1395
 Schedule is valid
- Time taken: 127.54 seconds
+ Time taken: 66.34 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1394
 Schedule is valid
- Time taken: 127.57 seconds
+ Time taken: 67.66 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1393
 Schedule is valid
- Time taken: 127.61 seconds
+ Time taken: 69.32 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1392
 Schedule is valid
- Time taken: 127.65 seconds
+ Time taken: 69.75 seconds
+[runlim] sample:		69.92 time, 70.01 real, 804 MB, 0.80 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1391
 Schedule is valid
- Time taken: 127.69 seconds
+ Time taken: 70.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1390
 Schedule is valid
- Time taken: 127.72 seconds
+ Time taken: 70.39 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1389
 Schedule is valid
- Time taken: 128.07 seconds
+ Time taken: 70.70 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1388
 Schedule is valid
- Time taken: 128.12 seconds
+ Time taken: 71.29 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1387
 Schedule is valid
- Time taken: 128.17 seconds
+ Time taken: 71.62 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1386
 Schedule is valid
- Time taken: 128.34 seconds
+ Time taken: 71.93 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1385
 Schedule is valid
- Time taken: 128.43 seconds
+ Time taken: 73.02 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1384
 Schedule is valid
- Time taken: 128.47 seconds
+ Time taken: 74.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1383
 Schedule is valid
- Time taken: 128.50 seconds
+ Time taken: 74.45 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1382
 Schedule is valid
- Time taken: 128.54 seconds
+ Time taken: 75.08 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1381
 Schedule is valid
- Time taken: 128.58 seconds
+ Time taken: 75.13 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1380
 Schedule is valid
- Time taken: 128.62 seconds
+ Time taken: 75.16 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1379
 Schedule is valid
- Time taken: 128.66 seconds
+ Time taken: 75.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1378
 Schedule is valid
- Time taken: 128.71 seconds
+ Time taken: 75.23 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1377
 Schedule is valid
- Time taken: 128.76 seconds
+ Time taken: 75.26 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1376
 Schedule is valid
- Time taken: 128.80 seconds
+ Time taken: 75.30 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1375
 Schedule is valid
- Time taken: 128.85 seconds
+ Time taken: 75.33 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1374
 Schedule is valid
- Time taken: 128.90 seconds
+ Time taken: 75.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1373
 Schedule is valid
- Time taken: 128.94 seconds
+ Time taken: 75.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1372
 Schedule is valid
- Time taken: 128.99 seconds
+ Time taken: 75.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1371
 Schedule is valid
- Time taken: 129.04 seconds
-[runlim] sample:		129.89 time, 130.01 real, 977 MB, 1.23 load
-[runlim] sample:		139.89 time, 140.01 real, 928 MB, 1.19 load
+ Time taken: 75.47 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1370
 Schedule is valid
- Time taken: 141.23 seconds
+ Time taken: 75.51 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1369
 Schedule is valid
- Time taken: 142.30 seconds
+ Time taken: 75.54 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1368
 Schedule is valid
- Time taken: 142.98 seconds
+ Time taken: 75.59 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1367
 Schedule is valid
- Time taken: 143.32 seconds
+ Time taken: 75.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1366
 Schedule is valid
- Time taken: 143.61 seconds
+ Time taken: 75.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1365
 Schedule is valid
- Time taken: 143.95 seconds
+ Time taken: 75.73 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1364
 Schedule is valid
- Time taken: 145.54 seconds
+ Time taken: 75.77 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1363
 Schedule is valid
- Time taken: 146.50 seconds
+ Time taken: 75.81 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1362
 Schedule is valid
- Time taken: 147.16 seconds
+ Time taken: 75.85 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1361
 Schedule is valid
- Time taken: 147.56 seconds
+ Time taken: 75.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1360
 Schedule is valid
- Time taken: 148.38 seconds
+ Time taken: 75.94 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1359
 Schedule is valid
- Time taken: 148.92 seconds
+ Time taken: 75.99 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1358
 Schedule is valid
- Time taken: 149.22 seconds
+ Time taken: 76.03 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1357
 Schedule is valid
- Time taken: 149.49 seconds
+ Time taken: 76.07 seconds
 SAT
-[runlim] sample:		149.89 time, 150.01 real, 866 MB, 1.16 load
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1356
 Schedule is valid
- Time taken: 150.00 seconds
+ Time taken: 76.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1355
 Schedule is valid
- Time taken: 150.31 seconds
+ Time taken: 76.16 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1354
 Schedule is valid
- Time taken: 150.57 seconds
+ Time taken: 76.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1353
 Schedule is valid
- Time taken: 150.82 seconds
+ Time taken: 77.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1352
 Schedule is valid
- Time taken: 151.07 seconds
+ Time taken: 79.95 seconds
 SAT
+[runlim] sample:		79.91 time, 80.01 real, 776 MB, 0.84 load
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1351
 Schedule is valid
- Time taken: 151.11 seconds
+ Time taken: 80.00 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1350
 Schedule is valid
- Time taken: 151.15 seconds
+ Time taken: 80.05 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1349
 Schedule is valid
- Time taken: 151.19 seconds
+ Time taken: 80.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1348
 Schedule is valid
- Time taken: 151.23 seconds
+ Time taken: 80.13 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1347
 Schedule is valid
- Time taken: 151.27 seconds
+ Time taken: 80.17 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1346
 Schedule is valid
- Time taken: 151.32 seconds
+ Time taken: 83.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1345
 Schedule is valid
- Time taken: 153.08 seconds
+ Time taken: 84.63 seconds
+[runlim] sample:		89.91 time, 90.01 real, 771 MB, 0.94 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1344
 Schedule is valid
- Time taken: 153.13 seconds
+ Time taken: 90.96 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1343
 Schedule is valid
- Time taken: 153.17 seconds
+ Time taken: 91.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1342
 Schedule is valid
- Time taken: 154.24 seconds
+ Time taken: 91.71 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1341
 Schedule is valid
- Time taken: 154.89 seconds
+ Time taken: 91.96 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1340
 Schedule is valid
- Time taken: 156.43 seconds
+ Time taken: 92.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1339
 Schedule is valid
- Time taken: 156.96 seconds
+ Time taken: 92.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1338
 Schedule is valid
- Time taken: 157.46 seconds
+ Time taken: 93.13 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1337
 Schedule is valid
- Time taken: 157.69 seconds
+ Time taken: 93.17 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1336
 Schedule is valid
- Time taken: 157.75 seconds
+ Time taken: 93.21 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1335
 Schedule is valid
- Time taken: 157.79 seconds
+ Time taken: 93.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1334
 Schedule is valid
- Time taken: 157.83 seconds
+ Time taken: 93.29 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1333
 Schedule is valid
- Time taken: 157.87 seconds
+ Time taken: 93.32 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1332
 Schedule is valid
- Time taken: 157.91 seconds
+ Time taken: 93.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1331
 Schedule is valid
- Time taken: 157.94 seconds
+ Time taken: 93.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1330
 Schedule is valid
- Time taken: 157.98 seconds
-[runlim] sample:		159.88 time, 160.01 real, 887 MB, 1.22 load
+ Time taken: 93.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1329
 Schedule is valid
- Time taken: 161.60 seconds
+ Time taken: 93.49 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1328
 Schedule is valid
- Time taken: 162.24 seconds
+ Time taken: 93.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1327
 Schedule is valid
- Time taken: 162.59 seconds
+ Time taken: 93.58 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1326
 Schedule is valid
- Time taken: 162.64 seconds
+ Time taken: 93.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1325
 Schedule is valid
- Time taken: 162.68 seconds
+ Time taken: 93.67 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1324
 Schedule is valid
- Time taken: 162.72 seconds
+ Time taken: 93.71 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1323
 Schedule is valid
- Time taken: 162.76 seconds
+ Time taken: 93.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1322
 Schedule is valid
- Time taken: 162.80 seconds
+ Time taken: 93.80 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1321
 Schedule is valid
- Time taken: 162.85 seconds
+ Time taken: 94.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1320
 Schedule is valid
- Time taken: 162.88 seconds
+ Time taken: 95.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1319
 Schedule is valid
- Time taken: 162.93 seconds
+ Time taken: 95.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1318
 Schedule is valid
- Time taken: 162.97 seconds
+ Time taken: 95.68 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1317
 Schedule is valid
- Time taken: 163.09 seconds
+ Time taken: 95.72 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1316
 Schedule is valid
- Time taken: 163.14 seconds
+ Time taken: 95.76 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1315
 Schedule is valid
- Time taken: 163.66 seconds
+ Time taken: 95.80 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1314
 Schedule is valid
- Time taken: 163.94 seconds
+ Time taken: 95.84 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1313
 Schedule is valid
- Time taken: 163.99 seconds
+ Time taken: 95.87 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1312
 Schedule is valid
- Time taken: 164.03 seconds
+ Time taken: 95.94 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1311
 Schedule is valid
- Time taken: 164.07 seconds
+ Time taken: 95.98 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1310
 Schedule is valid
- Time taken: 164.11 seconds
+ Time taken: 96.03 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1309
 Schedule is valid
- Time taken: 164.15 seconds
+ Time taken: 96.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1308
 Schedule is valid
- Time taken: 164.20 seconds
+ Time taken: 96.11 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1307
 Schedule is valid
- Time taken: 164.24 seconds
+ Time taken: 96.15 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1306
 Schedule is valid
- Time taken: 164.28 seconds
+ Time taken: 96.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1305
 Schedule is valid
- Time taken: 164.32 seconds
+ Time taken: 96.24 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1304
 Schedule is valid
- Time taken: 164.36 seconds
+ Time taken: 96.77 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1303
 Schedule is valid
- Time taken: 164.41 seconds
+ Time taken: 97.31 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1302
 Schedule is valid
- Time taken: 164.45 seconds
+ Time taken: 97.86 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1301
 Schedule is valid
- Time taken: 164.49 seconds
+ Time taken: 98.82 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1300
 Schedule is valid
- Time taken: 164.53 seconds
+ Time taken: 99.51 seconds
+[runlim] sample:		99.89 time, 100.01 real, 740 MB, 1.02 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1299
 Schedule is valid
- Time taken: 164.57 seconds
+ Time taken: 100.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1298
 Schedule is valid
- Time taken: 164.62 seconds
+ Time taken: 103.32 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1297
 Schedule is valid
- Time taken: 164.66 seconds
+ Time taken: 104.00 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1296
 Schedule is valid
- Time taken: 164.71 seconds
+ Time taken: 105.47 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1295
 Schedule is valid
- Time taken: 164.75 seconds
+ Time taken: 106.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1294
 Schedule is valid
- Time taken: 164.79 seconds
+ Time taken: 106.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1293
 Schedule is valid
- Time taken: 164.84 seconds
+ Time taken: 106.92 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1292
 Schedule is valid
- Time taken: 165.24 seconds
+ Time taken: 107.39 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1291
 Schedule is valid
- Time taken: 165.88 seconds
+ Time taken: 107.91 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1290
 Schedule is valid
- Time taken: 166.04 seconds
+ Time taken: 108.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1289
 Schedule is valid
- Time taken: 166.09 seconds
+ Time taken: 108.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1288
 Schedule is valid
- Time taken: 166.18 seconds
+ Time taken: 108.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1287
 Schedule is valid
- Time taken: 166.22 seconds
+ Time taken: 109.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1286
 Schedule is valid
- Time taken: 166.27 seconds
+ Time taken: 109.25 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1285
 Schedule is valid
- Time taken: 166.31 seconds
+ Time taken: 109.30 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1284
 Schedule is valid
- Time taken: 166.35 seconds
+ Time taken: 109.34 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1283
 Schedule is valid
- Time taken: 166.39 seconds
+ Time taken: 109.47 seconds
+[runlim] sample:		109.88 time, 110.01 real, 745 MB, 1.02 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1282
 Schedule is valid
- Time taken: 166.42 seconds
+ Time taken: 115.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1281
 Schedule is valid
- Time taken: 166.47 seconds
+ Time taken: 115.99 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1280
 Schedule is valid
- Time taken: 167.81 seconds
+ Time taken: 116.20 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1279
 Schedule is valid
- Time taken: 167.94 seconds
+ Time taken: 116.67 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1278
 Schedule is valid
- Time taken: 167.98 seconds
+ Time taken: 117.45 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1277
 Schedule is valid
- Time taken: 168.02 seconds
+ Time taken: 117.64 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1276
 Schedule is valid
- Time taken: 168.10 seconds
+ Time taken: 118.12 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1275
 Schedule is valid
- Time taken: 168.15 seconds
+ Time taken: 118.66 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1274
 Schedule is valid
- Time taken: 168.19 seconds
+ Time taken: 119.33 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1273
 Schedule is valid
- Time taken: 168.25 seconds
+ Time taken: 119.82 seconds
+[runlim] sample:		119.88 time, 120.01 real, 723 MB, 1.10 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1272
 Schedule is valid
- Time taken: 168.69 seconds
+ Time taken: 120.77 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1271
 Schedule is valid
- Time taken: 168.75 seconds
+ Time taken: 121.19 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1270
 Schedule is valid
- Time taken: 168.81 seconds
-[runlim] sample:		169.87 time, 170.01 real, 893 MB, 1.19 load
+ Time taken: 121.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1269
 Schedule is valid
- Time taken: 176.56 seconds
+ Time taken: 122.03 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1268
 Schedule is valid
- Time taken: 177.23 seconds
+ Time taken: 125.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1267
 Schedule is valid
- Time taken: 177.95 seconds
+ Time taken: 125.18 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1266
 Schedule is valid
- Time taken: 178.59 seconds
+ Time taken: 126.07 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1265
 Schedule is valid
- Time taken: 178.86 seconds
+ Time taken: 126.41 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1264
 Schedule is valid
- Time taken: 179.14 seconds
+ Time taken: 126.69 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1263
 Schedule is valid
- Time taken: 179.79 seconds
-[runlim] sample:		179.87 time, 180.01 real, 804 MB, 1.23 load
+ Time taken: 127.34 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1262
 Schedule is valid
- Time taken: 180.45 seconds
+ Time taken: 128.56 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1261
 Schedule is valid
- Time taken: 180.78 seconds
+ Time taken: 128.67 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1260
 Schedule is valid
- Time taken: 181.51 seconds
+ Time taken: 129.55 seconds
+[runlim] sample:		129.86 time, 130.01 real, 739 MB, 1.08 load
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1259
 Schedule is valid
- Time taken: 181.91 seconds
+ Time taken: 130.14 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1258
 Schedule is valid
- Time taken: 182.17 seconds
+ Time taken: 130.63 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1257
 Schedule is valid
- Time taken: 182.40 seconds
+ Time taken: 130.70 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1256
 Schedule is valid
- Time taken: 182.62 seconds
+ Time taken: 131.30 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1255
 Schedule is valid
- Time taken: 182.84 seconds
+ Time taken: 131.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1254
 Schedule is valid
- Time taken: 183.05 seconds
+ Time taken: 131.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1253
 Schedule is valid
- Time taken: 183.27 seconds
+ Time taken: 131.90 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1252
 Schedule is valid
- Time taken: 183.49 seconds
+ Time taken: 132.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1251
 Schedule is valid
- Time taken: 183.73 seconds
+ Time taken: 132.94 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1250
 Schedule is valid
- Time taken: 183.98 seconds
+ Time taken: 133.34 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1249
 Schedule is valid
- Time taken: 184.22 seconds
+ Time taken: 133.53 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1248
 Schedule is valid
- Time taken: 184.46 seconds
+ Time taken: 134.09 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1247
 Schedule is valid
- Time taken: 184.68 seconds
+ Time taken: 134.44 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1246
 Schedule is valid
- Time taken: 184.89 seconds
+ Time taken: 134.92 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1245
 Schedule is valid
- Time taken: 184.94 seconds
+ Time taken: 134.99 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1244
 Schedule is valid
- Time taken: 184.99 seconds
+ Time taken: 135.04 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1243
 Schedule is valid
- Time taken: 185.48 seconds
+ Time taken: 135.10 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1242
 Schedule is valid
- Time taken: 185.53 seconds
+ Time taken: 135.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1241
 Schedule is valid
- Time taken: 186.89 seconds
+ Time taken: 135.41 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1240
 Schedule is valid
- Time taken: 187.30 seconds
+ Time taken: 135.46 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 1239
 Schedule is valid
- Time taken: 187.39 seconds
+ Time taken: 135.51 seconds
 UNSAT
 status: optimal
-[runlim] end:			Sat Apr 18 23:40:56 2026
+[runlim] end:			Wed Apr 22 18:43:20 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			187.50 seconds
-[runlim] time:			187.26 seconds
-[runlim] space:			1152 MB
-[runlim] load:			1.37 maximum
-[runlim] samples:		1875
+[runlim] real:			135.61 seconds
+[runlim] time:			135.45 seconds
+[runlim] space:			1049 MB
+[runlim] load:			1.10 maximum
+[runlim] samples:		1357

@@ -5,147 +5,147 @@
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		main.py
+[runlim] argv[2]:		top_down.py
 [runlim] argv[3]:		datasets/dafjs/DAFJS03
-[runlim] start:			Sun Apr 19 00:54:17 2026
-[runlim] child:			26225
+[runlim] start:			Wed Apr 22 19:48:58 2026
+[runlim] child:			8925
 Operations: 55, Edges: 52, Machines: 10
 Greedy Schedule UB: 601
-Building constraints took 0.38 seconds.
+Building constraints took 0.34 seconds.
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 600
 Schedule is valid
- Time taken: 0.39 seconds
+ Time taken: 0.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 599
 Schedule is valid
- Time taken: 0.39 seconds
+ Time taken: 0.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 598
 Schedule is valid
- Time taken: 0.39 seconds
+ Time taken: 0.36 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 597
 Schedule is valid
- Time taken: 0.39 seconds
+ Time taken: 0.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 596
 Schedule is valid
- Time taken: 0.41 seconds
+ Time taken: 0.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 595
 Schedule is valid
- Time taken: 0.41 seconds
+ Time taken: 0.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 594
 Schedule is valid
- Time taken: 0.41 seconds
+ Time taken: 0.37 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 593
 Schedule is valid
- Time taken: 0.42 seconds
+ Time taken: 0.38 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 592
 Schedule is valid
- Time taken: 0.42 seconds
+ Time taken: 0.38 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 591
 Schedule is valid
- Time taken: 0.42 seconds
+ Time taken: 0.38 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 590
 Schedule is valid
- Time taken: 0.42 seconds
+ Time taken: 0.39 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 589
 Schedule is valid
- Time taken: 0.42 seconds
+ Time taken: 0.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 588
 Schedule is valid
- Time taken: 0.43 seconds
+ Time taken: 0.40 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 587
 Schedule is valid
- Time taken: 0.43 seconds
+ Time taken: 0.41 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 586
 Schedule is valid
- Time taken: 0.43 seconds
+ Time taken: 0.41 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 585
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 584
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 583
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 582
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 581
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.42 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 580
 Schedule is valid
- Time taken: 0.44 seconds
+ Time taken: 0.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 579
 Schedule is valid
- Time taken: 0.45 seconds
+ Time taken: 0.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 578
 Schedule is valid
- Time taken: 0.45 seconds
+ Time taken: 0.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 577
 Schedule is valid
- Time taken: 0.45 seconds
+ Time taken: 0.43 seconds
 SAT
 
 => TOTAL COMPLETION TIME (Makespan / UB): 576
 Schedule is valid
- Time taken: 0.51 seconds
+ Time taken: 0.44 seconds
 UNSAT
 status: optimal
-[runlim] end:			Sun Apr 19 00:54:18 2026
+[runlim] end:			Wed Apr 22 19:48:58 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		1
 [runlim] processes:		2
-[runlim] real:			0.55 seconds
-[runlim] time:			0.50 seconds
-[runlim] space:			66 MB
-[runlim] load:			1.18 maximum
-[runlim] samples:		6
+[runlim] real:			0.48 seconds
+[runlim] time:			0.40 seconds
+[runlim] space:			55 MB
+[runlim] load:			1.15 maximum
+[runlim] samples:		5

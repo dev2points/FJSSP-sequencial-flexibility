@@ -5,17 +5,17 @@
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		main.py
+[runlim] argv[2]:		top_down.py
 [runlim] argv[3]:		datasets/dafjs/DAFJS04
-[runlim] start:			Sun Apr 19 00:54:18 2026
-[runlim] child:			26228
+[runlim] start:			Wed Apr 22 19:48:58 2026
+[runlim] child:			8928
 Operations: 43, Edges: 40, Machines: 10
 Greedy Schedule UB: 606
 Operation 7 cannot be scheduled (feasible time: (434, 433))
 No feasible solution found
 status: optimal
 Time taken: 0.00 seconds
-[runlim] end:			Sun Apr 19 00:54:18 2026
+[runlim] end:			Wed Apr 22 19:48:58 2026
 [runlim] status:		ok
 [runlim] result:		0
 [runlim] children:		0
@@ -23,5 +23,5 @@ Time taken: 0.00 seconds
 [runlim] real:			0.03 seconds
 [runlim] time:			0.00 seconds
 [runlim] space:			0 MB
-[runlim] load:			1.17 maximum
+[runlim] load:			1.15 maximum
 [runlim] samples:		1

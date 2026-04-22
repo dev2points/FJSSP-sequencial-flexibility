@@ -233,39 +233,46 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             if (i,j) in precedence_list or (j,i) in precedence_list:
                 continue
             common_machines = set(request_list[i].keys()).intersection(set(request_list[j].keys()))
+
+            sm={}              
             for machine in common_machines:
+                # Khởi tạo same machine variable
+                top_id += 1
+                sm[(i,j,machine)] = top_id
+                solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
+                solver.add_clause([m[(i, machine)], m[(j, machine)], -sm[(i,j,machine)]])
+
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
 
                 for t_i in range(feasible_time[i][0], feasible_time[i][1] + 1):
-
                     start = t_i - p_j # Biên time bên trái
                     end   = t_i + p_i # Biên time bên phải
-
-                    clause = [
-                        -m[(i, machine)],
-                        -m[(j, machine)],
-                        -s[(i, t_i)]
-                    ]
+                    clause = [-sm[(i,j,machine)], -s[(i, t_i)]]
 
                     # Nếu end < ES_j: j chắc chắn bắt đầu sau end -> Mệnh đề luôn ĐÚNG
                     if end <= feasible_time[j][0]:
                         continue
-
                     # Nếu start + 1 > LS_j: j chắc chắn bắt đầu trước start -> Mệnh đề luôn ĐÚNG
                     if start  >= feasible_time[j][1]:
                         continue
-
                     # xử lý biên trái
                     if start >= feasible_time[j][0]:
                         clause.append(-x[(j, start + 1)])
-
                     # xử lý biên phải
                     if end <= feasible_time[j][1]:
                         clause.append(x[(j, end)])
-
-                    # nếu end >= feasible_time[j][1] thì luôn thỏa
                     solver.add_clause(clause)
+
+            # # (options) 
+            # diff_machines_i = set(request_list[i].keys()).difference(set(request_list[j].keys()))
+            # diff_machines_j = set(request_list[j].keys()).difference(set(request_list[i].keys()))
+            # for machine_i in diff_machines_i:
+            #     for machine_j in diff_machines_j:
+            #         for machine in common_machines:
+            #         # Nếu i và j không có máy nào chung, thì i và j chắc chắn không thể chạy cùng lúc trên cùng 1 máy -> Thêm mệnh đề cứng: -m[i, machine_i] OR -m[j, machine_j]
+            #             solver.add_clause([-m[(i, machine_i)], -m[(j, machine_j)], -sm[(i,j,machine)]])
+            
         
 
     #(6) ràng buộc thứ tự precedence
@@ -297,9 +304,9 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
     
     # symmetry breaking: ít nhất 1 thao tác đầu tiên phải bắt đầu tại thời điểm 0
-    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    solver.add_clause([s[(i, 0)] for i in first_ops])
+    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    # solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):

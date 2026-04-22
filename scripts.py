@@ -2,6 +2,7 @@ import os
 import re
 import glob
 import csv
+import sys
 
 def parse_log_file(file_path):
     """Đọc và trích xuất thông tin từ một file log cụ thể."""
@@ -105,8 +106,17 @@ def parse_log_file(file_path):
 
 def main():
     # Danh sách các thư mục cần quét
-    directories = ['results/yfjs', 'results/dafjs']
-    
+    path = sys.argv[1] if len(sys.argv) > 1 else None
+    # if path:
+    #     if os.path.isdir(path):
+    #         directories = [path]
+    #     else:
+    #         print(f"Cảnh báo: '{path}' không phải là một thư mục hợp lệ. Sử dụng thư mục mặc định.")
+    #         directories = ['results/yfjs', 'results/dafjs']
+    yfjs_dir = 'results' + '/' + path + '/yfjs'
+    dafjs_dir = 'results' + '/' + path + '/dafjs'
+    directories = [yfjs_dir, dafjs_dir]
+
     # Khởi tạo danh sách chứa kết quả với hàng Tiêu đề (Header)
     all_results = []
     headers = [
@@ -143,9 +153,12 @@ def main():
             if i == 0:
                 print("-" * table_width)
         print("=" * table_width + "\n")
+        
+        summary_dir = "summary"
+        os.makedirs(summary_dir, exist_ok=True)
 
-        # --- LƯU RA FILE CSV ---
-        csv_filename = "summary_results.csv"
+        # tạo đường dẫn file trong thư mục summary
+        csv_filename = os.path.join(summary_dir, sys.argv[1] + "_results.csv")
         with open(csv_filename, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(all_results)

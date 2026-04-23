@@ -240,7 +240,8 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 top_id += 1
                 sm[(i,j,machine)] = top_id
                 solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
-                solver.add_clause([m[(i, machine)], m[(j, machine)], -sm[(i,j,machine)]])
+                solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
+                solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
 
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
@@ -303,10 +304,10 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
                         solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
     
-    # symmetry breaking: ít nhất 1 thao tác đầu tiên phải bắt đầu tại thời điểm 0
-    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    # solver.add_clause([s[(i, 0)] for i in first_ops])
+    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):

@@ -5,9 +5,9 @@
 [runlim] space limit:		14000 MB
 [runlim] argv[0]:		python3
 [runlim] argv[1]:		-u
-[runlim] argv[2]:		top_down.py
-[runlim] argv[3]:		datasets/yfjs/YFJS18
-[runlim] start:			Wed Apr 22 22:30:15 2026
-[runlim] child:			14403
-Operations: 289, Edges: 272, Machines: 26
-Greedy Schedule UB: 1314
+[runlim] argv[2]:		sm_var.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS27
+[runlim] start:			Thu Apr 23 09:16:13 2026
+[runlim] child:			37476
+Operations: 127, Edges: 118, Machines: 9
+Greedy Schedule UB: 1015

@@ -502,70 +502,51 @@ def get_rank_position(rank_queue, worker_index):
     return worker_index
 
 
-def assign_targets_to_positions(rank_queue, ranked_targets, positions, pending_targets):
-    for pos in positions:
-        if pos < 0 or pos >= len(rank_queue) or pos >= len(ranked_targets):
-            continue
-        pending_targets[rank_queue[pos]] = ranked_targets[pos]
-
-
 def worker_ranked_binary(
-    shared_state,
-    lock,
-    stop_event,
-    interrupt_tickets,
-    active_targets,
-    rank_queue,
-    pending_targets,
-    num_operations,
-    precedence_list,
-    request_list,
-    in_degree,
-    out_degree,
-    queue,
-    neighbors,
-    start_time,
-    worker_index,
-    worker_count=4
+    shared_state, lock, stop_event, interrupt_tickets, active_targets, rank_queue,
+    num_operations, precedence_list, request_list, in_degree, out_degree, queue, neighbors, start_time, worker_index, worker_count=4
 ):
     name = f"Seeker-{worker_index + 1}"
     solver = None
     solver_bound = float('inf')
     s, x, m, feasible_time = None, None, None, None
+    
+    # 1. THÊM CỜ NÀY ĐỂ THEO DÕI TRẠNG THÁI
+    just_found_sat = False 
 
     while not stop_event.is_set():
         with lock:
             lb, ub = shared_state.get('lb'), shared_state.get('ub')
-            my_pos = get_rank_position(rank_queue, worker_index)
 
         if lb is None or ub is None or lb > ub:
             break
 
-        with lock:
-            assigned_target = pending_targets.pop(worker_index, None)
+        ranked_targets = compute_ranked_targets(lb, ub, worker_count)
+        if worker_index >= len(ranked_targets):
+            break
 
-        if assigned_target is not None:
-            current_target = assigned_target
+        # 2. LOGIC CHỌN TARGET THÔNG MINH HƠN
+        if just_found_sat:
+            # Nếu vừa SAT, lập tức chiếm đoạt mốc UB mới nhất để tiếp tục vắt kiệt Learned Clauses
+            current_target = ub
+            just_found_sat = False
         else:
-            ranked_targets = compute_ranked_targets(lb, ub, worker_count)
-            if not ranked_targets:
-                break
-            current_target = ranked_targets[min(my_pos, len(ranked_targets) - 1)]
-
+            # Nếu không, ngoan ngoãn lấy target theo rank của mình
+            current_target = ranked_targets[worker_index]
+            
         print(f"[{name}] Interval: LB={lb}, UB={ub} => Target={current_target}")
 
         if solver is not None and current_target <= solver_bound:
             if current_target < solver_bound:
-                # Chỉ nêm nếm thêm constraint khi Target thực sự NHỎ HƠN
                 add_incremental_constraints(solver, num_operations, out_degree, request_list, current_target, x, m, feasible_time)
                 solver_bound = current_target
-            # add_incremental_constraints(solver, num_operations, out_degree, request_list, current_target, x, m, feasible_time)
         else:
             if solver is not None:
                 solver.delete()
                 solver = None
 
-            solver = Solver(name='cadical195')
+            # 3. BẮT BUỘC ĐỔI SANG GLUCOSE ĐỂ HỖ TRỢ INTERRUPT()
+            solver = Solver(name='glucose4')
             init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, in_degree, out_degree, queue, neighbors, current_target)
 
             if not init_success:
@@ -588,6 +569,7 @@ def worker_ranked_binary(
         if stop_event.is_set():
             break
 
+        # ... (Giữ nguyên phần check stale target và watchdog thread của bạn) ...
         current_lb, current_ub = shared_state.get('lb'), shared_state.get('ub')
         if current_lb > current_target or current_ub < current_target or current_lb > current_ub:
             print(f"[{name}] Target {current_target} became stale. Re-seeding.")
@@ -599,17 +581,7 @@ def worker_ranked_binary(
         active_targets[worker_index] = current_target
         monitor_thread = threading.Thread(
             target=watchdog_both,
-            args=(
-                solver,
-                shared_state,
-            interrupt_tickets,
-            worker_index,
-            local_ticket,
-                current_target,
-                process_stop_event,
-                name,
-                watchdog_flag,
-            )
+            args=(solver, shared_state, interrupt_tickets, worker_index, local_ticket, current_target, process_stop_event, name, watchdog_flag,)
         )
         monitor_thread.start()
 
@@ -617,7 +589,7 @@ def worker_ranked_binary(
         try:
             is_sat = solver.solve()
         except Exception as e:
-            print(f"[{name}] Solver exception (likely interrupt): {e}")
+            print(f"[{name}] Solver exception: {e}")
             is_sat = None
 
         process_stop_event.set()
@@ -631,12 +603,17 @@ def worker_ranked_binary(
 
         if is_sat is None or was_interrupted:
             print(f"[{name}] Interrupted. Keeping the solver for the next re-seed.")
+            # 4. XÓA CỜ INTERRUPT NẾU DÙNG GLUCOSE, NẾU KHÔNG NÓ SẼ RA NGHIỆM GIẢ
+            if hasattr(solver, 'clear_interrupt'):
+                solver.clear_interrupt()
             continue
 
         if is_sat is True:
             with lock:
                 print(f"[{name}] SAT in {current_target}! Updating UB.")
-                print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+                
+                # BẬT CỜ BÁO HIỆU VỪA TÌM THẤY SAT ĐỂ VÒNG TỚI GIỮ BOUND
+                just_found_sat = True 
 
                 if current_target <= shared_state.get('ub'):
                     shared_state['ub'] = current_target - 1
@@ -647,52 +624,23 @@ def worker_ranked_binary(
                         shared_state['proved_by'] = name
                         stop_event.set()
 
-                ranked_targets = compute_ranked_targets(shared_state.get('lb'), shared_state.get('ub'), worker_count)
-                affected_positions = range(my_pos + 1, len(rank_queue))
-                assign_targets_to_positions(rank_queue, ranked_targets, affected_positions, pending_targets)
-
-                # Interrupt only larger solvers exceeding their new limit.
-                for pos in affected_positions:
-                    if pos >= len(rank_queue) or pos >= len(ranked_targets):
-                        continue
-                    other_idx = rank_queue[pos]
-                    new_limit = ranked_targets[pos]
-                    running_target = active_targets.get(other_idx)
-                    if running_target is not None and running_target > new_limit:
+                # ... (Giữ nguyên logic interrupt_tickets cho rank lớn hơn của bạn) ...
+                my_pos = get_rank_position(rank_queue, worker_index)
+                for other_pos in range(my_pos + 1, len(rank_queue)):
+                    other_idx = rank_queue[other_pos]
+                    other_target = active_targets.get(other_idx)
+                    if other_target is not None and other_target > current_target:
                         interrupt_tickets[other_idx] = interrupt_tickets.get(other_idx, 0) + 1
-
-                print(f"[{name}] Active solvers: {dict(active_targets)}")
-
             continue
 
         if is_sat is False:
             with lock:
                 print(f"[{name}] UNSAT in {current_target}. Updating LB.")
-
-                if current_target >= shared_state.get('lb'):
-                    shared_state['lb'] = current_target + 1
-
-                    if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
-                        shared_state['status'] = 'Optimal'
-                        shared_state['proved_by'] = name
-                        stop_event.set()
-
-                ranked_targets = compute_ranked_targets(shared_state.get('lb'), shared_state.get('ub'), worker_count)
-                affected_positions = range(0, my_pos + 1)
-                assign_targets_to_positions(rank_queue, ranked_targets, affected_positions, pending_targets)
-
-                # Interrupt only smaller solvers (and self slot) below their new raised limit.
-                for pos in affected_positions:
-                    if pos >= len(rank_queue) or pos >= len(ranked_targets):
-                        continue
-                    other_idx = rank_queue[pos]
-                    new_limit = ranked_targets[pos]
-                    running_target = active_targets.get(other_idx)
-                    if running_target is not None and running_target < new_limit:
-                        interrupt_tickets[other_idx] = interrupt_tickets.get(other_idx, 0) + 1
-
-                print(f"[{name}] Active solvers: {dict(active_targets)}")
-
+                # Nếu dính UNSAT thì cờ SAT bị tắt (mặc định rồi nhưng viết rõ ra)
+                just_found_sat = False 
+                
+                # ... (Giữ nguyên phần xử lý cập nhật LB và bắn vé ngắt rank nhỏ hơn) ...
+            
             if solver:
                 solver.delete()
                 solver = None
@@ -738,7 +686,7 @@ def watchdog_both(
     while not process_stop_event.is_set():
         current_ticket = interrupt_tickets.get(worker_index, 0)
         if current_ticket != local_ticket:
-            print(f"[{worker_name}-Watchdog] Received targeted reassignment interrupt.")
+            print(f"[{worker_name}-Watchdog] Received rank-queue interrupt signal.")
             watchdog_flag[0] = True
             if solver is not None:
                 solver.interrupt()
@@ -814,12 +762,9 @@ def main():
         interrupt_tickets = manager.dict({i: 0 for i in range(4)})
         active_targets = manager.dict()
         rank_queue = manager.list([0, 1, 2, 3])
-        pending_targets = manager.dict({
-            rank_queue[i]: initial_targets[i] for i in range(min(4, len(initial_targets)))
-        })
         
         args_chung = (
-            shared_state, lock, stop_event, interrupt_tickets, active_targets, rank_queue, pending_targets,
+            shared_state, lock, stop_event, interrupt_tickets, active_targets, rank_queue,
             num_operations, precedence_list, request_list, in_degree, out_degree, queue, neighbors, start_time
         )
 

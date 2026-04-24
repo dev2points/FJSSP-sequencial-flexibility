@@ -1,5 +1,6 @@
 
-import heapq
+import csv
+import os
 import sys
 from time import perf_counter, time
 from pysat.solvers import Solver
@@ -55,84 +56,100 @@ def data(num_operations, precedence_list):
         out_degree[u] += 1
         neighbors[u].append(v)
         predecessors[v].append(u)
-
+    # print(f"in_degree: {in_degree}")
     return in_degree, out_degree, neighbors, predecessors
 
 def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
-    # Khởi tạo trạng thái ban đầu
-    ready_tasks = set(i for i in range(num_operations) if in_degree[i] == 0)
-    free_machines = set(range(num_machines)) # Tất cả các máy đều rảnh ở thời điểm 0
-    
-    # Hàng đợi sự kiện: Lưu các tuple (thời_gian_xong, ID_máy, ID_việc)
-    event_queue = []
-    
-    op_completion_time = {i: 0 for i in range(num_operations)}
+    machine_ready_time = {m: 0 for m in range(num_machines)}
+    op_completion_time = {i: 0 for i in range(num_operations)} 
     machine_assignment = {i: None for i in range(num_operations)}
+    start_times = {i: None for i in range(num_operations)}
+    queue = [i for i in range(num_operations) if in_degree[i] == 0]
+    index = 0
     
-    current_time = 0
-    completed_operations = 0
-    
-    while completed_operations < num_operations:
-        
-        # --- BƯỚC 1: CHIA VIỆC CHO MÁY RẢNH TẠI THỜI ĐIỂM HIỆN TẠI ---
-        assigned_this_round = True
-        while assigned_this_round and ready_tasks and free_machines:
-            assigned_this_round = False
-            tasks_to_remove = []
-            
-            # Duyệt qua các công việc đang sẵn sàng
-            for task in ready_tasks:
-                best_machine = None
-                min_proc = float('inf')
-                
-                # Tìm máy rảnh có thể xử lý task này nhanh nhất
-                for machine, proc_time in request_list[task].items():
-                    if machine in free_machines and proc_time < min_proc:
-                        min_proc = proc_time
-                        best_machine = machine
-                
-                # Nếu tìm được máy rảnh phù hợp, lập tức giao việc
-                if best_machine is not None:
-                    machine_assignment[task] = best_machine
-                    completion_time = current_time + min_proc
-                    op_completion_time[task] = completion_time
-                    
-                    # Cập nhật sự kiện: Báo cho hệ thống biết khi nào máy này làm xong
-                    heapq.heappush(event_queue, (completion_time, best_machine, task))
-                    
-                    # Máy đã bận, rút khỏi danh sách rảnh
-                    free_machines.remove(best_machine)
-                    tasks_to_remove.append(task)
-                    
-                    # Khởi động lại vòng lặp để chia việc tiếp với các máy/việc còn lại
-                    assigned_this_round = True 
-                    break 
-            
-            # Xóa các việc đã được giao khỏi danh sách chờ
-            for t in tasks_to_remove:
-                ready_tasks.remove(t)
+    while index < num_operations:
+        curr = queue[index]
+        index += 1
+        min_completion = float('inf')
 
-        # --- BƯỚC 2: TUA THỜI GIAN TỚI SỰ KIỆN GẦN NHẤT ---
-        if event_queue:
-            # Lấy sự kiện xong việc sớm nhất trên trục thời gian
-            next_time, fin_machine, fin_task = heapq.heappop(event_queue)
-            
-            # Đồng hồ nhảy tới thời điểm máy làm xong
-            current_time = next_time
-            
-            # Trả máy về trạng thái rảnh rỗi để đón việc mới
-            free_machines.add(fin_machine)
-            completed_operations += 1
-            
-            # BƯỚC 3: MỞ KHÓA CÁC CÔNG VIỆC PHỤ THUỘC
-            for neighbor in neighbors[fin_task]:
-                in_degree[neighbor] -= 1
-                if in_degree[neighbor] == 0:
-                    ready_tasks.add(neighbor) # Thêm việc mới vào danh sách sẵn sàng
+        earliest_start = 0
+        if predecessors[curr]:
+            earliest_start = max(op_completion_time[p] for p in predecessors[curr])
 
-    ub = max(op_completion_time.values())
-    print(f"Time-based Schedule UB: {ub}")
-    return ub, machine_assignment
+        for machine, proc_time in request_list[curr].items():
+            actual_start = max(machine_ready_time[machine], earliest_start)
+            completion = proc_time + actual_start
+
+            if completion < min_completion:
+                min_completion = completion
+                machine_assignment[curr] = machine
+                start_times[curr] = actual_start
+
+        if machine_assignment[curr] is not None:
+            machine_ready_time[machine_assignment[curr]] = min_completion
+            op_completion_time[curr] = min_completion
+
+        for neighbor in neighbors[curr]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+
+    ub = max(machine_ready_time.values())
+    print(f"Greedy Schedule UB: {ub}")
+
+    return ub, machine_assignment,start_times, queue
+
+def create_lb(num_operations, num_machines, precedence_list, request_list):
+    min_proc_time = {i: min(request_list[i].values()) for i in range(num_operations)}
+
+    # Build precedence graph.
+    indegree = [0] * num_operations
+    successors = [[] for _ in range(num_operations)]
+    for u, v in precedence_list:
+        successors[u].append(v)
+        indegree[v] += 1
+
+    # Topological order for longest path in DAG with node weights min_proc_time.
+    queue = deque(i for i in range(num_operations) if indegree[i] == 0)
+    topo = []
+    while queue:
+        u = queue.popleft()
+        topo.append(u)
+        for v in successors[u]:
+            indegree[v] -= 1
+            if indegree[v] == 0:
+                queue.append(v)
+
+    if len(topo) != num_operations:
+        raise ValueError("Precedence graph contains a cycle")
+
+    longest_finish = [0] * num_operations
+    for u in topo:
+        if longest_finish[u] == 0:
+            longest_finish[u] = min_proc_time[u]
+        for v in successors[u]:
+            cand = longest_finish[u] + min_proc_time[v]
+            if cand > longest_finish[v]:
+                longest_finish[v] = cand
+    lb_precedence = max(longest_finish) if longest_finish else 0
+
+    # Load-based lower bound from total minimum workload.
+    total_min_work = sum(min_proc_time.values())
+    lb_avg_load = (total_min_work + num_machines - 1) // num_machines
+
+    # Mandatory load per machine (operations with exactly one eligible machine).
+    mandatory_load = [0] * num_machines
+    for i in range(num_operations):
+        if len(request_list[i]) == 1:
+            machine, p_time = next(iter(request_list[i].items()))
+            mandatory_load[machine] += p_time
+
+    lb = max(lb_precedence, lb_avg_load)
+    print(
+        f"Lower Bound: {lb} "
+        f"(precedence={lb_precedence}, avg_load={lb_avg_load})"
+    )
+    return lb
 
 def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue, neighbors, request_list, ub):
     # Tính thời gian xử lý tối thiểu cho mỗi thao tác (dựa trên máy nhanh nhất)
@@ -229,6 +246,7 @@ def create_var(num_operations, request_list, feasible_time):
     s={}
     x={}
     m={}
+    sm={}
     counter = 0
     for i in range(num_operations):
         for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
@@ -239,11 +257,10 @@ def create_var(num_operations, request_list, feasible_time):
         for a, process_time in request_list[i].items():
             counter += 1
             m[(i, a)] = counter
-    
 
     return s, x, m, counter    
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id):
     # (4) tạo dãy order
     for i in range(num_operations):
 
@@ -304,27 +321,40 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
 
                     # nếu end >= feasible_time[j][1] thì luôn thỏa
                     solver.add_clause(clause)
-    
-
-            
         
 
-    #(6) ràng buộc thứ tự ưu tiên
+    #(6) ràng buộc thứ tự precedence
     for i,j in precedence_list:
         # print(f"Adding precedence constraint: Op {i} -> Op {j}")
-        processing = request_list[i]
-        for machine, process_time in processing.items():
-            for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
-                finish_i = t + process_time
-                
-                if finish_i > feasible_time[j][1]:
-                    # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
-                    solver.add_clause([-s[(i, t)], -m[(i, machine)]])
-                elif finish_i > feasible_time[j][0]:
-                    # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
-                    solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
-        
-
+        machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
+        first_flag = True
+        for machine, process_time in machines_i:
+            if first_flag:
+                for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                    finish_i = t + process_time
+                    
+                    if finish_i > feasible_time[j][1]:
+                        # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+                    elif finish_i > feasible_time[j][0]:
+                        # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                        solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+                first_flag = False
+            else:
+                for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                    finish_i = t + process_time
+                    
+                    if finish_i > feasible_time[j][1]:
+                        # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+                    elif finish_i > feasible_time[j][0]:
+                        # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
+    
+    # symmetry breaking: ít nhất 1 thao tác đầu tiên phải bắt đầu tại thời điểm 0
+    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
@@ -507,39 +537,77 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 
 def main():
-    start_time = perf_counter()
-    file_path = sys.argv[1]
-    num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
-    in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
-    size_time, assignment = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
-    ub = size_time - 1
-    # feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
-    # if not is_feasible:
-    #     print("No feasible solution found")
-    #     print("status: optimal")
-    #     print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-    #     return
-    # s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
-
+    # 1. Tạo danh sách các đường dẫn file
+    file_paths = []
     
-    # solver = Solver(name = 'cadical195')
-    # build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, top_id)
-    # print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
+    # Thêm YFJS01 đến YFJS20
+    for i in range(1, 21):
+        file_paths.append(f"datasets/yfjs/YFJS{i:02d}")
+        
+    # Thêm DAFJS01 đến DAFJS30
+    for i in range(1, 31):
+        file_paths.append(f"datasets/dafjs/DAFJS{i:02d}")
+    
+    for i in range(1, 16):
+        file_paths.append(f"datasets/brandimarte/MK{i:02d}")
+    csv_filename = "bound.csv"
+    
+    # 2. Mở file CSV để ghi kết quả
+    with open(csv_filename, mode='w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        # Header của file CSV
+        writer.writerow(['Dataset','LB', 'Greedy_UB', 'Middle_Bound', 'Is_Valid', 'Execution_Time_sec'])
+        
+        print(f"{'Dataset':<15} |{'LB':<10} | {'UB':<10} | {'MID':<10} |{'Status':<10} | {'Time (s)':<10}")
+        print("-" * 55)
 
-    # while True:
-    #     add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time)
-    #     machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
-    #     if machine_assignment is None:
-    #         break  # Không thể giảm UB nữa
+        # 3. Duyệt qua từng file
+        for file_path in file_paths:
+            dataset_name = os.path.basename(file_path).replace(".txt", "")
+            
+            # Kiểm tra xem file có tồn tại không trước khi đọc
+            if not os.path.exists(file_path):
+                # print(f"⚠️ Bỏ qua: Không tìm thấy {file_path}")
+                continue
 
-    #     if not verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, start_times, makespan):
-    #         print("Schedule is not valid")
-    #         return
-    #     else:
-    #         print("Schedule is valid")
+            try:
+                start_time = perf_counter()
+                
+                # Đọc dữ liệu (Sử dụng các hàm bạn đã định nghĩa)
+                num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
+                in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
+                
+                # Chạy thuật toán Greedy
+                # Lưu ý: Truyền đúng các tham số mà hàm greedy_schedule của bạn yêu cầu
+                size_time, assignment, start_times, queue = greedy_schedule(
+                    num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors
+                )
+                
+                # Kiểm tra tính hợp lệ bằng hàm verify
+                is_valid = verify_schedule(
+                    num_operations, num_machines, precedence_list, 
+                    request_list, assignment, start_times, size_time
+                )
+                
+                lb = create_lb(num_operations, num_machines, precedence_list, request_list)
+                end_time = perf_counter()
+                execution_time = round(end_time - start_time, 4)
+                
+                # In kết quả ra console để theo dõi tiến độ
+                status_str = "✅ Valid" if is_valid else "❌ Invalid"
+                print(f"{dataset_name:<15}|{lb:<10} | {size_time:<10} | {(lb+size_time)//2:<10}|{status_str:<10} | {execution_time:<10}")
+                
+                # Ghi vào CSV
+                writer.writerow([dataset_name, lb, size_time, (lb + size_time) // 2, is_valid, execution_time])
+                
+            except Exception as e:
+                print(f"⚠️ Lỗi tại {dataset_name}: {str(e)}")
+                writer.writerow([dataset_name, "ERROR", False, 0])
+                
+    print("-" * 55)
+    print(f"🎉 Hoàn thành! Kết quả đã được lưu tại: {csv_filename}")
 
-    #     # Tìm nghiệm tốt hơn ở vòng lặp tiếp theo.
-    #     ub = makespan - 1
-    #     print(f" Time taken: {perf_counter() - start_time:.2f} seconds")
 if __name__ == "__main__":
     main()
+
+    

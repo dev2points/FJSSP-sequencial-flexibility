@@ -1,0 +1,47 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		15624 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		top_down.py
+[runlim] argv[3]:		YFJS09
+[runlim] start:			Fri Apr 24 14:11:22 2026
+[runlim] child:			6956
+Operations: 36, Edges: 27, Machines: 12
+Greedy Schedule UB: 288
+Building constraints took 0.14 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 245
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 244
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 243
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 242
+Schedule is valid
+ Time taken: 0.18 seconds
+UNSAT
+status: optimal
+Time taken: 0.18 seconds
+[runlim] end:			Fri Apr 24 14:11:22 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.22 seconds
+[runlim] time:			0.20 seconds
+[runlim] space:			41 MB
+[runlim] load:			1.92 maximum
+[runlim] samples:		3

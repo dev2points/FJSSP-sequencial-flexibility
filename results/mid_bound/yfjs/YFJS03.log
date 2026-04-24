@@ -1,0 +1,242 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	1800 seconds
+[runlim] space limit:		15624 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		top_down.py
+[runlim] argv[3]:		YFJS03
+[runlim] start:			Fri Apr 24 14:11:13 2026
+[runlim] child:			6936
+Operations: 24, Edges: 18, Machines: 7
+Greedy Schedule UB: 445
+Building constraints took 0.06 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 389
+Schedule is valid
+ Time taken: 0.06 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 388
+Schedule is valid
+ Time taken: 0.07 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 387
+Schedule is valid
+ Time taken: 0.07 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 386
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 385
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 384
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 383
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 382
+Schedule is valid
+ Time taken: 0.08 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 381
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 380
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 379
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 378
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 377
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 376
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 375
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 374
+Schedule is valid
+ Time taken: 0.10 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 373
+Schedule is valid
+ Time taken: 0.11 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 372
+Schedule is valid
+ Time taken: 0.11 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 371
+Schedule is valid
+ Time taken: 0.11 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 370
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 369
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 368
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 367
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 366
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 365
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 364
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 363
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 362
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 361
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 360
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 359
+Schedule is valid
+ Time taken: 0.12 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 358
+Schedule is valid
+ Time taken: 0.14 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 357
+Schedule is valid
+ Time taken: 0.14 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 356
+Schedule is valid
+ Time taken: 0.15 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 355
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 354
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 353
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 352
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 351
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 350
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 349
+Schedule is valid
+ Time taken: 0.16 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 348
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 347
+Schedule is valid
+ Time taken: 0.17 seconds
+UNSAT
+status: optimal
+Time taken: 0.17 seconds
+[runlim] end:			Fri Apr 24 14:11:13 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.21 seconds
+[runlim] time:			0.10 seconds
+[runlim] space:			30 MB
+[runlim] load:			2.09 maximum
+[runlim] samples:		2

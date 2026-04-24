@@ -296,10 +296,10 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
                         solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
     
-    # symmetry breaking: ít nhất 1 thao tác đầu tiên phải bắt đầu tại thời điểm 0
-    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    solver.add_clause([s[(i, 0)] for i in first_ops])
+    # # symmetry breaking: ít nhất 1 thao tác đầu tiên phải bắt đầu tại thời điểm 0
+    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    # solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
@@ -483,11 +483,74 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    file_path = sys.argv[1]
+    file_name = sys.argv[1]
+    if 'yfjs' in file_name.lower():
+        file_path = f"datasets/yfjs/{file_name}"
+    elif 'mk' in file_name.lower():
+        file_path = f"datasets/brandimarte/{file_name}"
+    elif 'dafjs' in file_name.lower():
+        file_path = f"datasets/dafjs/{file_name}"
+    else:
+        print("Invalid file name")
+        return
+
+    ub_list ={
+           "YFJS01": 803,
+           "YFJS02": 855,
+           "YFJS03": 377,
+           "YFJS04": 420,
+           "YFJS05": 475,
+           "YFJS06": 476,
+            "YFJS07": 474,
+            "YFJS08": 383,
+            "YFJS09": 272,
+            "YFJS10": 429,
+            "YFJS11": 556,
+            "YFJS12": 542,
+            "YFJS13": 435,
+            "YFJS14": 1347,
+            "YFJS15": 1269,
+            "YFJS16": 1252,
+            "YFJS17": 1163,
+            "YFJS18": 1250,
+            "YFJS19": 956,
+            "YFJS20": 998,
+            "DAFJS01": 287,
+            "DAFJS02": 319,
+            "DAFJS03": 606,
+            "DAFJS04": 636,
+            "DAFJS05": 414,
+            "DAFJS06": 434,
+            "DAFJS07": 535,
+            "DAFJS08": 658,
+            "DAFJS09": 490,
+            "DAFJS10": 546,
+            "DAFJS11": 688,
+            "DAFJS12": 618,
+            "DAFJS13": 664,
+            "DAFJS14": 738,
+            "DAFJS15": 656,
+            "DAFJS16": 672,
+            "DAFJS17": 801,
+            "DAFJS18": 796,
+            "DAFJS19": 542,
+            "DAFJS20": 690,
+            "DAFJS21": 785,
+            "DAFJS22": 689,
+            "DAFJS23": 491,
+            "DAFJS24": 563,
+            "DAFJS25": 719,
+            "DAFJS26": 711,
+            "DAFJS27": 798,
+            "DAFJS28": 565,
+            "DAFJS29": 650,
+            "DAFJS30": 549
+    }
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
-    ub = size_time - 1
+    ub = ub_list.get(file_name, size_time)
+    print(f"Solve from: {ub} ")
     feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
     if not is_feasible:
         print("No feasible solution found")

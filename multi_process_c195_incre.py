@@ -481,7 +481,6 @@ def get_dynamic_target_4_points(lb, ub, active_targets, worker_index, worker_cou
         ideal_targets.append(t)
     ideal_targets = sorted(list(set(ideal_targets))) 
     
-    # Lấy các mốc đang được giải bởi luồng khác
     busy_targets = [
         tgt for idx, tgt in active_targets.items() 
         if idx != worker_index and tgt is not None and lb <= tgt <= ub
@@ -497,17 +496,15 @@ def get_dynamic_target_4_points(lb, ub, active_targets, worker_index, worker_cou
         else: 
             return ub
             
-    # Lấy mốc cao nhất trong đám hợp lệ để ép UB xuống (Top-Down)
     return max(available_targets)
 
 
 def watchdog_event_driven(solver, my_interrupt_event, process_stop_event, worker_name, watchdog_flag):
-    """Watchdog thức dậy NGAY LẬP TỨC khi nhận Event, không dùng sleep delay"""
+    """Watchdog không delay, thức dậy tức thời khi nhận sự kiện"""
     while not process_stop_event.is_set():
-        # wait có timeout nhỏ để check process_stop_event, nhưng đánh thức tức thì nếu Event được set
         if my_interrupt_event.wait(timeout=0.05):
             if not process_stop_event.is_set():
-                print(f"[{worker_name}-Watchdog] ⚡ Kích hoạt ngắt tức thời do lệnh từ solver khác!")
+                print(f"[{worker_name}-Watchdog] ⚡ Nhận lệnh ngắt! Đang interrupt CaDiCaL...")
                 watchdog_flag[0] = True
                 if solver is not None:
                     solver.interrupt()
@@ -530,37 +527,38 @@ def worker_selective_interrupt(
         if lb is None or ub is None or lb > ub:
             break
 
-        # 1. NHẬN MỐC MỚI BẰNG 4-POINT
+        # 1. NHẬN MỐC MỚI
         with lock:
             current_target = get_dynamic_target_4_points(lb, ub, active_targets, worker_index, worker_count)
             if current_target is None: break
             active_targets[worker_index] = current_target
 
-        print(f"[{name}] State: [{lb}, {ub}]. Target selected = {current_target}")
+        print(f"[{name}] State: [{lb}, {ub}]. Target = {current_target}")
 
-        # Tắt Event ngắt cũ đi trước khi chạy vòng mới
         my_event = interrupt_events[worker_index]
         my_event.clear()
 
-        # 2. KHỞI TẠO HOẶC TÁI SỬ DỤNG SOLVER
+        # 2. LOGIC TÁI SỬ DỤNG HOẶC KHỞI TẠO SOLVER (QUAN TRỌNG)
         if solver is not None and current_target <= solver_bound:
+            # Nếu mốc mới NHỎ HƠN mốc cũ -> CHỈ THÊM CLAUSE INCREMENTAL
             if current_target < solver_bound:
+                print(f"[{name}] Tái sử dụng solver ({solver_bound} -> {current_target}). Adding incremental constraints...")
                 add_incremental_constraints(solver, num_operations, out_degree, request_list, current_target, x, m, feasible_time)
                 solver_bound = current_target
         else:
+            # Nếu mốc mới LỚN HƠN mốc cũ -> BẮT BUỘC DELETE & INIT LẠI
             if solver is not None:
+                print(f"[{name}] Mốc {current_target} > mốc cũ {solver_bound}. Đang reset solver...")
                 solver.delete()
                 solver = None
             
-            solver = Solver(name='glucose4')
+            solver = Solver(name='cadical195')
             init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, in_degree, out_degree, queue, neighbors, current_target)
 
-            if not init_success: # Sinh ràng buộc thất bại = UNSAT tự nhiên
+            if not init_success: 
                 with lock:
                     if current_target >= shared_state.get('lb'):
                         shared_state['lb'] = current_target + 1
-                        
-                        # TỰ ĐỘNG BẮN NGẮT CÁC MỐC NHỎ HƠN
                         for other_idx, other_tgt in active_targets.items():
                             if other_idx != worker_index and other_tgt is not None and other_tgt <= current_target:
                                 interrupt_events[other_idx].set()
@@ -588,37 +586,38 @@ def worker_selective_interrupt(
         )
         monitor_thread.start()
 
-        # 4. BẮT ĐẦU GIẢI
+        # 4. BẮT ĐẦU GIẢI VỚI CADICAL
         is_sat = None
         try:
             is_sat = solver.solve()
         except Exception as e:
-            print(f"[{name}] Lỗi Solver: {e}")
+            print(f"[{name}] Lỗi CaDiCaL Solver: {e}")
             is_sat = None
 
-        # Tắt Watchdog
         process_stop_event.set()
         monitor_thread.join()
         
-        # Rút tên khỏi bảng trạng thái
         active_targets[worker_index] = None 
 
         if stop_event.is_set(): break
 
         was_interrupted = watchdog_flag[0]
 
-        # XỬ LÝ: BỊ NGẮT
+        # ====================================================================
+        # ĐẶC TRỊ INCREMENTAL CHO CADICAL: KHI BỊ NGẮT, GIỮ LẠI SOLVER
+        # ====================================================================
         if is_sat is None or was_interrupted:
-            print(f"[{name}] Bị ngắt! Xóa mốc {current_target} để tính lại.")
+            print(f"[{name}] Bị ngắt! Dọn cờ ngắt và GIỮ LẠI SOLVER chờ mốc tiếp theo.")
             if hasattr(solver, 'clear_interrupt'):
                 solver.clear_interrupt()
+            # KHÔNG DELETE SOLVER, giữ nguyên solver_bound hiện tại
             continue 
 
         # XỬ LÝ: KẾT QUẢ SAT
         if is_sat is True:
             with lock:
                 if current_target <= shared_state.get('ub'):
-                    print(f"[{name}] SAT tại {current_target}! Cập nhật UB. 💥 Bắn ngắt các luồng LỚN HƠN!")
+                    print(f"[{name}] SAT tại {current_target}! 💥 Bắn ngắt các luồng LỚN HƠN!")
                     shared_state['ub'] = current_target - 1
                     shared_state['best_makespan'] = current_target
 
@@ -626,32 +625,34 @@ def worker_selective_interrupt(
                     for other_idx, other_tgt in active_targets.items():
                         if other_idx != worker_index and other_tgt is not None:
                             if other_tgt >= current_target:
-                                interrupt_events[other_idx].set() # Bấm nút gọi Watchdog nhà người ta
+                                interrupt_events[other_idx].set() 
 
                     if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
                         shared_state['status'] = 'Optimal'
                         shared_state['proved_by'] = name
                         stop_event.set()
+            # Ở vòng lặp tới, nó sẽ nhận target mới (< UB hiện tại), nên chắc chắn solver sẽ được tái sử dụng!
             continue
 
         # XỬ LÝ: KẾT QUẢ UNSAT
         if is_sat is False:
             with lock:
                 if current_target >= shared_state.get('lb'):
-                    print(f"[{name}] UNSAT tại {current_target}. Cập nhật LB. 💥 Bắn ngắt các luồng NHỎ HƠN!")
+                    print(f"[{name}] UNSAT tại {current_target}. 💥 Bắn ngắt các luồng NHỎ HƠN!")
                     shared_state['lb'] = current_target + 1
 
                     # NGẮT CÁC SOLVER NHỎ HƠN
                     for other_idx, other_tgt in active_targets.items():
                         if other_idx != worker_index and other_tgt is not None:
                             if other_tgt <= current_target:
-                                interrupt_events[other_idx].set() # Bấm nút gọi Watchdog nhà người ta
+                                interrupt_events[other_idx].set() 
 
                     if shared_state.get('lb') > shared_state.get('ub') and shared_state.get('status') != 'Optimal':
                         shared_state['status'] = 'Optimal'
                         shared_state['proved_by'] = name
                         stop_event.set()
-                        
+            
+            # UNSAT có nghĩa là ta phải tìm nghiệm ở mốc cao hơn, không thể incremental được, nên phải delete
             if solver:
                 solver.delete()
                 solver = None
@@ -661,27 +662,31 @@ def worker_selective_interrupt(
         solver.delete()
 
 
+# =====================================================================
+# PHẦN 3: MAIN LOOP THỰC THI
+# =====================================================================
 def main():
     if len(sys.argv) < 2:
         print("Sử dụng: python3 script.py <file_path>")
-        sys.exit(1)
+        file_path = "dummy.txt" 
+    else:
+        file_path = sys.argv[1]
 
     start_time = perf_counter()
-    file_path = sys.argv[1]
-    
     print(f"Loading data from: {file_path}")
+    
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
-    
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
     lb_initial = calculate_lower_bound(num_operations, num_machines, precedence_list, request_list)
     ub_initial = size_time - 1
-
-
+    
+    print(f"Complete preprocessing!")
+    print(f"Initial LB = {lb_initial}, UB = {ub_initial}")
 
     lock = mp.Lock()
     stop_event = mp.Event()
-    interrupt_events = [mp.Event() for _ in range(4)] # 4 Nút bấm ngắt cho 4 worker
+    interrupt_events = [mp.Event() for _ in range(4)] 
 
     with mp.Manager() as manager:
         shared_state = manager.dict({
@@ -707,7 +712,7 @@ def main():
         ]
 
         print("-" * 50)
-        print(" 🚀 Start EVENT-DRIVEN MULTIPROCESSING search...")
+        print(" 🚀 Start EVENT-DRIVEN INCREMENTAL search with CaDiCaL195...")
         print("-" * 50)
         
         for p in processes:
@@ -733,8 +738,6 @@ def main():
         print(f"  Optimal Makespan: {shared_state['best_makespan']}")
         print(f"  Total time: {perf_counter() - start_time:.2f} seconds")
 
-
 if __name__ == "__main__":
-    # Đảm bảo multiprocessing chạy an toàn trên mọi hệ điều hành
     mp.set_start_method('spawn', force=True) 
     main()

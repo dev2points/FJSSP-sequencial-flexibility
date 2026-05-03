@@ -57,6 +57,56 @@ def data(num_operations, precedence_list):
     # print(f"in_degree: {in_degree}")
     return in_degree, out_degree, neighbors, predecessors
 
+def read_new_format(file_path):
+    with open(file_path, 'r') as file:
+        # Bỏ comment
+        lines = [line.strip() for line in file if line.strip() and not line.startswith('#')]
+
+    # Dòng đầu
+    first = list(map(int, lines[0].split()))
+    num_jobs = first[0]
+    num_machines = first[1]
+
+    request_list = []
+    precedence_list = []
+
+    op_id = 0  # đánh số operation toàn cục
+
+    # Duyệt từng job
+    for line in lines[1:]:
+        data = list(map(int, line.split()))
+        idx = 0
+
+        num_ops = data[idx]
+        idx += 1
+
+        job_ops = []
+
+        for _ in range(num_ops):
+            num_choices = data[idx]
+            idx += 1
+
+            machine_map = {}
+
+            for _ in range(num_choices):
+                machine = data[idx]
+                process_time = data[idx + 1]
+                idx += 2
+                machine_map[machine] = process_time
+
+            request_list.append(machine_map)
+            job_ops.append(op_id)
+            op_id += 1
+
+        # Sinh precedence trong job
+        for i in range(len(job_ops) - 1):
+            precedence_list.append((job_ops[i], job_ops[i + 1]))
+
+    num_operations = op_id
+    num_edges = len(precedence_list)
+
+    return num_operations, num_edges, num_machines, precedence_list, request_list
+
 def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
     machine_ready_time = {m: 0 for m in range(num_machines)}
     op_completion_time = {i: 0 for i in range(num_operations)} 
@@ -484,72 +534,13 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 def main():
     start_time = perf_counter()
     file_name = sys.argv[1]
-    if 'yfjs' in file_name.lower():
-        file_path = f"datasets/yfjs/{file_name}"
-    elif 'mk' in file_name.lower():
-        file_path = f"datasets/brandimarte/{file_name}"
-    elif 'dafjs' in file_name.lower():
-        file_path = f"datasets/dafjs/{file_name}"
+    if 'dauzere' in file_name.lower() or 'hurink' in file_name.lower():
+        num_operations, num_edges, num_machines, precedence_list, request_list = read_new_format(file_name)
     else:
-        print("Invalid file name")
-        return
-
-    ub_list ={
-           "YFJS01": 803,
-           "YFJS02": 855,
-           "YFJS03": 377,
-           "YFJS04": 420,
-           "YFJS05": 475,
-           "YFJS06": 476,
-            "YFJS07": 474,
-            "YFJS08": 383,
-            "YFJS09": 272,
-            "YFJS10": 429,
-            "YFJS11": 556,
-            "YFJS12": 542,
-            "YFJS13": 435,
-            "YFJS14": 1347,
-            "YFJS15": 1269,
-            "YFJS16": 1252,
-            "YFJS17": 1163,
-            "YFJS18": 1250,
-            "YFJS19": 956,
-            "YFJS20": 998,
-            "DAFJS01": 287,
-            "DAFJS02": 319,
-            "DAFJS03": 606,
-            "DAFJS04": 636,
-            "DAFJS05": 414,
-            "DAFJS06": 434,
-            "DAFJS07": 535,
-            "DAFJS08": 658,
-            "DAFJS09": 490,
-            "DAFJS10": 546,
-            "DAFJS11": 688,
-            "DAFJS12": 618,
-            "DAFJS13": 664,
-            "DAFJS14": 738,
-            "DAFJS15": 656,
-            "DAFJS16": 672,
-            "DAFJS17": 801,
-            "DAFJS18": 796,
-            "DAFJS19": 542,
-            "DAFJS20": 690,
-            "DAFJS21": 785,
-            "DAFJS22": 689,
-            "DAFJS23": 491,
-            "DAFJS24": 563,
-            "DAFJS25": 719,
-            "DAFJS26": 711,
-            "DAFJS27": 798,
-            "DAFJS28": 565,
-            "DAFJS29": 650,
-            "DAFJS30": 549
-    }
-    num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
+        num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_name)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
-    ub = ub_list.get(file_name, size_time)
+    ub = size_time - 1
     print(f"Solve from: {ub} ")
     feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
     if not is_feasible:

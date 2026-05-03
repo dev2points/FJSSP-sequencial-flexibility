@@ -57,6 +57,58 @@ def data(num_operations, precedence_list):
     # print(f"in_degree: {in_degree}")
     return in_degree, out_degree, neighbors, predecessors
 
+
+def read_new_format(file_path):
+    with open(file_path, 'r') as file:
+        # Bỏ comment
+        lines = [line.strip() for line in file if line.strip() and not line.startswith('#')]
+
+    # Dòng đầu
+    first = list(map(int, lines[0].split()))
+    num_jobs = first[0]
+    num_machines = first[1]
+
+    request_list = []
+    precedence_list = []
+
+    op_id = 0  # đánh số operation toàn cục
+
+    # Duyệt từng job
+    for line in lines[1:]:
+        data = list(map(int, line.split()))
+        idx = 0
+
+        num_ops = data[idx]
+        idx += 1
+
+        job_ops = []
+
+        for _ in range(num_ops):
+            num_choices = data[idx]
+            idx += 1
+
+            machine_map = {}
+
+            for _ in range(num_choices):
+                machine = data[idx]
+                process_time = data[idx + 1]
+                idx += 2
+                machine_map[machine] = process_time
+
+            request_list.append(machine_map)
+            job_ops.append(op_id)
+            op_id += 1
+
+        # Sinh precedence trong job
+        for i in range(len(job_ops) - 1):
+            precedence_list.append((job_ops[i], job_ops[i + 1]))
+
+    num_operations = op_id
+    num_edges = len(precedence_list)
+
+    return num_operations, num_edges, num_machines, precedence_list, request_list
+
+
 def greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors):
     machine_ready_time = {m: 0 for m in range(num_machines)}
     op_completion_time = {i: 0 for i in range(num_operations)} 
@@ -240,6 +292,8 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 top_id += 1
                 sm[(i,j,machine)] = top_id
                 solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
+                solver.add_clause([m[(i, machine)], -sm[(i,j,machine)]])
+                solver.add_clause([m[(j, machine)], -sm[(i,j,machine)]])
 
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
@@ -489,8 +543,11 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    file_path = sys.argv[1]
-    num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
+    file_name = sys.argv[1]
+    if 'dauzere' in file_name.lower() or 'hurink' in file_name.lower():
+        num_operations, num_edges, num_machines, precedence_list, request_list = read_new_format(file_name)
+    else:
+        num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_name)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
     ub = size_time - 1

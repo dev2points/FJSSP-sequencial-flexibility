@@ -1,0 +1,26 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	600 seconds
+[runlim] space limit:		15624 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/hurink/vdata/la20.txt
+[runlim] start:			Mon May  4 02:02:13 2026
+[runlim] child:			8754
+Greedy Schedule UB: 756
+Operation 61 cannot be scheduled (feasible time: (70, 69))
+No feasible solution found
+status: optimal
+Time taken: 0.00 seconds
+[runlim] end:			Mon May  4 02:02:14 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] processes:		0
+[runlim] real:			0.03 seconds
+[runlim] time:			0.00 seconds
+[runlim] space:			0 MB
+[runlim] load:			1.03 maximum
+[runlim] samples:		1

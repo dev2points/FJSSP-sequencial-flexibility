@@ -113,10 +113,11 @@ def main():
     #     else:
     #         print(f"Cảnh báo: '{path}' không phải là một thư mục hợp lệ. Sử dụng thư mục mặc định.")
     #         directories = ['results/yfjs', 'results/dafjs']
-    yfjs_dir = 'results' + '/' + path + '/yfjs'
-    dafjs_dir = 'results' + '/' + path + '/dafjs'
-    directories = [yfjs_dir, dafjs_dir]
-
+    # yfjs_dir = 'results' + '/' + path + '/yfjs'
+    # dafjs_dir = 'results' + '/' + path + '/dafjs'
+    # directories = [yfjs_dir, dafjs_dir]
+    directories = [path]
+    
     # Khởi tạo danh sách chứa kết quả với hàng Tiêu đề (Header)
     all_results = []
     headers = [
@@ -158,7 +159,7 @@ def main():
         os.makedirs(summary_dir, exist_ok=True)
 
         # tạo đường dẫn file trong thư mục summary
-        csv_filename = os.path.join(summary_dir, sys.argv[1] + "_results.csv")
+        csv_filename = os.path.join(summary_dir, "results.csv")
         with open(csv_filename, 'w', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(all_results)

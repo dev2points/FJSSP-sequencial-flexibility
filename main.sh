@@ -181,23 +181,23 @@ mkdir -p $HUVRESULT_DIR
 # ./runlim -r $TO  python3 -u main.py $HUEDATA_DIR/orb10.txt 2>&1 | tee $HUERESULT_DIR/orb10.log
 
 
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz5.txt 2>&1 | tee $HURRESULT_DIR/abz5.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz6.txt 2>&1 | tee $HURRESULT_DIR/abz6.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz7.txt 2>&1 | tee $HURRESULT_DIR/abz7.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz8.txt 2>&1 | tee $HURRESULT_DIR/abz8.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz9.txt 2>&1 | tee $HURRESULT_DIR/abz9.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car1.txt 2>&1 | tee $HURRESULT_DIR/car1.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car2.txt 2>&1 | tee $HURRESULT_DIR/car2.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car3.txt 2>&1 | tee $HURRESULT_DIR/car3.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car4.txt 2>&1 | tee $HURRESULT_DIR/car4.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car5.txt 2>&1 | tee $HURRESULT_DIR/car5.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car6.txt 2>&1 | tee $HURRESULT_DIR/car6.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car7.txt 2>&1 | tee $HURRESULT_DIR/car7.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car8.txt 2>&1 | tee $HURRESULT_DIR/car8.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la01.txt 2>&1 | tee $HURRESULT_DIR/la01.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la02.txt 2>&1 | tee $HURRESULT_DIR/la02.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la03.txt 2>&1 | tee $HURRESULT_DIR/la03.log
-./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la04.txt 2>&1 | tee $HURRESULT_DIR/la04.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz5.txt 2>&1 | tee $HURRESULT_DIR/abz5.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz6.txt 2>&1 | tee $HURRESULT_DIR/abz6.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz7.txt 2>&1 | tee $HURRESULT_DIR/abz7.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz8.txt 2>&1 | tee $HURRESULT_DIR/abz8.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/abz9.txt 2>&1 | tee $HURRESULT_DIR/abz9.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car1.txt 2>&1 | tee $HURRESULT_DIR/car1.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car2.txt 2>&1 | tee $HURRESULT_DIR/car2.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car3.txt 2>&1 | tee $HURRESULT_DIR/car3.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car4.txt 2>&1 | tee $HURRESULT_DIR/car4.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car5.txt 2>&1 | tee $HURRESULT_DIR/car5.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car6.txt 2>&1 | tee $HURRESULT_DIR/car6.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car7.txt 2>&1 | tee $HURRESULT_DIR/car7.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/car8.txt 2>&1 | tee $HURRESULT_DIR/car8.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la01.txt 2>&1 | tee $HURRESULT_DIR/la01.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la02.txt 2>&1 | tee $HURRESULT_DIR/la02.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la03.txt 2>&1 | tee $HURRESULT_DIR/la03.log
+# ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la04.txt 2>&1 | tee $HURRESULT_DIR/la04.log
 ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la05.txt 2>&1 | tee $HURRESULT_DIR/la05.log
 ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la06.txt 2>&1 | tee $HURRESULT_DIR/la06.log
 ./runlim -r $TO  python3 -u main.py $HURDATA_DIR/la07.txt 2>&1 | tee $HURRESULT_DIR/la07.log

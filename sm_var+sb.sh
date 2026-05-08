@@ -42,8 +42,8 @@ mkdir -p $MKRESULT_DIR
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS06 2>&1 | tee $DARESULT_DIR/DAFJS06.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS07 2>&1 | tee $DARESULT_DIR/DAFJS07.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS08 2>&1 | tee $DARESULT_DIR/DAFJS08.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS10 2>&1 | tee $DARESULT_DIR/DAFJS10.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS10 2>&1 | tee $DARESULT_DIR/DAFJS10.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS11 2>&1 | tee $DARESULT_DIR/DAFJS11.log
 ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS12 2>&1 | tee $DARESULT_DIR/DAFJS12.log
 ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS13 2>&1 | tee $DARESULT_DIR/DAFJS13.log

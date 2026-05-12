@@ -50,14 +50,14 @@ mkdir -p $MKRESULT_DIR
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS14 2>&1 | tee $DARESULT_DIR/DAFJS14.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS15 2>&1 | tee $DARESULT_DIR/DAFJS15.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS16 2>&1 | tee $DARESULT_DIR/DAFJS16.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS17 2>&1 | tee $DARESULT_DIR/DAFJS17.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS18 2>&1 | tee $DARESULT_DIR/DAFJS18.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS17 2>&1 | tee $DARESULT_DIR/DAFJS17.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS18 2>&1 | tee $DARESULT_DIR/DAFJS18.log
 # ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS19 2>&1 | tee $DARESULT_DIR/DAFJS19.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS20 2>&1 | tee $DARESULT_DIR/DAFJS20.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS21 2>&1 | tee $DARESULT_DIR/DAFJS21.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS22 2>&1 | tee $DARESULT_DIR/DAFJS22.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS23 2>&1 | tee $DARESULT_DIR/DAFJS23.log
-./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS24 2>&1 | tee $DARESULT_DIR/DAFJS24.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS20 2>&1 | tee $DARESULT_DIR/DAFJS20.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS21 2>&1 | tee $DARESULT_DIR/DAFJS21.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS22 2>&1 | tee $DARESULT_DIR/DAFJS22.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS23 2>&1 | tee $DARESULT_DIR/DAFJS23.log
+# ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS24 2>&1 | tee $DARESULT_DIR/DAFJS24.log
 ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS25 2>&1 | tee $DARESULT_DIR/DAFJS25.log
 ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS26 2>&1 | tee $DARESULT_DIR/DAFJS26.log
 ./runlim -r $TO  python3 -u sm_var.py $DADATA_DIR/DAFJS27 2>&1 | tee $DARESULT_DIR/DAFJS27.log
@@ -69,14 +69,14 @@ mkdir -p $MKRESULT_DIR
 # ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK02 2>&1 | tee $MKRESULT_DIR/MK02.log
 # ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK03 2>&1 | tee $MKRESULT_DIR/MK03.log
 # ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK04 2>&1 | tee $MKRESULT_DIR/MK04.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK05 2>&1 | tee $MKRESULT_DIR/MK05.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK05 2>&1 | tee $MKRESULT_DIR/MK05.log
 # ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK06 2>&1 | tee $MKRESULT_DIR/MK06.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK07 2>&1 | tee $MKRESULT_DIR/MK07.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK08 2>&1 | tee $MKRESULT_DIR/MK08.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK09 2>&1 | tee $MKRESULT_DIR/MK09.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK10 2>&1 | tee $MKRESULT_DIR/MK10.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK11 2>&1 | tee $MKRESULT_DIR/MK11.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK12 2>&1 | tee $MKRESULT_DIR/MK12.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK13 2>&1 | tee $MKRESULT_DIR/MK13.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK14 2>&1 | tee $MKRESULT_DIR/MK14.log
-# ./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK15 2>&1 | tee $MKRESULT_DIR/MK15.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK07 2>&1 | tee $MKRESULT_DIR/MK07.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK08 2>&1 | tee $MKRESULT_DIR/MK08.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK09 2>&1 | tee $MKRESULT_DIR/MK09.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK10 2>&1 | tee $MKRESULT_DIR/MK10.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK11 2>&1 | tee $MKRESULT_DIR/MK11.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK12 2>&1 | tee $MKRESULT_DIR/MK12.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK13 2>&1 | tee $MKRESULT_DIR/MK13.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK14 2>&1 | tee $MKRESULT_DIR/MK14.log
+./runlim -r $TO  python3 -u sm_var.py $MKDATA_DIR/MK15 2>&1 | tee $MKRESULT_DIR/MK15.log

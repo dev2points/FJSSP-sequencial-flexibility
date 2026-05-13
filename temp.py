@@ -126,6 +126,63 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
 
     return feasible_time, True
 
+def transitive_closure_weighted(num_operations, precedence_list, request_list):
+    """
+    Tạo thêm các cạnh theo tính chất bao đóng:
+    (u,v), (v,w) => (u,w)
+    trọng số mới = tổng trọng số đường đi
+
+    Trọng số cạnh gốc lấy bằng thời gian xử lý nhỏ nhất của operation đầu.
+    """
+    
+    # trọng số mỗi operation = máy nhanh nhất
+    min_proc = {i: min(request_list[i].values()) for i in range(num_operations)}
+
+    # graph[u][v] = weight
+    graph = {i: {} for i in range(num_operations)}
+    indegree = [0] * num_operations
+
+    # khởi tạo cạnh ban đầu
+    for u, v in precedence_list:
+        graph[u][v] = min_proc[u]
+        indegree[v] += 1
+
+    # topo sort
+    queue = [i for i in range(num_operations) if indegree[i] == 0]
+    topo = []
+
+    while queue:
+        u = queue.pop(0)
+        topo.append(u)
+
+        for v in graph[u]:
+            indegree[v] -= 1
+            if indegree[v] == 0:
+                queue.append(v)
+
+    # transitive closure
+    closure = {u: dict(graph[u]) for u in range(num_operations)}
+
+    for u in reversed(topo):
+        for v in list(closure[u].keys()):
+            for w, weight_vw in closure[v].items():
+
+                new_weight = closure[u][v] + weight_vw
+
+                if w not in closure[u]:
+                    closure[u][w] = new_weight
+                else:
+                    # giữ cạnh mạnh hơn
+                    closure[u][w] = max(closure[u][w], new_weight)
+
+    # convert về list
+    new_edges = []
+    for u in closure:
+        for v, w in closure[u].items():
+            new_edges.append((u, v, w))
+
+    return new_edges
+
 def calculate_greedy_ub(num_operations, num_machines, precedence_list, request_list):
     """
     Tính Cận trên (Upper Bound - UB) bằng thuật toán Heuristic Tham Lam.
@@ -205,7 +262,7 @@ def create_var(num_operations, request_list, feasible_time):
 
     return s, x, m, counter    
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, have_sm_var=False, have_sb=False):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, closure_edges = None):
     # (4) tạo dãy order
     for i in range(num_operations):
 
@@ -237,15 +294,11 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             sm={}              
             for machine in common_machines:
                 # Khởi tạo same machine variable
-                if have_sm_var == '1' or have_sm_var == '2':
-                    # print("have sm var")
-                    top_id += 1
-                    sm[(i,j,machine)] = top_id
-                    solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
-                    if have_sm_var == '2':
-                        # print("sm_var 2 chieu")
-                        solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
-                        solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
+                top_id += 1
+                sm[(i,j,machine)] = top_id
+                solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
+                solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
+                solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
 
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
@@ -253,14 +306,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 for t_i in range(feasible_time[i][0], feasible_time[i][1] + 1):
                     start = t_i - p_j # Biên time bên trái
                     end   = t_i + p_i # Biên time bên phải
-                    if have_sm_var != '0':
-                        clause = [-sm[(i,j,machine)], -s[(i, t_i)]]
-                    else:
-                        clause = [
-                        -m[(i, machine)],
-                        -m[(j, machine)],
-                        -s[(i, t_i)]
-                    ]
+                    clause = [-sm[(i,j,machine)], -s[(i, t_i)]]
 
                     # Nếu end < ES_j: j chắc chắn bắt đầu sau end -> Mệnh đề luôn ĐÚNG
                     if end <= feasible_time[j][0]:
@@ -315,12 +361,22 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
                         solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
     
-    if have_sb:
-        # print("sb")
-        # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-        first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-        # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-        solver.add_clause([s[(i, 0)] for i in first_ops])
+    if closure_edges is not None:
+        for i, j, w in closure_edges:
+            for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                finish_i = t + w
+                
+                if finish_i > feasible_time[j][1]:
+                    # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                    solver.add_clause([-s[(i, t)]])
+                elif finish_i > feasible_time[j][0]:
+                    # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                    solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+    
+    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
@@ -504,14 +560,10 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    if len(sys.argv) < 4:
-        print("Usage: python temp.py <file_path> <have_sm_var(1,2)> <have_sb>")
-        return
     file_path = sys.argv[1]
-    have_sm_var = sys.argv[2].lower() 
-    have_sb = sys.argv[3].lower() == 'true'
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
+    closure_edges = transitive_closure_weighted(num_operations,    precedence_list,    request_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
     ub = size_time - 1
     feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, ub)
@@ -525,7 +577,7 @@ def main():
 
     
     solver = Solver(name = 'cadical195')
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, have_sm_var, have_sb)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, closure_edges)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:

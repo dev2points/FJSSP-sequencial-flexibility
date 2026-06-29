@@ -39,7 +39,6 @@ def read_file(file_path):
                     machine = int(line[1 + 2 * i])
                     process_time = int(line[2 + 2 * i])
                     map[machine] = process_time
-                map = dict(sorted(map.items(), key=lambda item: item[1]))
                 request_list.append(map)
 
     return num_operations, num_edges, num_machines, precedence_list, request_list
@@ -249,7 +248,7 @@ def create_var(num_operations, request_list, feasible_time):
     s={}
     x={}
     m={}
-    xm={}
+    sm={}
     counter = 0
     for i in range(num_operations):
         for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
@@ -260,14 +259,18 @@ def create_var(num_operations, request_list, feasible_time):
         for a, process_time in request_list[i].items():
             counter += 1
             m[(i, a)] = counter
-            counter += 1
-            xm[(i, a)] = counter
 
-    return s, x, m, xm, counter    
+    return s, x, m, counter    
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, closure_edges = None):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, closure_edges = None):
     # (4) tạo dãy order
-    for i in range(num_operations):    
+    for i in range(num_operations):
+
+        # exactly one
+        machines= request_list[i].keys()
+        enc = CardEnc.equals(lits=[m[(i,machine)] for machine in machines], bound=1, encoding=1, top_id=top_id)
+        top_id = enc.nv
+        solver.append_formula(enc.clauses)
 
         # Create first bit of order
         solver.add_clause([x[(i,feasible_time[i][0])]])
@@ -281,32 +284,6 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
         # t = feasible_time[i][1]
         solver.add_clause([-s[(i,feasible_time[i][1])], x[(i,feasible_time[i][1])]])
         solver.add_clause([s[(i,feasible_time[i][1])], -x[(i,feasible_time[i][1])]])
-
-        # Exactly one machine
-        request_list_i = request_list[i]       
-
-        last_machine = request_list_i[-1][0]
-        solver.add_clause([xm[(i, last_machine)]])
-
-        for idx in range(len(request_list_i) - 1):
-            machine1 = request_list_i[idx][0]
-            machine2 = request_list_i[idx + 1][0]
-            solver.add_clause([-xm[(i, machine1)], xm[(i, machine2)]])
-
-        first_machine = request_list_i[0][0]
-        solver.add_clause([-m[(i, first_machine)], xm[(i, first_machine)]])
-        solver.add_clause([-xm[(i, first_machine)],m[(i, first_machine)]])
-
-        for idx in range(1, len(request_list_i)):
-
-            prev_machine = request_list_i[idx - 1][0]
-            curr_machine = request_list_i[idx][0]
-
-            solver.add_clause([-m[(i, curr_machine)],-xm[(i, prev_machine)]])
-            solver.add_clause([-m[(i, curr_machine)],xm[(i, curr_machine)]])
-
-            solver.add_clause([xm[(i, prev_machine)],-xm[(i, curr_machine)],m[(i, curr_machine)]])
-
 
         # ràng buộc chống overlap
         for j in range(i+1, num_operations):
@@ -355,19 +332,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             #             solver.add_clause([-m[(i, machine_i)], -m[(j, machine_j)], -sm[(i,j,machine)]])
             
         
-    for (i, j) in precedence_list:
 
-        request_list_i = request_list[i]
-
-        for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
-            for machine, processing_time in request_list_i:
-                finish_i = t + processing_time
-                if finish_i+1 >= feasible_time[j][0]:
-                    if finish_i+1 <= feasible_time[j][1]:
-                        solver.add_clause([-s[i][t], -x[j][finish_i+1], -xm[i][machine]])
-                    else:
-                        solver.add_clause([-s[i][t], -xm[i][machine]])
-                        break
     #(6) ràng buộc thứ tự precedence
     for i,j in precedence_list:
         # print(f"Adding precedence constraint: Op {i} -> Op {j}")
@@ -608,11 +573,11 @@ def main():
         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
         return
     # print(f"Feasible time windows: {feasible_time}  ")
-    s, x, m, xm, top_id = create_var(num_operations, request_list, feasible_time)
+    s, x, m, top_id = create_var(num_operations, request_list, feasible_time)
 
     
     solver = Solver(name = 'cadical195')
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, closure_edges)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, closure_edges)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:

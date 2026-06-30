@@ -146,11 +146,6 @@ def create_var(num_operations, request_list, feasible_time):
             counter += 1
             xm[(i, a)] = counter
 
-<<<<<<< HEAD:temp.py
-    return s, x, m, xm, counter    
-
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, closure_edges = None):
-=======
     return s, x, m, counter   
 
 def transitive_closure_weighted(num_operations, precedence_list,request_list, neighbors, in_degree):
@@ -182,8 +177,7 @@ def transitive_closure_weighted(num_operations, precedence_list,request_list, ne
     # Trả về danh sách các cạnh closure dưới dạng (u, v, w) với w là thời gian tối thiểu từ u đến v
     return [(u, v, w) for (u, v), w in graph.items()] 
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, graph):
->>>>>>> 0c846f1 (add closure edges):closure.py
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
     # (4) tạo dãy order
     for i in range(num_operations):    
 
@@ -280,9 +274,9 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
         for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
             for machine, processing_time in request_list_i:
                 finish_i = t + processing_time
-                if finish_i+1 >= feasible_time[j][0]:
-                    if finish_i+1 <= feasible_time[j][1]:
-                        solver.add_clause([-s[i][t], -x[j][finish_i+1], -xm[i][machine]])
+                if finish_i >= feasible_time[j][0]:
+                    if finish_i <= feasible_time[j][1]:
+                        solver.add_clause([-s[i][t], x[j][finish_i], -xm[i][machine]])
                     else:
                         solver.add_clause([-s[i][t], -xm[i][machine]])
                         break
@@ -536,13 +530,9 @@ def main():
 
     
     solver = Solver(name = 'cadical195')
-<<<<<<< HEAD:temp.py
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, closure_edges)
-=======
 
     graph = transitive_closure_weighted(num_operations, precedence_list, request_list, neighbors.copy(), in_degree.copy())
     build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, top_id, graph)
->>>>>>> 0c846f1 (add closure edges):closure.py
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:

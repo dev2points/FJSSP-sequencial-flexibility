@@ -38,11 +38,11 @@ mkdir -p $DARESULT_DIR
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS06 2>&1 | tee $DARESULT_DIR/DAFJS06.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS07 2>&1 | tee $DARESULT_DIR/DAFJS07.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS08 2>&1 | tee $DARESULT_DIR/DAFJS08.log
-./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09.log
-./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS10 2>&1 | tee $DARESULT_DIR/DAFJS10.log
+# ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09.log
+# ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS10 2>&1 | tee $DARESULT_DIR/DAFJS10.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS11 2>&1 | tee $DARESULT_DIR/DAFJS11.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS12 2>&1 | tee $DARESULT_DIR/DAFJS12.log
-# ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS13 2>&1 | tee $DARESULT_DIR/DAFJS13.log
+./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS13 2>&1 | tee $DARESULT_DIR/DAFJS13.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS14 2>&1 | tee $DARESULT_DIR/DAFJS14.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS15 2>&1 | tee $DARESULT_DIR/DAFJS15.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS16 2>&1 | tee $DARESULT_DIR/DAFJS16.log
@@ -58,5 +58,5 @@ mkdir -p $DARESULT_DIR
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS26 2>&1 | tee $DARESULT_DIR/DAFJS26.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS27 2>&1 | tee $DARESULT_DIR/DAFJS27.log
 # ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS28 2>&1 | tee $DARESULT_DIR/DAFJS28.log
-./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS29 2>&1 | tee $DARESULT_DIR/DAFJS29.log
-./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS30 2>&1 | tee $DARESULT_DIR/DAFJS30.log
+# ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS29 2>&1 | tee $DARESULT_DIR/DAFJS29.log
+# ./runlim -r $TO  python3 -u main.py $DADATA_DIR/DAFJS30 2>&1 | tee $DARESULT_DIR/DAFJS30.log

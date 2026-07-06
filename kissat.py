@@ -109,12 +109,11 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
             earliest_start[v] = max(earliest_start[v], earliest_start[u] + min_proc_time[u])
     
     # Tính thời gian muộn nhất thao tác có thể bắt đầu
-    latest_start = {i: ub - min_proc_time[i] if out_degree[i] == 0 else 0 for i in range(num_operations)}
+    latest_start = {}
     # print(f"lastest start 8 {latest_start[8]}")
 
     for u in reversed(topo_queue):
-        for v in neighbors[u]:
-            latest_start[u] = max(latest_start[u], latest_start[v] - min_proc_time[u])
+        latest_start[u] = min(latest_start[v] - min_proc_time[u] for v in neighbors[u]) if neighbors[u] else ub - min_proc_time[u]
     
     feasible_time = {}
     for i in range(num_operations):
@@ -268,48 +267,77 @@ def create_var(num_operations, request_list, feasible_time):
     return s, x, m, xm, counter    
 
 
+def transitive_closure_weighted(num_operations, precedence_list,request_list, neighbors, in_degree):
+   
+    # processing time nhỏ nhất của mỗi operation
+    min_proc = {
+        i: min(request_list[i].values())
+        for i in range(num_operations)
+    }
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
+    # Khởi tạo khoảng cách giữa các thao tác
+    graph = {(u,v): min_proc[u] for u, v in precedence_list}
+
+    neighbors = neighbors.copy()
+    in_degree = in_degree.copy()
+
+    # Sử dụng thuật toán Floyd-Warshall để tính transitive closure có trọng số
+    for k in range(num_operations):
+        for i in range(num_operations):
+            for j in range(num_operations):
+                if (i, k) in graph and (k, j) in graph:
+                    new_dist = graph[(i, k)] + graph[(k, j)]
+                    if (i, j) not in graph or new_dist > graph[(i, j)]:
+                        graph[(i, j)] = new_dist
+                        if j not in neighbors[i]:
+                            neighbors[i].append(j)
+                            in_degree[j] += 1
+    
+    # Trả về danh sách các cạnh closure dưới dạng (u, v, w) với w là thời gian tối thiểu từ u đến v
+    return [(u, v, w) for (u, v), w in graph.items()] 
+
+
+def build_constraints(clauses, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
     # (4) tạo dãy order
     for i in range(num_operations):    
 
         # Create first bit of order
-        solver.add_clause([x[(i,feasible_time[i][0])]])
+        clauses.append([x[(i,feasible_time[i][0])]])
         for t in range(feasible_time[i][0], feasible_time[i][1]):
             # (4) Tạo dãy order
-            solver.add_clause([-x[(i,t+1)], x[(i,t)]]) 
+            clauses.append([-x[(i,t+1)], x[(i,t)]])
             # (5) Link s và x
-            solver.add_clause([-s[(i,t)], x[(i,t)]])
-            solver.add_clause([-s[(i,t)], -x[(i,t+1)]])
-            solver.add_clause([-x[(i,t)], x[(i,t+1)], s[(i,t)]])
+            clauses.append([-s[(i,t)], x[(i,t)]])
+            clauses.append([-s[(i,t)], -x[(i,t+1)]])
+            clauses.append([-x[(i,t)], x[(i,t+1)], s[(i,t)]])
         # t = feasible_time[i][1]
-        solver.add_clause([-s[(i,feasible_time[i][1])], x[(i,feasible_time[i][1])]])
-        solver.add_clause([s[(i,feasible_time[i][1])], -x[(i,feasible_time[i][1])]])
+        clauses.append([-s[(i,feasible_time[i][1])], x[(i,feasible_time[i][1])]])
+        clauses.append([s[(i,feasible_time[i][1])], -x[(i,feasible_time[i][1])]])
 
         # Exactly one machine
         request_list_i = list(request_list[i].items())
 
         last_machine = request_list_i[-1][0]
-        solver.add_clause([xm[(i, last_machine)]])
+        clauses.append([xm[(i, last_machine)]])
 
         for idx in range(len(request_list_i) - 1):
             machine1 = request_list_i[idx][0]
             machine2 = request_list_i[idx + 1][0]
-            solver.add_clause([-xm[(i, machine1)], xm[(i, machine2)]])
+            clauses.append([-xm[(i, machine1)], xm[(i, machine2)]])
 
         first_machine = request_list_i[0][0]
-        solver.add_clause([-m[(i, first_machine)], xm[(i, first_machine)]])
-        solver.add_clause([-xm[(i, first_machine)],m[(i, first_machine)]])
+        clauses.append([-m[(i, first_machine)], xm[(i, first_machine)]])
+        clauses.append([-xm[(i, first_machine)],m[(i, first_machine)]])
 
         for idx in range(1, len(request_list_i)):
 
             prev_machine = request_list_i[idx - 1][0]
             curr_machine = request_list_i[idx][0]
 
-            solver.add_clause([-m[(i, curr_machine)],-xm[(i, prev_machine)]])
-            solver.add_clause([-m[(i, curr_machine)],xm[(i, curr_machine)]])
+            clauses.append([-m[(i, curr_machine)],-xm[(i, prev_machine)]])
+            clauses.append([-m[(i, curr_machine)],xm[(i, curr_machine)]])
 
-            solver.add_clause([xm[(i, prev_machine)],-xm[(i, curr_machine)],m[(i, curr_machine)]])
+            clauses.append([xm[(i, prev_machine)],-xm[(i, curr_machine)],m[(i, curr_machine)]])
 
 
         # ràng buộc chống overlap
@@ -323,9 +351,9 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # Khởi tạo same machine variable
                 top_id += 1
                 sm[(i,j,machine)] = top_id
-                solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
-                solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
-                solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
+                clauses.append([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
+                clauses.append([-sm[(i,j,machine)], m[(i, machine)] ])
+                clauses.append([-sm[(i,j,machine)], m[(j, machine)] ])
 
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
@@ -347,7 +375,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                     # xử lý biên phải
                     if end <= feasible_time[j][1]:
                         clause.append(x[(j, end)])
-                    solver.add_clause(clause)
+                    clauses.append(clause)
 
             # # (options) 
             # diff_machines_i = set(request_list[i].keys()).difference(set(request_list[j].keys()))
@@ -356,7 +384,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             #     for machine_j in diff_machines_j:
             #         for machine in common_machines:
             #         # Nếu i và j không có máy nào chung, thì i và j chắc chắn không thể chạy cùng lúc trên cùng 1 máy -> Thêm mệnh đề cứng: -m[i, machine_i] OR -m[j, machine_j]
-            #             solver.add_clause([-m[(i, machine_i)], -m[(j, machine_j)], -sm[(i,j,machine)]])
+            #             clauses.append([-m[(i, machine_i)], -m[(j, machine_j)], -sm[(i,j,machine)]])
             
         
     # for (i, j) in precedence_list:
@@ -426,23 +454,23 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         if idx == 0:
                             # Nếu là máy nhanh nhất (idx=0) mà j vẫn bắt đầu trước khi i xong, 
                             # thì không còn máy nào nhanh hơn nữa -> Clause ép j phải đợi đến finish_i
-                            solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+                            clauses.append([-s[(i, t)], x[(j, finish_i)]])
                             # print(f"at operation {i} at time {t}, finish_i={finish_i} is within [ES_j, LS_j]=[{feasible_time[j][0]}, {feasible_time[j][1]}] of operation {j}. Clause added: [-s[({i}, {t})], x[({j}, {finish_i})]]")
                         else:
                             # SỬA TẠI ĐÂY: Nếu j bắt đầu trước finish_i, ép buộc phải chọn các máy nhanh hơn phía trước
                             prev_machine = request_list_i[idx - 1][0]
-                            solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
+                            clauses.append([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
                     else:
                         # Trường hợp finish_i vượt quá cả thời gian muộn nhất của j (LS_j)
                         if idx == 0:
                             # Ngay cả máy nhanh nhất cũng không kịp -> thời điểm t này bất khả thi
                             # Don't need because pre processing build on first machine, but keep it for safety
-                            solver.add_clause([-s[(i, t)]])
-                            print(f"at operation {i} at time {t}, finish_i={finish_i} is beyond LS_j={feasible_time[j][1]} of operation {j}. Clause added: [-s[({i}, {t})]]")
+                            clauses.append([-s[(i, t)]])
+                            # print(f"at operation {i} at time {t}, finish_i={finish_i} is beyond LS_j={feasible_time[j][1]} of operation {j}. Clause added: [-s[({i}, {t})]]")
                         else:
                             # Bắt buộc phải chọn các máy nhanh hơn phía trước thì mới kịp giờ của j
                             prev_machine = request_list_i[idx - 1][0]
-                            solver.add_clause([-s[(i, t)], xm[(i, prev_machine)]])
+                            clauses.append([-s[(i, t)], xm[(i, prev_machine)]])
                             # print(f"at operation {i} at time {t}, finish_i={finish_i} is beyond LS_j={feasible_time[j][1]} of operation {j}. Clause added: [-s[({i}, {t})], xm[({i}, {prev_machine})]]")
                         
                         # Vì các máy phía sau còn chậm hơn nữa, chắc chắn cũng sẽ vượt quá LS_j,
@@ -492,16 +520,16 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             
             if finish_u > feasible_time[v][1]:
                 # u kết thúc muộn hơn cả thời điểm muộn nhất v có thể bắt đầu -> Vô lý
-                solver.add_clause([-s[(u, t)]])
+                clauses.append([-s[(u, t)]])
             elif finish_u > feasible_time[v][0]:
                 # u kết thúc trong khoảng [ES_v, LS_v] -> v phải bắt đầu >= finish_u
-                solver.add_clause([-s[(u, t)], x[(v, finish_u)]])
+                clauses.append([-s[(u, t)], x[(v, finish_u)]])
 
 
-    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    solver.set_phases([s[(i, 0)] for i in first_ops])  # ưu tiên các thao tác đầu tiên bắt đầu sớm nhất
+    # # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    # solver.set_phases([s[(i, 0)] for i in first_ops])  # ưu tiên các thao tác đầu tiên bắt đầu sớm nhất
     
 
                     
@@ -528,6 +556,7 @@ def init_solver(solver, num_operations, precedence_list, request_list, out_degre
     build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, s, x, m, xm, top_id)
     add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
     return True, s, x, m, xm, feasible_time
+
 
 def solve_and_print(solver, num_operations, s, m, request_list):
     if solver.solve():
@@ -702,86 +731,42 @@ def main():
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree, neighbors, predecessors)
     lb = calculate_lower_bound(num_operations, num_machines, precedence_list, request_list)
-
-
+    graph = transitive_closure_weighted(num_operations, precedence_list, request_list, neighbors, in_degree)
+    feasible_time, is_feasible = pre_processing_time(num_operations, precedence_list, out_degree, queue, neighbors, request_list, size_time - 1)
+    if not is_feasible:
+        print(f"No feasible solution found with UB = {size_time-1} during pre-processing.")
+        return
     best_makespan = size_time
     ub = size_time - 1
     expected_makespan = (lb + ub) // 2
     last_expected_makespan = expected_makespan
-    # while True:
-    #     print(f"\nTrying to solve with expected makespan (UB) = {expected_makespan} (LB={lb}, UB={ub})")
-    #     solver = Solver(name='cadical195')
-    #     init_success, s, x, m, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan)
-    #     if not init_success:
-    #         print(f"Pre-processing determined no feasible solution with UB = {expected_makespan}. Adjusting bounds.")
-    #         ub = expected_makespan - 1
-    #         expected_makespan = (lb + ub) // 2
-    #         continue
+    s, x, m, xm, top_id = create_var(num_operations, request_list, feasible_time)
+    clauses = []
+    build_constraints(clauses, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph)
 
-    #     machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
-    #     solver.delete()
+    while lb < ub:
+        print(f"\nTrying expected makespan: {expected_makespan} (LB={lb}, UB={ub})")
+        solver = Solver(name='kissat404', bootstrap_with=clauses)
+        add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
+        machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
 
-    #     if machine_assignment is not None:
-    #         if verify_schedule(num_operations, num_machines, precedence_list,
-    #                            request_list, machine_assignment, start_times, expected_makespan):
-    #             print(f"Schedule verified successfully with makespan {makespan}. Updating UB.")
-    #             print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-    #             best_makespan = makespan
-    #             ub = makespan - 1
-    #         else:
-    #             print("Schedule verification failed. This should not happen if the SAT model is correct.")
-    #             print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-    #             break
-    #     else:
-    #         print(f"No schedule found with UB = {expected_makespan}. Updating LB.")
-    #         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-    #         lb = expected_makespan + 1
+        if machine_assignment is not None:
+            # Kiểm tra tính hợp lệ của lịch trình
+            if verify_schedule(num_operations, num_machines, precedence_list,
+                               request_list, machine_assignment, start_times, expected_makespan):
+                print(f"Valid schedule found with makespan {makespan}. Updating UB.")
+                ub = makespan
+                best_makespan = makespan
+            else:
+                print("Schedule verification failed. Treating as UNSAT.")
+                lb = expected_makespan + 1
+        else:
+            print("No valid schedule found. Updating LB.")
+            lb = expected_makespan + 1
 
-    #     if lb > ub:
-    #         print(f"Search complete. Optimal makespan is {best_makespan}.")
-    #         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
-    #         break
-
-    #     expected_makespan = (lb + ub) // 2
-
-    # while lb <= ub:
-    #     print(f"\nTrying to solve with expected makespan (UB) = {expected_makespan} (LB={lb}, UB={ub})")
-        
-    #     # --- NHÁNH 1: INCREMENTAL SAT (Chỉ dùng khi giảm makespan và solver chưa bị xóa) ---
-    #     if expected_makespan < last_expected_makespan :
-    #         add_incremental_constraints(solver, num_operations, out_degree, request_list, expected_makespan, x, m, feasible_time)
-    #         machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
-            
-    #     # --- NHÁNH 2: RE-INIT SOLVER (Dùng cho vòng đầu tiên, hoặc sau khi UNSAT) ---
-    #     else:            
-    #         solver = Solver(name='kissat404')
-    #         init_success, s, x, m, xm, feasible_time = init_solver(solver, num_operations, precedence_list, request_list, out_degree, queue, neighbors, expected_makespan)
-            
-    #         if not init_success:
-    #             print(f"Pre-processing determined no feasible solution with UB = {expected_makespan}.")
-    #             machine_assignment = None  # Ép nó hiểu là UNSAT
-    #         else:
-    #             machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
-
-    #     if machine_assignment is not None:
-    #         if verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, start_times, expected_makespan):
-    #             print(f"Schedule verified successfully with makespan {makespan}. Updating UB.")
-    #             best_makespan = makespan
-    #             ub = makespan - 1
-    #         else:
-    #             print("Schedule verification failed. This should not happen if the SAT model is correct.")
-    #             break
-    #     else:
-
-    #         print(f"No schedule found with UB = {expected_makespan}. Updating LB.")
-    #         lb = expected_makespan + 1
-    #         if solver is not None:
-    #             solver.delete()
-    #             solver = None
-
-    #     last_expected_makespan = expected_makespan
-    #     expected_makespan = (lb + ub) // 2
-    #     print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+        last_expected_makespan = expected_makespan
+        expected_makespan = (lb + ub) // 2
+        solver.delete()  # Giải phóng bộ nhớ của solver cũ
 
     # Kết thúc vòng lặp
     print(f"\nSearch complete. Optimal makespan is {best_makespan}.")

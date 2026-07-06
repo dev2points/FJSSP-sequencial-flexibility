@@ -1,0 +1,2427 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			ap-Precision-7550
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10800 seconds
+[runlim] space limit:		15624 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS13
+[runlim] start:			Sun Jul  5 04:06:05 2026
+[runlim] child:			11370
+Operations: 62, Edges: 55, Machines: 5
+Greedy Schedule UB: 738
+at operation 0 at time 0, finish_i=15 is before ES_j=15 of operation 1. No clause needed.
+at operation 1 at time 15, finish_i=65 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 15, finish_i=84 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 15, finish_i=103 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 15, finish_i=114 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 16, finish_i=66 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 16, finish_i=85 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 16, finish_i=104 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 16, finish_i=115 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 17, finish_i=67 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 17, finish_i=86 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 17, finish_i=105 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 17, finish_i=116 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 18, finish_i=68 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 18, finish_i=87 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 18, finish_i=106 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 18, finish_i=117 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 19, finish_i=69 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 19, finish_i=88 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 19, finish_i=107 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 19, finish_i=118 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 20, finish_i=70 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 20, finish_i=89 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 20, finish_i=108 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 20, finish_i=119 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 21, finish_i=71 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 21, finish_i=90 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 21, finish_i=109 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 21, finish_i=120 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 22, finish_i=72 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 22, finish_i=91 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 22, finish_i=110 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 22, finish_i=121 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 23, finish_i=73 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 23, finish_i=92 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 23, finish_i=111 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 23, finish_i=122 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 24, finish_i=74 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 24, finish_i=93 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 24, finish_i=112 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 24, finish_i=123 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 25, finish_i=75 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 25, finish_i=94 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 25, finish_i=113 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 25, finish_i=124 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 26, finish_i=76 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 26, finish_i=95 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 26, finish_i=114 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 26, finish_i=125 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 27, finish_i=77 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 27, finish_i=96 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 27, finish_i=115 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 27, finish_i=126 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 28, finish_i=78 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 28, finish_i=97 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 28, finish_i=116 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 28, finish_i=127 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 29, finish_i=79 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 29, finish_i=98 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 29, finish_i=117 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 29, finish_i=128 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 30, finish_i=80 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 30, finish_i=99 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 30, finish_i=118 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 30, finish_i=129 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 31, finish_i=81 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 31, finish_i=100 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 31, finish_i=119 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 31, finish_i=130 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 32, finish_i=82 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 32, finish_i=101 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 32, finish_i=120 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 32, finish_i=131 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 33, finish_i=83 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 33, finish_i=102 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 33, finish_i=121 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 33, finish_i=132 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 34, finish_i=84 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 34, finish_i=103 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 34, finish_i=122 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 34, finish_i=133 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 35, finish_i=85 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 35, finish_i=104 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 35, finish_i=123 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 35, finish_i=134 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 36, finish_i=86 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 36, finish_i=105 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 36, finish_i=124 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 36, finish_i=135 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 37, finish_i=87 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 37, finish_i=106 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 37, finish_i=125 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 37, finish_i=136 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 38, finish_i=88 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 38, finish_i=107 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 38, finish_i=126 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 38, finish_i=137 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 39, finish_i=89 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 39, finish_i=108 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 39, finish_i=127 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 39, finish_i=138 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 40, finish_i=90 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 40, finish_i=109 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 40, finish_i=128 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 40, finish_i=139 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 41, finish_i=91 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 41, finish_i=110 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 41, finish_i=129 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 41, finish_i=140 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 42, finish_i=92 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 42, finish_i=111 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 42, finish_i=130 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 42, finish_i=141 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 43, finish_i=93 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 43, finish_i=112 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 43, finish_i=131 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 43, finish_i=142 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 44, finish_i=94 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 44, finish_i=113 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 44, finish_i=132 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 44, finish_i=143 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 45, finish_i=95 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 45, finish_i=114 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 45, finish_i=133 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 45, finish_i=144 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 46, finish_i=96 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 46, finish_i=115 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 46, finish_i=134 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 46, finish_i=145 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 47, finish_i=97 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 47, finish_i=116 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 47, finish_i=135 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 48, finish_i=98 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 48, finish_i=117 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 48, finish_i=136 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 49, finish_i=99 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 49, finish_i=118 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 49, finish_i=137 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 50, finish_i=100 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 50, finish_i=119 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 50, finish_i=138 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 51, finish_i=101 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 51, finish_i=120 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 51, finish_i=139 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 52, finish_i=102 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 52, finish_i=121 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 52, finish_i=140 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 53, finish_i=103 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 53, finish_i=122 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 53, finish_i=141 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 54, finish_i=104 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 54, finish_i=123 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 54, finish_i=142 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 55, finish_i=105 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 55, finish_i=124 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 55, finish_i=143 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 56, finish_i=106 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 56, finish_i=125 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 56, finish_i=144 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 57, finish_i=107 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 57, finish_i=126 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 57, finish_i=145 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 58, finish_i=108 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 58, finish_i=127 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 59, finish_i=109 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 59, finish_i=128 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 60, finish_i=110 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 60, finish_i=129 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 61, finish_i=111 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 61, finish_i=130 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 62, finish_i=112 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 62, finish_i=131 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 63, finish_i=113 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 63, finish_i=132 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 64, finish_i=114 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 64, finish_i=133 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 65, finish_i=115 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 65, finish_i=134 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 66, finish_i=116 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 66, finish_i=135 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 67, finish_i=117 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 67, finish_i=136 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 68, finish_i=118 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 68, finish_i=137 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 69, finish_i=119 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 69, finish_i=138 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 70, finish_i=120 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 70, finish_i=139 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 71, finish_i=121 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 71, finish_i=140 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 72, finish_i=122 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 72, finish_i=141 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 73, finish_i=123 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 73, finish_i=142 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 74, finish_i=124 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 74, finish_i=143 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 75, finish_i=125 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 75, finish_i=144 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 76, finish_i=126 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 76, finish_i=145 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 77, finish_i=127 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 78, finish_i=128 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 79, finish_i=129 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 80, finish_i=130 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 81, finish_i=131 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 82, finish_i=132 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 83, finish_i=133 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 84, finish_i=134 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 85, finish_i=135 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 86, finish_i=136 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 87, finish_i=137 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 88, finish_i=138 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 89, finish_i=139 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 90, finish_i=140 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 91, finish_i=141 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 92, finish_i=142 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 93, finish_i=143 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 94, finish_i=144 is before ES_j=145 of operation 4. No clause needed.
+at operation 1 at time 95, finish_i=145 is before ES_j=145 of operation 4. No clause needed.
+at operation 2 at time 0, finish_i=61 is before ES_j=61 of operation 3. No clause needed.
+at operation 3 at time 61, finish_i=145 is before ES_j=145 of operation 4. No clause needed.
+at operation 5 at time 0, finish_i=95 is before ES_j=95 of operation 6. No clause needed.
+at operation 5 at time 0, finish_i=95 is before ES_j=95 of operation 6. No clause needed.
+at operation 6 at time 95, finish_i=180 is before ES_j=180 of operation 9. No clause needed.
+at operation 7 at time 0, finish_i=50 is before ES_j=50 of operation 8. No clause needed.
+at operation 8 at time 50, finish_i=101 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 50, finish_i=109 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 50, finish_i=112 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 51, finish_i=102 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 51, finish_i=110 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 51, finish_i=113 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 52, finish_i=103 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 52, finish_i=111 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 52, finish_i=114 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 53, finish_i=104 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 53, finish_i=112 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 53, finish_i=115 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 54, finish_i=105 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 54, finish_i=113 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 54, finish_i=116 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 55, finish_i=106 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 55, finish_i=114 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 55, finish_i=117 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 56, finish_i=107 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 56, finish_i=115 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 56, finish_i=118 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 57, finish_i=108 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 57, finish_i=116 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 57, finish_i=119 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 58, finish_i=109 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 58, finish_i=117 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 58, finish_i=120 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 59, finish_i=110 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 59, finish_i=118 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 59, finish_i=121 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 60, finish_i=111 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 60, finish_i=119 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 60, finish_i=122 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 61, finish_i=112 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 61, finish_i=120 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 61, finish_i=123 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 62, finish_i=113 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 62, finish_i=121 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 62, finish_i=124 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 63, finish_i=114 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 63, finish_i=122 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 63, finish_i=125 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 64, finish_i=115 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 64, finish_i=123 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 64, finish_i=126 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 65, finish_i=116 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 65, finish_i=124 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 65, finish_i=127 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 66, finish_i=117 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 66, finish_i=125 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 66, finish_i=128 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 67, finish_i=118 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 67, finish_i=126 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 67, finish_i=129 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 68, finish_i=119 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 68, finish_i=127 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 68, finish_i=130 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 69, finish_i=120 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 69, finish_i=128 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 69, finish_i=131 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 70, finish_i=121 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 70, finish_i=129 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 70, finish_i=132 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 71, finish_i=122 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 71, finish_i=130 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 71, finish_i=133 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 72, finish_i=123 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 72, finish_i=131 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 72, finish_i=134 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 73, finish_i=124 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 73, finish_i=132 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 73, finish_i=135 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 74, finish_i=125 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 74, finish_i=133 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 74, finish_i=136 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 75, finish_i=126 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 75, finish_i=134 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 75, finish_i=137 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 76, finish_i=127 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 76, finish_i=135 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 76, finish_i=138 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 77, finish_i=128 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 77, finish_i=136 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 77, finish_i=139 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 78, finish_i=129 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 78, finish_i=137 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 78, finish_i=140 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 79, finish_i=130 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 79, finish_i=138 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 79, finish_i=141 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 80, finish_i=131 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 80, finish_i=139 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 80, finish_i=142 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 81, finish_i=132 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 81, finish_i=140 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 81, finish_i=143 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 82, finish_i=133 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 82, finish_i=141 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 82, finish_i=144 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 83, finish_i=134 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 83, finish_i=142 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 83, finish_i=145 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 84, finish_i=135 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 84, finish_i=143 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 84, finish_i=146 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 85, finish_i=136 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 85, finish_i=144 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 85, finish_i=147 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 86, finish_i=137 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 86, finish_i=145 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 86, finish_i=148 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 87, finish_i=138 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 87, finish_i=146 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 87, finish_i=149 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 88, finish_i=139 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 88, finish_i=147 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 88, finish_i=150 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 89, finish_i=140 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 89, finish_i=148 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 89, finish_i=151 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 90, finish_i=141 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 90, finish_i=149 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 90, finish_i=152 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 91, finish_i=142 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 91, finish_i=150 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 91, finish_i=153 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 92, finish_i=143 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 92, finish_i=151 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 92, finish_i=154 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 93, finish_i=144 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 93, finish_i=152 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 93, finish_i=155 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 94, finish_i=145 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 94, finish_i=153 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 94, finish_i=156 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 95, finish_i=146 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 95, finish_i=154 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 95, finish_i=157 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 96, finish_i=147 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 96, finish_i=155 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 96, finish_i=158 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 97, finish_i=148 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 97, finish_i=156 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 97, finish_i=159 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 98, finish_i=149 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 98, finish_i=157 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 98, finish_i=160 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 99, finish_i=150 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 99, finish_i=158 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 99, finish_i=161 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 100, finish_i=151 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 100, finish_i=159 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 100, finish_i=162 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 101, finish_i=152 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 101, finish_i=160 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 101, finish_i=163 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 102, finish_i=153 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 102, finish_i=161 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 102, finish_i=164 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 103, finish_i=154 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 103, finish_i=162 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 103, finish_i=165 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 104, finish_i=155 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 104, finish_i=163 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 104, finish_i=166 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 105, finish_i=156 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 105, finish_i=164 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 105, finish_i=167 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 106, finish_i=157 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 106, finish_i=165 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 106, finish_i=168 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 107, finish_i=158 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 107, finish_i=166 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 107, finish_i=169 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 108, finish_i=159 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 108, finish_i=167 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 108, finish_i=170 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 109, finish_i=160 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 109, finish_i=168 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 109, finish_i=171 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 110, finish_i=161 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 110, finish_i=169 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 110, finish_i=172 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 111, finish_i=162 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 111, finish_i=170 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 111, finish_i=173 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 112, finish_i=163 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 112, finish_i=171 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 112, finish_i=174 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 113, finish_i=164 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 113, finish_i=172 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 113, finish_i=175 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 114, finish_i=165 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 114, finish_i=173 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 114, finish_i=176 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 115, finish_i=166 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 115, finish_i=174 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 115, finish_i=177 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 116, finish_i=167 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 116, finish_i=175 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 116, finish_i=178 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 117, finish_i=168 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 117, finish_i=176 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 117, finish_i=179 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 118, finish_i=169 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 118, finish_i=177 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 118, finish_i=180 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 119, finish_i=170 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 119, finish_i=178 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 120, finish_i=171 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 120, finish_i=179 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 121, finish_i=172 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 121, finish_i=180 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 122, finish_i=173 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 123, finish_i=174 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 124, finish_i=175 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 125, finish_i=176 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 126, finish_i=177 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 127, finish_i=178 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 128, finish_i=179 is before ES_j=180 of operation 9. No clause needed.
+at operation 8 at time 129, finish_i=180 is before ES_j=180 of operation 9. No clause needed.
+at operation 10 at time 0, finish_i=6 is before ES_j=6 of operation 11. No clause needed.
+at operation 11 at time 6, finish_i=16 is before ES_j=16 of operation 12. No clause needed.
+at operation 12 at time 16, finish_i=106 is before ES_j=106 of operation 13. No clause needed.
+at operation 13 at time 106, finish_i=201 is before ES_j=201 of operation 14. No clause needed.
+at operation 13 at time 106, finish_i=201 is before ES_j=201 of operation 15. No clause needed.
+at operation 16 at time 0, finish_i=53 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 1, finish_i=54 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 2, finish_i=55 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 3, finish_i=56 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 4, finish_i=57 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 5, finish_i=58 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 6, finish_i=59 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 7, finish_i=60 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 8, finish_i=61 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 9, finish_i=62 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 10, finish_i=63 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 11, finish_i=64 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 12, finish_i=65 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 13, finish_i=66 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 14, finish_i=67 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 15, finish_i=68 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 16, finish_i=69 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 17, finish_i=70 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 18, finish_i=71 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 19, finish_i=72 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 20, finish_i=73 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 21, finish_i=74 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 22, finish_i=75 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 23, finish_i=76 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 24, finish_i=77 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 25, finish_i=78 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 26, finish_i=79 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 27, finish_i=80 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 28, finish_i=81 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 29, finish_i=82 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 30, finish_i=83 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 31, finish_i=84 is before ES_j=85 of operation 18. No clause needed.
+at operation 16 at time 32, finish_i=85 is before ES_j=85 of operation 18. No clause needed.
+at operation 17 at time 0, finish_i=85 is before ES_j=85 of operation 18. No clause needed.
+at operation 18 at time 85, finish_i=106 is before ES_j=106 of operation 19. No clause needed.
+at operation 19 at time 106, finish_i=126 is before ES_j=126 of operation 20. No clause needed.
+at operation 21 at time 0, finish_i=75 is before ES_j=75 of operation 22. No clause needed.
+at operation 22 at time 75, finish_i=105 is before ES_j=105 of operation 23. No clause needed.
+at operation 22 at time 75, finish_i=105 is before ES_j=105 of operation 24. No clause needed.
+at operation 22 at time 75, finish_i=105 is before ES_j=105 of operation 25. No clause needed.
+at operation 26 at time 0, finish_i=18 is before ES_j=18 of operation 27. No clause needed.
+at operation 27 at time 18, finish_i=27 is before ES_j=27 of operation 28. No clause needed.
+at operation 28 at time 27, finish_i=31 is before ES_j=31 of operation 29. No clause needed.
+at operation 29 at time 31, finish_i=45 is before ES_j=45 of operation 30. No clause needed.
+at operation 27 at time 18, finish_i=27 is before ES_j=27 of operation 31. No clause needed.
+at operation 31 at time 27, finish_i=73 is before ES_j=73 of operation 32. No clause needed.
+at operation 32 at time 73, finish_i=131 is before ES_j=131 of operation 33. No clause needed.
+at operation 27 at time 18, finish_i=27 is before ES_j=27 of operation 34. No clause needed.
+at operation 34 at time 27, finish_i=56 is before ES_j=56 of operation 35. No clause needed.
+at operation 35 at time 56, finish_i=144 is before ES_j=144 of operation 36. No clause needed.
+at operation 37 at time 0, finish_i=53 is before ES_j=53 of operation 38. No clause needed.
+at operation 38 at time 53, finish_i=89 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 53, finish_i=95 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 54, finish_i=90 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 54, finish_i=96 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 55, finish_i=91 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 55, finish_i=97 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 56, finish_i=92 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 56, finish_i=98 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 57, finish_i=93 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 57, finish_i=99 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 58, finish_i=94 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 58, finish_i=100 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 59, finish_i=95 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 59, finish_i=101 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 60, finish_i=96 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 60, finish_i=102 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 61, finish_i=97 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 61, finish_i=103 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 62, finish_i=98 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 62, finish_i=104 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 63, finish_i=99 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 64, finish_i=100 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 65, finish_i=101 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 66, finish_i=102 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 67, finish_i=103 is before ES_j=104 of operation 40. No clause needed.
+at operation 38 at time 68, finish_i=104 is before ES_j=104 of operation 40. No clause needed.
+at operation 37 at time 0, finish_i=53 is before ES_j=53 of operation 39. No clause needed.
+at operation 39 at time 53, finish_i=104 is before ES_j=104 of operation 40. No clause needed.
+at operation 40 at time 104, finish_i=113 is before ES_j=113 of operation 41. No clause needed.
+at operation 41 at time 113, finish_i=210 is before ES_j=210 of operation 42. No clause needed.
+at operation 43 at time 0, finish_i=74 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 0, finish_i=75 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 0, finish_i=86 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 1, finish_i=75 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 1, finish_i=76 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 1, finish_i=87 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 2, finish_i=76 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 2, finish_i=77 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 3, finish_i=77 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 3, finish_i=78 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 4, finish_i=78 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 4, finish_i=79 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 5, finish_i=79 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 5, finish_i=80 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 6, finish_i=80 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 6, finish_i=81 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 7, finish_i=81 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 7, finish_i=82 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 8, finish_i=82 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 8, finish_i=83 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 9, finish_i=83 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 9, finish_i=84 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 10, finish_i=84 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 10, finish_i=85 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 11, finish_i=85 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 11, finish_i=86 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 12, finish_i=86 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 12, finish_i=87 is before ES_j=87 of operation 45. No clause needed.
+at operation 43 at time 13, finish_i=87 is before ES_j=87 of operation 45. No clause needed.
+at operation 44 at time 0, finish_i=87 is before ES_j=87 of operation 45. No clause needed.
+at operation 45 at time 87, finish_i=141 is before ES_j=141 of operation 46. No clause needed.
+at operation 47 at time 0, finish_i=54 is before ES_j=54 of operation 48. No clause needed.
+at operation 48 at time 54, finish_i=88 is before ES_j=88 of operation 49. No clause needed.
+at operation 48 at time 54, finish_i=88 is before ES_j=88 of operation 50. No clause needed.
+at operation 51 at time 0, finish_i=24 is before ES_j=24 of operation 52. No clause needed.
+at operation 52 at time 24, finish_i=117 is before ES_j=117 of operation 53. No clause needed.
+at operation 53 at time 117, finish_i=208 is before ES_j=208 of operation 54. No clause needed.
+at operation 54 at time 208, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 54 at time 208, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 54 at time 208, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 51 at time 0, finish_i=24 is before ES_j=24 of operation 55. No clause needed.
+at operation 55 at time 24, finish_i=88 is before ES_j=88 of operation 56. No clause needed.
+at operation 56 at time 88, finish_i=110 is before ES_j=110 of operation 57. No clause needed.
+at operation 57 at time 110, finish_i=148 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 110, finish_i=158 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 110, finish_i=160 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 110, finish_i=171 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 111, finish_i=149 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 111, finish_i=159 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 111, finish_i=161 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 111, finish_i=172 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 112, finish_i=150 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 112, finish_i=160 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 112, finish_i=162 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 112, finish_i=173 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 113, finish_i=151 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 113, finish_i=161 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 113, finish_i=163 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 113, finish_i=174 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 114, finish_i=152 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 114, finish_i=162 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 114, finish_i=164 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 114, finish_i=175 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 115, finish_i=153 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 115, finish_i=163 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 115, finish_i=165 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 115, finish_i=176 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 116, finish_i=154 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 116, finish_i=164 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 116, finish_i=166 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 116, finish_i=177 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 117, finish_i=155 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 117, finish_i=165 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 117, finish_i=167 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 117, finish_i=178 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 118, finish_i=156 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 118, finish_i=166 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 118, finish_i=168 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 118, finish_i=179 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 119, finish_i=157 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 119, finish_i=167 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 119, finish_i=169 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 119, finish_i=180 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 120, finish_i=158 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 120, finish_i=168 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 120, finish_i=170 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 120, finish_i=181 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 121, finish_i=159 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 121, finish_i=169 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 121, finish_i=171 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 121, finish_i=182 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 122, finish_i=160 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 122, finish_i=170 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 122, finish_i=172 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 122, finish_i=183 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 123, finish_i=161 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 123, finish_i=171 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 123, finish_i=173 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 123, finish_i=184 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 124, finish_i=162 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 124, finish_i=172 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 124, finish_i=174 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 124, finish_i=185 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 125, finish_i=163 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 125, finish_i=173 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 125, finish_i=175 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 125, finish_i=186 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 126, finish_i=164 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 126, finish_i=174 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 126, finish_i=176 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 126, finish_i=187 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 127, finish_i=165 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 127, finish_i=175 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 127, finish_i=177 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 127, finish_i=188 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 128, finish_i=166 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 128, finish_i=176 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 128, finish_i=178 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 128, finish_i=189 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 129, finish_i=167 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 129, finish_i=177 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 129, finish_i=179 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 129, finish_i=190 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 130, finish_i=168 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 130, finish_i=178 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 130, finish_i=180 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 130, finish_i=191 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 131, finish_i=169 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 131, finish_i=179 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 131, finish_i=181 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 131, finish_i=192 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 132, finish_i=170 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 132, finish_i=180 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 132, finish_i=182 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 132, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 133, finish_i=171 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 133, finish_i=181 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 133, finish_i=183 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 133, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 134, finish_i=172 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 134, finish_i=182 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 134, finish_i=184 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 134, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 135, finish_i=173 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 135, finish_i=183 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 135, finish_i=185 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 135, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 136, finish_i=174 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 136, finish_i=184 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 136, finish_i=186 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 136, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 137, finish_i=175 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 137, finish_i=185 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 137, finish_i=187 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 137, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 138, finish_i=176 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 138, finish_i=186 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 138, finish_i=188 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 138, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 139, finish_i=177 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 139, finish_i=187 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 139, finish_i=189 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 139, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 140, finish_i=178 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 140, finish_i=188 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 140, finish_i=190 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 140, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 141, finish_i=179 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 141, finish_i=189 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 141, finish_i=191 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 141, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 142, finish_i=180 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 142, finish_i=190 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 142, finish_i=192 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 142, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 143, finish_i=181 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 143, finish_i=191 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 143, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 143, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 144, finish_i=182 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 144, finish_i=192 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 144, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 144, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 145, finish_i=183 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 145, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 145, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 145, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 146, finish_i=184 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 146, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 146, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 146, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 147, finish_i=185 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 147, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 147, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 147, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 148, finish_i=186 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 148, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 148, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 148, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 149, finish_i=187 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 149, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 149, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 150, finish_i=188 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 150, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 150, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 151, finish_i=189 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 151, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 151, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 152, finish_i=190 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 152, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 152, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 153, finish_i=191 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 153, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 153, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 154, finish_i=192 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 154, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 154, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 155, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 155, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 155, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 156, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 156, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 156, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 157, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 157, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 157, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 158, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 158, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 158, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 159, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 159, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 159, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 160, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 160, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 161, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 161, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 162, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 163, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 164, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 165, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 166, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 167, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 168, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 169, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 170, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 57 at time 171, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 51 at time 0, finish_i=24 is before ES_j=24 of operation 58. No clause needed.
+at operation 58 at time 24, finish_i=42 is before ES_j=42 of operation 59. No clause needed.
+at operation 59 at time 42, finish_i=105 is before ES_j=105 of operation 60. No clause needed.
+at operation 60 at time 105, finish_i=153 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 105, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 105, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 105, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 106, finish_i=154 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 106, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 106, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 106, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 107, finish_i=155 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 107, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 107, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 107, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 108, finish_i=156 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 108, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 108, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 108, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 109, finish_i=157 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 109, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 109, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 109, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 110, finish_i=158 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 110, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 110, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 110, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 111, finish_i=159 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 111, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 111, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 111, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 112, finish_i=160 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 112, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 112, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 112, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 113, finish_i=161 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 113, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 113, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 113, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 114, finish_i=162 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 114, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 114, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 114, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 115, finish_i=163 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 115, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 115, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 115, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 116, finish_i=164 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 116, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 116, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 117, finish_i=165 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 117, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 117, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 118, finish_i=166 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 118, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 118, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 119, finish_i=167 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 119, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 119, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 120, finish_i=168 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 120, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 120, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 121, finish_i=169 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 121, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 121, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 122, finish_i=170 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 123, finish_i=171 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 124, finish_i=172 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 125, finish_i=173 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 126, finish_i=174 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 127, finish_i=175 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 128, finish_i=176 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 129, finish_i=177 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 130, finish_i=178 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 131, finish_i=179 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 132, finish_i=180 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 133, finish_i=181 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 134, finish_i=182 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 135, finish_i=183 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 136, finish_i=184 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 137, finish_i=185 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 138, finish_i=186 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 139, finish_i=187 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 140, finish_i=188 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 141, finish_i=189 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 142, finish_i=190 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 143, finish_i=191 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 144, finish_i=192 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 145, finish_i=193 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 146, finish_i=194 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 147, finish_i=195 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 148, finish_i=196 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 149, finish_i=197 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 150, finish_i=198 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 151, finish_i=199 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 152, finish_i=200 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 153, finish_i=201 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 154, finish_i=202 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 155, finish_i=203 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 156, finish_i=204 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 157, finish_i=205 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 158, finish_i=206 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 159, finish_i=207 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 160, finish_i=208 is before ES_j=209 of operation 61. No clause needed.
+at operation 60 at time 161, finish_i=209 is before ES_j=209 of operation 61. No clause needed.
+Building constraints took 2.30 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 737
+Schedule is valid
+ Time taken: 4.36 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 736
+Schedule is valid
+ Time taken: 8.51 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 735
+Schedule is valid
+ Time taken: 9.04 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 734
+Schedule is valid
+ Time taken: 9.06 seconds
+[runlim] sample:		9.99 time, 10.01 real, 427 MB, 1.06 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 733
+Schedule is valid
+ Time taken: 10.28 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 732
+Schedule is valid
+ Time taken: 10.90 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 731
+Schedule is valid
+ Time taken: 11.44 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 730
+Schedule is valid
+ Time taken: 13.71 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 729
+Schedule is valid
+ Time taken: 18.59 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 728
+Schedule is valid
+ Time taken: 18.69 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 727
+Schedule is valid
+ Time taken: 19.23 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 726
+Schedule is valid
+ Time taken: 19.70 seconds
+[runlim] sample:		19.99 time, 20.01 real, 405 MB, 1.05 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 725
+Schedule is valid
+ Time taken: 20.29 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 724
+Schedule is valid
+ Time taken: 20.80 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 723
+Schedule is valid
+ Time taken: 20.81 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 722
+Schedule is valid
+ Time taken: 20.81 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 721
+Schedule is valid
+ Time taken: 21.69 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 720
+Schedule is valid
+ Time taken: 22.09 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 719
+Schedule is valid
+ Time taken: 22.58 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 718
+Schedule is valid
+ Time taken: 24.26 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 717
+Schedule is valid
+ Time taken: 24.85 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 716
+Schedule is valid
+ Time taken: 28.68 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 715
+Schedule is valid
+ Time taken: 28.79 seconds
+[runlim] sample:		29.98 time, 30.01 real, 405 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 714
+Schedule is valid
+ Time taken: 31.48 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 713
+Schedule is valid
+ Time taken: 31.77 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 712
+Schedule is valid
+ Time taken: 32.25 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 711
+Schedule is valid
+ Time taken: 32.61 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 710
+Schedule is valid
+ Time taken: 35.03 seconds
+[runlim] sample:		39.97 time, 40.01 real, 405 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 709
+Schedule is valid
+ Time taken: 40.67 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 708
+Schedule is valid
+ Time taken: 42.99 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 707
+Schedule is valid
+ Time taken: 45.42 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 706
+Schedule is valid
+ Time taken: 46.25 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 705
+Schedule is valid
+ Time taken: 48.03 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 704
+Schedule is valid
+ Time taken: 48.39 seconds
+[runlim] sample:		49.96 time, 50.01 real, 405 MB, 1.03 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 703
+Schedule is valid
+ Time taken: 50.58 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 702
+Schedule is valid
+ Time taken: 55.01 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 701
+Schedule is valid
+ Time taken: 57.98 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 700
+Schedule is valid
+ Time taken: 57.99 seconds
+[runlim] sample:		59.96 time, 60.01 real, 404 MB, 1.18 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 699
+Schedule is valid
+ Time taken: 66.45 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 698
+Schedule is valid
+ Time taken: 66.46 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 697
+Schedule is valid
+ Time taken: 68.56 seconds
+[runlim] sample:		69.95 time, 70.01 real, 405 MB, 1.15 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 696
+Schedule is valid
+ Time taken: 74.00 seconds
+[runlim] sample:		79.95 time, 80.01 real, 405 MB, 1.13 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 695
+Schedule is valid
+ Time taken: 82.45 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 694
+Schedule is valid
+ Time taken: 85.41 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 693
+Schedule is valid
+ Time taken: 88.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 692
+Schedule is valid
+ Time taken: 88.68 seconds
+[runlim] sample:		89.94 time, 90.01 real, 404 MB, 1.11 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 691
+Schedule is valid
+ Time taken: 99.98 seconds
+[runlim] sample:		99.94 time, 100.01 real, 405 MB, 1.09 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 690
+Schedule is valid
+ Time taken: 100.57 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 689
+Schedule is valid
+ Time taken: 109.10 seconds
+[runlim] sample:		109.93 time, 110.01 real, 405 MB, 1.08 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 688
+Schedule is valid
+ Time taken: 111.04 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 687
+Schedule is valid
+ Time taken: 111.06 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 686
+Schedule is valid
+ Time taken: 111.44 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 685
+Schedule is valid
+ Time taken: 113.71 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 684
+Schedule is valid
+ Time taken: 119.38 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 683
+Schedule is valid
+ Time taken: 119.89 seconds
+[runlim] sample:		119.92 time, 120.01 real, 408 MB, 1.06 load
+[runlim] sample:		129.92 time, 130.01 real, 409 MB, 1.05 load
+[runlim] sample:		139.91 time, 140.01 real, 410 MB, 1.05 load
+[runlim] sample:		149.91 time, 150.01 real, 408 MB, 1.04 load
+[runlim] sample:		159.90 time, 160.01 real, 410 MB, 1.03 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 682
+Schedule is valid
+ Time taken: 162.80 seconds
+[runlim] sample:		169.89 time, 170.01 real, 409 MB, 1.03 load
+[runlim] sample:		179.89 time, 180.01 real, 410 MB, 1.02 load
+[runlim] sample:		189.88 time, 190.01 real, 409 MB, 1.02 load
+[runlim] sample:		199.88 time, 200.01 real, 408 MB, 1.02 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 681
+Schedule is valid
+ Time taken: 207.54 seconds
+[runlim] sample:		209.87 time, 210.01 real, 413 MB, 1.01 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 680
+Schedule is valid
+ Time taken: 217.69 seconds
+[runlim] sample:		219.87 time, 220.01 real, 410 MB, 1.01 load
+[runlim] sample:		229.86 time, 230.01 real, 410 MB, 1.01 load
+[runlim] sample:		239.85 time, 240.01 real, 414 MB, 1.01 load
+[runlim] sample:		249.85 time, 250.01 real, 409 MB, 1.00 load
+[runlim] sample:		259.84 time, 260.01 real, 409 MB, 1.00 load
+[runlim] sample:		269.84 time, 270.01 real, 414 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 679
+Schedule is valid
+ Time taken: 270.09 seconds
+[runlim] sample:		279.83 time, 280.01 real, 353 MB, 1.00 load
+[runlim] sample:		289.83 time, 290.01 real, 366 MB, 1.00 load
+[runlim] sample:		299.83 time, 300.01 real, 367 MB, 1.00 load
+[runlim] sample:		309.81 time, 310.01 real, 364 MB, 1.00 load
+[runlim] sample:		319.81 time, 320.01 real, 407 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 678
+Schedule is valid
+ Time taken: 326.25 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 677
+Schedule is valid
+ Time taken: 328.80 seconds
+[runlim] sample:		329.81 time, 330.01 real, 356 MB, 1.00 load
+[runlim] sample:		339.80 time, 340.01 real, 382 MB, 1.00 load
+[runlim] sample:		349.79 time, 350.01 real, 382 MB, 1.07 load
+[runlim] sample:		359.79 time, 360.01 real, 403 MB, 1.06 load
+[runlim] sample:		369.78 time, 370.01 real, 405 MB, 1.05 load
+[runlim] sample:		379.78 time, 380.01 real, 405 MB, 1.04 load
+[runlim] sample:		389.78 time, 390.01 real, 411 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 676
+Schedule is valid
+ Time taken: 392.89 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 675
+Schedule is valid
+ Time taken: 393.01 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 674
+Schedule is valid
+ Time taken: 393.44 seconds
+[runlim] sample:		399.77 time, 400.01 real, 357 MB, 1.03 load
+[runlim] sample:		409.77 time, 410.01 real, 370 MB, 1.02 load
+[runlim] sample:		419.76 time, 420.01 real, 355 MB, 1.02 load
+[runlim] sample:		429.76 time, 430.01 real, 366 MB, 1.02 load
+[runlim] sample:		439.75 time, 440.01 real, 368 MB, 1.01 load
+[runlim] sample:		449.74 time, 450.01 real, 373 MB, 1.01 load
+[runlim] sample:		459.74 time, 460.01 real, 372 MB, 1.01 load
+[runlim] sample:		469.74 time, 470.01 real, 411 MB, 1.01 load
+[runlim] sample:		479.73 time, 480.01 real, 408 MB, 1.01 load
+[runlim] sample:		489.73 time, 490.01 real, 405 MB, 1.00 load
+[runlim] sample:		499.72 time, 500.01 real, 405 MB, 1.00 load
+[runlim] sample:		509.72 time, 510.01 real, 406 MB, 1.00 load
+[runlim] sample:		519.71 time, 520.01 real, 406 MB, 1.00 load
+[runlim] sample:		529.71 time, 530.01 real, 409 MB, 1.00 load
+[runlim] sample:		539.70 time, 540.01 real, 405 MB, 1.00 load
+[runlim] sample:		549.70 time, 550.01 real, 403 MB, 1.00 load
+[runlim] sample:		559.69 time, 560.01 real, 410 MB, 1.15 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 673
+Schedule is valid
+ Time taken: 568.51 seconds
+[runlim] sample:		569.69 time, 570.01 real, 411 MB, 1.13 load
+[runlim] sample:		579.69 time, 580.01 real, 362 MB, 1.11 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 672
+Schedule is valid
+ Time taken: 580.92 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 671
+Schedule is valid
+ Time taken: 580.93 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 670
+Schedule is valid
+ Time taken: 583.80 seconds
+[runlim] sample:		589.67 time, 590.01 real, 387 MB, 1.09 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 669
+Schedule is valid
+ Time taken: 595.94 seconds
+[runlim] sample:		599.67 time, 600.01 real, 448 MB, 1.08 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 668
+Schedule is valid
+ Time taken: 602.91 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 667
+Schedule is valid
+ Time taken: 603.05 seconds
+[runlim] sample:		609.66 time, 610.01 real, 387 MB, 1.06 load
+[runlim] sample:		619.66 time, 620.01 real, 389 MB, 1.14 load
+[runlim] sample:		629.65 time, 630.01 real, 389 MB, 1.11 load
+[runlim] sample:		639.65 time, 640.01 real, 385 MB, 1.18 load
+[runlim] sample:		649.65 time, 650.01 real, 390 MB, 1.15 load
+[runlim] sample:		659.64 time, 660.01 real, 390 MB, 1.13 load
+[runlim] sample:		669.64 time, 670.01 real, 431 MB, 1.11 load
+[runlim] sample:		679.63 time, 680.01 real, 431 MB, 1.09 load
+[runlim] sample:		689.62 time, 690.01 real, 430 MB, 1.08 load
+[runlim] sample:		699.61 time, 700.01 real, 430 MB, 1.06 load
+[runlim] sample:		709.61 time, 710.01 real, 425 MB, 1.05 load
+[runlim] sample:		719.60 time, 720.01 real, 425 MB, 1.04 load
+[runlim] sample:		729.60 time, 730.01 real, 425 MB, 1.04 load
+[runlim] sample:		739.60 time, 740.01 real, 425 MB, 1.03 load
+[runlim] sample:		749.60 time, 750.01 real, 385 MB, 1.03 load
+[runlim] sample:		759.59 time, 760.01 real, 385 MB, 1.02 load
+[runlim] sample:		769.59 time, 770.01 real, 386 MB, 1.02 load
+[runlim] sample:		779.58 time, 780.01 real, 394 MB, 1.01 load
+[runlim] sample:		789.57 time, 790.01 real, 394 MB, 1.01 load
+[runlim] sample:		799.57 time, 800.01 real, 397 MB, 1.01 load
+[runlim] sample:		809.56 time, 810.01 real, 426 MB, 1.01 load
+[runlim] sample:		819.56 time, 820.01 real, 432 MB, 1.01 load
+[runlim] sample:		829.56 time, 830.01 real, 440 MB, 1.00 load
+[runlim] sample:		839.55 time, 840.01 real, 440 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 666
+Schedule is valid
+ Time taken: 847.52 seconds
+[runlim] sample:		849.54 time, 850.01 real, 371 MB, 1.00 load
+[runlim] sample:		859.53 time, 860.01 real, 371 MB, 1.00 load
+[runlim] sample:		869.53 time, 870.01 real, 394 MB, 1.00 load
+[runlim] sample:		879.52 time, 880.01 real, 394 MB, 1.00 load
+[runlim] sample:		889.52 time, 890.01 real, 357 MB, 1.00 load
+[runlim] sample:		899.52 time, 900.01 real, 381 MB, 1.00 load
+[runlim] sample:		909.51 time, 910.01 real, 381 MB, 1.00 load
+[runlim] sample:		919.50 time, 920.01 real, 383 MB, 1.00 load
+[runlim] sample:		929.50 time, 930.01 real, 383 MB, 1.00 load
+[runlim] sample:		939.50 time, 940.01 real, 373 MB, 1.00 load
+[runlim] sample:		949.49 time, 950.01 real, 373 MB, 1.00 load
+[runlim] sample:		959.48 time, 960.01 real, 373 MB, 1.00 load
+[runlim] sample:		969.48 time, 970.01 real, 358 MB, 1.00 load
+[runlim] sample:		979.48 time, 980.01 real, 358 MB, 1.00 load
+[runlim] sample:		989.47 time, 990.01 real, 373 MB, 1.00 load
+[runlim] sample:		999.47 time, 1000.01 real, 373 MB, 1.00 load
+[runlim] sample:		1009.46 time, 1010.01 real, 373 MB, 1.00 load
+[runlim] sample:		1019.46 time, 1020.01 real, 375 MB, 1.00 load
+[runlim] sample:		1029.45 time, 1030.01 real, 388 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 665
+Schedule is valid
+ Time taken: 1031.70 seconds
+[runlim] sample:		1039.44 time, 1040.01 real, 404 MB, 1.00 load
+[runlim] sample:		1049.44 time, 1050.01 real, 398 MB, 1.00 load
+[runlim] sample:		1059.43 time, 1060.01 real, 383 MB, 1.15 load
+[runlim] sample:		1069.43 time, 1070.01 real, 383 MB, 1.13 load
+[runlim] sample:		1079.43 time, 1080.01 real, 392 MB, 1.11 load
+[runlim] sample:		1089.42 time, 1090.01 real, 403 MB, 1.09 load
+[runlim] sample:		1099.42 time, 1100.01 real, 403 MB, 1.08 load
+[runlim] sample:		1109.41 time, 1110.01 real, 403 MB, 1.06 load
+[runlim] sample:		1119.40 time, 1120.01 real, 402 MB, 1.05 load
+[runlim] sample:		1129.40 time, 1130.01 real, 402 MB, 1.05 load
+[runlim] sample:		1139.39 time, 1140.01 real, 392 MB, 1.11 load
+[runlim] sample:		1149.39 time, 1150.01 real, 435 MB, 1.09 load
+[runlim] sample:		1159.39 time, 1160.01 real, 376 MB, 1.08 load
+[runlim] sample:		1169.38 time, 1170.01 real, 392 MB, 1.07 load
+[runlim] sample:		1179.37 time, 1180.01 real, 392 MB, 1.06 load
+[runlim] sample:		1189.37 time, 1190.01 real, 392 MB, 1.05 load
+[runlim] sample:		1199.37 time, 1200.01 real, 393 MB, 1.04 load
+[runlim] sample:		1209.36 time, 1210.01 real, 393 MB, 1.03 load
+[runlim] sample:		1219.35 time, 1220.01 real, 402 MB, 1.03 load
+[runlim] sample:		1229.35 time, 1230.01 real, 402 MB, 1.02 load
+[runlim] sample:		1239.34 time, 1240.01 real, 405 MB, 1.02 load
+[runlim] sample:		1249.34 time, 1250.01 real, 390 MB, 1.02 load
+[runlim] sample:		1259.33 time, 1260.01 real, 406 MB, 1.01 load
+[runlim] sample:		1269.33 time, 1270.01 real, 406 MB, 1.01 load
+[runlim] sample:		1279.32 time, 1280.01 real, 414 MB, 1.01 load
+[runlim] sample:		1289.32 time, 1290.01 real, 414 MB, 1.01 load
+[runlim] sample:		1299.32 time, 1300.01 real, 411 MB, 1.00 load
+[runlim] sample:		1309.32 time, 1310.01 real, 411 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 664
+Schedule is valid
+ Time taken: 1314.98 seconds
+[runlim] sample:		1319.31 time, 1320.01 real, 408 MB, 1.00 load
+[runlim] sample:		1329.30 time, 1330.01 real, 454 MB, 1.00 load
+[runlim] sample:		1339.29 time, 1340.01 real, 378 MB, 1.00 load
+[runlim] sample:		1349.30 time, 1350.01 real, 400 MB, 1.00 load
+[runlim] sample:		1359.29 time, 1360.01 real, 400 MB, 1.00 load
+[runlim] sample:		1369.28 time, 1370.01 real, 398 MB, 1.00 load
+[runlim] sample:		1379.28 time, 1380.01 real, 398 MB, 1.00 load
+[runlim] sample:		1389.27 time, 1390.01 real, 407 MB, 1.00 load
+[runlim] sample:		1399.26 time, 1400.01 real, 407 MB, 1.00 load
+[runlim] sample:		1409.26 time, 1410.01 real, 400 MB, 1.00 load
+[runlim] sample:		1419.26 time, 1420.01 real, 400 MB, 1.00 load
+[runlim] sample:		1429.25 time, 1430.01 real, 444 MB, 1.00 load
+[runlim] sample:		1439.25 time, 1440.01 real, 369 MB, 1.00 load
+[runlim] sample:		1449.24 time, 1450.01 real, 380 MB, 1.00 load
+[runlim] sample:		1459.24 time, 1460.01 real, 380 MB, 1.07 load
+[runlim] sample:		1469.23 time, 1470.01 real, 380 MB, 1.06 load
+[runlim] sample:		1479.22 time, 1480.01 real, 381 MB, 1.05 load
+[runlim] sample:		1489.22 time, 1490.01 real, 381 MB, 1.04 load
+[runlim] sample:		1499.22 time, 1500.01 real, 389 MB, 1.04 load
+[runlim] sample:		1509.21 time, 1510.01 real, 389 MB, 1.03 load
+[runlim] sample:		1519.21 time, 1520.01 real, 394 MB, 1.02 load
+[runlim] sample:		1529.21 time, 1530.01 real, 394 MB, 1.02 load
+[runlim] sample:		1539.20 time, 1540.01 real, 378 MB, 1.02 load
+[runlim] sample:		1549.19 time, 1550.01 real, 394 MB, 1.01 load
+[runlim] sample:		1559.19 time, 1560.01 real, 394 MB, 1.17 load
+[runlim] sample:		1569.18 time, 1570.01 real, 394 MB, 1.14 load
+[runlim] sample:		1579.17 time, 1580.01 real, 400 MB, 1.12 load
+[runlim] sample:		1589.17 time, 1590.01 real, 400 MB, 1.10 load
+[runlim] sample:		1599.17 time, 1600.01 real, 400 MB, 1.16 load
+[runlim] sample:		1609.16 time, 1610.01 real, 399 MB, 1.21 load
+[runlim] sample:		1619.16 time, 1620.01 real, 399 MB, 1.25 load
+[runlim] sample:		1629.15 time, 1630.01 real, 395 MB, 1.21 load
+[runlim] sample:		1639.15 time, 1640.01 real, 395 MB, 1.18 load
+[runlim] sample:		1649.14 time, 1650.01 real, 440 MB, 1.15 load
+[runlim] sample:		1659.13 time, 1660.01 real, 441 MB, 1.13 load
+[runlim] sample:		1669.13 time, 1670.01 real, 441 MB, 1.11 load
+[runlim] sample:		1679.13 time, 1680.01 real, 441 MB, 1.09 load
+[runlim] sample:		1689.13 time, 1690.01 real, 427 MB, 1.08 load
+[runlim] sample:		1699.12 time, 1700.01 real, 427 MB, 1.06 load
+[runlim] sample:		1709.12 time, 1710.01 real, 427 MB, 1.05 load
+[runlim] sample:		1719.11 time, 1720.01 real, 427 MB, 1.05 load
+[runlim] sample:		1729.11 time, 1730.01 real, 428 MB, 1.04 load
+[runlim] sample:		1739.10 time, 1740.01 real, 428 MB, 1.03 load
+[runlim] sample:		1749.10 time, 1750.01 real, 428 MB, 1.11 load
+[runlim] sample:		1759.09 time, 1760.01 real, 428 MB, 1.09 load
+[runlim] sample:		1769.09 time, 1770.01 real, 428 MB, 1.08 load
+[runlim] sample:		1779.08 time, 1780.01 real, 428 MB, 1.06 load
+[runlim] sample:		1789.08 time, 1790.01 real, 428 MB, 1.05 load
+[runlim] sample:		1799.07 time, 1800.01 real, 401 MB, 1.04 load
+[runlim] sample:		1809.06 time, 1810.01 real, 401 MB, 1.04 load
+[runlim] sample:		1819.06 time, 1820.01 real, 401 MB, 1.03 load
+[runlim] sample:		1829.05 time, 1830.01 real, 401 MB, 1.03 load
+[runlim] sample:		1839.05 time, 1840.01 real, 401 MB, 1.02 load
+[runlim] sample:		1849.05 time, 1850.01 real, 401 MB, 1.02 load
+[runlim] sample:		1859.04 time, 1860.01 real, 401 MB, 1.01 load
+[runlim] sample:		1869.04 time, 1870.01 real, 401 MB, 1.01 load
+[runlim] sample:		1879.03 time, 1880.01 real, 402 MB, 1.01 load
+[runlim] sample:		1889.03 time, 1890.01 real, 402 MB, 1.01 load
+[runlim] sample:		1899.02 time, 1900.01 real, 402 MB, 1.01 load
+[runlim] sample:		1909.02 time, 1910.01 real, 402 MB, 1.00 load
+[runlim] sample:		1919.01 time, 1920.01 real, 402 MB, 1.00 load
+[runlim] sample:		1929.00 time, 1930.01 real, 402 MB, 1.08 load
+[runlim] sample:		1939.00 time, 1940.01 real, 402 MB, 1.07 load
+[runlim] sample:		1948.99 time, 1950.01 real, 402 MB, 1.06 load
+[runlim] sample:		1959.00 time, 1960.01 real, 430 MB, 1.05 load
+[runlim] sample:		1968.98 time, 1970.01 real, 371 MB, 1.04 load
+[runlim] sample:		1978.98 time, 1980.01 real, 371 MB, 1.03 load
+[runlim] sample:		1988.97 time, 1990.01 real, 371 MB, 1.03 load
+[runlim] sample:		1998.97 time, 2000.01 real, 387 MB, 1.02 load
+[runlim] sample:		2008.97 time, 2010.01 real, 387 MB, 1.02 load
+[runlim] sample:		2018.96 time, 2020.01 real, 387 MB, 1.02 load
+[runlim] sample:		2028.96 time, 2030.01 real, 387 MB, 1.01 load
+[runlim] sample:		2038.95 time, 2040.01 real, 388 MB, 1.01 load
+[runlim] sample:		2048.94 time, 2050.01 real, 388 MB, 1.01 load
+[runlim] sample:		2058.94 time, 2060.01 real, 388 MB, 1.16 load
+[runlim] sample:		2068.93 time, 2070.01 real, 388 MB, 1.14 load
+[runlim] sample:		2078.93 time, 2080.01 real, 388 MB, 1.11 load
+[runlim] sample:		2088.92 time, 2090.01 real, 388 MB, 1.10 load
+[runlim] sample:		2098.92 time, 2100.01 real, 388 MB, 1.08 load
+[runlim] sample:		2108.92 time, 2110.01 real, 447 MB, 1.07 load
+[runlim] sample:		2118.91 time, 2120.01 real, 385 MB, 1.06 load
+[runlim] sample:		2128.91 time, 2130.01 real, 385 MB, 1.05 load
+[runlim] sample:		2138.90 time, 2140.01 real, 385 MB, 1.04 load
+[runlim] sample:		2148.89 time, 2150.01 real, 406 MB, 1.03 load
+[runlim] sample:		2158.89 time, 2160.01 real, 406 MB, 1.03 load
+[runlim] sample:		2168.89 time, 2170.01 real, 406 MB, 1.02 load
+[runlim] sample:		2178.88 time, 2180.01 real, 406 MB, 1.02 load
+[runlim] sample:		2188.88 time, 2190.01 real, 412 MB, 1.02 load
+[runlim] sample:		2198.87 time, 2200.01 real, 412 MB, 1.01 load
+[runlim] sample:		2208.87 time, 2210.01 real, 412 MB, 1.01 load
+[runlim] sample:		2218.86 time, 2220.01 real, 412 MB, 1.01 load
+[runlim] sample:		2228.85 time, 2230.01 real, 415 MB, 1.01 load
+[runlim] sample:		2238.85 time, 2240.01 real, 415 MB, 1.00 load
+[runlim] sample:		2248.84 time, 2250.01 real, 415 MB, 1.00 load
+[runlim] sample:		2258.84 time, 2260.01 real, 415 MB, 1.00 load
+[runlim] sample:		2268.84 time, 2270.01 real, 409 MB, 1.00 load
+[runlim] sample:		2278.84 time, 2280.01 real, 392 MB, 1.00 load
+[runlim] sample:		2288.83 time, 2290.01 real, 392 MB, 1.00 load
+[runlim] sample:		2298.83 time, 2300.01 real, 392 MB, 1.00 load
+[runlim] sample:		2308.81 time, 2310.01 real, 410 MB, 1.00 load
+[runlim] sample:		2318.81 time, 2320.01 real, 410 MB, 1.00 load
+[runlim] sample:		2328.80 time, 2330.01 real, 410 MB, 1.00 load
+[runlim] sample:		2338.80 time, 2340.01 real, 410 MB, 1.07 load
+[runlim] sample:		2348.80 time, 2350.01 real, 414 MB, 1.06 load
+[runlim] sample:		2358.80 time, 2360.01 real, 414 MB, 1.05 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 663
+Schedule is valid
+ Time taken: 2361.33 seconds
+[runlim] sample:		2368.79 time, 2370.01 real, 433 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 662
+Schedule is valid
+ Time taken: 2372.29 seconds
+[runlim] sample:		2378.78 time, 2380.01 real, 418 MB, 1.04 load
+[runlim] sample:		2388.77 time, 2390.01 real, 418 MB, 1.03 load
+[runlim] sample:		2398.77 time, 2400.01 real, 418 MB, 1.02 load
+[runlim] sample:		2408.76 time, 2410.01 real, 419 MB, 1.09 load
+[runlim] sample:		2418.76 time, 2420.01 real, 412 MB, 1.08 load
+[runlim] sample:		2428.75 time, 2430.01 real, 431 MB, 1.07 load
+[runlim] sample:		2438.75 time, 2440.01 real, 431 MB, 1.06 load
+[runlim] sample:		2448.74 time, 2450.01 real, 545 MB, 1.05 load
+[runlim] sample:		2458.74 time, 2460.01 real, 441 MB, 1.04 load
+[runlim] sample:		2468.74 time, 2470.01 real, 441 MB, 1.03 load
+[runlim] sample:		2478.73 time, 2480.01 real, 441 MB, 1.03 load
+[runlim] sample:		2488.72 time, 2490.01 real, 433 MB, 1.02 load
+[runlim] sample:		2498.71 time, 2500.01 real, 433 MB, 1.02 load
+[runlim] sample:		2508.71 time, 2510.01 real, 433 MB, 1.02 load
+[runlim] sample:		2518.70 time, 2520.01 real, 433 MB, 1.01 load
+[runlim] sample:		2528.70 time, 2530.01 real, 427 MB, 1.01 load
+[runlim] sample:		2538.70 time, 2540.01 real, 427 MB, 1.01 load
+[runlim] sample:		2548.69 time, 2550.01 real, 427 MB, 1.01 load
+[runlim] sample:		2558.69 time, 2560.01 real, 427 MB, 1.16 load
+[runlim] sample:		2568.69 time, 2570.01 real, 430 MB, 1.13 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 661
+Schedule is valid
+ Time taken: 2576.90 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 660
+Schedule is valid
+ Time taken: 2577.05 seconds
+[runlim] sample:		2578.68 time, 2580.01 real, 413 MB, 1.11 load
+[runlim] sample:		2588.67 time, 2590.01 real, 466 MB, 1.10 load
+[runlim] sample:		2598.67 time, 2600.01 real, 466 MB, 1.08 load
+[runlim] sample:		2608.66 time, 2610.01 real, 402 MB, 1.07 load
+[runlim] sample:		2618.65 time, 2620.01 real, 402 MB, 1.06 load
+[runlim] sample:		2628.65 time, 2630.01 real, 402 MB, 1.05 load
+[runlim] sample:		2638.64 time, 2640.01 real, 409 MB, 1.04 load
+[runlim] sample:		2648.64 time, 2650.01 real, 409 MB, 1.03 load
+[runlim] sample:		2658.63 time, 2660.01 real, 409 MB, 1.03 load
+[runlim] sample:		2668.63 time, 2670.01 real, 409 MB, 1.02 load
+[runlim] sample:		2678.62 time, 2680.01 real, 417 MB, 1.17 load
+[runlim] sample:		2688.61 time, 2690.01 real, 417 MB, 1.14 load
+[runlim] sample:		2698.61 time, 2700.01 real, 417 MB, 1.12 load
+[runlim] sample:		2708.60 time, 2710.01 real, 417 MB, 1.10 load
+[runlim] sample:		2718.59 time, 2720.01 real, 403 MB, 1.08 load
+[runlim] sample:		2728.59 time, 2730.01 real, 403 MB, 1.07 load
+[runlim] sample:		2738.59 time, 2740.01 real, 444 MB, 1.06 load
+[runlim] sample:		2748.58 time, 2750.01 real, 411 MB, 1.05 load
+[runlim] sample:		2758.58 time, 2760.01 real, 411 MB, 1.04 load
+[runlim] sample:		2768.57 time, 2770.01 real, 411 MB, 1.04 load
+[runlim] sample:		2778.57 time, 2780.01 real, 411 MB, 1.03 load
+[runlim] sample:		2788.56 time, 2790.01 real, 411 MB, 1.02 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 659
+Schedule is valid
+ Time taken: 2791.56 seconds
+[runlim] sample:		2798.56 time, 2800.01 real, 445 MB, 1.02 load
+[runlim] sample:		2808.55 time, 2810.01 real, 446 MB, 1.02 load
+[runlim] sample:		2818.55 time, 2820.01 real, 446 MB, 1.01 load
+[runlim] sample:		2828.54 time, 2830.01 real, 446 MB, 1.01 load
+[runlim] sample:		2838.53 time, 2840.01 real, 435 MB, 1.01 load
+[runlim] sample:		2848.53 time, 2850.01 real, 435 MB, 1.01 load
+[runlim] sample:		2858.52 time, 2860.01 real, 435 MB, 1.01 load
+[runlim] sample:		2868.52 time, 2870.01 real, 446 MB, 1.00 load
+[runlim] sample:		2878.51 time, 2880.01 real, 446 MB, 1.00 load
+[runlim] sample:		2888.51 time, 2890.01 real, 446 MB, 1.00 load
+[runlim] sample:		2898.50 time, 2900.01 real, 479 MB, 1.00 load
+[runlim] sample:		2908.50 time, 2910.01 real, 446 MB, 1.00 load
+[runlim] sample:		2918.49 time, 2920.01 real, 437 MB, 1.00 load
+[runlim] sample:		2928.48 time, 2930.01 real, 437 MB, 1.00 load
+[runlim] sample:		2938.48 time, 2940.01 real, 437 MB, 1.00 load
+[runlim] sample:		2948.47 time, 2950.01 real, 437 MB, 1.00 load
+[runlim] sample:		2958.47 time, 2960.01 real, 437 MB, 1.00 load
+[runlim] sample:		2968.46 time, 2970.01 real, 432 MB, 1.00 load
+[runlim] sample:		2978.45 time, 2980.01 real, 432 MB, 1.00 load
+[runlim] sample:		2988.45 time, 2990.01 real, 432 MB, 1.00 load
+[runlim] sample:		2998.44 time, 3000.01 real, 432 MB, 1.00 load
+[runlim] sample:		3008.44 time, 3010.01 real, 442 MB, 1.00 load
+[runlim] sample:		3018.43 time, 3020.01 real, 442 MB, 1.00 load
+[runlim] sample:		3028.43 time, 3030.01 real, 442 MB, 1.00 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 658
+Schedule is valid
+ Time taken: 3031.87 seconds
+[runlim] sample:		3038.43 time, 3040.01 real, 431 MB, 1.00 load
+[runlim] sample:		3048.42 time, 3050.01 real, 431 MB, 1.00 load
+[runlim] sample:		3058.42 time, 3060.01 real, 431 MB, 1.15 load
+[runlim] sample:		3068.42 time, 3070.01 real, 440 MB, 1.13 load
+[runlim] sample:		3078.41 time, 3080.01 real, 440 MB, 1.11 load
+[runlim] sample:		3088.40 time, 3090.01 real, 455 MB, 1.09 load
+[runlim] sample:		3098.39 time, 3100.01 real, 455 MB, 1.08 load
+[runlim] sample:		3108.39 time, 3110.01 real, 455 MB, 1.06 load
+[runlim] sample:		3118.38 time, 3120.01 real, 455 MB, 1.05 load
+[runlim] sample:		3128.38 time, 3130.01 real, 471 MB, 1.05 load
+[runlim] sample:		3138.37 time, 3140.01 real, 471 MB, 1.04 load
+[runlim] sample:		3148.37 time, 3150.01 real, 471 MB, 1.03 load
+[runlim] sample:		3158.36 time, 3160.01 real, 471 MB, 1.03 load
+[runlim] sample:		3168.36 time, 3170.01 real, 471 MB, 1.10 load
+[runlim] sample:		3178.35 time, 3180.01 real, 454 MB, 1.08 load
+[runlim] sample:		3188.34 time, 3190.01 real, 454 MB, 1.07 load
+[runlim] sample:		3198.34 time, 3200.01 real, 454 MB, 1.06 load
+[runlim] sample:		3208.33 time, 3210.01 real, 454 MB, 1.05 load
+[runlim] sample:		3218.33 time, 3220.01 real, 454 MB, 1.04 load
+[runlim] sample:		3228.32 time, 3230.01 real, 451 MB, 1.03 load
+[runlim] sample:		3238.31 time, 3240.01 real, 451 MB, 1.03 load
+[runlim] sample:		3248.31 time, 3250.01 real, 451 MB, 1.02 load
+[runlim] sample:		3258.30 time, 3260.01 real, 451 MB, 1.02 load
+[runlim] sample:		3268.31 time, 3270.01 real, 462 MB, 1.02 load
+[runlim] sample:		3278.30 time, 3280.01 real, 462 MB, 1.01 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 657
+Schedule is valid
+ Time taken: 3282.28 seconds
+[runlim] sample:		3288.30 time, 3290.01 real, 463 MB, 1.01 load
+[runlim] sample:		3298.29 time, 3300.01 real, 463 MB, 1.01 load
+[runlim] sample:		3308.28 time, 3310.01 real, 467 MB, 1.01 load
+[runlim] sample:		3318.28 time, 3320.01 real, 467 MB, 1.00 load
+[runlim] sample:		3328.27 time, 3330.01 real, 467 MB, 1.00 load
+[runlim] sample:		3338.27 time, 3340.01 real, 467 MB, 1.00 load
+[runlim] sample:		3348.26 time, 3350.01 real, 461 MB, 1.00 load
+[runlim] sample:		3358.26 time, 3360.01 real, 461 MB, 1.00 load
+[runlim] sample:		3368.25 time, 3370.01 real, 461 MB, 1.00 load
+[runlim] sample:		3378.25 time, 3380.01 real, 461 MB, 1.00 load
+[runlim] sample:		3388.24 time, 3390.01 real, 467 MB, 1.00 load
+[runlim] sample:		3398.24 time, 3400.01 real, 467 MB, 1.00 load
+[runlim] sample:		3408.23 time, 3410.01 real, 467 MB, 1.00 load
+[runlim] sample:		3418.23 time, 3420.01 real, 467 MB, 1.00 load
+[runlim] sample:		3428.23 time, 3430.01 real, 467 MB, 1.00 load
+[runlim] sample:		3438.22 time, 3440.01 real, 467 MB, 1.00 load
+[runlim] sample:		3448.21 time, 3450.01 real, 453 MB, 1.00 load
+[runlim] sample:		3458.20 time, 3460.01 real, 453 MB, 1.00 load
+[runlim] sample:		3468.20 time, 3470.01 real, 453 MB, 1.00 load
+[runlim] sample:		3478.20 time, 3480.01 real, 453 MB, 1.00 load
+[runlim] sample:		3488.19 time, 3490.01 real, 453 MB, 1.00 load
+[runlim] sample:		3498.19 time, 3500.01 real, 454 MB, 1.00 load
+[runlim] sample:		3508.18 time, 3510.01 real, 454 MB, 1.00 load
+[runlim] sample:		3518.18 time, 3520.01 real, 454 MB, 1.00 load
+[runlim] sample:		3528.17 time, 3530.01 real, 454 MB, 1.00 load
+[runlim] sample:		3538.17 time, 3540.01 real, 480 MB, 1.00 load
+[runlim] sample:		3548.16 time, 3550.01 real, 480 MB, 1.00 load
+[runlim] sample:		3558.16 time, 3560.01 real, 480 MB, 1.15 load
+[runlim] sample:		3568.15 time, 3570.01 real, 480 MB, 1.13 load
+[runlim] sample:		3578.15 time, 3580.01 real, 478 MB, 1.11 load
+[runlim] sample:		3588.14 time, 3590.01 real, 478 MB, 1.09 load
+[runlim] sample:		3598.14 time, 3600.01 real, 493 MB, 1.08 load
+[runlim] sample:		3608.13 time, 3610.01 real, 493 MB, 1.15 load
+[runlim] sample:		3618.12 time, 3620.01 real, 484 MB, 1.12 load
+[runlim] sample:		3628.12 time, 3630.01 real, 484 MB, 1.10 load
+[runlim] sample:		3638.12 time, 3640.01 real, 484 MB, 1.17 load
+[runlim] sample:		3648.11 time, 3650.01 real, 484 MB, 1.14 load
+[runlim] sample:		3658.11 time, 3660.01 real, 484 MB, 1.12 load
+[runlim] sample:		3668.10 time, 3670.01 real, 478 MB, 1.18 load
+[runlim] sample:		3678.10 time, 3680.01 real, 478 MB, 1.15 load
+[runlim] sample:		3688.09 time, 3690.01 real, 478 MB, 1.21 load
+[runlim] sample:		3698.09 time, 3700.01 real, 478 MB, 1.18 load
+[runlim] sample:		3708.08 time, 3710.01 real, 478 MB, 1.15 load
+[runlim] sample:		3718.08 time, 3720.01 real, 464 MB, 1.13 load
+[runlim] sample:		3728.07 time, 3730.01 real, 464 MB, 1.11 load
+[runlim] sample:		3738.07 time, 3740.01 real, 464 MB, 1.09 load
+[runlim] sample:		3748.06 time, 3750.01 real, 464 MB, 1.08 load
+[runlim] sample:		3758.06 time, 3760.01 real, 464 MB, 1.06 load
+[runlim] sample:		3768.05 time, 3770.01 real, 455 MB, 1.05 load
+[runlim] sample:		3778.05 time, 3780.01 real, 455 MB, 1.04 load
+[runlim] sample:		3788.04 time, 3790.01 real, 455 MB, 1.04 load
+[runlim] sample:		3798.04 time, 3800.01 real, 455 MB, 1.03 load
+[runlim] sample:		3808.03 time, 3810.01 real, 455 MB, 1.03 load
+[runlim] sample:		3818.03 time, 3820.01 real, 455 MB, 1.02 load
+[runlim] sample:		3828.02 time, 3830.01 real, 456 MB, 1.02 load
+[runlim] sample:		3838.01 time, 3840.01 real, 456 MB, 1.01 load
+[runlim] sample:		3848.00 time, 3850.01 real, 456 MB, 1.01 load
+[runlim] sample:		3858.00 time, 3860.01 real, 456 MB, 1.01 load
+[runlim] sample:		3867.99 time, 3870.01 real, 456 MB, 1.01 load
+[runlim] sample:		3877.99 time, 3880.01 real, 456 MB, 1.01 load
+[runlim] sample:		3887.99 time, 3890.01 real, 456 MB, 1.00 load
+[runlim] sample:		3897.98 time, 3900.01 real, 456 MB, 1.00 load
+[runlim] sample:		3907.98 time, 3910.01 real, 456 MB, 1.00 load
+[runlim] sample:		3917.97 time, 3920.01 real, 456 MB, 1.00 load
+[runlim] sample:		3927.97 time, 3930.01 real, 456 MB, 1.00 load
+[runlim] sample:		3937.97 time, 3940.01 real, 456 MB, 1.00 load
+[runlim] sample:		3947.96 time, 3950.01 real, 457 MB, 1.00 load
+[runlim] sample:		3957.96 time, 3960.01 real, 457 MB, 1.08 load
+[runlim] sample:		3967.95 time, 3970.01 real, 457 MB, 1.07 load
+[runlim] sample:		3977.95 time, 3980.01 real, 457 MB, 1.06 load
+[runlim] sample:		3987.95 time, 3990.01 real, 457 MB, 1.05 load
+[runlim] sample:		3997.94 time, 4000.01 real, 457 MB, 1.04 load
+[runlim] sample:		4007.93 time, 4010.01 real, 458 MB, 1.03 load
+[runlim] sample:		4017.93 time, 4020.01 real, 458 MB, 1.03 load
+[runlim] sample:		4027.92 time, 4030.01 real, 458 MB, 1.02 load
+[runlim] sample:		4037.92 time, 4040.01 real, 458 MB, 1.02 load
+[runlim] sample:		4047.91 time, 4050.01 real, 458 MB, 1.02 load
+[runlim] sample:		4057.91 time, 4060.01 real, 458 MB, 1.17 load
+[runlim] sample:		4067.91 time, 4070.01 real, 458 MB, 1.14 load
+[runlim] sample:		4077.91 time, 4080.01 real, 458 MB, 1.12 load
+[runlim] sample:		4087.90 time, 4090.01 real, 458 MB, 1.10 load
+[runlim] sample:		4097.89 time, 4100.01 real, 458 MB, 1.08 load
+[runlim] sample:		4107.89 time, 4110.01 real, 458 MB, 1.07 load
+[runlim] sample:		4117.88 time, 4120.01 real, 458 MB, 1.13 load
+[runlim] sample:		4127.88 time, 4130.01 real, 458 MB, 1.11 load
+[runlim] sample:		4137.87 time, 4140.01 real, 458 MB, 1.10 load
+[runlim] sample:		4147.86 time, 4150.01 real, 458 MB, 1.08 load
+[runlim] sample:		4157.86 time, 4160.01 real, 458 MB, 1.07 load
+[runlim] sample:		4167.85 time, 4170.01 real, 458 MB, 1.06 load
+[runlim] sample:		4177.85 time, 4180.01 real, 458 MB, 1.05 load
+[runlim] sample:		4187.85 time, 4190.01 real, 464 MB, 1.04 load
+[runlim] sample:		4197.84 time, 4200.01 real, 464 MB, 1.03 load
+[runlim] sample:		4207.84 time, 4210.01 real, 464 MB, 1.03 load
+[runlim] sample:		4217.83 time, 4220.01 real, 464 MB, 1.02 load
+[runlim] sample:		4227.83 time, 4230.01 real, 464 MB, 1.02 load
+[runlim] sample:		4237.83 time, 4240.01 real, 477 MB, 1.02 load
+[runlim] sample:		4247.82 time, 4250.01 real, 477 MB, 1.01 load
+[runlim] sample:		4257.82 time, 4260.01 real, 477 MB, 1.01 load
+[runlim] sample:		4267.81 time, 4270.01 real, 477 MB, 1.01 load
+[runlim] sample:		4277.81 time, 4280.01 real, 477 MB, 1.01 load
+[runlim] sample:		4287.80 time, 4290.01 real, 483 MB, 1.00 load
+[runlim] sample:		4297.80 time, 4300.01 real, 483 MB, 1.00 load
+[runlim] sample:		4307.79 time, 4310.01 real, 483 MB, 1.00 load
+[runlim] sample:		4317.79 time, 4320.01 real, 483 MB, 1.00 load
+[runlim] sample:		4327.78 time, 4330.01 real, 483 MB, 1.00 load
+[runlim] sample:		4337.78 time, 4340.01 real, 483 MB, 1.00 load
+[runlim] sample:		4347.77 time, 4350.01 real, 483 MB, 1.00 load
+[runlim] sample:		4357.77 time, 4360.01 real, 495 MB, 1.00 load
+[runlim] sample:		4367.76 time, 4370.01 real, 495 MB, 1.00 load
+[runlim] sample:		4377.75 time, 4380.01 real, 495 MB, 1.00 load
+[runlim] sample:		4387.75 time, 4390.01 real, 495 MB, 1.00 load
+[runlim] sample:		4397.74 time, 4400.01 real, 495 MB, 1.00 load
+[runlim] sample:		4407.74 time, 4410.01 real, 495 MB, 1.00 load
+[runlim] sample:		4417.73 time, 4420.01 real, 495 MB, 1.00 load
+[runlim] sample:		4427.73 time, 4430.01 real, 486 MB, 1.00 load
+[runlim] sample:		4437.72 time, 4440.01 real, 486 MB, 1.15 load
+[runlim] sample:		4447.71 time, 4450.01 real, 486 MB, 1.12 load
+[runlim] sample:		4457.71 time, 4460.01 real, 486 MB, 1.10 load
+[runlim] sample:		4467.70 time, 4470.01 real, 486 MB, 1.09 load
+[runlim] sample:		4477.70 time, 4480.01 real, 485 MB, 1.07 load
+[runlim] sample:		4487.70 time, 4490.01 real, 485 MB, 1.06 load
+[runlim] sample:		4497.69 time, 4500.01 real, 485 MB, 1.05 load
+[runlim] sample:		4507.69 time, 4510.01 real, 485 MB, 1.04 load
+[runlim] sample:		4517.68 time, 4520.01 real, 485 MB, 1.04 load
+[runlim] sample:		4527.67 time, 4530.01 real, 485 MB, 1.03 load
+[runlim] sample:		4537.67 time, 4540.01 real, 483 MB, 1.02 load
+[runlim] sample:		4547.66 time, 4550.01 real, 483 MB, 1.02 load
+[runlim] sample:		4557.66 time, 4560.01 real, 483 MB, 1.25 load
+[runlim] sample:		4567.64 time, 4570.01 real, 483 MB, 1.21 load
+[runlim] sample:		4577.64 time, 4580.01 real, 483 MB, 1.18 load
+[runlim] sample:		4587.63 time, 4590.01 real, 483 MB, 1.15 load
+[runlim] sample:		4597.63 time, 4600.01 real, 483 MB, 1.13 load
+[runlim] sample:		4607.62 time, 4610.01 real, 488 MB, 1.18 load
+[runlim] sample:		4617.62 time, 4620.01 real, 488 MB, 1.15 load
+[runlim] sample:		4627.61 time, 4630.01 real, 488 MB, 1.20 load
+[runlim] sample:		4637.61 time, 4640.01 real, 488 MB, 1.17 load
+[runlim] sample:		4647.60 time, 4650.01 real, 490 MB, 1.22 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 656
+Schedule is valid
+ Time taken: 4656.38 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 655
+Schedule is valid
+ Time taken: 4657.52 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 654
+Schedule is valid
+ Time taken: 4657.70 seconds
+[runlim] sample:		4657.60 time, 4660.01 real, 489 MB, 1.19 load
+[runlim] sample:		4667.60 time, 4670.01 real, 489 MB, 1.16 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 653
+Schedule is valid
+ Time taken: 4673.03 seconds
+[runlim] sample:		4677.59 time, 4680.01 real, 490 MB, 1.21 load
+[runlim] sample:		4687.58 time, 4690.01 real, 621 MB, 1.17 load
+[runlim] sample:		4697.57 time, 4700.01 real, 477 MB, 1.15 load
+[runlim] sample:		4707.57 time, 4710.01 real, 477 MB, 1.12 load
+[runlim] sample:		4717.56 time, 4720.01 real, 477 MB, 1.18 load
+[runlim] sample:		4727.55 time, 4730.01 real, 477 MB, 1.16 load
+[runlim] sample:		4737.55 time, 4740.01 real, 489 MB, 1.13 load
+[runlim] sample:		4747.55 time, 4750.01 real, 489 MB, 1.11 load
+[runlim] sample:		4757.54 time, 4760.01 real, 489 MB, 1.09 load
+[runlim] sample:		4767.54 time, 4770.01 real, 489 MB, 1.08 load
+[runlim] sample:		4777.54 time, 4780.01 real, 489 MB, 1.07 load
+[runlim] sample:		4787.53 time, 4790.01 real, 489 MB, 1.06 load
+[runlim] sample:		4797.53 time, 4800.01 real, 491 MB, 1.05 load
+[runlim] sample:		4807.52 time, 4810.01 real, 491 MB, 1.04 load
+[runlim] sample:		4817.52 time, 4820.01 real, 491 MB, 1.03 load
+[runlim] sample:		4827.51 time, 4830.01 real, 491 MB, 1.03 load
+[runlim] sample:		4837.50 time, 4840.01 real, 491 MB, 1.02 load
+[runlim] sample:		4847.50 time, 4850.01 real, 491 MB, 1.02 load
+[runlim] sample:		4857.49 time, 4860.01 real, 477 MB, 1.02 load
+[runlim] sample:		4867.49 time, 4870.01 real, 477 MB, 1.01 load
+[runlim] sample:		4877.48 time, 4880.01 real, 477 MB, 1.16 load
+[runlim] sample:		4887.48 time, 4890.01 real, 477 MB, 1.13 load
+[runlim] sample:		4897.47 time, 4900.01 real, 477 MB, 1.11 load
+[runlim] sample:		4907.47 time, 4910.01 real, 491 MB, 1.09 load
+[runlim] sample:		4917.46 time, 4920.01 real, 491 MB, 1.08 load
+[runlim] sample:		4927.46 time, 4930.01 real, 491 MB, 1.07 load
+[runlim] sample:		4937.45 time, 4940.01 real, 491 MB, 1.06 load
+[runlim] sample:		4947.45 time, 4950.01 real, 491 MB, 1.05 load
+[runlim] sample:		4957.44 time, 4960.01 real, 504 MB, 1.04 load
+[runlim] sample:		4967.44 time, 4970.01 real, 504 MB, 1.03 load
+[runlim] sample:		4977.43 time, 4980.01 real, 504 MB, 1.03 load
+[runlim] sample:		4987.42 time, 4990.01 real, 504 MB, 1.17 load
+[runlim] sample:		4997.42 time, 5000.01 real, 504 MB, 1.14 load
+[runlim] sample:		5007.41 time, 5010.01 real, 504 MB, 1.12 load
+[runlim] sample:		5017.41 time, 5020.01 real, 516 MB, 1.10 load
+[runlim] sample:		5027.40 time, 5030.01 real, 516 MB, 1.09 load
+[runlim] sample:		5037.40 time, 5040.01 real, 516 MB, 1.07 load
+[runlim] sample:		5047.39 time, 5050.01 real, 516 MB, 1.06 load
+[runlim] sample:		5057.39 time, 5060.01 real, 516 MB, 1.28 load
+[runlim] sample:		5067.39 time, 5070.01 real, 509 MB, 1.24 load
+[runlim] sample:		5077.38 time, 5080.01 real, 509 MB, 1.20 load
+[runlim] sample:		5087.37 time, 5090.01 real, 509 MB, 1.17 load
+[runlim] sample:		5097.37 time, 5100.01 real, 509 MB, 1.14 load
+[runlim] sample:		5107.36 time, 5110.01 real, 509 MB, 1.12 load
+[runlim] sample:		5117.36 time, 5120.01 real, 509 MB, 1.10 load
+[runlim] sample:		5127.35 time, 5130.01 real, 637 MB, 1.08 load
+[runlim] sample:		5137.34 time, 5140.01 real, 492 MB, 1.07 load
+[runlim] sample:		5147.34 time, 5150.01 real, 492 MB, 1.06 load
+[runlim] sample:		5157.33 time, 5160.01 real, 492 MB, 1.05 load
+[runlim] sample:		5167.33 time, 5170.01 real, 492 MB, 1.04 load
+[runlim] sample:		5177.32 time, 5180.01 real, 492 MB, 1.04 load
+[runlim] sample:		5187.32 time, 5190.01 real, 492 MB, 1.03 load
+[runlim] sample:		5197.32 time, 5200.01 real, 479 MB, 1.02 load
+[runlim] sample:		5207.31 time, 5210.01 real, 479 MB, 1.02 load
+[runlim] sample:		5217.31 time, 5220.01 real, 479 MB, 1.02 load
+[runlim] sample:		5227.30 time, 5230.01 real, 479 MB, 1.01 load
+[runlim] sample:		5237.30 time, 5240.01 real, 479 MB, 1.01 load
+[runlim] sample:		5247.29 time, 5250.01 real, 479 MB, 1.01 load
+[runlim] sample:		5257.29 time, 5260.01 real, 479 MB, 1.01 load
+[runlim] sample:		5267.28 time, 5270.01 real, 480 MB, 1.01 load
+[runlim] sample:		5277.27 time, 5280.01 real, 480 MB, 1.00 load
+[runlim] sample:		5287.27 time, 5290.01 real, 480 MB, 1.00 load
+[runlim] sample:		5297.26 time, 5300.01 real, 480 MB, 1.00 load
+[runlim] sample:		5307.26 time, 5310.01 real, 480 MB, 1.00 load
+[runlim] sample:		5317.25 time, 5320.01 real, 480 MB, 1.00 load
+[runlim] sample:		5327.25 time, 5330.01 real, 480 MB, 1.00 load
+[runlim] sample:		5337.24 time, 5340.01 real, 480 MB, 1.00 load
+[runlim] sample:		5347.24 time, 5350.01 real, 481 MB, 1.00 load
+[runlim] sample:		5357.24 time, 5360.01 real, 481 MB, 1.00 load
+[runlim] sample:		5367.23 time, 5370.01 real, 481 MB, 1.00 load
+[runlim] sample:		5377.23 time, 5380.01 real, 481 MB, 1.00 load
+[runlim] sample:		5387.22 time, 5390.01 real, 481 MB, 1.00 load
+[runlim] sample:		5397.22 time, 5400.01 real, 481 MB, 1.00 load
+[runlim] sample:		5407.21 time, 5410.01 real, 481 MB, 1.00 load
+[runlim] sample:		5417.20 time, 5420.01 real, 482 MB, 1.00 load
+[runlim] sample:		5427.20 time, 5430.01 real, 482 MB, 1.00 load
+[runlim] sample:		5437.19 time, 5440.01 real, 482 MB, 1.00 load
+[runlim] sample:		5447.19 time, 5450.01 real, 482 MB, 1.00 load
+[runlim] sample:		5457.18 time, 5460.01 real, 482 MB, 1.00 load
+[runlim] sample:		5467.18 time, 5470.01 real, 482 MB, 1.00 load
+[runlim] sample:		5477.17 time, 5480.01 real, 482 MB, 1.08 load
+[runlim] sample:		5487.17 time, 5490.01 real, 483 MB, 1.07 load
+[runlim] sample:		5497.17 time, 5500.01 real, 483 MB, 1.06 load
+[runlim] sample:		5507.16 time, 5510.01 real, 483 MB, 1.05 load
+[runlim] sample:		5517.16 time, 5520.01 real, 483 MB, 1.04 load
+[runlim] sample:		5527.15 time, 5530.01 real, 483 MB, 1.03 load
+[runlim] sample:		5537.15 time, 5540.01 real, 483 MB, 1.10 load
+[runlim] sample:		5547.14 time, 5550.01 real, 483 MB, 1.08 load
+[runlim] sample:		5557.13 time, 5560.01 real, 483 MB, 1.23 load
+[runlim] sample:		5567.13 time, 5570.01 real, 483 MB, 1.19 load
+[runlim] sample:		5577.12 time, 5580.01 real, 483 MB, 1.16 load
+[runlim] sample:		5587.12 time, 5590.01 real, 483 MB, 1.14 load
+[runlim] sample:		5597.11 time, 5600.01 real, 483 MB, 1.11 load
+[runlim] sample:		5607.11 time, 5610.01 real, 483 MB, 1.10 load
+[runlim] sample:		5617.10 time, 5620.01 real, 483 MB, 1.08 load
+[runlim] sample:		5627.10 time, 5630.01 real, 486 MB, 1.07 load
+[runlim] sample:		5637.10 time, 5640.01 real, 486 MB, 1.13 load
+[runlim] sample:		5647.09 time, 5650.01 real, 486 MB, 1.11 load
+[runlim] sample:		5657.09 time, 5660.01 real, 486 MB, 1.09 load
+[runlim] sample:		5667.08 time, 5670.01 real, 486 MB, 1.08 load
+[runlim] sample:		5677.08 time, 5680.01 real, 512 MB, 1.07 load
+[runlim] sample:		5687.07 time, 5690.01 real, 512 MB, 1.14 load
+[runlim] sample:		5697.07 time, 5700.01 real, 512 MB, 1.11 load
+[runlim] sample:		5707.06 time, 5710.01 real, 512 MB, 1.10 load
+[runlim] sample:		5717.06 time, 5720.01 real, 512 MB, 1.08 load
+[runlim] sample:		5727.05 time, 5730.01 real, 512 MB, 1.07 load
+[runlim] sample:		5737.05 time, 5740.01 real, 512 MB, 1.06 load
+[runlim] sample:		5747.04 time, 5750.01 real, 512 MB, 1.05 load
+[runlim] sample:		5757.04 time, 5760.01 real, 512 MB, 1.04 load
+[runlim] sample:		5767.03 time, 5770.01 real, 513 MB, 1.03 load
+[runlim] sample:		5777.02 time, 5780.01 real, 513 MB, 1.03 load
+[runlim] sample:		5787.02 time, 5790.01 real, 513 MB, 1.02 load
+[runlim] sample:		5797.01 time, 5800.01 real, 513 MB, 1.02 load
+[runlim] sample:		5807.01 time, 5810.01 real, 513 MB, 1.02 load
+[runlim] sample:		5817.00 time, 5820.01 real, 513 MB, 1.01 load
+[runlim] sample:		5827.00 time, 5830.01 real, 513 MB, 1.01 load
+[runlim] sample:		5836.99 time, 5840.01 real, 513 MB, 1.01 load
+[runlim] sample:		5846.98 time, 5850.01 real, 511 MB, 1.01 load
+[runlim] sample:		5856.98 time, 5860.01 real, 511 MB, 1.00 load
+[runlim] sample:		5866.97 time, 5870.01 real, 511 MB, 1.00 load
+[runlim] sample:		5876.97 time, 5880.01 real, 511 MB, 1.00 load
+[runlim] sample:		5886.96 time, 5890.01 real, 511 MB, 1.00 load
+[runlim] sample:		5896.97 time, 5900.01 real, 508 MB, 1.00 load
+[runlim] sample:		5906.96 time, 5910.01 real, 508 MB, 1.00 load
+[runlim] sample:		5916.96 time, 5920.01 real, 508 MB, 1.00 load
+[runlim] sample:		5926.95 time, 5930.01 real, 508 MB, 1.00 load
+[runlim] sample:		5936.95 time, 5940.01 real, 508 MB, 1.00 load
+[runlim] sample:		5946.94 time, 5950.01 real, 508 MB, 1.00 load
+[runlim] sample:		5956.93 time, 5960.01 real, 508 MB, 1.00 load
+[runlim] sample:		5966.93 time, 5970.01 real, 508 MB, 1.00 load
+[runlim] sample:		5976.92 time, 5980.01 real, 508 MB, 1.00 load
+[runlim] sample:		5986.92 time, 5990.01 real, 508 MB, 1.00 load
+[runlim] sample:		5996.92 time, 6000.01 real, 508 MB, 1.00 load
+[runlim] sample:		6006.91 time, 6010.01 real, 514 MB, 1.00 load
+[runlim] sample:		6016.90 time, 6020.01 real, 514 MB, 1.00 load
+[runlim] sample:		6026.90 time, 6030.01 real, 514 MB, 1.00 load
+[runlim] sample:		6036.89 time, 6040.01 real, 514 MB, 1.00 load
+[runlim] sample:		6046.89 time, 6050.01 real, 514 MB, 1.00 load
+[runlim] sample:		6056.89 time, 6060.01 real, 506 MB, 1.15 load
+[runlim] sample:		6066.88 time, 6070.01 real, 506 MB, 1.13 load
+[runlim] sample:		6076.88 time, 6080.01 real, 506 MB, 1.11 load
+[runlim] sample:		6086.87 time, 6090.01 real, 506 MB, 1.09 load
+[runlim] sample:		6096.86 time, 6100.01 real, 511 MB, 1.08 load
+[runlim] sample:		6106.86 time, 6110.01 real, 511 MB, 1.06 load
+[runlim] sample:		6116.85 time, 6120.01 real, 511 MB, 1.05 load
+[runlim] sample:		6126.85 time, 6130.01 real, 511 MB, 1.05 load
+[runlim] sample:		6136.84 time, 6140.01 real, 511 MB, 1.04 load
+[runlim] sample:		6146.84 time, 6150.01 real, 519 MB, 1.03 load
+[runlim] sample:		6156.84 time, 6160.01 real, 519 MB, 1.03 load
+[runlim] sample:		6166.83 time, 6170.01 real, 519 MB, 1.02 load
+[runlim] sample:		6176.83 time, 6180.01 real, 519 MB, 1.02 load
+[runlim] sample:		6186.82 time, 6190.01 real, 519 MB, 1.02 load
+[runlim] sample:		6196.82 time, 6200.01 real, 519 MB, 1.01 load
+[runlim] sample:		6206.82 time, 6210.01 real, 519 MB, 1.01 load
+[runlim] sample:		6216.81 time, 6220.01 real, 528 MB, 1.01 load
+[runlim] sample:		6226.80 time, 6230.01 real, 528 MB, 1.01 load
+[runlim] sample:		6236.80 time, 6240.01 real, 528 MB, 1.09 load
+[runlim] sample:		6246.80 time, 6250.01 real, 528 MB, 1.07 load
+[runlim] sample:		6256.79 time, 6260.01 real, 528 MB, 1.06 load
+[runlim] sample:		6266.79 time, 6270.01 real, 528 MB, 1.05 load
+[runlim] sample:		6276.78 time, 6280.01 real, 521 MB, 1.04 load
+[runlim] sample:		6286.78 time, 6290.01 real, 531 MB, 1.04 load
+[runlim] sample:		6296.76 time, 6300.01 real, 531 MB, 1.03 load
+[runlim] sample:		6306.76 time, 6310.01 real, 531 MB, 1.02 load
+[runlim] sample:		6316.75 time, 6320.01 real, 531 MB, 1.02 load
+[runlim] sample:		6326.75 time, 6330.01 real, 531 MB, 1.02 load
+[runlim] sample:		6336.74 time, 6340.01 real, 531 MB, 1.01 load
+[runlim] sample:		6346.74 time, 6350.01 real, 533 MB, 1.01 load
+[runlim] sample:		6356.73 time, 6360.01 real, 533 MB, 1.01 load
+[runlim] sample:		6366.73 time, 6370.01 real, 533 MB, 1.01 load
+[runlim] sample:		6376.73 time, 6380.01 real, 533 MB, 1.01 load
+[runlim] sample:		6386.72 time, 6390.01 real, 533 MB, 1.00 load
+[runlim] sample:		6396.72 time, 6400.01 real, 533 MB, 1.08 load
+[runlim] sample:		6406.71 time, 6410.01 real, 521 MB, 1.07 load
+[runlim] sample:		6416.71 time, 6420.01 real, 521 MB, 1.06 load
+[runlim] sample:		6426.71 time, 6430.01 real, 521 MB, 1.05 load
+[runlim] sample:		6436.70 time, 6440.01 real, 521 MB, 1.04 load
+[runlim] sample:		6446.70 time, 6450.01 real, 521 MB, 1.03 load
+[runlim] sample:		6456.70 time, 6460.01 real, 526 MB, 1.03 load
+[runlim] sample:		6466.69 time, 6470.01 real, 526 MB, 1.02 load
+[runlim] sample:		6476.69 time, 6480.01 real, 526 MB, 1.02 load
+[runlim] sample:		6486.68 time, 6490.01 real, 526 MB, 1.02 load
+[runlim] sample:		6496.68 time, 6500.01 real, 526 MB, 1.01 load
+[runlim] sample:		6506.68 time, 6510.01 real, 526 MB, 1.08 load
+[runlim] sample:		6516.67 time, 6520.01 real, 526 MB, 1.07 load
+[runlim] sample:		6526.67 time, 6530.01 real, 497 MB, 1.06 load
+[runlim] sample:		6536.66 time, 6540.01 real, 497 MB, 1.05 load
+[runlim] sample:		6546.65 time, 6550.01 real, 534 MB, 1.04 load
+[runlim] sample:		6556.65 time, 6560.01 real, 497 MB, 1.19 load
+[runlim] sample:		6566.64 time, 6570.01 real, 497 MB, 1.16 load
+[runlim] sample:		6576.64 time, 6580.01 real, 497 MB, 1.13 load
+[runlim] sample:		6586.63 time, 6590.01 real, 497 MB, 1.11 load
+[runlim] sample:		6596.63 time, 6600.01 real, 497 MB, 1.10 load
+[runlim] sample:		6606.63 time, 6610.01 real, 497 MB, 1.08 load
+[runlim] sample:		6616.63 time, 6620.01 real, 498 MB, 1.07 load
+[runlim] sample:		6626.62 time, 6630.01 real, 498 MB, 1.06 load
+[runlim] sample:		6636.62 time, 6640.01 real, 498 MB, 1.13 load
+[runlim] sample:		6646.61 time, 6650.01 real, 498 MB, 1.11 load
+[runlim] sample:		6656.61 time, 6660.01 real, 498 MB, 1.17 load
+[runlim] sample:		6666.61 time, 6670.01 real, 498 MB, 1.14 load
+[runlim] sample:		6676.60 time, 6680.01 real, 498 MB, 1.20 load
+[runlim] sample:		6686.60 time, 6690.01 real, 498 MB, 1.17 load
+[runlim] sample:		6696.59 time, 6700.01 real, 498 MB, 1.14 load
+[runlim] sample:		6706.58 time, 6710.01 real, 499 MB, 1.12 load
+[runlim] sample:		6716.58 time, 6720.01 real, 499 MB, 1.18 load
+[runlim] sample:		6726.57 time, 6730.01 real, 499 MB, 1.15 load
+[runlim] sample:		6736.57 time, 6740.01 real, 499 MB, 1.13 load
+[runlim] sample:		6746.56 time, 6750.01 real, 499 MB, 1.11 load
+[runlim] sample:		6756.56 time, 6760.01 real, 499 MB, 1.09 load
+[runlim] sample:		6766.56 time, 6770.01 real, 499 MB, 1.08 load
+[runlim] sample:		6776.55 time, 6780.01 real, 499 MB, 1.06 load
+[runlim] sample:		6786.55 time, 6790.01 real, 500 MB, 1.05 load
+[runlim] sample:		6796.54 time, 6800.01 real, 500 MB, 1.04 load
+[runlim] sample:		6806.54 time, 6810.01 real, 500 MB, 1.04 load
+[runlim] sample:		6816.53 time, 6820.01 real, 500 MB, 1.03 load
+[runlim] sample:		6826.53 time, 6830.01 real, 500 MB, 1.03 load
+[runlim] sample:		6836.52 time, 6840.01 real, 500 MB, 1.02 load
+[runlim] sample:		6846.52 time, 6850.01 real, 500 MB, 1.02 load
+[runlim] sample:		6856.51 time, 6860.01 real, 500 MB, 1.01 load
+[runlim] sample:		6866.51 time, 6870.01 real, 500 MB, 1.01 load
+[runlim] sample:		6876.51 time, 6880.01 real, 500 MB, 1.01 load
+[runlim] sample:		6886.50 time, 6890.01 real, 500 MB, 1.01 load
+[runlim] sample:		6896.50 time, 6900.01 real, 500 MB, 1.01 load
+[runlim] sample:		6906.49 time, 6910.01 real, 500 MB, 1.00 load
+[runlim] sample:		6916.49 time, 6920.01 real, 500 MB, 1.00 load
+[runlim] sample:		6926.48 time, 6930.01 real, 500 MB, 1.00 load
+[runlim] sample:		6936.48 time, 6940.01 real, 500 MB, 1.00 load
+[runlim] sample:		6946.48 time, 6950.01 real, 500 MB, 1.00 load
+[runlim] sample:		6956.47 time, 6960.01 real, 500 MB, 1.00 load
+[runlim] sample:		6966.47 time, 6970.01 real, 501 MB, 1.00 load
+[runlim] sample:		6976.46 time, 6980.01 real, 501 MB, 1.00 load
+[runlim] sample:		6986.46 time, 6990.01 real, 501 MB, 1.00 load
+[runlim] sample:		6996.45 time, 7000.01 real, 501 MB, 1.00 load
+[runlim] sample:		7006.45 time, 7010.01 real, 501 MB, 1.00 load
+[runlim] sample:		7016.44 time, 7020.01 real, 501 MB, 1.00 load
+[runlim] sample:		7026.44 time, 7030.01 real, 501 MB, 1.00 load
+[runlim] sample:		7036.43 time, 7040.01 real, 501 MB, 1.00 load
+[runlim] sample:		7046.42 time, 7050.01 real, 501 MB, 1.00 load
+[runlim] sample:		7056.42 time, 7060.01 real, 501 MB, 1.15 load
+[runlim] sample:		7066.41 time, 7070.01 real, 501 MB, 1.13 load
+[runlim] sample:		7076.41 time, 7080.01 real, 501 MB, 1.11 load
+[runlim] sample:		7086.40 time, 7090.01 real, 501 MB, 1.09 load
+[runlim] sample:		7096.40 time, 7100.01 real, 501 MB, 1.08 load
+[runlim] sample:		7106.39 time, 7110.01 real, 501 MB, 1.06 load
+[runlim] sample:		7116.39 time, 7120.01 real, 501 MB, 1.05 load
+[runlim] sample:		7126.38 time, 7130.01 real, 501 MB, 1.05 load
+[runlim] sample:		7136.38 time, 7140.01 real, 502 MB, 1.04 load
+[runlim] sample:		7146.38 time, 7150.01 real, 502 MB, 1.03 load
+[runlim] sample:		7156.37 time, 7160.01 real, 502 MB, 1.03 load
+[runlim] sample:		7166.37 time, 7170.01 real, 502 MB, 1.02 load
+[runlim] sample:		7176.36 time, 7180.01 real, 502 MB, 1.02 load
+[runlim] sample:		7186.36 time, 7190.01 real, 502 MB, 1.02 load
+[runlim] sample:		7196.35 time, 7200.01 real, 502 MB, 1.01 load
+[runlim] sample:		7206.35 time, 7210.01 real, 502 MB, 1.01 load
+[runlim] sample:		7216.34 time, 7220.01 real, 502 MB, 1.01 load
+[runlim] sample:		7226.34 time, 7230.01 real, 503 MB, 1.01 load
+[runlim] sample:		7236.34 time, 7240.01 real, 503 MB, 1.00 load
+[runlim] sample:		7246.33 time, 7250.01 real, 503 MB, 1.00 load
+[runlim] sample:		7256.33 time, 7260.01 real, 503 MB, 1.00 load
+[runlim] sample:		7266.33 time, 7270.01 real, 538 MB, 1.00 load
+[runlim] sample:		7276.32 time, 7280.01 real, 503 MB, 1.00 load
+[runlim] sample:		7286.31 time, 7290.01 real, 503 MB, 1.00 load
+[runlim] sample:		7296.31 time, 7300.01 real, 503 MB, 1.00 load
+[runlim] sample:		7306.30 time, 7310.01 real, 503 MB, 1.00 load
+[runlim] sample:		7316.30 time, 7320.01 real, 503 MB, 1.00 load
+[runlim] sample:		7326.29 time, 7330.01 real, 503 MB, 1.00 load
+[runlim] sample:		7336.29 time, 7340.01 real, 503 MB, 1.00 load
+[runlim] sample:		7346.28 time, 7350.01 real, 503 MB, 1.08 load
+[runlim] sample:		7356.28 time, 7360.01 real, 503 MB, 1.14 load
+[runlim] sample:		7366.27 time, 7370.01 real, 503 MB, 1.12 load
+[runlim] sample:		7376.27 time, 7380.01 real, 503 MB, 1.10 load
+[runlim] sample:		7386.26 time, 7390.01 real, 503 MB, 1.08 load
+[runlim] sample:		7396.26 time, 7400.01 real, 503 MB, 1.07 load
+[runlim] sample:		7406.26 time, 7410.01 real, 503 MB, 1.06 load
+[runlim] sample:		7416.25 time, 7420.01 real, 503 MB, 1.05 load
+[runlim] sample:		7426.25 time, 7430.01 real, 503 MB, 1.04 load
+[runlim] sample:		7436.24 time, 7440.01 real, 503 MB, 1.04 load
+[runlim] sample:		7446.24 time, 7450.01 real, 503 MB, 1.03 load
+[runlim] sample:		7456.23 time, 7460.01 real, 503 MB, 1.02 load
+[runlim] sample:		7466.23 time, 7470.01 real, 503 MB, 1.02 load
+[runlim] sample:		7476.22 time, 7480.01 real, 503 MB, 1.02 load
+[runlim] sample:		7486.22 time, 7490.01 real, 503 MB, 1.01 load
+[runlim] sample:		7496.21 time, 7500.01 real, 503 MB, 1.01 load
+[runlim] sample:		7506.20 time, 7510.01 real, 503 MB, 1.01 load
+[runlim] sample:		7516.20 time, 7520.01 real, 503 MB, 1.01 load
+[runlim] sample:		7526.19 time, 7530.01 real, 503 MB, 1.01 load
+[runlim] sample:		7536.19 time, 7540.01 real, 503 MB, 1.00 load
+[runlim] sample:		7546.18 time, 7550.01 real, 503 MB, 1.00 load
+[runlim] sample:		7556.18 time, 7560.01 real, 503 MB, 1.16 load
+[runlim] sample:		7566.17 time, 7570.01 real, 503 MB, 1.13 load
+[runlim] sample:		7576.17 time, 7580.01 real, 633 MB, 1.11 load
+[runlim] sample:		7586.17 time, 7590.01 real, 504 MB, 1.09 load
+[runlim] sample:		7596.16 time, 7600.01 real, 504 MB, 1.15 load
+[runlim] sample:		7606.16 time, 7610.01 real, 504 MB, 1.13 load
+[runlim] sample:		7616.16 time, 7620.01 real, 504 MB, 1.18 load
+[runlim] sample:		7626.15 time, 7630.01 real, 542 MB, 1.15 load
+[runlim] sample:		7636.15 time, 7640.01 real, 509 MB, 1.13 load
+[runlim] sample:		7646.14 time, 7650.01 real, 509 MB, 1.11 load
+[runlim] sample:		7656.14 time, 7660.01 real, 509 MB, 1.09 load
+[runlim] sample:		7666.13 time, 7670.01 real, 509 MB, 1.15 load
+[runlim] sample:		7676.12 time, 7680.01 real, 514 MB, 1.13 load
+[runlim] sample:		7686.12 time, 7690.01 real, 514 MB, 1.11 load
+[runlim] sample:		7696.11 time, 7700.01 real, 514 MB, 1.09 load
+[runlim] sample:		7706.11 time, 7710.01 real, 514 MB, 1.08 load
+[runlim] sample:		7716.10 time, 7720.01 real, 514 MB, 1.06 load
+[runlim] sample:		7726.10 time, 7730.01 real, 514 MB, 1.05 load
+[runlim] sample:		7736.09 time, 7740.01 real, 514 MB, 1.05 load
+[runlim] sample:		7746.09 time, 7750.01 real, 514 MB, 1.04 load
+[runlim] sample:		7756.09 time, 7760.01 real, 514 MB, 1.03 load
+[runlim] sample:		7766.09 time, 7770.01 real, 515 MB, 1.03 load
+[runlim] sample:		7776.08 time, 7780.01 real, 515 MB, 1.02 load
+[runlim] sample:		7786.08 time, 7790.01 real, 515 MB, 1.02 load
+[runlim] sample:		7796.07 time, 7800.01 real, 515 MB, 1.02 load
+[runlim] sample:		7806.07 time, 7810.01 real, 515 MB, 1.01 load
+[runlim] sample:		7816.06 time, 7820.01 real, 515 MB, 1.49 load
+[runlim] sample:		7826.06 time, 7830.01 real, 515 MB, 1.42 load
+[runlim] sample:		7836.05 time, 7840.01 real, 515 MB, 1.35 load
+[runlim] sample:		7846.05 time, 7850.01 real, 515 MB, 1.30 load
+[runlim] sample:		7856.04 time, 7860.01 real, 515 MB, 1.25 load
+[runlim] sample:		7866.03 time, 7870.01 real, 515 MB, 1.21 load
+[runlim] sample:		7876.03 time, 7880.01 real, 515 MB, 1.18 load
+[runlim] sample:		7886.02 time, 7890.01 real, 515 MB, 1.15 load
+[runlim] sample:		7896.02 time, 7900.01 real, 515 MB, 1.13 load
+[runlim] sample:		7906.01 time, 7910.01 real, 515 MB, 1.11 load
+[runlim] sample:		7916.01 time, 7920.01 real, 515 MB, 1.09 load
+[runlim] sample:		7926.00 time, 7930.01 real, 515 MB, 1.08 load
+[runlim] sample:		7936.00 time, 7940.01 real, 515 MB, 1.06 load
+[runlim] sample:		7946.00 time, 7950.01 real, 515 MB, 1.05 load
+[runlim] sample:		7955.99 time, 7960.01 real, 515 MB, 1.04 load
+[runlim] sample:		7965.99 time, 7970.01 real, 515 MB, 1.04 load
+[runlim] sample:		7975.98 time, 7980.01 real, 515 MB, 1.03 load
+[runlim] sample:		7985.97 time, 7990.01 real, 515 MB, 1.03 load
+[runlim] sample:		7995.97 time, 8000.01 real, 515 MB, 1.02 load
+[runlim] sample:		8005.96 time, 8010.01 real, 515 MB, 1.02 load
+[runlim] sample:		8015.96 time, 8020.01 real, 515 MB, 1.01 load
+[runlim] sample:		8025.96 time, 8030.01 real, 515 MB, 1.01 load
+[runlim] sample:		8035.95 time, 8040.01 real, 515 MB, 1.01 load
+[runlim] sample:		8045.95 time, 8050.01 real, 513 MB, 1.01 load
+[runlim] sample:		8055.94 time, 8060.01 real, 513 MB, 1.16 load
+[runlim] sample:		8065.93 time, 8070.01 real, 513 MB, 1.14 load
+[runlim] sample:		8075.93 time, 8080.01 real, 513 MB, 1.11 load
+[runlim] sample:		8085.92 time, 8090.01 real, 513 MB, 1.10 load
+[runlim] sample:		8095.92 time, 8100.01 real, 513 MB, 1.08 load
+[runlim] sample:		8105.91 time, 8110.01 real, 513 MB, 1.07 load
+[runlim] sample:		8115.91 time, 8120.01 real, 513 MB, 1.06 load
+[runlim] sample:		8125.90 time, 8130.01 real, 513 MB, 1.05 load
+[runlim] sample:		8135.90 time, 8140.01 real, 513 MB, 1.12 load
+[runlim] sample:		8145.90 time, 8150.01 real, 515 MB, 1.10 load
+[runlim] sample:		8155.89 time, 8160.01 real, 515 MB, 1.08 load
+[runlim] sample:		8165.89 time, 8170.01 real, 515 MB, 1.07 load
+[runlim] sample:		8175.88 time, 8180.01 real, 515 MB, 1.06 load
+[runlim] sample:		8185.88 time, 8190.01 real, 515 MB, 1.05 load
+[runlim] sample:		8195.87 time, 8200.01 real, 515 MB, 1.04 load
+[runlim] sample:		8205.87 time, 8210.01 real, 515 MB, 1.04 load
+[runlim] sample:		8215.86 time, 8220.01 real, 515 MB, 1.03 load
+[runlim] sample:		8225.86 time, 8230.01 real, 515 MB, 1.02 load
+[runlim] sample:		8235.85 time, 8240.01 real, 516 MB, 1.02 load
+[runlim] sample:		8245.84 time, 8250.01 real, 516 MB, 1.02 load
+[runlim] sample:		8255.84 time, 8260.01 real, 516 MB, 1.01 load
+[runlim] sample:		8265.83 time, 8270.01 real, 516 MB, 1.01 load
+[runlim] sample:		8275.83 time, 8280.01 real, 516 MB, 1.01 load
+[runlim] sample:		8285.82 time, 8290.01 real, 516 MB, 1.01 load
+[runlim] sample:		8295.82 time, 8300.01 real, 516 MB, 1.01 load
+[runlim] sample:		8305.81 time, 8310.01 real, 516 MB, 1.00 load
+[runlim] sample:		8315.81 time, 8320.01 real, 516 MB, 1.00 load
+[runlim] sample:		8325.80 time, 8330.01 real, 516 MB, 1.00 load
+[runlim] sample:		8335.80 time, 8340.01 real, 516 MB, 1.00 load
+[runlim] sample:		8345.80 time, 8350.01 real, 516 MB, 1.00 load
+[runlim] sample:		8355.79 time, 8360.01 real, 516 MB, 1.00 load
+[runlim] sample:		8365.79 time, 8370.01 real, 516 MB, 1.00 load
+[runlim] sample:		8375.78 time, 8380.01 real, 516 MB, 1.00 load
+[runlim] sample:		8385.78 time, 8390.01 real, 516 MB, 1.00 load
+[runlim] sample:		8395.77 time, 8400.01 real, 516 MB, 1.00 load
+[runlim] sample:		8405.76 time, 8410.01 real, 516 MB, 1.00 load
+[runlim] sample:		8415.76 time, 8420.01 real, 516 MB, 1.00 load
+[runlim] sample:		8425.76 time, 8430.01 real, 516 MB, 1.00 load
+[runlim] sample:		8435.75 time, 8440.01 real, 516 MB, 1.00 load
+[runlim] sample:		8445.75 time, 8450.01 real, 516 MB, 1.00 load
+[runlim] sample:		8455.74 time, 8460.01 real, 516 MB, 1.00 load
+[runlim] sample:		8465.74 time, 8470.01 real, 516 MB, 1.00 load
+[runlim] sample:		8475.73 time, 8480.01 real, 516 MB, 1.00 load
+[runlim] sample:		8485.73 time, 8490.01 real, 516 MB, 1.00 load
+[runlim] sample:		8495.73 time, 8500.01 real, 516 MB, 1.00 load
+[runlim] sample:		8505.72 time, 8510.01 real, 516 MB, 1.00 load
+[runlim] sample:		8515.72 time, 8520.01 real, 516 MB, 1.00 load
+[runlim] sample:		8525.71 time, 8530.01 real, 517 MB, 1.00 load
+[runlim] sample:		8535.70 time, 8540.01 real, 517 MB, 1.00 load
+[runlim] sample:		8545.70 time, 8550.01 real, 517 MB, 1.00 load
+[runlim] sample:		8555.69 time, 8560.01 real, 517 MB, 1.15 load
+[runlim] sample:		8565.69 time, 8570.01 real, 517 MB, 1.13 load
+[runlim] sample:		8575.68 time, 8580.01 real, 517 MB, 1.11 load
+[runlim] sample:		8585.68 time, 8590.01 real, 517 MB, 1.09 load
+[runlim] sample:		8595.67 time, 8600.01 real, 517 MB, 1.08 load
+[runlim] sample:		8605.67 time, 8610.01 real, 517 MB, 1.06 load
+[runlim] sample:		8615.67 time, 8620.01 real, 517 MB, 1.20 load
+[runlim] sample:		8625.66 time, 8630.01 real, 518 MB, 1.17 load
+[runlim] sample:		8635.66 time, 8640.01 real, 518 MB, 1.14 load
+[runlim] sample:		8645.65 time, 8650.01 real, 518 MB, 1.12 load
+[runlim] sample:		8655.65 time, 8660.01 real, 518 MB, 1.10 load
+[runlim] sample:		8665.64 time, 8670.01 real, 518 MB, 1.09 load
+[runlim] sample:		8675.64 time, 8680.01 real, 518 MB, 1.07 load
+[runlim] sample:		8685.63 time, 8690.01 real, 518 MB, 1.06 load
+[runlim] sample:		8695.63 time, 8700.01 real, 518 MB, 1.05 load
+[runlim] sample:		8705.63 time, 8710.01 real, 518 MB, 1.04 load
+[runlim] sample:		8715.62 time, 8720.01 real, 518 MB, 1.04 load
+[runlim] sample:		8725.62 time, 8730.01 real, 518 MB, 1.03 load
+[runlim] sample:		8735.61 time, 8740.01 real, 518 MB, 1.02 load
+[runlim] sample:		8745.61 time, 8750.01 real, 518 MB, 1.02 load
+[runlim] sample:		8755.60 time, 8760.01 real, 518 MB, 1.02 load
+[runlim] sample:		8765.60 time, 8770.01 real, 518 MB, 1.01 load
+[runlim] sample:		8775.59 time, 8780.01 real, 518 MB, 1.01 load
+[runlim] sample:		8785.59 time, 8790.01 real, 518 MB, 1.01 load
+[runlim] sample:		8795.58 time, 8800.01 real, 518 MB, 1.01 load
+[runlim] sample:		8805.58 time, 8810.01 real, 518 MB, 1.01 load
+[runlim] sample:		8815.58 time, 8820.01 real, 518 MB, 1.00 load
+[runlim] sample:		8825.57 time, 8830.01 real, 518 MB, 1.00 load
+[runlim] sample:		8835.56 time, 8840.01 real, 518 MB, 1.00 load
+[runlim] sample:		8845.56 time, 8850.01 real, 518 MB, 1.00 load
+[runlim] sample:		8855.55 time, 8860.01 real, 518 MB, 1.00 load
+[runlim] sample:		8865.55 time, 8870.01 real, 518 MB, 1.00 load
+[runlim] sample:		8875.54 time, 8880.01 real, 557 MB, 1.00 load
+[runlim] sample:		8885.54 time, 8890.01 real, 557 MB, 1.00 load
+[runlim] sample:		8895.53 time, 8900.01 real, 557 MB, 1.00 load
+[runlim] sample:		8905.53 time, 8910.01 real, 557 MB, 1.00 load
+[runlim] sample:		8915.52 time, 8920.01 real, 557 MB, 1.00 load
+[runlim] sample:		8925.52 time, 8930.01 real, 557 MB, 1.00 load
+[runlim] sample:		8935.51 time, 8940.01 real, 557 MB, 1.00 load
+[runlim] sample:		8945.51 time, 8950.01 real, 557 MB, 1.00 load
+[runlim] sample:		8955.50 time, 8960.01 real, 562 MB, 1.00 load
+[runlim] sample:		8965.50 time, 8970.01 real, 562 MB, 1.00 load
+[runlim] sample:		8975.49 time, 8980.01 real, 562 MB, 1.00 load
+[runlim] sample:		8985.49 time, 8990.01 real, 562 MB, 1.00 load
+[runlim] sample:		8995.49 time, 9000.01 real, 562 MB, 1.00 load
+[runlim] sample:		9005.48 time, 9010.01 real, 562 MB, 1.00 load
+[runlim] sample:		9015.48 time, 9020.01 real, 562 MB, 1.00 load
+[runlim] sample:		9025.48 time, 9030.01 real, 547 MB, 1.00 load
+[runlim] sample:		9035.47 time, 9040.01 real, 547 MB, 1.00 load
+[runlim] sample:		9045.47 time, 9050.01 real, 547 MB, 1.00 load
+[runlim] sample:		9055.47 time, 9060.01 real, 547 MB, 1.15 load
+[runlim] sample:		9065.46 time, 9070.01 real, 547 MB, 1.13 load
+[runlim] sample:		9075.46 time, 9080.01 real, 547 MB, 1.11 load
+[runlim] sample:		9085.45 time, 9090.01 real, 547 MB, 1.09 load
+[runlim] sample:		9095.45 time, 9100.01 real, 547 MB, 1.08 load
+[runlim] sample:		9105.44 time, 9110.01 real, 577 MB, 1.06 load
+[runlim] sample:		9115.43 time, 9120.01 real, 577 MB, 1.05 load
+[runlim] sample:		9125.43 time, 9130.01 real, 577 MB, 1.05 load
+[runlim] sample:		9135.43 time, 9140.01 real, 577 MB, 1.04 load
+[runlim] sample:		9145.42 time, 9150.01 real, 577 MB, 1.03 load
+[runlim] sample:		9155.42 time, 9160.01 real, 577 MB, 1.03 load
+[runlim] sample:		9165.41 time, 9170.01 real, 577 MB, 1.02 load
+[runlim] sample:		9175.41 time, 9180.01 real, 577 MB, 1.02 load
+[runlim] sample:		9185.40 time, 9190.01 real, 577 MB, 1.02 load
+[runlim] sample:		9195.40 time, 9200.01 real, 576 MB, 1.01 load
+[runlim] sample:		9205.39 time, 9210.01 real, 576 MB, 1.01 load
+[runlim] sample:		9215.39 time, 9220.01 real, 576 MB, 1.01 load
+[runlim] sample:		9225.38 time, 9230.01 real, 576 MB, 1.01 load
+[runlim] sample:		9235.38 time, 9240.01 real, 576 MB, 1.00 load
+[runlim] sample:		9245.37 time, 9250.01 real, 576 MB, 1.00 load
+[runlim] sample:		9255.37 time, 9260.01 real, 576 MB, 1.00 load
+[runlim] sample:		9265.37 time, 9270.01 real, 575 MB, 1.00 load
+[runlim] sample:		9275.37 time, 9280.01 real, 575 MB, 1.08 load
+[runlim] sample:		9285.36 time, 9290.01 real, 575 MB, 1.07 load
+[runlim] sample:		9295.36 time, 9300.01 real, 575 MB, 1.06 load
+[runlim] sample:		9305.35 time, 9310.01 real, 575 MB, 1.12 load
+[runlim] sample:		9315.35 time, 9320.01 real, 575 MB, 1.10 load
+[runlim] sample:		9325.35 time, 9330.01 real, 575 MB, 1.09 load
+[runlim] sample:		9335.34 time, 9340.01 real, 575 MB, 1.07 load
+[runlim] sample:		9345.34 time, 9350.01 real, 575 MB, 1.06 load
+[runlim] sample:		9355.32 time, 9360.01 real, 568 MB, 1.05 load
+[runlim] sample:		9365.32 time, 9370.01 real, 568 MB, 1.04 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 652
+Schedule is valid
+ Time taken: 9371.45 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 651
+Schedule is valid
+ Time taken: 9371.70 seconds
+[runlim] sample:		9375.32 time, 9380.01 real, 568 MB, 1.04 load
+[runlim] sample:		9385.31 time, 9390.01 real, 568 MB, 1.03 load
+[runlim] sample:		9395.31 time, 9400.01 real, 568 MB, 1.02 load
+[runlim] sample:		9405.30 time, 9410.01 real, 568 MB, 1.02 load
+[runlim] sample:		9415.30 time, 9420.01 real, 568 MB, 1.02 load
+[runlim] sample:		9425.30 time, 9430.01 real, 568 MB, 1.01 load
+[runlim] sample:		9435.29 time, 9440.01 real, 568 MB, 1.01 load
+[runlim] sample:		9445.29 time, 9450.01 real, 558 MB, 1.01 load
+[runlim] sample:		9455.28 time, 9460.01 real, 558 MB, 1.01 load
+[runlim] sample:		9465.28 time, 9470.01 real, 558 MB, 1.01 load
+[runlim] sample:		9475.27 time, 9480.01 real, 558 MB, 1.00 load
+[runlim] sample:		9485.27 time, 9490.01 real, 558 MB, 1.00 load
+[runlim] sample:		9495.27 time, 9500.01 real, 558 MB, 1.00 load
+[runlim] sample:		9505.26 time, 9510.01 real, 558 MB, 1.00 load
+[runlim] sample:		9515.26 time, 9520.01 real, 558 MB, 1.00 load
+[runlim] sample:		9525.25 time, 9530.01 real, 567 MB, 1.00 load
+[runlim] sample:		9535.25 time, 9540.01 real, 567 MB, 1.00 load
+[runlim] sample:		9545.24 time, 9550.01 real, 567 MB, 1.00 load
+[runlim] sample:		9555.24 time, 9560.01 real, 567 MB, 1.15 load
+[runlim] sample:		9565.23 time, 9570.01 real, 567 MB, 1.13 load
+[runlim] sample:		9575.23 time, 9580.01 real, 567 MB, 1.11 load
+[runlim] sample:		9585.23 time, 9590.01 real, 567 MB, 1.09 load
+[runlim] sample:		9595.22 time, 9600.01 real, 567 MB, 1.16 load
+[runlim] sample:		9605.22 time, 9610.01 real, 567 MB, 1.13 load
+[runlim] sample:		9615.21 time, 9620.01 real, 545 MB, 1.19 load
+[runlim] sample:		9625.20 time, 9630.01 real, 545 MB, 1.16 load
+[runlim] sample:		9635.20 time, 9640.01 real, 545 MB, 1.22 load
+[runlim] sample:		9645.19 time, 9650.01 real, 545 MB, 1.18 load
+[runlim] sample:		9655.19 time, 9660.01 real, 545 MB, 1.32 load
+[runlim] sample:		9665.18 time, 9670.01 real, 545 MB, 1.27 load
+[runlim] sample:		9675.18 time, 9680.01 real, 545 MB, 1.23 load
+[runlim] sample:		9685.17 time, 9690.01 real, 545 MB, 1.19 load
+[runlim] sample:		9695.17 time, 9700.01 real, 545 MB, 1.16 load
+[runlim] sample:		9705.16 time, 9710.01 real, 577 MB, 1.14 load
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 650
+Schedule is valid
+ Time taken: 9711.22 seconds
+[runlim] sample:		9715.15 time, 9720.01 real, 576 MB, 1.11 load
+[runlim] sample:		9725.15 time, 9730.01 real, 576 MB, 1.10 load
+[runlim] sample:		9735.14 time, 9740.01 real, 576 MB, 1.08 load
+[runlim] sample:		9745.14 time, 9750.01 real, 576 MB, 1.07 load
+[runlim] sample:		9755.14 time, 9760.01 real, 576 MB, 1.06 load
+[runlim] sample:		9765.13 time, 9770.01 real, 576 MB, 1.05 load
+[runlim] sample:		9775.13 time, 9780.01 real, 576 MB, 1.04 load
+[runlim] sample:		9785.12 time, 9790.01 real, 560 MB, 1.03 load
+[runlim] sample:		9795.12 time, 9800.01 real, 599 MB, 1.03 load
+[runlim] sample:		9805.11 time, 9810.01 real, 560 MB, 1.02 load
+[runlim] sample:		9815.11 time, 9820.01 real, 560 MB, 1.02 load
+[runlim] sample:		9825.10 time, 9830.01 real, 560 MB, 1.02 load
+[runlim] sample:		9835.10 time, 9840.01 real, 560 MB, 1.01 load
+[runlim] sample:		9845.10 time, 9850.01 real, 560 MB, 1.01 load
+[runlim] sample:		9855.09 time, 9860.01 real, 560 MB, 1.01 load
+[runlim] sample:		9865.08 time, 9870.01 real, 712 MB, 1.01 load
+[runlim] sample:		9875.08 time, 9880.01 real, 561 MB, 1.00 load
+[runlim] sample:		9885.08 time, 9890.01 real, 561 MB, 1.00 load
+[runlim] sample:		9895.07 time, 9900.01 real, 561 MB, 1.00 load
+[runlim] sample:		9905.07 time, 9910.01 real, 561 MB, 1.00 load
+[runlim] sample:		9915.06 time, 9920.01 real, 561 MB, 1.00 load
+[runlim] sample:		9925.06 time, 9930.01 real, 561 MB, 1.00 load
+[runlim] sample:		9935.05 time, 9940.01 real, 561 MB, 1.00 load
+[runlim] sample:		9945.05 time, 9950.01 real, 561 MB, 1.00 load
+[runlim] sample:		9955.04 time, 9960.01 real, 561 MB, 1.00 load
+[runlim] sample:		9965.04 time, 9970.01 real, 698 MB, 1.00 load
+[runlim] sample:		9975.04 time, 9980.01 real, 546 MB, 1.00 load
+[runlim] sample:		9985.03 time, 9990.01 real, 546 MB, 1.00 load
+[runlim] sample:		9995.03 time, 10000.01 real, 546 MB, 1.00 load
+[runlim] sample:		10005.02 time, 10010.01 real, 546 MB, 1.00 load
+[runlim] sample:		10015.02 time, 10020.01 real, 546 MB, 1.00 load
+[runlim] sample:		10025.01 time, 10030.01 real, 577 MB, 1.00 load
+[runlim] sample:		10035.01 time, 10040.01 real, 577 MB, 1.00 load
+[runlim] sample:		10045.00 time, 10050.01 real, 577 MB, 1.00 load
+[runlim] sample:		10055.00 time, 10060.01 real, 577 MB, 1.15 load
+[runlim] sample:		10064.99 time, 10070.01 real, 577 MB, 1.13 load
+[runlim] sample:		10074.99 time, 10080.01 real, 577 MB, 1.18 load
+[runlim] sample:		10084.99 time, 10090.01 real, 577 MB, 1.15 load
+[runlim] sample:		10094.98 time, 10100.01 real, 577 MB, 1.13 load
+[runlim] sample:		10104.98 time, 10110.01 real, 587 MB, 1.11 load
+[runlim] sample:		10114.97 time, 10120.01 real, 587 MB, 1.09 load
+[runlim] sample:		10124.97 time, 10130.01 real, 587 MB, 1.08 load
+[runlim] sample:		10134.96 time, 10140.01 real, 610 MB, 1.07 load
+[runlim] sample:		10144.96 time, 10150.01 real, 610 MB, 1.06 load
+[runlim] sample:		10154.95 time, 10160.01 real, 610 MB, 1.05 load
+[runlim] sample:		10164.95 time, 10170.01 real, 610 MB, 1.04 load
+[runlim] sample:		10174.94 time, 10180.01 real, 610 MB, 1.03 load
+[runlim] sample:		10184.94 time, 10190.01 real, 610 MB, 1.03 load
+[runlim] sample:		10194.93 time, 10200.01 real, 584 MB, 1.02 load
+[runlim] sample:		10204.93 time, 10210.01 real, 584 MB, 1.09 load
+[runlim] sample:		10214.92 time, 10220.01 real, 584 MB, 1.08 load
+[runlim] sample:		10224.92 time, 10230.01 real, 584 MB, 1.07 load
+[runlim] sample:		10234.92 time, 10240.01 real, 584 MB, 1.06 load
+[runlim] sample:		10244.91 time, 10250.01 real, 584 MB, 1.05 load
+[runlim] sample:		10254.91 time, 10260.01 real, 584 MB, 1.04 load
+[runlim] sample:		10264.90 time, 10270.01 real, 584 MB, 1.03 load
+[runlim] sample:		10274.90 time, 10280.01 real, 584 MB, 1.03 load
+[runlim] sample:		10284.89 time, 10290.01 real, 546 MB, 1.02 load
+[runlim] sample:		10294.89 time, 10300.01 real, 546 MB, 1.10 load
+[runlim] sample:		10304.88 time, 10310.01 real, 546 MB, 1.08 load
+[runlim] sample:		10314.88 time, 10320.01 real, 546 MB, 1.07 load
+[runlim] sample:		10324.87 time, 10330.01 real, 546 MB, 1.06 load
+[runlim] sample:		10334.87 time, 10340.01 real, 546 MB, 1.05 load
+[runlim] sample:		10344.86 time, 10350.01 real, 546 MB, 1.04 load
+[runlim] sample:		10354.86 time, 10360.01 real, 546 MB, 1.03 load
+[runlim] sample:		10364.85 time, 10370.01 real, 546 MB, 1.03 load
+[runlim] sample:		10374.85 time, 10380.01 real, 546 MB, 1.02 load
+[runlim] sample:		10384.85 time, 10390.01 real, 546 MB, 1.02 load
+[runlim] sample:		10394.84 time, 10400.01 real, 548 MB, 1.02 load
+[runlim] sample:		10404.84 time, 10410.01 real, 548 MB, 1.01 load
+[runlim] sample:		10414.83 time, 10420.01 real, 548 MB, 1.01 load
+[runlim] sample:		10424.83 time, 10430.01 real, 548 MB, 1.01 load
+[runlim] sample:		10434.82 time, 10440.01 real, 548 MB, 1.01 load
+[runlim] sample:		10444.82 time, 10450.01 real, 548 MB, 1.01 load
+[runlim] sample:		10454.81 time, 10460.01 real, 548 MB, 1.08 load
+[runlim] sample:		10464.81 time, 10470.01 real, 548 MB, 1.07 load
+[runlim] sample:		10474.81 time, 10480.01 real, 548 MB, 1.06 load
+[runlim] sample:		10484.80 time, 10490.01 real, 548 MB, 1.05 load
+[runlim] sample:		10494.80 time, 10500.01 real, 548 MB, 1.04 load
+[runlim] sample:		10504.79 time, 10510.01 real, 549 MB, 1.03 load
+[runlim] sample:		10514.79 time, 10520.01 real, 549 MB, 1.03 load
+[runlim] sample:		10524.78 time, 10530.01 real, 549 MB, 1.02 load
+[runlim] sample:		10534.78 time, 10540.01 real, 549 MB, 1.02 load
+[runlim] sample:		10544.77 time, 10550.01 real, 549 MB, 1.10 load
+[runlim] sample:		10554.77 time, 10560.01 real, 549 MB, 1.24 load
+[runlim] sample:		10564.77 time, 10570.01 real, 549 MB, 1.20 load
+[runlim] sample:		10574.76 time, 10580.01 real, 549 MB, 1.17 load
+[runlim] sample:		10584.76 time, 10590.01 real, 549 MB, 1.14 load
+[runlim] sample:		10594.75 time, 10600.01 real, 549 MB, 1.19 load
+[runlim] sample:		10604.75 time, 10610.01 real, 549 MB, 1.16 load
+[runlim] sample:		10614.74 time, 10620.01 real, 549 MB, 1.21 load
+[runlim] sample:		10624.73 time, 10630.01 real, 553 MB, 1.18 load
+[runlim] sample:		10634.73 time, 10640.01 real, 553 MB, 1.15 load
+[runlim] sample:		10644.72 time, 10650.01 real, 553 MB, 1.13 load
+[runlim] sample:		10654.72 time, 10660.01 real, 553 MB, 1.11 load
+[runlim] sample:		10664.72 time, 10670.01 real, 553 MB, 1.09 load
+[runlim] sample:		10674.71 time, 10680.01 real, 553 MB, 1.08 load
+[runlim] sample:		10684.71 time, 10690.01 real, 553 MB, 1.06 load
+[runlim] sample:		10694.70 time, 10700.01 real, 553 MB, 1.05 load
+[runlim] sample:		10704.70 time, 10710.01 real, 553 MB, 1.05 load
+[runlim] sample:		10714.69 time, 10720.01 real, 553 MB, 1.04 load
+[runlim] sample:		10724.69 time, 10730.01 real, 553 MB, 1.03 load
+[runlim] sample:		10734.68 time, 10740.01 real, 554 MB, 1.03 load
+[runlim] sample:		10744.68 time, 10750.01 real, 554 MB, 1.02 load
+[runlim] sample:		10754.67 time, 10760.01 real, 554 MB, 1.02 load
+[runlim] sample:		10764.67 time, 10770.01 real, 554 MB, 1.02 load
+[runlim] sample:		10774.67 time, 10780.01 real, 554 MB, 1.01 load
+[runlim] sample:		10784.66 time, 10790.01 real, 554 MB, 1.01 load
+[runlim] sample:		10794.66 time, 10800.01 real, 554 MB, 1.01 load
+[runlim] end:			Sun Jul  5 07:06:06 2026
+[runlim] status:		out of time
+[runlim] result:		2
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			10801.06 seconds
+[runlim] time:			10794.66 seconds
+[runlim] space:			787 MB
+[runlim] load:			1.49 maximum
+[runlim] samples:		108000

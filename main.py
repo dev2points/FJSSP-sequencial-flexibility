@@ -233,8 +233,8 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 sm[(i,j,machine)] = top_id
                 # Constraint 1 way to decrease the number of clauses
                 solver.add_clause([-m[(i, machine)], -m[(j, machine)], sm[(i,j,machine)]])
-                # solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
-                # solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
+                solver.add_clause([-sm[(i,j,machine)], m[(i, machine)] ])
+                solver.add_clause([-sm[(i,j,machine)], m[(j, machine)] ])
 
                 p_i = request_list[i][machine]
                 p_j = request_list[j][machine]
@@ -296,7 +296,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                             # Ngay cả máy nhanh nhất cũng không kịp -> thời điểm t này bất khả thi
                             # Don't need because pre processing build on first machine, but keep it for safety
                             solver.add_clause([-s[(i, t)]])
-                            print(f"at operation {i} at time {t}, finish_i={finish_i} is beyond LS_j={feasible_time[j][1]} of operation {j}. Clause added: [-s[({i}, {t})]]")
+                            # print(f"at operation {i} at time {t}, finish_i={finish_i} is beyond LS_j={feasible_time[j][1]} of operation {j}. Clause added: [-s[({i}, {t})]]")
                         else:
                             # Bắt buộc phải chọn các máy nhanh hơn phía trước thì mới kịp giờ của j
                             prev_machine = request_list_i[idx - 1][0]
@@ -306,8 +306,8 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # Vì các máy phía sau còn chậm hơn nữa, chắc chắn cũng sẽ vượt quá LS_j,
                         # nên ta có thể break luôn để giảm số lượng clause thừa.
                         break
-                else:
-                    print(f"at operation {i} at time {t}, finish_i={finish_i} is before ES_j={feasible_time[j][0]} of operation {j}. No clause needed.")
+                # else:
+                #     print(f"at operation {i} at time {t}, finish_i={finish_i} is before ES_j={feasible_time[j][0]} of operation {j}. No clause needed.")
 
 
     #(6) ràng buộc thứ tự precedence
@@ -476,7 +476,7 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         #     queue_str = "  ->  ".join([f"Op {op} [{st}->{en}]" for st, en, op in queue])
         #     print(f"Machine {machine}: {queue_str}")
             
-        print(f"\n=> TOTAL COMPLETION TIME (Makespan / UB): {makespan}")
+        print(f"=> TOTAL COMPLETION TIME (Makespan / UB): {makespan}")
             
         # Trả về thêm makespan (ub) ở vị trí thứ 4
         return machine_assignment, start_times, machine_queues, makespan
@@ -594,6 +594,7 @@ def main():
         print("No feasible solution found")
         print("status: optimal")
         print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+        print("------------------------------------------------------------------")
         return
     # print(f"Feasible time windows: {feasible_time}  ")
     s, x, m, xm, top_id = create_var(num_operations, request_list, feasible_time)
@@ -610,6 +611,7 @@ def main():
         machine_assignment, start_times, machine_queues, makespan = solve_and_print(solver, num_operations, s, m, request_list)
         if machine_assignment is None:
             print(f"Time taken: {perf_counter() - start_time:.2f} seconds")
+            print("------------------------------------------------------------------")
             break  # Không thể giảm UB nữa
 
         if not verify_schedule(num_operations, num_machines, precedence_list, request_list, machine_assignment, start_times, makespan):
@@ -622,5 +624,6 @@ def main():
         k = ub - makespan
         ub = makespan - 1
         print(f" Time taken: {perf_counter() - start_time:.2f} seconds")
+        print("------------------------------------------------------------------")
 if __name__ == "__main__":
     main()

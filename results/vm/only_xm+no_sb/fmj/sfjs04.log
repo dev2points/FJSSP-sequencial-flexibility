@@ -1,0 +1,37 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			fjssp-instance
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		temp.py
+[runlim] argv[3]:		datasets/fmj/sfjs04
+[runlim] start:			Thu Jul 16 15:24:14 2026
+[runlim] child:			58395
+Operations: 6, Edges: 3, Machines: 2
+Greedy Schedule UB: 367
+Building constraints took 0.00 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 366
+Schedule is valid
+ Time taken: 0.01 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 355
+Schedule is valid
+ Time taken: 0.01 seconds
+UNSAT
+status: optimal
+Time taken: 0.01 seconds
+[runlim] end:			Thu Jul 16 15:24:14 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		0
+[runlim] processes:		0
+[runlim] real:			0.03 seconds
+[runlim] time:			0.00 seconds
+[runlim] space:			0 MB
+[runlim] load:			0.16 maximum
+[runlim] samples:		1

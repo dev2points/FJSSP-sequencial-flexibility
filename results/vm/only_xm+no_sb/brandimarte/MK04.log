@@ -7,19 +7,156 @@
 [runlim] argv[1]:		-u
 [runlim] argv[2]:		temp.py
 [runlim] argv[3]:		datasets/brandimarte/MK04
-[runlim] start:			Fri Jul 17 00:54:18 2026
-[runlim] child:			52560
-Traceback (most recent call last):
-  File "/home/anhphuong/FJSSP-sequencial-flexibility/temp.py", line 4, in <module>
-    from pysat.solvers import Solver
-ModuleNotFoundError: No module named 'pysat'
-[runlim] end:			Fri Jul 17 00:54:18 2026
+[runlim] start:			Fri Jul 17 05:17:15 2026
+[runlim] child:			59716
+Operations: 90, Edges: 75, Machines: 8
+Greedy Schedule UB: 87
+Building constraints took 0.14 seconds.
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 86
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 85
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 84
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 83
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 82
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 81
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 80
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 79
+Schedule is valid
+ Time taken: 0.20 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 78
+Schedule is valid
+ Time taken: 0.20 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 77
+Schedule is valid
+ Time taken: 0.21 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 76
+Schedule is valid
+ Time taken: 0.24 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 75
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 74
+Schedule is valid
+ Time taken: 0.32 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 73
+Schedule is valid
+ Time taken: 0.37 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 72
+Schedule is valid
+ Time taken: 0.48 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 71
+Schedule is valid
+ Time taken: 0.50 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 70
+Schedule is valid
+ Time taken: 0.97 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 69
+Schedule is valid
+ Time taken: 1.24 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 68
+Schedule is valid
+ Time taken: 1.29 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 67
+Schedule is valid
+ Time taken: 1.38 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 66
+Schedule is valid
+ Time taken: 1.46 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 65
+Schedule is valid
+ Time taken: 1.51 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 64
+Schedule is valid
+ Time taken: 1.94 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 63
+Schedule is valid
+ Time taken: 2.03 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 62
+Schedule is valid
+ Time taken: 2.31 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 61
+Schedule is valid
+ Time taken: 2.86 seconds
+SAT
+
+=> TOTAL COMPLETION TIME (Makespan / UB): 60
+Schedule is valid
+ Time taken: 3.31 seconds
+UNSAT
+status: optimal
+Time taken: 4.79 seconds
+[runlim] end:			Fri Jul 17 05:17:20 2026
 [runlim] status:		ok
-[runlim] result:		1
-[runlim] children:		0
-[runlim] processes:		0
-[runlim] real:			0.02 seconds
-[runlim] time:			0.00 seconds
-[runlim] space:			0 MB
-[runlim] load:			1.01 maximum
-[runlim] samples:		1
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			4.82 seconds
+[runlim] time:			4.80 seconds
+[runlim] space:			58 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		49

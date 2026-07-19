@@ -226,7 +226,7 @@ def transitive_closure_weighted(num_operations, precedence_list,request_list, ne
     # Trả về danh sách các cạnh closure dưới dạng (u, v, w) với w là thời gian tối thiểu từ u đến v
     return [(u, v, w) for (u, v), w in graph.items()] 
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb=0):
     # (4) tạo dãy order
     for i in range(num_operations):    
 
@@ -408,33 +408,33 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 #     print(f"at operation {i} at time {t}, finish_i={finish_i} is before ES_j={feasible_time[j][0]} of operation {j}. No clause needed.")
 
 
-    # #(6) ràng buộc thứ tự precedence
-    # for i,j in precedence_list:
-    #     # print(f"Adding precedence constraint: Op {i} -> Op {j}")
-    #     machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
-    #     first_flag = True
-    #     for machine, process_time in machines_i:
-    #         if first_flag:
-    #             for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
-    #                 finish_i = t + process_time
+    #(6) ràng buộc thứ tự precedence
+    for i,j in precedence_list:
+        # print(f"Adding precedence constraint: Op {i} -> Op {j}")
+        machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
+        first_flag = True
+        for machine, process_time in machines_i:
+            if first_flag:
+                for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                    finish_i = t + process_time
                     
-    #                 if finish_i > feasible_time[j][1]:
-    #                     # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
-    #                     solver.add_clause([-s[(i, t)], -m[(i, machine)]])
-    #                 elif finish_i > feasible_time[j][0]:
-    #                     # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
-    #                     solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
-    #             first_flag = False
-    #         else:
-    #             for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
-    #                 finish_i = t + process_time
+                    if finish_i > feasible_time[j][1]:
+                        # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+                    elif finish_i > feasible_time[j][0]:
+                        # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                        solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+                first_flag = False
+            else:
+                for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+                    finish_i = t + process_time
                     
-    #                 if finish_i > feasible_time[j][1]:
-    #                     # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
-    #                     solver.add_clause([-s[(i, t)], -m[(i, machine)]])
-    #                 elif finish_i > feasible_time[j][0]:
-    #                     # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
-    #                     solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
+                    if finish_i > feasible_time[j][1]:
+                        # i kết thúc muộn hơn cả thời điểm muộn nhất j có thể bắt đầu -> Vô lý
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+                    elif finish_i > feasible_time[j][0]:
+                        # i kết thúc trong khoảng [ES_j, LS_j] -> j phải bắt đầu >= finish_i
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
 
     for u, v, w in graph:
         if (u, v) in precedence_list:
@@ -453,11 +453,11 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # u kết thúc trong khoảng [ES_v, LS_v] -> v phải bắt đầu >= finish_u
                 solver.add_clause([-s[(u, t)], x[(v, finish_u)]])
 
-
-    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    # solver.add_clause([s[(i, 0)] for i in first_ops])
+    if sb == 1:
+        # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+        first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+        # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+        solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
@@ -641,7 +641,8 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    file_name = sys.argv[1]
+    sb = int(sys.argv[1])  # symmetry breaking flag
+    file_name = sys.argv[2]
     if 'dauzere' in file_name.lower() or 'hurink' in file_name.lower():
         num_operations, num_edges, num_machines, precedence_list, request_list = read_new_format(file_name)
     else:
@@ -662,7 +663,7 @@ def main():
     solver = Solver(name = 'cadical195')
 
     graph = transitive_closure_weighted(num_operations, precedence_list, request_list, neighbors.copy(), in_degree.copy())
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:

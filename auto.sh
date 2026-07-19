@@ -6,14 +6,20 @@ DADATA_DIR=datasets/dafjs
 FMJDATA_DIR=datasets/fmj
 MKDATA_DIR=datasets/brandimarte
 YRESULT_DIR=results/vm/yfjs
-DARESULT_DIR=results/vm/only_xm+no_sb/dafjs
-FMJRESULT_DIR=results/vm/only_xm+no_sb/fmj
-MKRESULT_DIR=results/vm/only_xm+no_sb/brandimarte
+DARESULT_DIR=results/vm/test/dafjs
+FMJRESULT_DIR=results/vm/test/fmj
+MKRESULT_DIR=results/vm/test/brandimarte
 
 mkdir -p $YRESULT_DIR
 mkdir -p $DARESULT_DIR
 mkdir -p $FMJRESULT_DIR
 mkdir -p $MKRESULT_DIR
+
+./runlim -r $TO -s $MO  python3 -u temp.py 1 $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09_1.log
+./runlim -r $TO -s $MO  python3 -u temp.py 0 $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09_0.log
+./runlim -r $TO -s $MO  python3 -u temp.py 1 $DADATA_DIR/DAFJS29 2>&1 | tee $DARESULT_DIR/DAFJS29_1.log
+./runlim -r $TO -s $MO  python3 -u temp.py 0 $DADATA_DIR/DAFJS29 2>&1 | tee $DARESULT_DIR/DAFJS29_0.log
+
 
 # ./runlim -r $TO -s $MO  python3 -u temp.py $YDATA_DIR/YFJS01 2>&1 | tee $YRESULT_DIR/YFJS01.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $YDATA_DIR/YFJS02 2>&1 | tee $YRESULT_DIR/YFJS02.log
@@ -99,18 +105,9 @@ mkdir -p $MKRESULT_DIR
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK07 2>&1 | tee $MKRESULT_DIR/MK07.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK08 2>&1 | tee $MKRESULT_DIR/MK08.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK09 2>&1 | tee $MKRESULT_DIR/MK09.log
-<<<<<<< HEAD
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK10 2>&1 | tee $MKRESULT_DIR/MK10.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK11 2>&1 | tee $MKRESULT_DIR/MK11.log
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK12 2>&1 | tee $MKRESULT_DIR/MK12.log
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK13 2>&1 | tee $MKRESULT_DIR/MK13.log
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK14 2>&1 | tee $MKRESULT_DIR/MK14.log
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK15 2>&1 | tee $MKRESULT_DIR/MK15.log
-=======
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK10 2>&1 | tee $MKRESULT_DIR/MK10.log
-./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK11 2>&1 | tee $MKRESULT_DIR/MK11.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK12 2>&1 | tee $MKRESULT_DIR/MK12.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK13 2>&1 | tee $MKRESULT_DIR/MK13.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK14 2>&1 | tee $MKRESULT_DIR/MK14.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $MKDATA_DIR/MK15 2>&1 | tee $MKRESULT_DIR/MK15.log
->>>>>>> 1d25e15 (complete run mk)

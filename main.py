@@ -176,7 +176,7 @@ def transitive_closure_weighted(num_operations, precedence_list,request_list, ne
     # Trả về danh sách các cạnh closure dưới dạng (u, v, w) với w là thời gian tối thiểu từ u đến v
     return [(u, v, w) for (u, v), w in graph.items()] 
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb=0):
     # (4) tạo dãy order
     for i in range(num_operations):    
         
@@ -355,11 +355,11 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # u kết thúc trong khoảng [ES_v, LS_v] -> v phải bắt đầu >= finish_u
                 solver.add_clause([-s[(u, t)], x[(v, finish_u)]])
 
-
-    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-    # first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-    # # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-    # solver.set_phases([s[(i, 0)] for i in first_ops])  # ưu tiên các thao tác đầu tiên bắt đầu sớm nhất
+    if sb == 1:
+        # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+        first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+        # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+        solver.set_phases([s[(i, 0)] for i in first_ops])  # ưu tiên các thao tác đầu tiên bắt đầu sớm nhất
     
 
                     
@@ -584,7 +584,8 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    file_path = sys.argv[1]
+    sb = int(sys.argv[1])  # symmetry breaking flag
+    file_path = sys.argv[2]
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
@@ -603,7 +604,7 @@ def main():
     solver = Solver(name = 'cadical195')
 
     graph = transitive_closure_weighted(num_operations, precedence_list, request_list, neighbors.copy(), in_degree.copy())
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
     k = 0
     while True:

@@ -113,6 +113,7 @@ mkdir -p $HUVRESULT_DIR
 # ./runlim -r $TO -s $MO  python3 -u temp.py $DPDATA_DIR/18a.txt 2>&1 | tee $DPRESULT_DIR/18a.log
 
 
+<<<<<<< HEAD
 ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz5.txt 2>&1 | tee $HUERESULT_DIR/abz5.log
 ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz6.txt 2>&1 | tee $HUERESULT_DIR/abz6.log
 ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz7.txt 2>&1 | tee $HUERESULT_DIR/abz7.log
@@ -179,6 +180,74 @@ mkdir -p $HUVRESULT_DIR
 # ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb8.txt 2>&1 | tee $HUERESULT_DIR/orb8.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb9.txt 2>&1 | tee $HUERESULT_DIR/orb9.log
 # ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb10.txt 2>&1 | tee $HUERESULT_DIR/orb10.log
+=======
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz5.txt 2>&1 | tee $HUERESULT_DIR/abz5.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz6.txt 2>&1 | tee $HUERESULT_DIR/abz6.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz7.txt 2>&1 | tee $HUERESULT_DIR/abz7.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz8.txt 2>&1 | tee $HUERESULT_DIR/abz8.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/abz9.txt 2>&1 | tee $HUERESULT_DIR/abz9.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car1.txt 2>&1 | tee $HUERESULT_DIR/car1.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car2.txt 2>&1 | tee $HUERESULT_DIR/car2.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car3.txt 2>&1 | tee $HUERESULT_DIR/car3.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car4.txt 2>&1 | tee $HUERESULT_DIR/car4.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car5.txt 2>&1 | tee $HUERESULT_DIR/car5.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car6.txt 2>&1 | tee $HUERESULT_DIR/car6.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car7.txt 2>&1 | tee $HUERESULT_DIR/car7.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/car8.txt 2>&1 | tee $HUERESULT_DIR/car8.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la01.txt 2>&1 | tee $HUERESULT_DIR/la01.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la02.txt 2>&1 | tee $HUERESULT_DIR/la02.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la03.txt 2>&1 | tee $HUERESULT_DIR/la03.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la04.txt 2>&1 | tee $HUERESULT_DIR/la04.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la05.txt 2>&1 | tee $HUERESULT_DIR/la05.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la06.txt 2>&1 | tee $HUERESULT_DIR/la06.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la07.txt 2>&1 | tee $HUERESULT_DIR/la07.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la08.txt 2>&1 | tee $HUERESULT_DIR/la08.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la09.txt 2>&1 | tee $HUERESULT_DIR/la09.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la10.txt 2>&1 | tee $HUERESULT_DIR/la10.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la11.txt 2>&1 | tee $HUERESULT_DIR/la11.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la12.txt 2>&1 | tee $HUERESULT_DIR/la12.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la13.txt 2>&1 | tee $HUERESULT_DIR/la13.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la14.txt 2>&1 | tee $HUERESULT_DIR/la14.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la15.txt 2>&1 | tee $HUERESULT_DIR/la15.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la16.txt 2>&1 | tee $HUERESULT_DIR/la16.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la17.txt 2>&1 | tee $HUERESULT_DIR/la17.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la18.txt 2>&1 | tee $HUERESULT_DIR/la18.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la19.txt 2>&1 | tee $HUERESULT_DIR/la19.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la20.txt 2>&1 | tee $HUERESULT_DIR/la20.log   
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la21.txt 2>&1 | tee $HUERESULT_DIR/la21.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la22.txt 2>&1 | tee $HUERESULT_DIR/la22.log
+# ./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la23.txt 2>&1 | tee $HUERESULT_DIR/la23.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la24.txt 2>&1 | tee $HUERESULT_DIR/la24.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la25.txt 2>&1 | tee $HUERESULT_DIR/la25.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la26.txt 2>&1 | tee $HUERESULT_DIR/la26.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la27.txt 2>&1 | tee $HUERESULT_DIR/la27.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la28.txt 2>&1 | tee $HUERESULT_DIR/la28.log   
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la29.txt 2>&1 | tee $HUERESULT_DIR/la29.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la30.txt 2>&1 | tee $HUERESULT_DIR/la30.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la31.txt 2>&1 | tee $HUERESULT_DIR/la31.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la32.txt 2>&1 | tee $HUERESULT_DIR/la32.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la33.txt 2>&1 | tee $HUERESULT_DIR/la33.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la34.txt 2>&1 | tee $HUERESULT_DIR/la34.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la35.txt 2>&1 | tee $HUERESULT_DIR/la35.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la36.txt 2>&1 | tee $HUERESULT_DIR/la36.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la37.txt 2>&1 | tee $HUERESULT_DIR/la37.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la38.txt 2>&1 | tee $HUERESULT_DIR/la38.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la39.txt 2>&1 | tee $HUERESULT_DIR/la39.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/la40.txt 2>&1 | tee $HUERESULT_DIR/la40.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/mt06.txt 2>&1 | tee $HUERESULT_DIR/mt06.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/mt10.txt 2>&1 | tee $HUERESULT_DIR/mt10.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/mt20.txt 2>&1 | tee $HUERESULT_DIR/mt20.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb1.txt 2>&1 | tee $HUERESULT_DIR/orb1.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb2.txt 2>&1 | tee $HUERESULT_DIR/orb2.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb3.txt 2>&1 | tee $HUERESULT_DIR/orb3.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb4.txt 2>&1 | tee $HUERESULT_DIR/orb4.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb5.txt 2>&1 | tee $HUERESULT_DIR/orb5.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb6.txt 2>&1 | tee $HUERESULT_DIR/orb6.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb7.txt 2>&1 | tee $HUERESULT_DIR/orb7.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb8.txt 2>&1 | tee $HUERESULT_DIR/orb8.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb9.txt 2>&1 | tee $HUERESULT_DIR/orb9.log
+./runlim -r $TO -s $MO  python3 -u temp.py $HUEDATA_DIR/orb10.txt 2>&1 | tee $HUERESULT_DIR/orb10.log
+>>>>>>> fdfda5871b12b93866a94fcbe1e854bd8baa4d0e
 
 
 # ./runlim -r $TO -s $MO  python3 -u temp.py $HURDATA_DIR/abz5.txt 2>&1 | tee $HURRESULT_DIR/abz5.log

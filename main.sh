@@ -8,7 +8,7 @@ HUEDATA_DIR=datasets/hurink/edata
 HURDATA_DIR=datasets/hurink/rdata
 HUVDATA_DIR=datasets/hurink/vdata
 YRESULT_DIR=results/main/yfjs
-DARESULT_DIR=results/main/dafjs
+DARESULT_DIR=results/test/dafjs
 MKRESULT_DIR=results/main/mk
 DPRESULT_DIR=results/main/dauzere
 HUERESULT_DIR=results/vm/test/edata
@@ -16,13 +16,13 @@ HURRESULT_DIR=results/vm/test/rdata
 HUVRESULT_DIR=results/vm/test/vdata
 
 
-mkdir -p $YRESULT_DIR
+# mkdir -p $YRESULT_DIR
 mkdir -p $DARESULT_DIR
-mkdir -p $MKRESULT_DIR
-mkdir -p $DPRESULT_DIR
-mkdir -p $HUERESULT_DIR
-mkdir -p $HURRESULT_DIR
-mkdir -p $HUVRESULT_DIR
+# mkdir -p $MKRESULT_DIR
+# mkdir -p $DPRESULT_DIR
+# mkdir -p $HUERESULT_DIR
+# mkdir -p $HURRESULT_DIR
+# mkdir -p $HUVRESULT_DIR
 
 ./runlim -r $TO -s $MO  python3 -u main.py 1 $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09_1.log
 ./runlim -r $TO -s $MO  python3 -u main.py 0 $DADATA_DIR/DAFJS09 2>&1 | tee $DARESULT_DIR/DAFJS09_0.log

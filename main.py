@@ -177,7 +177,7 @@ def transitive_closure_weighted(num_operations, precedence_list,request_list, ne
     # Trả về danh sách các cạnh closure dưới dạng (u, v, w) với w là thời gian tối thiểu từ u đến v
     return [(u, v, w) for (u, v), w in graph.items()] 
 
-def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb):
+def build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph):
     # (4) tạo dãy order
     for i in range(num_operations):    
 
@@ -312,7 +312,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # =========================================================================
                 elif finish_i == feasible_time[j][0]:
                     if idx == 0:
-                        continue
+                        solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
                     else:
                         prev_machine = machines_i[idx - 1][0]
                         solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
@@ -335,11 +335,10 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # u kết thúc trong khoảng [ES_v, LS_v] -> v phải bắt đầu >= finish_u
                 solver.add_clause([-s[(u, t)], x[(v, finish_u)]])
 
-    if sb == 1:
-        # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-        first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-        # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-        solver.add_clause([s[(i, 0)] for i in first_ops])
+    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):
@@ -415,7 +414,7 @@ def solve_and_print(solver, num_operations, s, m, request_list):
         #     queue_str = "  ->  ".join([f"Op {op} [{st}->{en}]" for st, en, op in queue])
         #     print(f"Machine {machine}: {queue_str}")
             
-        print(f"\n=> TOTAL COMPLETION TIME (Makespan / UB): {makespan}")
+        print(f"=> MAKESPAN: {makespan}")
             
         # Trả về thêm makespan (ub) ở vị trí thứ 4
         return machine_assignment, start_times, machine_queues, makespan
@@ -523,8 +522,7 @@ def verify_schedule(num_operations, num_machines, precedence_list,
 
 def main():
     start_time = perf_counter()
-    sb = int(sys.argv[1])
-    file_path = sys.argv[2]
+    file_path = sys.argv[1]
     num_operations, num_edges, num_machines, precedence_list, request_list = read_file(file_path)
     in_degree, out_degree, neighbors, predecessors = data(num_operations, precedence_list)
     size_time, assignment, queue = greedy_schedule(num_operations, num_machines, request_list, in_degree.copy(), neighbors, predecessors)
@@ -542,7 +540,7 @@ def main():
     solver = Solver(name = 'cadical195')
 
     graph = transitive_closure_weighted(num_operations, precedence_list, request_list, neighbors.copy(), in_degree.copy())
-    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph, sb)
+    build_constraints(solver, num_operations, precedence_list, request_list, feasible_time, in_degree, s, x, m, xm, top_id, graph)
     print(f"Building constraints took {perf_counter() - start_time:.2f} seconds.")
 
     while True:

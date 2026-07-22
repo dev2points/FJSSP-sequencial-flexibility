@@ -165,8 +165,7 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
     # print(f"lastest start 8 {latest_start[8]}")
 
     for u in reversed(topo_queue):
-        for v in neighbors[u]:
-            latest_start[u] = max(latest_start[u], latest_start[v] - min_proc_time[u])
+        latest_start[u] = min(latest_start[v] - min_proc_time[u] for v in neighbors[u]) if neighbors[u] else ub - min_proc_time[u]
     
     feasible_time = {}
     for i in range(num_operations):

@@ -362,7 +362,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # =========================================================================
                 elif finish_i == feasible_time[j][0]:
                     if idx == 0:
-                        solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+                        continue  # Không cần thêm ràng buộc gì cả, vì j có thể bắt đầu ngay sau i
                     else:
                         prev_machine = machines_i[idx - 1][0]
                         solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])

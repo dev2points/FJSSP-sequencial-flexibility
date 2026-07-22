@@ -1,0 +1,436 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			fjssp-instance
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/yfjs/YFJS18
+[runlim] start:			Tue Jul 21 15:37:08 2026
+[runlim] child:			11411
+Operations: 289, Edges: 272, Machines: 26
+Greedy Schedule UB: 1314
+[runlim] sample:		10.00 time, 10.01 real, 1173 MB, 1.01 load
+Building constraints took 14.02 seconds.
+SAT
+=> MAKESPAN: 1313
+Schedule is valid
+ Time taken: 17.47 seconds
+[runlim] sample:		19.99 time, 20.01 real, 2344 MB, 1.01 load
+SAT
+=> MAKESPAN: 1312
+Schedule is valid
+ Time taken: 24.50 seconds
+SAT
+=> MAKESPAN: 1311
+Schedule is valid
+ Time taken: 25.79 seconds
+SAT
+=> MAKESPAN: 1310
+Schedule is valid
+ Time taken: 25.88 seconds
+[runlim] sample:		30.00 time, 30.01 real, 2488 MB, 1.01 load
+[runlim] sample:		39.99 time, 40.01 real, 2358 MB, 1.08 load
+[runlim] sample:		49.99 time, 50.01 real, 2309 MB, 1.07 load
+SAT
+=> MAKESPAN: 1309
+Schedule is valid
+ Time taken: 54.34 seconds
+SAT
+=> MAKESPAN: 1308
+Schedule is valid
+ Time taken: 58.99 seconds
+SAT
+=> MAKESPAN: 1307
+Schedule is valid
+ Time taken: 59.93 seconds
+[runlim] sample:		60.00 time, 60.01 real, 2280 MB, 1.06 load
+SAT
+=> MAKESPAN: 1306
+Schedule is valid
+ Time taken: 62.01 seconds
+SAT
+=> MAKESPAN: 1305
+Schedule is valid
+ Time taken: 65.29 seconds
+[runlim] sample:		69.99 time, 70.01 real, 2281 MB, 1.05 load
+SAT
+=> MAKESPAN: 1304
+Schedule is valid
+ Time taken: 71.87 seconds
+SAT
+=> MAKESPAN: 1303
+Schedule is valid
+ Time taken: 73.50 seconds
+SAT
+=> MAKESPAN: 1302
+Schedule is valid
+ Time taken: 74.76 seconds
+[runlim] sample:		79.99 time, 80.01 real, 2288 MB, 1.04 load
+[runlim] sample:		89.99 time, 90.01 real, 2502 MB, 1.03 load
+SAT
+=> MAKESPAN: 1301
+Schedule is valid
+ Time taken: 92.54 seconds
+SAT
+=> MAKESPAN: 1300
+Schedule is valid
+ Time taken: 97.82 seconds
+SAT
+=> MAKESPAN: 1299
+Schedule is valid
+ Time taken: 99.74 seconds
+[runlim] sample:		99.98 time, 100.01 real, 2268 MB, 1.03 load
+SAT
+=> MAKESPAN: 1298
+Schedule is valid
+ Time taken: 109.80 seconds
+[runlim] sample:		109.99 time, 110.01 real, 2266 MB, 1.02 load
+SAT
+=> MAKESPAN: 1297
+Schedule is valid
+ Time taken: 111.52 seconds
+SAT
+=> MAKESPAN: 1296
+Schedule is valid
+ Time taken: 112.37 seconds
+SAT
+=> MAKESPAN: 1295
+Schedule is valid
+ Time taken: 114.03 seconds
+SAT
+=> MAKESPAN: 1294
+Schedule is valid
+ Time taken: 117.96 seconds
+SAT
+=> MAKESPAN: 1293
+Schedule is valid
+ Time taken: 118.90 seconds
+[runlim] sample:		119.98 time, 120.01 real, 2498 MB, 1.02 load
+[runlim] sample:		129.98 time, 130.01 real, 2260 MB, 1.02 load
+[runlim] sample:		139.98 time, 140.01 real, 2259 MB, 1.01 load
+SAT
+=> MAKESPAN: 1292
+Schedule is valid
+ Time taken: 144.85 seconds
+SAT
+=> MAKESPAN: 1291
+Schedule is valid
+ Time taken: 145.68 seconds
+SAT
+=> MAKESPAN: 1290
+Schedule is valid
+ Time taken: 145.73 seconds
+SAT
+=> MAKESPAN: 1289
+Schedule is valid
+ Time taken: 148.56 seconds
+SAT
+=> MAKESPAN: 1288
+Schedule is valid
+ Time taken: 149.79 seconds
+[runlim] sample:		149.98 time, 150.01 real, 2264 MB, 1.01 load
+SAT
+=> MAKESPAN: 1287
+Schedule is valid
+ Time taken: 152.60 seconds
+SAT
+=> MAKESPAN: 1286
+Schedule is valid
+ Time taken: 152.72 seconds
+SAT
+=> MAKESPAN: 1285
+Schedule is valid
+ Time taken: 153.61 seconds
+SAT
+=> MAKESPAN: 1284
+Schedule is valid
+ Time taken: 154.45 seconds
+SAT
+=> MAKESPAN: 1283
+Schedule is valid
+ Time taken: 155.16 seconds
+SAT
+=> MAKESPAN: 1282
+Schedule is valid
+ Time taken: 155.32 seconds
+SAT
+=> MAKESPAN: 1281
+Schedule is valid
+ Time taken: 155.36 seconds
+SAT
+=> MAKESPAN: 1280
+Schedule is valid
+ Time taken: 155.39 seconds
+SAT
+=> MAKESPAN: 1279
+Schedule is valid
+ Time taken: 155.43 seconds
+SAT
+=> MAKESPAN: 1278
+Schedule is valid
+ Time taken: 155.47 seconds
+[runlim] sample:		159.97 time, 160.01 real, 2243 MB, 1.01 load
+SAT
+=> MAKESPAN: 1277
+Schedule is valid
+ Time taken: 160.24 seconds
+SAT
+=> MAKESPAN: 1276
+Schedule is valid
+ Time taken: 166.06 seconds
+SAT
+=> MAKESPAN: 1275
+Schedule is valid
+ Time taken: 167.04 seconds
+SAT
+=> MAKESPAN: 1274
+Schedule is valid
+ Time taken: 168.75 seconds
+[runlim] sample:		169.98 time, 170.01 real, 2310 MB, 1.01 load
+SAT
+=> MAKESPAN: 1273
+Schedule is valid
+ Time taken: 171.75 seconds
+[runlim] sample:		179.97 time, 180.01 real, 2385 MB, 1.00 load
+SAT
+=> MAKESPAN: 1272
+Schedule is valid
+ Time taken: 187.91 seconds
+SAT
+=> MAKESPAN: 1271
+Schedule is valid
+ Time taken: 189.07 seconds
+SAT
+=> MAKESPAN: 1270
+Schedule is valid
+ Time taken: 189.16 seconds
+[runlim] sample:		189.97 time, 190.01 real, 2230 MB, 1.00 load
+SAT
+=> MAKESPAN: 1269
+Schedule is valid
+ Time taken: 191.13 seconds
+SAT
+=> MAKESPAN: 1268
+Schedule is valid
+ Time taken: 192.59 seconds
+SAT
+=> MAKESPAN: 1267
+Schedule is valid
+ Time taken: 194.03 seconds
+SAT
+=> MAKESPAN: 1266
+[runlim] sample:		199.97 time, 200.01 real, 2226 MB, 1.00 load
+Schedule is valid
+ Time taken: 199.99 seconds
+SAT
+=> MAKESPAN: 1265
+Schedule is valid
+ Time taken: 208.92 seconds
+[runlim] sample:		209.97 time, 210.01 real, 2225 MB, 1.00 load
+SAT
+=> MAKESPAN: 1264
+Schedule is valid
+ Time taken: 210.54 seconds
+SAT
+=> MAKESPAN: 1263
+Schedule is valid
+ Time taken: 211.40 seconds
+SAT
+=> MAKESPAN: 1262
+Schedule is valid
+ Time taken: 215.99 seconds
+SAT
+=> MAKESPAN: 1261
+Schedule is valid
+ Time taken: 219.31 seconds
+[runlim] sample:		219.96 time, 220.01 real, 2210 MB, 1.00 load
+SAT
+=> MAKESPAN: 1260
+Schedule is valid
+ Time taken: 221.98 seconds
+SAT
+=> MAKESPAN: 1259
+Schedule is valid
+ Time taken: 222.40 seconds
+SAT
+=> MAKESPAN: 1258
+Schedule is valid
+ Time taken: 223.62 seconds
+SAT
+=> MAKESPAN: 1257
+Schedule is valid
+ Time taken: 223.70 seconds
+SAT
+=> MAKESPAN: 1256
+Schedule is valid
+ Time taken: 224.57 seconds
+SAT
+=> MAKESPAN: 1255
+Schedule is valid
+ Time taken: 225.68 seconds
+SAT
+=> MAKESPAN: 1254
+Schedule is valid
+ Time taken: 226.47 seconds
+SAT
+=> MAKESPAN: 1253
+Schedule is valid
+ Time taken: 228.25 seconds
+[runlim] sample:		229.96 time, 230.01 real, 2413 MB, 1.00 load
+[runlim] sample:		239.96 time, 240.01 real, 2210 MB, 1.00 load
+SAT
+=> MAKESPAN: 1252
+Schedule is valid
+ Time taken: 245.34 seconds
+SAT
+=> MAKESPAN: 1251
+Schedule is valid
+ Time taken: 248.58 seconds
+[runlim] sample:		249.97 time, 250.01 real, 2730 MB, 1.00 load
+SAT
+=> MAKESPAN: 1250
+Schedule is valid
+ Time taken: 258.05 seconds
+[runlim] sample:		259.96 time, 260.01 real, 2233 MB, 1.00 load
+SAT
+=> MAKESPAN: 1249
+Schedule is valid
+ Time taken: 261.43 seconds
+SAT
+=> MAKESPAN: 1248
+Schedule is valid
+ Time taken: 262.62 seconds
+SAT
+=> MAKESPAN: 1247
+Schedule is valid
+ Time taken: 263.96 seconds
+SAT
+=> MAKESPAN: 1246
+Schedule is valid
+ Time taken: 265.17 seconds
+SAT
+=> MAKESPAN: 1245
+Schedule is valid
+ Time taken: 266.53 seconds
+[runlim] sample:		269.96 time, 270.01 real, 2741 MB, 1.00 load
+SAT
+=> MAKESPAN: 1244
+Schedule is valid
+ Time taken: 271.96 seconds
+SAT
+=> MAKESPAN: 1243
+Schedule is valid
+ Time taken: 272.09 seconds
+SAT
+=> MAKESPAN: 1242
+Schedule is valid
+ Time taken: 272.17 seconds
+SAT
+=> MAKESPAN: 1241
+Schedule is valid
+ Time taken: 272.25 seconds
+SAT
+=> MAKESPAN: 1240
+Schedule is valid
+ Time taken: 275.44 seconds
+SAT
+=> MAKESPAN: 1239
+Schedule is valid
+ Time taken: 276.44 seconds
+SAT
+=> MAKESPAN: 1238
+Schedule is valid
+ Time taken: 277.32 seconds
+SAT
+=> MAKESPAN: 1237
+Schedule is valid
+ Time taken: 278.29 seconds
+[runlim] sample:		279.96 time, 280.01 real, 2674 MB, 1.00 load
+SAT
+=> MAKESPAN: 1236
+Schedule is valid
+ Time taken: 281.10 seconds
+SAT
+=> MAKESPAN: 1235
+Schedule is valid
+ Time taken: 281.24 seconds
+SAT
+=> MAKESPAN: 1234
+Schedule is valid
+ Time taken: 282.08 seconds
+SAT
+=> MAKESPAN: 1233
+Schedule is valid
+ Time taken: 282.98 seconds
+SAT
+=> MAKESPAN: 1232
+Schedule is valid
+ Time taken: 288.96 seconds
+[runlim] sample:		289.95 time, 290.01 real, 2173 MB, 1.00 load
+SAT
+=> MAKESPAN: 1231
+Schedule is valid
+ Time taken: 292.42 seconds
+SAT
+=> MAKESPAN: 1230
+Schedule is valid
+ Time taken: 298.84 seconds
+SAT
+=> MAKESPAN: 1229
+Schedule is valid
+ Time taken: 299.11 seconds
+[runlim] sample:		299.95 time, 300.01 real, 2146 MB, 1.00 load
+SAT
+=> MAKESPAN: 1228
+Schedule is valid
+ Time taken: 300.60 seconds
+[runlim] sample:		309.95 time, 310.01 real, 2146 MB, 1.00 load
+SAT
+=> MAKESPAN: 1227
+Schedule is valid
+ Time taken: 314.08 seconds
+SAT
+=> MAKESPAN: 1226
+Schedule is valid
+ Time taken: 316.74 seconds
+[runlim] sample:		319.94 time, 320.01 real, 2146 MB, 1.00 load
+SAT
+=> MAKESPAN: 1225
+Schedule is valid
+ Time taken: 320.70 seconds
+SAT
+=> MAKESPAN: 1224
+Schedule is valid
+ Time taken: 321.71 seconds
+SAT
+=> MAKESPAN: 1223
+Schedule is valid
+ Time taken: 324.22 seconds
+SAT
+=> MAKESPAN: 1222
+Schedule is valid
+ Time taken: 327.13 seconds
+SAT
+=> MAKESPAN: 1221
+Schedule is valid
+ Time taken: 328.14 seconds
+SAT
+=> MAKESPAN: 1220
+Schedule is valid
+ Time taken: 329.82 seconds
+UNSAT
+status: optimal
+Time taken: 329.82 seconds
+[runlim] sample:		329.84 time, 329.96 real, 0 MB, 1.00 load
+[runlim] end:			Tue Jul 21 15:42:38 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			329.96 seconds
+[runlim] time:			329.84 seconds
+[runlim] space:			3047 MB
+[runlim] load:			1.09 maximum
+[runlim] samples:		3300

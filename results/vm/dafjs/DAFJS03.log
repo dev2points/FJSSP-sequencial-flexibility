@@ -1,0 +1,127 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			fjssp-instance
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/dafjs/DAFJS03
+[runlim] start:			Tue Jul 21 16:07:45 2026
+[runlim] child:			12249
+Operations: 55, Edges: 52, Machines: 10
+Greedy Schedule UB: 601
+Building constraints took 0.24 seconds.
+SAT
+=> MAKESPAN: 600
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 599
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 598
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 597
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 596
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 595
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 594
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 593
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 592
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 591
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 590
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 589
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 588
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 587
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 586
+Schedule is valid
+ Time taken: 0.27 seconds
+SAT
+=> MAKESPAN: 585
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 584
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 583
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 582
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 581
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 580
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 579
+Schedule is valid
+ Time taken: 0.28 seconds
+SAT
+=> MAKESPAN: 578
+Schedule is valid
+ Time taken: 0.29 seconds
+SAT
+=> MAKESPAN: 577
+Schedule is valid
+ Time taken: 0.29 seconds
+SAT
+=> MAKESPAN: 576
+Schedule is valid
+ Time taken: 0.29 seconds
+UNSAT
+status: optimal
+Time taken: 0.29 seconds
+[runlim] end:			Tue Jul 21 16:07:45 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.33 seconds
+[runlim] time:			0.30 seconds
+[runlim] space:			59 MB
+[runlim] load:			1.00 maximum
+[runlim] samples:		4

@@ -1,0 +1,207 @@
+[runlim] version:		2.0.0rc12
+[runlim] host:			fjssp-instance
+[runlim] time limit:		311040000 seconds
+[runlim] real time limit:	10800 seconds
+[runlim] space limit:		14000 MB
+[runlim] argv[0]:		python3
+[runlim] argv[1]:		-u
+[runlim] argv[2]:		main.py
+[runlim] argv[3]:		datasets/yfjs/YFJS09
+[runlim] start:			Tue Jul 21 15:27:32 2026
+[runlim] child:			10506
+Operations: 36, Edges: 27, Machines: 12
+Greedy Schedule UB: 288
+Building constraints took 0.15 seconds.
+SAT
+=> MAKESPAN: 287
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+=> MAKESPAN: 286
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+=> MAKESPAN: 285
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+=> MAKESPAN: 284
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+=> MAKESPAN: 283
+Schedule is valid
+ Time taken: 0.17 seconds
+SAT
+=> MAKESPAN: 282
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 281
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 280
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 279
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 278
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 277
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 276
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 275
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 274
+Schedule is valid
+ Time taken: 0.18 seconds
+SAT
+=> MAKESPAN: 273
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 272
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 271
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 270
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 269
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 268
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 267
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 266
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 265
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 264
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 263
+Schedule is valid
+ Time taken: 0.19 seconds
+SAT
+=> MAKESPAN: 262
+Schedule is valid
+ Time taken: 0.20 seconds
+SAT
+=> MAKESPAN: 261
+Schedule is valid
+ Time taken: 0.23 seconds
+SAT
+=> MAKESPAN: 260
+Schedule is valid
+ Time taken: 0.23 seconds
+SAT
+=> MAKESPAN: 259
+Schedule is valid
+ Time taken: 0.23 seconds
+SAT
+=> MAKESPAN: 258
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 257
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 256
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 255
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 254
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 253
+Schedule is valid
+ Time taken: 0.25 seconds
+SAT
+=> MAKESPAN: 252
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 251
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 249
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 248
+Schedule is valid
+ Time taken: 0.26 seconds
+SAT
+=> MAKESPAN: 247
+Schedule is valid
+ Time taken: 0.30 seconds
+SAT
+=> MAKESPAN: 246
+Schedule is valid
+ Time taken: 0.30 seconds
+SAT
+=> MAKESPAN: 245
+Schedule is valid
+ Time taken: 0.30 seconds
+SAT
+=> MAKESPAN: 244
+Schedule is valid
+ Time taken: 0.31 seconds
+SAT
+=> MAKESPAN: 243
+Schedule is valid
+ Time taken: 0.31 seconds
+SAT
+=> MAKESPAN: 242
+Schedule is valid
+ Time taken: 0.31 seconds
+UNSAT
+status: optimal
+Time taken: 0.31 seconds
+[runlim] end:			Tue Jul 21 15:27:32 2026
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			0.34 seconds
+[runlim] time:			0.29 seconds
+[runlim] space:			54 MB
+[runlim] load:			0.28 maximum
+[runlim] samples:		4

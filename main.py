@@ -161,10 +161,12 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
             earliest_start[v] = max(earliest_start[v], earliest_start[u] + min_proc_time[u])
     
     # Tính thời gian muộn nhất thao tác có thể bắt đầu
-    latest_start = {}
+    latest_start = {i: ub - min_proc_time[i] if out_degree[i] == 0 else 0 for i in range(num_operations)}
+    # print(f"lastest start 8 {latest_start[8]}")
 
     for u in reversed(topo_queue):
-        latest_start[u] = min(latest_start[v] - min_proc_time[u] for v in neighbors[u]) if neighbors[u] else ub - min_proc_time[u]
+        for v in neighbors[u]:
+            latest_start[u] = max(latest_start[u], latest_start[v] - min_proc_time[u])
     
     feasible_time = {}
     for i in range(num_operations):
@@ -328,8 +330,10 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # TRƯỜNG HỢP 1: i kết thúc MUỘN HƠN thời điểm muộn nhất j có thể bắt đầu (LS_j)
                 # =========================================================================
                 if finish_i > feasible_time[j][1]:
+                    # [Từ đoạn code 2]: i chạy tại t trên máy này là vô lý -> cấm máy này
+                    
+                    
                     # [Từ đoạn code 1]: Ép logic mạnh hơn bằng biến xm
-                    solver.add_clause([-s[(i, t)], -m[(i, machine)]])
                     if idx == 0:
                         # Máy nhanh nhất còn không kịp -> Cấm luôn thời điểm t này
                         solver.add_clause([-s[(i, t)]])
@@ -337,6 +341,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # Bắt buộc phải chọn các máy nhanh hơn phía trước
                         prev_machine = machines_i[idx - 1][0]
                         solver.add_clause([-s[(i, t)], xm[(i, prev_machine)]])
+                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
 
                 # =========================================================================
                 # TRƯỜNG HỢP 2: i kết thúc TRONG KHOẢNG khả thi của j (ES_j < finish_i <= LS_j)
@@ -382,10 +387,11 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # u kết thúc trong khoảng [ES_v, LS_v] -> v phải bắt đầu >= finish_u
                 solver.add_clause([-s[(u, t)], x[(v, finish_u)]])
 
-        # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
-        first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
-        # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
-        solver.add_clause([s[(i, 0)] for i in first_ops])
+    
+    # symmetry breaking: ít nhất 1 thao tác đầu tiên cua moi job phải bắt đầu tại thời điểm 0
+    first_ops = [i for i in range(num_operations) if in_degree[i] == 0]
+    # print(f"Adding symmetry breaking constraint for first operations: {first_ops}")
+    solver.add_clause([s[(i, 0)] for i in first_ops])
                     
         
 def add_incremental_constraints(solver, num_operations, out_degree, request_list, ub, x, m, feasible_time):

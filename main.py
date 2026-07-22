@@ -161,12 +161,9 @@ def pre_processing_time(num_operations, precedence_list, out_degree, topo_queue,
             earliest_start[v] = max(earliest_start[v], earliest_start[u] + min_proc_time[u])
     
     # Tính thời gian muộn nhất thao tác có thể bắt đầu
-    latest_start = {i: ub - min_proc_time[i] if out_degree[i] == 0 else 0 for i in range(num_operations)}
-    # print(f"lastest start 8 {latest_start[8]}")
-
+    latest_start = {}
     for u in reversed(topo_queue):
-        for v in neighbors[u]:
-            latest_start[u] = max(latest_start[u], latest_start[v] - min_proc_time[u])
+        latest_start[u] = min(latest_start[v] - min_proc_time[u] for v in neighbors[u]) if neighbors[u] else ub - min_proc_time[u]
     
     feasible_time = {}
     for i in range(num_operations):
@@ -331,7 +328,7 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                 # =========================================================================
                 if finish_i > feasible_time[j][1]:
                     # [Từ đoạn code 2]: i chạy tại t trên máy này là vô lý -> cấm máy này
-                    
+                    solver.add_clause([-s[(i, t)], -m[(i, machine)]])
                     
                     # [Từ đoạn code 1]: Ép logic mạnh hơn bằng biến xm
                     if idx == 0:
@@ -341,7 +338,6 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
                         # Bắt buộc phải chọn các máy nhanh hơn phía trước
                         prev_machine = machines_i[idx - 1][0]
                         solver.add_clause([-s[(i, t)], xm[(i, prev_machine)]])
-                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
 
                 # =========================================================================
                 # TRƯỜNG HỢP 2: i kết thúc TRONG KHOẢNG khả thi của j (ES_j < finish_i <= LS_j)

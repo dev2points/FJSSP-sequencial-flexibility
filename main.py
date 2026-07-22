@@ -316,56 +316,77 @@ def build_constraints(solver, num_operations, precedence_list, request_list, fea
             #             solver.add_clause([-m[(i, machine_i)], -m[(j, machine_j)], -sm[(i,j,machine)]])
             
         
-    for (i, j) in precedence_list:
-        # Sắp xếp danh sách máy của op i theo thời gian xử lý tăng dần
-        machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
+    # for (i, j) in precedence_list:
+    #     # Sắp xếp danh sách máy của op i theo thời gian xử lý tăng dần
+    #     machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
 
+    #     for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
+    #         for idx in range(len(machines_i)):
+    #             machine, process_time = machines_i[idx]
+    #             finish_i = t + process_time
+                
+    #             # =========================================================================
+    #             # TRƯỜNG HỢP 1: i kết thúc MUỘN HƠN thời điểm muộn nhất j có thể bắt đầu (LS_j)
+    #             # =========================================================================
+    #             if finish_i > feasible_time[j][1]:
+    #                 # [Từ đoạn code 1]: Ép logic mạnh hơn bằng biến xm
+    #                 if idx == 0:
+    #                     # Máy nhanh nhất còn không kịp -> Cấm luôn thời điểm t này
+    #                     solver.add_clause([-s[(i, t)]])
+    #                 else:
+    #                     # Bắt buộc phải chọn các máy nhanh hơn phía trước
+    #                     prev_machine = machines_i[idx - 1][0]
+    #                     solver.add_clause([-s[(i, t)], xm[(i, prev_machine)]])
+
+    #                     solver.add_clause([-s[(i, t)], -m[(i, machine)]])
+
+    #             # =========================================================================
+    #             # TRƯỜNG HỢP 2: i kết thúc TRONG KHOẢNG khả thi của j (ES_j < finish_i <= LS_j)
+    #             # =========================================================================
+    #             elif finish_i > feasible_time[j][0]:
+    #                 if idx == 0:
+    #                     # ĐÃ SỬA TRÙNG LẶP: Cả đoạn 1 và đoạn 2 đều sinh ra clause giống hệt nhau:
+    #                     # [-s[(i, t)], x[(j, finish_i)]]. Ta gộp lại viết đúng 1 lần ở đây.
+    #                     solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
+    #                 else:
+    #                     prev_machine = machines_i[idx - 1][0]
+    #                     # [Từ đoạn code 1]: Dùng biến tích lũy xm để ép chọn máy nhanh hơn
+    #                     solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
+    #                     # [Từ đoạn code 2]: Dùng biến đơn m để cấm chọn máy hiện tại
+    #                     solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
+
+    #             # =========================================================================
+    #             # TRƯỜNG HỢP 3: i kết thúc ĐÚNG BẰNG thời điểm sớm nhất của j (finish_i == ES_j)
+    #             # (Trường hợp này chỉ có đoạn code 1 xử lý vì đoạn code 2 dùng điều kiện hẹp hơn ">")
+    #             # =========================================================================
+    #             elif finish_i == feasible_time[j][0]:
+    #                 if idx == 0:
+    #                     continue  # Không cần thêm ràng buộc gì cả, vì j có thể bắt đầu ngay sau i
+    #                 else:
+    #                     prev_machine = machines_i[idx - 1][0]
+    #                     solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
+    
+    for (i,j) in precedence_list:
+        machines_i = sorted(request_list[i].items(), key=lambda x: x[1])
         for t in range(feasible_time[i][0], feasible_time[i][1] + 1):
             for idx in range(len(machines_i)):
                 machine, process_time = machines_i[idx]
                 finish_i = t + process_time
                 
-                # =========================================================================
-                # TRƯỜNG HỢP 1: i kết thúc MUỘN HƠN thời điểm muộn nhất j có thể bắt đầu (LS_j)
-                # =========================================================================
                 if finish_i > feasible_time[j][1]:
-                    # [Từ đoạn code 1]: Ép logic mạnh hơn bằng biến xm
                     if idx == 0:
-                        # Máy nhanh nhất còn không kịp -> Cấm luôn thời điểm t này
                         solver.add_clause([-s[(i, t)]])
                     else:
-                        # Bắt buộc phải chọn các máy nhanh hơn phía trước
                         prev_machine = machines_i[idx - 1][0]
                         solver.add_clause([-s[(i, t)], xm[(i, prev_machine)]])
-
-                        solver.add_clause([-s[(i, t)], -m[(i, machine)]])
-
-                # =========================================================================
-                # TRƯỜNG HỢP 2: i kết thúc TRONG KHOẢNG khả thi của j (ES_j < finish_i <= LS_j)
-                # =========================================================================
+                    break
                 elif finish_i > feasible_time[j][0]:
                     if idx == 0:
-                        # ĐÃ SỬA TRÙNG LẶP: Cả đoạn 1 và đoạn 2 đều sinh ra clause giống hệt nhau:
-                        # [-s[(i, t)], x[(j, finish_i)]]. Ta gộp lại viết đúng 1 lần ở đây.
                         solver.add_clause([-s[(i, t)], x[(j, finish_i)]])
                     else:
                         prev_machine = machines_i[idx - 1][0]
-                        # [Từ đoạn code 1]: Dùng biến tích lũy xm để ép chọn máy nhanh hơn
                         solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
-                        # [Từ đoạn code 2]: Dùng biến đơn m để cấm chọn máy hiện tại
-                        solver.add_clause([-s[(i, t)], -m[(i, machine)], x[(j, finish_i)]])
 
-                # =========================================================================
-                # TRƯỜNG HỢP 3: i kết thúc ĐÚNG BẰNG thời điểm sớm nhất của j (finish_i == ES_j)
-                # (Trường hợp này chỉ có đoạn code 1 xử lý vì đoạn code 2 dùng điều kiện hẹp hơn ">")
-                # =========================================================================
-                elif finish_i == feasible_time[j][0]:
-                    if idx == 0:
-                        continue  # Không cần thêm ràng buộc gì cả, vì j có thể bắt đầu ngay sau i
-                    else:
-                        prev_machine = machines_i[idx - 1][0]
-                        solver.add_clause([-s[(i, t)], x[(j, finish_i)], xm[(i, prev_machine)]])
-    
 
     for u, v, w in graph:
         if (u, v) in precedence_list:
